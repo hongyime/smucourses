@@ -19,14 +19,14 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased selection:bg-[var(--color-brand-primary)] selection:text-[#050a14]">
         <nav className="sticky top-0 z-50 py-4 border-b border-white/10 bg-[#050a14]/80 backdrop-blur-xl">
-          <div className="container mx-auto px-4 max-w-7xl flex justify-between items-center">
+          <div className="container mx-auto px-4 max-w-7xl flex flex-wrap justify-between items-center gap-y-4">
             <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <img src="/icon.svg" alt="SMU Courses Logo" className="w-8 h-8" />
               <span className="font-display font-bold text-xl tracking-tight text-white">
                 smu<span className="text-neutral-400 font-normal">courses</span>
               </span>
             </Link>
-            <div className="flex gap-6 items-center">
+            <div className="flex gap-4 md:gap-6 items-center flex-wrap">
               <Link href="/courses" className="text-sm font-medium text-neutral-300 hover:text-white transition-colors">
                 Browse
               </Link>

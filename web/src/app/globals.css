@@ -40,6 +40,7 @@
     /* Disable Scrollbar completely but allow scrolling */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
+    overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
   }
 
   /* Disable Scrollbar for Chrome, Safari, Opera */
