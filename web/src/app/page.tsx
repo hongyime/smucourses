@@ -20,8 +20,8 @@ export default function Home() {
     <div className="py-16">
       <div className="container mx-auto px-4 text-center max-w-[800px]">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-[var(--color-brand-primary)] to-white bg-clip-text text-transparent">
-            The course catalog SMU deserves.
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-[var(--color-brand-primary)] via-amber-400 to-[var(--color-brand-primary)] bg-clip-text text-transparent animate-gradient">
+            Discover your perfect courses.
           </h1>
 
           <form onSubmit={handleSearch} className="relative max-w-[600px] mx-auto mb-16">
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
             <input 
               type="text" 
-              className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-black dark:text-white rounded-full h-16 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500 shadow-lg"
+              className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-black dark:text-white rounded-full h-16 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500"
               placeholder="Search by course code, name, or area (e.g., ACCT101, Marketing)" 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}

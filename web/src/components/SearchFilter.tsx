@@ -53,7 +53,7 @@ export default function SearchFilter({
         </div>
         <input
           type="text"
-          className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-black dark:text-white rounded-full h-16 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500 shadow-lg backdrop-blur-sm"
+          className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-black dark:text-white rounded-full h-16 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500 backdrop-blur-sm"
           placeholder="Search by course code, name, or keywords..."
           value={filters.query}
           onChange={(e) => handleChange("query", e.target.value)}
