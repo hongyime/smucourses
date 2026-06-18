@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 # --- CONFIGURATION & FAILSAFES ---
 MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024       # 5 MB anti-zip bomb cap
-MAX_GLOBAL_SIZE_BYTES = 2 * 1024 * 1024 * 1024 # 2 GB global cap for R2 bucket
+MAX_GLOBAL_SIZE_BYTES = int(1.5 * 1024 * 1024 * 1024) # 1.5 GB global cap for R2 bucket
 DELAY_BETWEEN_REQUESTS = 0.5                # 0.5s rate limit
 PDF_MAGIC_BYTES = b"%PDF"                   # Standard PDF header
 
