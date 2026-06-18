@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, GraduationCap, Building2, ChevronRight, Bookmark } from "lucide-react";
+import { BookOpen, GraduationCap, Building2, ChevronRight, Bookmark, Scale } from "lucide-react";
 import { useBookmarks } from "@/hooks/useBookmarks";
+import { useCompare } from "@/hooks/useCompare";
 
 export interface CourseData {
   id: string;
@@ -25,7 +26,9 @@ interface CourseCardProps {
 
 export default function CourseCard({ course }: CourseCardProps) {
   const { isBookmarked, toggleBookmark } = useBookmarks();
+  const { compareIds, toggleCompare } = useCompare();
   const bookmarked = isBookmarked(course.id);
+  const isComparing = compareIds.includes(course.id);
 
   // Truncate description for the card
   const truncatedDesc = course.description 
@@ -43,6 +46,13 @@ export default function CourseCard({ course }: CourseCardProps) {
             {course.code}
           </div>
           <div className="flex items-center gap-2">
+            <button 
+              onClick={(e) => { e.preventDefault(); toggleCompare(course.id); }}
+              className={`p-1.5 rounded-md transition-colors ${isComparing ? 'bg-indigo-500/30 text-indigo-300' : 'text-neutral-500 hover:text-white hover:bg-white/10'}`}
+              title={isComparing ? "Remove from Compare" : "Add to Compare"}
+            >
+              <Scale size={18} className={isComparing ? "text-indigo-300" : ""} />
+            </button>
             <button 
               onClick={(e) => { e.preventDefault(); toggleBookmark(course.id); }}
               className={`p-1.5 rounded-md transition-colors ${bookmarked ? 'bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)]' : 'text-neutral-500 hover:text-white hover:bg-white/10'}`}

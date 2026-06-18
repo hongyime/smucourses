@@ -162,7 +162,7 @@ def download_document(i, total, item, output_dir, tracking_file, downloaded_ids,
 
 def main():
     parser = argparse.ArgumentParser(description="SMU Course PDF Scraper")
-    parser.add_argument("--output-dir", default="Y:/courses", help="Directory to save PDFs")
+    parser.add_argument("--output-dir", default="./downloads", help="Directory to save PDFs")
     parser.add_argument("--restart", action="store_true", help="Restart from scratch (clear history)")
     parser.add_argument("--limit", type=int, default=0, help="Limit number of downloads (0 for no limit)")
     parser.add_argument("--workers", type=int, default=10, help="Number of parallel downloads")
