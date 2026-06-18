@@ -1,0 +1,938 @@
+{
+  "current_courses_sample": [
+    {
+      "_id": "HTd0nDNORVmF74Giouz0",
+      "code": "",
+      "college": "",
+      "consent": "",
+      "courseGroupId": "HTd0nDNORVmF74Giouz0",
+      "customFields": {
+        "rawCourseId": "001330"
+      },
+      "departments": [],
+      "description": "",
+      "dropConsent": "",
+      "effectiveEndDate": null,
+      "effectiveStartDate": null,
+      "gradeMode": "",
+      "id": "HTd0nDNORVmF74Giouz0",
+      "learningOutcomes": [],
+      "longName": "",
+      "name": "",
+      "requisites": {},
+      "status": "Active",
+      "topics": [],
+      "departmentOwnership": [],
+      "alternativeCode": null,
+      "orderByKeyForCode": ""
+    },
+    {
+      "_id": "ei0jQGNWC6ODpThRml9k",
+      "code": "",
+      "college": "",
+      "consent": "",
+      "courseGroupId": "ei0jQGNWC6ODpThRml9k",
+      "customFields": {
+        "rawCourseId": "001163"
+      },
+      "departments": [],
+      "description": "",
+      "dropConsent": "",
+      "effectiveEndDate": null,
+      "effectiveStartDate": null,
+      "gradeMode": "",
+      "id": "ei0jQGNWC6ODpThRml9k",
+      "learningOutcomes": [],
+      "longName": "",
+      "name": "",
+      "requisites": {},
+      "status": "Active",
+      "topics": [],
+      "departmentOwnership": [],
+      "alternativeCode": null,
+      "orderByKeyForCode": ""
+    },
+    {
+      "_id": "0032011-2026-02-12",
+      "attributes": [
+        "AREA - Accounting Electives",
+        "AREA - Accounting Options",
+        "RQPR - Open to Undergraduates only",
+        "TRCK - Accounting Major: Sustainability Accounting Track",
+        "ENRL - Open to Undergraduates only",
+        "AREA - Sustainability Management Electives",
+        "AREA - Asia Studies (Intake 2019 to 2023)"
+      ],
+      "catalogPrint": true,
+      "code": "ACCT.010",
+      "college": "School of Accountancy",
+      "components": [
+        {
+          "id": "SEM",
+          "code": "SEM",
+          "name": "Seminar",
+          "optionalComponent": false,
+          "defaultSectionSize": 48,
+          "contactHours": 0,
+          "workloadHours": 0,
+          "oeeWorkloadHours": 0,
+          "examSeatSpacing": 1,
+          "finalExamType": "Yes",
+          "includeInDynamicDate": false,
+          "autoCreate": false,
+          "attendanceGenerate": false,
+          "preferredRoomFeatures": [],
+          "instructionMode": "In Person",
+          "attendanceType": "MTG - Class Meeting",
+          "attendancePresentUse": true,
+          "attendanceReasonUse": true,
+          "attendanceTardyUse": true,
+          "attendanceLeftUse": true,
+          "attendanceContactUse": true,
+          "attendanceTimeUse": true,
+          "attendanceTemplateOverride": false,
+          "deliveryMode": [],
+          "customFields": {},
+          "providerForAuthentication": "",
+          "lmsFileType": ""
+        }
+      ],
+      "consent": "N - No Special Consent Required",
+      "courseGroupId": "0032011",
+      "courseNumber": ".010",
+      "credits": {
+        "courseCount": 1,
+        "repeatable": false,
+        "numberOfRepeats": 1,
+        "numberOfCredits": 1,
+        "creditHours": {
+          "min": 1,
+          "max": 1,
+          "operator": ""
+        },
+        "contactHours": {
+          "value": 0,
+          "operator": ""
+        },
+        "academicProgressHours": {
+          "value": 1,
+          "operator": ""
+        },
+        "financialAidHours": {
+          "value": 1,
+          "operator": ""
+        }
+      },
+      "customFields": {
+        "rawCourseId": "003201",
+        "catalogAttributes": [
+          "RQPR - Open to Undergraduates only"
+        ],
+        "courseType": "Undergraduate",
+        "crseOfferNbr": "1",
+        "graduateLearningOutcomes": [
+          "Interdisciplinary knowledge",
+          "Critical thinking & problem solving",
+          "Innovation & enterprising skills",
+          "Collaboration & leadership",
+          "Communication",
+          "Intercultural understanding and sensitivity",
+          "Understanding of global and Asian perspectives",
+          "Ethics and social responsibility",
+          "Understanding of sustainability issues",
+          "Self-directed learning",
+          "Resilience",
+          "Purpose-driven mindset"
+        ],
+        "disciplineSpecificCompetencies": [
+          "Accounting Standards",
+          "Financial Reporting",
+          "Governance",
+          "Professional and Business Ethics",
+          "Risk Assessment"
+        ]
+      },
+      "departmentOwnership": [],
+      "departments": [
+        {
+          "_id": "SOA",
+          "campus": "1",
+          "chair": [],
+          "displayName": "SOA",
+          "effectiveEndDate": "",
+          "effectiveStartDate": "2024-01-01",
+          "id": "SOA",
+          "institution": "SMUSG",
+          "lastSyncErrorRecommendations": [],
+          "lastSyncErrors": [],
+          "lastSyncMergeReportId": "Kgslu76m4RErHiDnRPJU",
+          "lastSyncStatus": "success",
+          "lastSyncedAt": 1781629471391,
+          "name": "School of Accountancy",
+          "smWorkflowStep": null,
+          "status": "Active",
+          "workflowStep": {
+            "participants": [],
+            "committees": [
+              "qUfg3zdrhYNVPesIJ4Dy"
+            ],
+            "name": "Offering School - Sch Manager",
+            "votesRequiredForApproval": 1,
+            "votesRequiredForRejection": 1,
+            "ifReject": "author",
+            "id": "",
+            "required": false,
+            "ifDeadline": "",
+            "deadline": {
+              "days": "",
+              "months": "",
+              "years": ""
+            },
+            "hasDeadline": false,
+            "nextStep": "",
+            "isRoot": false
+          },
+          "asWorkflowStep": null,
+          "catalogDescription": "",
+          "catalogDisplayName": "",
+          "catalogImageUrl": "",
+          "createdAt": 1781629471392,
+          "createdBy": "",
+          "customFields": {},
+          "hideInEvents": false,
+          "hideInScheduling": false,
+          "institutionId": "",
+          "lastEditedAt": 1781629471392,
+          "lastEditedBy": "",
+          "scheduleValidationWorkflowId": "",
+          "sisId": "",
+          "subjectCodes": [],
+          "institutions": []
+        }
+      ],
+      "description": "This course is aimed at exposing students to recent development in sustainability accounting in the country that is the focus of the study trip. In addition, the trip will also provide students with an understanding of investment and business opportunities in the country, as well as the social, cultural, economic, and political environments under which companies operate. It will give students a better appreciation of the country’s macro-economic environment, its key industries, financial and capital markets, investment climate, and economic policies and systems. During the trip, students will visit companies and interact with executives and entrepreneurs. They will also be exposed to the country’s history, culture, traditions, and values as these play an important role in determining business and financial strategies and operations of companies. At the same time, this is an SMU-XO module, which offers an overseas experiential learning opportunity for students. The course allows students to translate classroom knowledge and theory into practical solutions for real organizations. In addition to visits to companies and organizations, student will also participate in a consultancy project. Through the project, students will learn how to solve real  problems with guidance from the faculty and project sponsor mentors, from problem definition to final client presentation – while simultaneously testing their skills in real world settings. The project will focus on issues related to sustainability accounting that is faced by the accounting/finance and other functions of the companies in the country that will be visited and recommending/applying solutions to these problems. These issues (eg: implementation of sustainability reporting) are becoming very important for companies all around the world. Prior to the trip, students will be required to undergo intensive pre-trip preparations involving talks by experts, individual and team research of assigned topics, and project presentations and discussions.",
+      "dropConsent": "N - No Special Consent Required",
+      "effectiveEndDate": null,
+      "effectiveStartDate": "2026-02-12",
+      "gradeMode": "PNP - Pass/Fail",
+      "id": "0032011-2026-02-12",
+      "learningOutcomes": [],
+      "longName": "Overseas Project Experience (Sustainability Accounting)",
+      "name": "Ovsea Proj Expc (Sustain Acct)",
+      "requisites": {
+        "requisitesSimple": []
+      },
+      "status": "Active",
+      "subjectCode": "ACCT",
+      "topics": [
+        {
+          "id": "1",
+          "code": "1",
+          "name": "CHN",
+          "longName": "SMU-X: China (Hong Kong & Shenzhen)",
+          "description": "SMU-X: Hong Kong & Shenzhen",
+          "repeatable": false,
+          "numberOfRepeats": 1,
+          "numberOfCredits": 1,
+          "link": "801",
+          "cdTopicDescription": "",
+          "cdMeetingPattern": "",
+          "cdSessionType": "",
+          "cdPermissionToEnroll": "",
+          "cdPermissionToWithdraw": "",
+          "cdGradingBasis": "",
+          "cdCreditSpecificTopic": "",
+          "cdPrerequistes": "",
+          "cdLearningOutcomes": "",
+          "cdLearningOutcomesAddress": "",
+          "cdLearningOutcomesAssess": "",
+          "cdSpecialInstructions": "",
+          "cdOTRNotes": ""
+        }
+      ],
+      "alternativeCode": null,
+      "orderByKeyForCode": "ACCT.010"
+    }
+  ],
+  "current_courses_total": 2641,
+  "all_versions_sample": [
+    {
+      "_id": "HTd0nDNORVmF74Giouz0",
+      "code": "",
+      "college": "",
+      "consent": "",
+      "courseGroupId": "HTd0nDNORVmF74Giouz0",
+      "customFields": {
+        "rawCourseId": "001330"
+      },
+      "departments": [],
+      "description": "",
+      "dropConsent": "",
+      "effectiveEndDate": null,
+      "effectiveStartDate": null,
+      "gradeMode": "",
+      "id": "HTd0nDNORVmF74Giouz0",
+      "learningOutcomes": [],
+      "longName": "",
+      "name": "",
+      "requisites": {},
+      "status": "Active",
+      "topics": [],
+      "departmentOwnership": [],
+      "alternativeCode": null,
+      "orderByKeyForCode": ""
+    },
+    {
+      "_id": "ei0jQGNWC6ODpThRml9k",
+      "code": "",
+      "college": "",
+      "consent": "",
+      "courseGroupId": "ei0jQGNWC6ODpThRml9k",
+      "customFields": {
+        "rawCourseId": "001163"
+      },
+      "departments": [],
+      "description": "",
+      "dropConsent": "",
+      "effectiveEndDate": null,
+      "effectiveStartDate": null,
+      "gradeMode": "",
+      "id": "ei0jQGNWC6ODpThRml9k",
+      "learningOutcomes": [],
+      "longName": "",
+      "name": "",
+      "requisites": {},
+      "status": "Active",
+      "topics": [],
+      "departmentOwnership": [],
+      "alternativeCode": null,
+      "orderByKeyForCode": ""
+    },
+    {
+      "_id": "0032011-2026-02-12",
+      "attributes": [
+        "AREA - Accounting Electives",
+        "AREA - Accounting Options",
+        "RQPR - Open to Undergraduates only",
+        "TRCK - Accounting Major: Sustainability Accounting Track",
+        "ENRL - Open to Undergraduates only",
+        "AREA - Sustainability Management Electives",
+        "AREA - Asia Studies (Intake 2019 to 2023)"
+      ],
+      "catalogPrint": true,
+      "code": "ACCT.010",
+      "college": "School of Accountancy",
+      "components": [
+        {
+          "id": "SEM",
+          "code": "SEM",
+          "name": "Seminar",
+          "optionalComponent": false,
+          "defaultSectionSize": 48,
+          "contactHours": 0,
+          "workloadHours": 0,
+          "oeeWorkloadHours": 0,
+          "examSeatSpacing": 1,
+          "finalExamType": "Yes",
+          "includeInDynamicDate": false,
+          "autoCreate": false,
+          "attendanceGenerate": false,
+          "preferredRoomFeatures": [],
+          "instructionMode": "In Person",
+          "attendanceType": "MTG - Class Meeting",
+          "attendancePresentUse": true,
+          "attendanceReasonUse": true,
+          "attendanceTardyUse": true,
+          "attendanceLeftUse": true,
+          "attendanceContactUse": true,
+          "attendanceTimeUse": true,
+          "attendanceTemplateOverride": false,
+          "deliveryMode": [],
+          "customFields": {},
+          "providerForAuthentication": "",
+          "lmsFileType": ""
+        }
+      ],
+      "consent": "N - No Special Consent Required",
+      "courseGroupId": "0032011",
+      "courseNumber": ".010",
+      "credits": {
+        "courseCount": 1,
+        "repeatable": false,
+        "numberOfRepeats": 1,
+        "numberOfCredits": 1,
+        "creditHours": {
+          "min": 1,
+          "max": 1,
+          "operator": ""
+        },
+        "contactHours": {
+          "value": 0,
+          "operator": ""
+        },
+        "academicProgressHours": {
+          "value": 1,
+          "operator": ""
+        },
+        "financialAidHours": {
+          "value": 1,
+          "operator": ""
+        }
+      },
+      "customFields": {
+        "rawCourseId": "003201",
+        "catalogAttributes": [
+          "RQPR - Open to Undergraduates only"
+        ],
+        "courseType": "Undergraduate",
+        "crseOfferNbr": "1",
+        "graduateLearningOutcomes": [
+          "Interdisciplinary knowledge",
+          "Critical thinking & problem solving",
+          "Innovation & enterprising skills",
+          "Collaboration & leadership",
+          "Communication",
+          "Intercultural understanding and sensitivity",
+          "Understanding of global and Asian perspectives",
+          "Ethics and social responsibility",
+          "Understanding of sustainability issues",
+          "Self-directed learning",
+          "Resilience",
+          "Purpose-driven mindset"
+        ],
+        "disciplineSpecificCompetencies": [
+          "Accounting Standards",
+          "Financial Reporting",
+          "Governance",
+          "Professional and Business Ethics",
+          "Risk Assessment"
+        ]
+      },
+      "departmentOwnership": [],
+      "departments": [
+        {
+          "_id": "SOA",
+          "campus": "1",
+          "chair": [],
+          "displayName": "SOA",
+          "effectiveEndDate": "",
+          "effectiveStartDate": "2024-01-01",
+          "id": "SOA",
+          "institution": "SMUSG",
+          "lastSyncErrorRecommendations": [],
+          "lastSyncErrors": [],
+          "lastSyncMergeReportId": "Kgslu76m4RErHiDnRPJU",
+          "lastSyncStatus": "success",
+          "lastSyncedAt": 1781629471391,
+          "name": "School of Accountancy",
+          "smWorkflowStep": null,
+          "status": "Active",
+          "workflowStep": {
+            "participants": [],
+            "committees": [
+              "qUfg3zdrhYNVPesIJ4Dy"
+            ],
+            "name": "Offering School - Sch Manager",
+            "votesRequiredForApproval": 1,
+            "votesRequiredForRejection": 1,
+            "ifReject": "author",
+            "id": "",
+            "required": false,
+            "ifDeadline": "",
+            "deadline": {
+              "days": "",
+              "months": "",
+              "years": ""
+            },
+            "hasDeadline": false,
+            "nextStep": "",
+            "isRoot": false
+          },
+          "asWorkflowStep": null,
+          "catalogDescription": "",
+          "catalogDisplayName": "",
+          "catalogImageUrl": "",
+          "createdAt": 1781629471392,
+          "createdBy": "",
+          "customFields": {},
+          "hideInEvents": false,
+          "hideInScheduling": false,
+          "institutionId": "",
+          "lastEditedAt": 1781629471392,
+          "lastEditedBy": "",
+          "scheduleValidationWorkflowId": "",
+          "sisId": "",
+          "subjectCodes": [],
+          "institutions": []
+        }
+      ],
+      "description": "This course is aimed at exposing students to recent development in sustainability accounting in the country that is the focus of the study trip. In addition, the trip will also provide students with an understanding of investment and business opportunities in the country, as well as the social, cultural, economic, and political environments under which companies operate. It will give students a better appreciation of the country’s macro-economic environment, its key industries, financial and capital markets, investment climate, and economic policies and systems. During the trip, students will visit companies and interact with executives and entrepreneurs. They will also be exposed to the country’s history, culture, traditions, and values as these play an important role in determining business and financial strategies and operations of companies. At the same time, this is an SMU-XO module, which offers an overseas experiential learning opportunity for students. The course allows students to translate classroom knowledge and theory into practical solutions for real organizations. In addition to visits to companies and organizations, student will also participate in a consultancy project. Through the project, students will learn how to solve real  problems with guidance from the faculty and project sponsor mentors, from problem definition to final client presentation – while simultaneously testing their skills in real world settings. The project will focus on issues related to sustainability accounting that is faced by the accounting/finance and other functions of the companies in the country that will be visited and recommending/applying solutions to these problems. These issues (eg: implementation of sustainability reporting) are becoming very important for companies all around the world. Prior to the trip, students will be required to undergo intensive pre-trip preparations involving talks by experts, individual and team research of assigned topics, and project presentations and discussions.",
+      "dropConsent": "N - No Special Consent Required",
+      "effectiveEndDate": null,
+      "effectiveStartDate": "2026-02-12",
+      "gradeMode": "PNP - Pass/Fail",
+      "id": "0032011-2026-02-12",
+      "learningOutcomes": [],
+      "longName": "Overseas Project Experience (Sustainability Accounting)",
+      "name": "Ovsea Proj Expc (Sustain Acct)",
+      "requisites": {
+        "requisitesSimple": []
+      },
+      "status": "Active",
+      "subjectCode": "ACCT",
+      "topics": [
+        {
+          "id": "1",
+          "code": "1",
+          "name": "CHN",
+          "longName": "SMU-X: China (Hong Kong & Shenzhen)",
+          "description": "SMU-X: Hong Kong & Shenzhen",
+          "repeatable": false,
+          "numberOfRepeats": 1,
+          "numberOfCredits": 1,
+          "link": "801",
+          "cdTopicDescription": "",
+          "cdMeetingPattern": "",
+          "cdSessionType": "",
+          "cdPermissionToEnroll": "",
+          "cdPermissionToWithdraw": "",
+          "cdGradingBasis": "",
+          "cdCreditSpecificTopic": "",
+          "cdPrerequistes": "",
+          "cdLearningOutcomes": "",
+          "cdLearningOutcomesAddress": "",
+          "cdLearningOutcomesAssess": "",
+          "cdSpecialInstructions": "",
+          "cdOTRNotes": ""
+        }
+      ],
+      "alternativeCode": null,
+      "orderByKeyForCode": "ACCT.010"
+    },
+    {
+      "_id": "0032011-2024-11-26",
+      "attributes": [
+        "AREA - Accounting Electives",
+        "AREA - Accounting Options",
+        "RQPR - Open to Undergraduates only",
+        "TRCK - Accounting Major: Sustainability Accounting Track",
+        "ENRL - Open to Undergraduates only"
+      ],
+      "catalogPrint": true,
+      "code": "ACCT.010",
+      "college": "School of Accountancy",
+      "components": [
+        {
+          "id": "SEM",
+          "code": "SEM",
+          "name": "Seminar",
+          "optionalComponent": false,
+          "defaultSectionSize": 48,
+          "contactHours": 0,
+          "workloadHours": 0,
+          "oeeWorkloadHours": 0,
+          "examSeatSpacing": 1,
+          "finalExamType": "Yes",
+          "includeInDynamicDate": false,
+          "autoCreate": false,
+          "attendanceGenerate": false,
+          "preferredRoomFeatures": [],
+          "instructionMode": "In Person",
+          "attendanceType": "MTG - Class Meeting",
+          "attendancePresentUse": true,
+          "attendanceReasonUse": true,
+          "attendanceTardyUse": true,
+          "attendanceLeftUse": true,
+          "attendanceContactUse": true,
+          "attendanceTimeUse": true,
+          "attendanceTemplateOverride": false,
+          "deliveryMode": [],
+          "customFields": {},
+          "providerForAuthentication": "",
+          "lmsFileType": ""
+        }
+      ],
+      "consent": "N - No Special Consent Required",
+      "courseGroupId": "0032011",
+      "courseNumber": ".010",
+      "credits": {
+        "courseCount": 1,
+        "repeatable": false,
+        "numberOfRepeats": 1,
+        "numberOfCredits": 1,
+        "creditHours": {
+          "min": 1,
+          "max": 1,
+          "operator": ""
+        },
+        "contactHours": {
+          "value": 0,
+          "operator": ""
+        },
+        "academicProgressHours": {
+          "value": 1,
+          "operator": ""
+        },
+        "financialAidHours": {
+          "value": 1,
+          "operator": ""
+        }
+      },
+      "customFields": {
+        "rawCourseId": "003201",
+        "catalogAttributes": [
+          "RQPR - Open to Undergraduates only"
+        ],
+        "courseType": "Undergraduate",
+        "crseOfferNbr": "1"
+      },
+      "departmentOwnership": [],
+      "departments": [
+        {
+          "_id": "SOA",
+          "campus": "1",
+          "chair": [],
+          "displayName": "SOA",
+          "effectiveEndDate": "",
+          "effectiveStartDate": "2024-01-01",
+          "id": "SOA",
+          "institution": "SMUSG",
+          "lastSyncErrorRecommendations": [],
+          "lastSyncErrors": [],
+          "lastSyncMergeReportId": "Kgslu76m4RErHiDnRPJU",
+          "lastSyncStatus": "success",
+          "lastSyncedAt": 1781629471391,
+          "name": "School of Accountancy",
+          "smWorkflowStep": null,
+          "status": "Active",
+          "workflowStep": {
+            "participants": [],
+            "committees": [
+              "qUfg3zdrhYNVPesIJ4Dy"
+            ],
+            "name": "Offering School - Sch Manager",
+            "votesRequiredForApproval": 1,
+            "votesRequiredForRejection": 1,
+            "ifReject": "author",
+            "id": "",
+            "required": false,
+            "ifDeadline": "",
+            "deadline": {
+              "days": "",
+              "months": "",
+              "years": ""
+            },
+            "hasDeadline": false,
+            "nextStep": "",
+            "isRoot": false
+          },
+          "asWorkflowStep": null,
+          "catalogDescription": "",
+          "catalogDisplayName": "",
+          "catalogImageUrl": "",
+          "createdAt": 1781629471392,
+          "createdBy": "",
+          "customFields": {},
+          "hideInEvents": false,
+          "hideInScheduling": false,
+          "institutionId": "",
+          "lastEditedAt": 1781629471392,
+          "lastEditedBy": "",
+          "scheduleValidationWorkflowId": "",
+          "sisId": "",
+          "subjectCodes": [],
+          "institutions": []
+        }
+      ],
+      "description": "This course is aimed at exposing students to recent development in sustainability accounting in the country that is the focus of the study trip. In addition, the trip will also provide students with an understanding of investment and business opportunities in the country, as well as the social, cultural, economic, and political environments under which companies operate. It will give students a better appreciation of the country’s macro-economic environment, its key industries, financial and capital markets, investment climate, and economic policies and systems. During the trip, students will visit companies and interact with executives and entrepreneurs. They will also be exposed to the country’s history, culture, traditions, and values as these play an important role in determining business and financial strategies and operations of companies. At the same time, this is an SMU-XO module, which offers an overseas experiential learning opportunity for students. The course allows students to translate classroom knowledge and theory into practical solutions for real organizations. In addition to visits to companies and organizations, student will also participate in a consultancy project. Through the project, students will learn how to solve real  problems with guidance from the faculty and project sponsor mentors, from problem definition to final client presentation – while simultaneously testing their skills in real world settings. The project will focus on issues related to sustainability accounting that is faced by the accounting/finance and other functions of the companies in the country that will be visited and recommending/applying solutions to these problems. These issues (eg: implementation of sustainability reporting) are becoming very important for companies all around the world. Prior to the trip, students will be required to undergo intensive pre-trip preparations involving talks by experts, individual and team research of assigned topics, and project presentations and discussions.",
+      "dropConsent": "N - No Special Consent Required",
+      "effectiveEndDate": null,
+      "effectiveStartDate": "2024-11-26",
+      "gradeMode": "PNP - Pass/Fail",
+      "id": "0032011-2024-11-26",
+      "learningOutcomes": [],
+      "longName": "Overseas Project Experience (Sustainability Accounting)",
+      "name": "Ovsea Proj Expc (Sustain Acct)",
+      "requisites": {
+        "requisitesSimple": []
+      },
+      "status": "Active",
+      "subjectCode": "ACCT",
+      "topics": [],
+      "orderByKeyForCode": "ACCT.010"
+    },
+    {
+      "_id": "0016821-2018-03-09",
+      "attributes": [
+        "AREA - Accounting Data and Analytics Major",
+        "AREA - Accounting Options",
+        "AREA - Advanced Business Technology Major",
+        "AREA - Analytics Major",
+        "AREA - Business Options",
+        "AREA - Business-Oriented Electives/IS Options",
+        "AREA - Econ Major Rel/Econ Options",
+        "AREA - IS Related Courses",
+        "AREA - SMU-X",
+        "AREA - Social Sciences/PLE Major-related",
+        "AREA - Technology & Entrepreneurship",
+        "RQCP - ACCT203/ACCT221/IS304/IS210",
+        "RQPR - Open to Undergraduates only",
+        "TRCK - Accounting Major: Data Analytics Track",
+        "TRCK - Analytics Major: Accounting Track"
+      ],
+      "catalogPrint": true,
+      "code": "ACCT.414",
+      "college": "School of Accountancy",
+      "components": [
+        {
+          "id": "SEM",
+          "code": "SEM",
+          "name": "Seminar",
+          "optionalComponent": false,
+          "defaultSectionSize": 45,
+          "contactHours": 0,
+          "workloadHours": 0,
+          "oeeWorkloadHours": 0,
+          "examSeatSpacing": 1,
+          "finalExamType": "Yes",
+          "includeInDynamicDate": false,
+          "autoCreate": false,
+          "attendanceGenerate": false,
+          "preferredRoomFeatures": [],
+          "instructionMode": "In Person",
+          "attendanceType": "MTG - Class Meeting",
+          "attendancePresentUse": true,
+          "attendanceReasonUse": true,
+          "attendanceTardyUse": true,
+          "attendanceLeftUse": true,
+          "attendanceContactUse": true,
+          "attendanceTimeUse": true,
+          "attendanceTemplateOverride": false,
+          "deliveryMode": [],
+          "customFields": {},
+          "providerForAuthentication": "",
+          "lmsFileType": ""
+        }
+      ],
+      "consent": "N - No Special Consent Required",
+      "courseGroupId": "0016821",
+      "courseNumber": ".414",
+      "credits": {
+        "courseCount": 1,
+        "repeatable": false,
+        "numberOfRepeats": 1,
+        "numberOfCredits": 1,
+        "creditHours": {
+          "min": 1,
+          "max": 1,
+          "operator": ""
+        },
+        "contactHours": {
+          "value": 0,
+          "operator": ""
+        },
+        "academicProgressHours": {
+          "value": 1,
+          "operator": ""
+        },
+        "financialAidHours": {
+          "value": 1,
+          "operator": ""
+        }
+      },
+      "customFields": {
+        "rawCourseId": "001682",
+        "crseOfferNbr": "1",
+        "catalogAttributes": [
+          "RQPR - Open to Undergraduates only"
+        ]
+      },
+      "departmentOwnership": [],
+      "departments": [
+        {
+          "_id": "SOA",
+          "campus": "1",
+          "chair": [],
+          "displayName": "SOA",
+          "effectiveEndDate": "",
+          "effectiveStartDate": "2024-01-01",
+          "id": "SOA",
+          "institution": "SMUSG",
+          "lastSyncErrorRecommendations": [],
+          "lastSyncErrors": [],
+          "lastSyncMergeReportId": "Kgslu76m4RErHiDnRPJU",
+          "lastSyncStatus": "success",
+          "lastSyncedAt": 1781629471391,
+          "name": "School of Accountancy",
+          "smWorkflowStep": null,
+          "status": "Active",
+          "workflowStep": {
+            "participants": [],
+            "committees": [
+              "qUfg3zdrhYNVPesIJ4Dy"
+            ],
+            "name": "Offering School - Sch Manager",
+            "votesRequiredForApproval": 1,
+            "votesRequiredForRejection": 1,
+            "ifReject": "author",
+            "id": "",
+            "required": false,
+            "ifDeadline": "",
+            "deadline": {
+              "days": "",
+              "months": "",
+              "years": ""
+            },
+            "hasDeadline": false,
+            "nextStep": "",
+            "isRoot": false
+          },
+          "asWorkflowStep": null,
+          "catalogDescription": "",
+          "catalogDisplayName": "",
+          "catalogImageUrl": "",
+          "createdAt": 1781629471392,
+          "createdBy": "",
+          "customFields": {},
+          "hideInEvents": false,
+          "hideInScheduling": false,
+          "institutionId": "",
+          "lastEditedAt": 1781629471392,
+          "lastEditedBy": "",
+          "scheduleValidationWorkflowId": "",
+          "sisId": "",
+          "subjectCodes": [],
+          "institutions": []
+        }
+      ],
+      "description": "Traditionally, the accounting function’s role is always viewed as that of a steward, the control centre for the organisation, rather than the catalyst for enterprise growth. The term ‘back office’ is often used to describe the operating nature of accounting function. So in today’s volatile global business environment, the key challenge for accounting function is how to lead the enterprise in its growth strategies while ensuring effective risk management and stewardship of the enterprise. \n\nWith complexity and data proliferation, increasingly the CEO and the board turn to accountants to help make sense of all the data, to help cut through this complexity, and to provide more informed analysis on the business and its operation. The opportunity for accounting function is if it can generate the insights that help make better corporate decision making, while continuing to ensure effective control of the enterprise, its reputation as a catalyst for growth will be guaranteed. To do so, traditional accounting departments may have to transform themselves into ‘intelligent accounting functions’. \n\nIntelligent accounting functions run their operations as cost effectively as possible, leveraging technology to reduce finance operating costs; strengthen stewardship and control so as to establish a solid foundation to support growth. The biggest challenges, however, lie in creating the efficiencies needed to gather and process basic financial data and continue to deliver traditional finance outputs while at the same time redeploying their limited resources to enable higher-value business decision support activities.\n\nThis accounting analytics practicum which adopts SMU-X approach, focuses on a few key topics that are vital to establishing an intelligent accounting function (refer to the diagram below): finance strategy and transformation, lean finance and finance shared services, business intelligence analytics, and enterprise process management. In this experiential learning course, students from various disciplines learn what comprises a highly optimised accounting process, design an end-to-end process management and explore the underlying accounting IT systems and advanced data analytical applications. By working closely with instructors from accounting and information systems disciplines, together with an industry partner, students are expected to carry out design and development of an intelligent accounting function solution. The whole idea is to engage students in real-life application and to encourage students to creatively apply concepts to practical problems in their pursuit of solving real-world problems. Students will apply the concepts in real projects.",
+      "dropConsent": "N - No Special Consent Required",
+      "effectiveEndDate": null,
+      "effectiveStartDate": "2018-03-09",
+      "gradeMode": "GRD - Graded",
+      "id": "0016821-2018-03-09",
+      "learningOutcomes": [],
+      "longName": "Accounting Analytics Capstone",
+      "name": "Accounting Analytics Capstone",
+      "requisites": {},
+      "status": "Active",
+      "subjectCode": "ACCT",
+      "topics": [
+        {
+          "id": "1",
+          "code": "1",
+          "name": "SMU-X",
+          "longName": "SMU-X",
+          "description": "SMU-X",
+          "repeatable": false,
+          "numberOfRepeats": 1,
+          "numberOfCredits": 1,
+          "link": "401",
+          "cdTopicDescription": "",
+          "cdMeetingPattern": "",
+          "cdSessionType": "",
+          "cdPermissionToEnroll": "",
+          "cdPermissionToWithdraw": "",
+          "cdGradingBasis": "",
+          "cdCreditSpecificTopic": "",
+          "cdPrerequistes": "",
+          "cdLearningOutcomes": "",
+          "cdLearningOutcomesAddress": "",
+          "cdLearningOutcomesAssess": "",
+          "cdSpecialInstructions": "",
+          "cdOTRNotes": ""
+        }
+      ],
+      "orderByKeyForCode": "ACCT.414"
+    }
+  ],
+  "all_versions_total": 9864,
+  "documents_info": {
+    "total": 4713,
+    "sample": [
+      {
+        "_id": "VQmtKoj0082ubG9Csug0",
+        "documentTypeId": "MVuZSqwCGKMfQtwRURd4",
+        "documentGroupId": "VQmtKoj0082ubG9Csug0",
+        "effectiveStartDate": null,
+        "effectiveEndDate": null
+      },
+      {
+        "_id": "xU8E7QMpz9FxX0N86wug",
+        "documentTypeId": "MVuZSqwCGKMfQtwRURd4",
+        "documentGroupId": "xU8E7QMpz9FxX0N86wug",
+        "effectiveStartDate": null,
+        "effectiveEndDate": null
+      },
+      {
+        "_id": "RnSZyVDkpThyIR07I3Nx",
+        "documentTypeId": "MVuZSqwCGKMfQtwRURd4",
+        "documentGroupId": "RnSZyVDkpThyIR07I3Nx",
+        "effectiveStartDate": null,
+        "effectiveEndDate": null
+      },
+      {
+        "_id": "TgzgORSKP1r1251ge37X",
+        "documentTypeId": "MVuZSqwCGKMfQtwRURd4",
+        "documentGroupId": "TgzgORSKP1r1251ge37X",
+        "effectiveStartDate": null,
+        "effectiveEndDate": null
+      },
+      {
+        "_id": "i3sr7C9qP0sjor8N1IDt",
+        "documentTypeId": "MVuZSqwCGKMfQtwRURd4",
+        "documentGroupId": "i3sr7C9qP0sjor8N1IDt",
+        "effectiveStartDate": null,
+        "effectiveEndDate": null
+      }
+    ],
+    "terms": [
+      "2150",
+      "2210",
+      "2215",
+      "2220",
+      "2230",
+      "2231",
+      "2233",
+      "2310",
+      "2315",
+      "2320",
+      "2330",
+      "2331",
+      "2333",
+      "2401",
+      "2402",
+      "2403",
+      "2404",
+      "2405",
+      "2410",
+      "2411",
+      "2415",
+      "2420",
+      "2430",
+      "2433",
+      "2440",
+      "2450",
+      "2510",
+      "2515",
+      "2520",
+      "2530",
+      "2531",
+      "2532",
+      "2533",
+      "2540",
+      "2550",
+      "2601",
+      "2602",
+      "2603",
+      "2604",
+      "2605",
+      "2610",
+      "2620",
+      "2630",
+      "2640",
+      "2710",
+      "2832"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/
+
+access the link above
+
+extract _id and form the url below
+
+https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/{_id}/pdf
+
+
+ask where to save pdfs to (external folder)
+save pdf using the py code (edit the py code for this whole script)
+
+edit the bat file to run the py code (i double click to run process)
+
+- needs to not download whatever that has been downloaded
+- keep txt of all pdf available in https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/ (do not overwrite if entry is missing, just update txt with new entries)
+- keep track of progress so can ask user if resume or restart
+
+ask me if i want additional features
+maybe extract the course name and label name of pdf as course name?
+
