@@ -31,7 +31,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="mb-8">
-          <Link href="/courses" className="text-neutral-400 hover:text-white transition-colors flex items-center gap-1 inline-flex">
+          <Link href="/courses" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
             <ChevronLeft size={20} /> Back to Search
           </Link>
         </div>

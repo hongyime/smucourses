@@ -20,13 +20,10 @@ export default function ComparePage() {
     <div className="container mx-auto px-4 py-12 max-w-7xl">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
         <div>
-          <Link href="/courses" className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors mb-4">
+          <Link href="/courses" className="inline-flex items-center text-white hover:text-[var(--color-brand-primary)] transition-colors">
             <ArrowLeft size={16} className="mr-2" />
             Back to Search
           </Link>
-          <h1 className="text-4xl font-bold">
-            Course Comparison
-          </h1>
         </div>
         
         {courses.length > 0 && (
