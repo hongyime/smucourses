@@ -2,42 +2,17 @@ import os
 import json
 import time
 import requests
-import boto3
-from botocore.client import Config
 from pathlib import Path
-from dotenv import load_dotenv
 
 # --- CONFIGURATION & FAILSAFES ---
 MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024       # 5 MB anti-zip bomb cap
-MAX_GLOBAL_SIZE_BYTES = int(1.5 * 1024 * 1024 * 1024) # 1.5 GB global cap for R2 bucket
 DELAY_BETWEEN_REQUESTS = 0.5                # 0.5s rate limit
 PDF_MAGIC_BYTES = b"%PDF"                   # Standard PDF header
 
 # Paths
 ROOT_DIR = Path(__file__).resolve().parent.parent
-ENV_PATH = ROOT_DIR / "web" / ".env.local"
 COURSES_JSON_PATH = ROOT_DIR / "data" / "processed" / "courses.json"
-
-# Load environment variables
-load_dotenv(ENV_PATH)
-
-R2_ACCOUNT_ID = os.getenv("R2_ACCOUNT_ID")
-R2_ACCESS_KEY_ID = os.getenv("R2_ACCESS_KEY_ID")
-R2_SECRET_ACCESS_KEY = os.getenv("R2_SECRET_ACCESS_KEY")
-R2_BUCKET_NAME = os.getenv("R2_BUCKET_NAME")
-
-if not all([R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET_NAME]):
-    print("❌ ERROR: Missing R2 credentials in web/.env.local")
-    exit(1)
-
-# Initialize R2 client via Boto3
-s3 = boto3.client(
-    "s3",
-    endpoint_url=f"https://{R2_ACCOUNT_ID}.r2.cloudflarestorage.com",
-    aws_access_key_id=R2_ACCESS_KEY_ID,
-    aws_secret_access_key=R2_SECRET_ACCESS_KEY,
-    config=Config(signature_version="s3v4"),
-)
+PDF_DIR = ROOT_DIR / "web" / "public" / "pdfs"
 
 def download_and_validate_pdf(url: str, course_id: str) -> bytes:
     """
@@ -79,11 +54,14 @@ def download_and_validate_pdf(url: str, course_id: str) -> bytes:
         return None
 
 def main():
-    print("🚀 Starting Secure PDF Sync Pipeline to Cloudflare R2")
+    print("🚀 Starting Secure PDF Sync Pipeline (Local Storage)")
     
     if not COURSES_JSON_PATH.exists():
         print(f"❌ ERROR: Cannot find courses.json at {COURSES_JSON_PATH}")
         return
+
+    # Create the target directory if it doesn't exist
+    os.makedirs(PDF_DIR, exist_ok=True)
 
     with open(COURSES_JSON_PATH, "r", encoding="utf-8") as f:
         courses = json.load(f)
@@ -95,15 +73,17 @@ def main():
     print(f"📦 Found {len(courses)} courses to process.")
     
     for course in courses:
-        # 1. Global Failsafe Check
-        if total_bytes_processed > MAX_GLOBAL_SIZE_BYTES:
-            print("🚨 CRITICAL: Global limit of 2GB reached! Terminating pipeline to protect billing limits.")
-            break
-
         course_id = course.get("id")
         pdf_url = course.get("documents", {}).get("url")
 
         if not pdf_url:
+            continue
+
+        target_path = PDF_DIR / f"{course_id}.pdf"
+        
+        # Skip if already downloaded
+        if target_path.exists():
+            print(f"⏭️ SKIPPED {course_id}: Already exists locally.")
             continue
 
         print(f"Processing {course_id}...", end=" ", flush=True)
@@ -112,23 +92,17 @@ def main():
         pdf_bytes = download_and_validate_pdf(pdf_url, course_id)
         
         if pdf_bytes:
-            # Update global tracker
+            # Save to local file
             file_size = len(pdf_bytes)
             total_bytes_processed += file_size
-
-            # Upload to R2
-            object_key = f"syllabi/{course_id}.pdf"
+            
             try:
-                s3.put_object(
-                    Bucket=R2_BUCKET_NAME,
-                    Key=object_key,
-                    Body=pdf_bytes,
-                    ContentType="application/pdf"
-                )
-                print(f"✅ Uploaded ({file_size / 1024:.1f} KB) - Total: {total_bytes_processed / (1024*1024):.2f} MB")
+                with open(target_path, "wb") as f:
+                    f.write(pdf_bytes)
+                print(f"✅ Saved ({file_size / 1024:.1f} KB)")
                 success_count += 1
             except Exception as e:
-                print(f"❌ Upload failed: {str(e)}")
+                print(f"❌ Save failed: {str(e)}")
         else:
             skip_count += 1
 
@@ -136,9 +110,9 @@ def main():
         time.sleep(DELAY_BETWEEN_REQUESTS)
 
     print("\n🎉 Pipeline Complete!")
-    print(f"Successfully uploaded: {success_count} PDFs")
-    print(f"Skipped/Rejected: {skip_count}")
-    print(f"Total Storage Used: {total_bytes_processed / (1024*1024):.2f} MB / 2048.00 MB")
+    print(f"Successfully downloaded: {success_count} PDFs")
+    print(f"Skipped/Rejected/Existing: {skip_count}")
+    print(f"Total New Storage Used: {total_bytes_processed / (1024*1024):.2f} MB")
 
 if __name__ == "__main__":
     main()
