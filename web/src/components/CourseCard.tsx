@@ -42,7 +42,7 @@ export default function CourseCard({ course }: CourseCardProps) {
 
   return (
     <div onClick={handleCardClick} className="block group cursor-pointer h-full">
-      <div className="glass-panel p-6 h-full transition-all duration-300 hover:border-[var(--color-brand-primary)]/30 hover:bg-black/5 dark:hover:bg-white/10 hover:shadow-[var(--color-brand-primary)]/10 hover:-translate-y-1 relative overflow-hidden flex flex-col">
+      <div className="glass-panel p-6 h-full transition-all duration-300 hover:border-[var(--color-brand-primary)]/30 hover:bg-black/5 dark:hover:bg-white/10 hover:-translate-y-1 relative overflow-hidden flex flex-col">
         {/* Subtle gradient glow effect on hover */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-primary)]/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
         
