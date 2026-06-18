@@ -30,8 +30,8 @@ export default function BookmarksPage() {
           </Link>
         </div>
 
-        <div className="mb-10">
-          <h1 className="text-4xl font-bold mb-3 flex items-center gap-3">
+        <div className="mb-10 text-center flex flex-col items-center">
+          <h1 className="text-4xl font-bold mb-3 flex items-center justify-center gap-3">
             <Bookmark className="text-[var(--color-brand-primary)]" size={32} />
             My Bookmarks
           </h1>
