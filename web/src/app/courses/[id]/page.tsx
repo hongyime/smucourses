@@ -127,29 +127,33 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
                   Historical Syllabi
                 </h3>
                 <ul className="space-y-4">
-                  {course.syllabi.map((syllabus: any, idx: number) => (
-                    <li key={idx} className="flex items-start gap-2 text-neutral-700 dark:text-neutral-300">
-                      <span className="text-[var(--color-brand-primary)] mt-1">•</span>
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full gap-3">
-                        <div>
-                          <span className="font-medium text-black dark:text-white block sm:inline">{syllabus.term}</span>
-                          <span className="text-neutral-500 text-sm sm:ml-3 block sm:inline">Sections: {syllabus.sections.map((s: any) => s.section).join(', ')}</span>
+                  {course.syllabi.map((syllabus: any, idx: number) => {
+                    const pdfUrl = syllabus.sections?.find((sec: any) => sec.pdfUrl)?.pdfUrl;
+                    
+                    return (
+                      <li key={idx} className="flex items-start gap-2 text-neutral-700 dark:text-neutral-300">
+                        <span className="text-[var(--color-brand-primary)] mt-1">•</span>
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full gap-3">
+                          <div>
+                            <span className="font-medium text-black dark:text-white block sm:inline">{syllabus.term}</span>
+                            <span className="text-neutral-500 text-sm sm:ml-3 block sm:inline">Sections: {syllabus.sections.map((s: any) => s.section).join(', ')}</span>
+                          </div>
+                          {pdfUrl ? (
+                            <a 
+                              href={pdfUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="self-start sm:self-auto text-sm bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] px-4 py-2 rounded-full transition-colors inline-flex items-center justify-center gap-2 font-semibold w-auto"
+                            >
+                              <FileText size={16} /> View PDF
+                            </a>
+                          ) : (
+                            <span className="text-sm text-neutral-500 italic">No PDF Available</span>
+                          )}
                         </div>
-                        {course.syllabi?.some((s: any) => s.sections?.some((sec: any) => sec.pdfUrl)) ? (
-                          <a 
-                            href={`/pdfs/${course.id}.pdf`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="self-start sm:self-auto text-sm bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] px-4 py-2 rounded-full transition-colors inline-flex items-center justify-center gap-2 font-semibold w-auto"
-                          >
-                            <FileText size={16} /> View PDF
-                          </a>
-                        ) : (
-                          <span className="text-sm text-neutral-500 italic">No PDF Available</span>
-                        )}
-                      </div>
-                    </li>
-                  ))}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             )}
