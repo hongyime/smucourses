@@ -61,7 +61,15 @@ function CoursesSearchContent() {
 
     // Search
     if (filters.query.trim()) {
-      result = fuse.search(filters.query).map((res) => res.item);
+      const queryLower = filters.query.trim().toLowerCase();
+      // Check for exact course code match first
+      const exactMatch = coursesData.find(c => c.code.toLowerCase() === queryLower);
+      
+      if (exactMatch) {
+        result = [exactMatch];
+      } else {
+        result = fuse.search(filters.query).map((res) => res.item);
+      }
     }
 
     // Filter
