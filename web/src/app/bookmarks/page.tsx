@@ -32,10 +32,8 @@ export default function BookmarksPage() {
 
         <div className="mb-10 text-center flex flex-col items-center">
           <h1 className="text-4xl font-bold mb-3 flex items-center justify-center gap-3">
-            <Bookmark className="text-[var(--color-brand-primary)]" size={32} />
-            My Bookmarks
+            Saved Courses
           </h1>
-          <p className="text-neutral-400 text-lg">Your strategically saved courses for bidding.</p>
         </div>
 
         {bookmarkedCourses.length === 0 ? (
