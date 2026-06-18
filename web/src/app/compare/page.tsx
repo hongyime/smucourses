@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Scale, Trash2, CheckCircle2, XCircle, Clock } from "lucide-react";
 import { useCompare } from "@/hooks/useCompare";
-import coursesData from "@/data/processed/courses.json";
+import coursesData from "@/data/courses.json";
 
 export default function ComparePage() {
   const { compareIds, clearCompare, toggleCompare } = useCompare();
