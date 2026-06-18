@@ -47,13 +47,13 @@ export default function SearchFilter({
   return (
     <div className="w-full mb-8">
       {/* Search Input */}
-      <div className="relative mb-4">
+      <div className="relative mb-4 max-w-[600px] mx-auto">
         <div className="absolute top-1/2 -translate-y-1/2 left-5 text-neutral-500 z-10 pointer-events-none">
           <Search size={20} />
         </div>
         <input
           type="text"
-          className="w-full bg-white/5 border border-white/10 text-white rounded-full h-14 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all placeholder:text-neutral-500 shadow-lg backdrop-blur-sm"
+          className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-black dark:text-white rounded-full h-16 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500 shadow-lg backdrop-blur-sm"
           placeholder="Search by course code, name, or keywords..."
           value={filters.query}
           onChange={(e) => handleChange("query", e.target.value)}
@@ -62,7 +62,7 @@ export default function SearchFilter({
           {filters.query && (
             <button
               onClick={() => handleChange("query", "")}
-              className="p-2 text-neutral-400 hover:text-white transition-colors"
+              className="p-2 text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
               title="Clear search"
             >
               <X size={18} />
@@ -70,10 +70,10 @@ export default function SearchFilter({
           )}
           <button
             onClick={() => setShowFilters(!showFilters)}
-            className={`flex items-center gap-2 px-4 h-full rounded-full transition-colors font-medium border border-white/5 ${
+            className={`flex items-center gap-2 px-4 h-full rounded-full transition-colors font-medium border border-black/5 dark:border-white/5 ${
               showFilters || activeFilterCount > 0
-                ? "bg-indigo-600/20 text-indigo-300 border-indigo-500/30"
-                : "bg-white/5 text-neutral-300 hover:bg-white/10"
+                ? "bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)] border-[var(--color-brand-primary)]/30"
+                : "bg-black/5 dark:bg-white/5 text-neutral-600 dark:text-neutral-300 hover:bg-black/10 dark:hover:bg-white/10"
             }`}
           >
             <SlidersHorizontal size={18} />

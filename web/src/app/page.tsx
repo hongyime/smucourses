@@ -30,7 +30,7 @@ export default function Home() {
             </div>
             <input 
               type="text" 
-              className="w-full bg-white/5 border border-white/10 text-white rounded-full h-16 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500"
+              className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-black dark:text-white rounded-full h-16 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500 shadow-lg"
               placeholder="Search by course code, name, or area (e.g., ACCT101, Marketing)" 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -48,7 +48,7 @@ export default function Home() {
               { icon: Clock, title: "Historical Data", desc: "See exactly when a course is usually offered", color: "#10b981" }
             ].map((feature, i) => (
               <div key={i} className="glass-panel p-6 transition-transform hover:-translate-y-1 duration-200">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mb-4" style={{ color: feature.color }}>
+                <div className="w-10 h-10 rounded-xl bg-black/5 dark:bg-white/5 flex items-center justify-center mb-4" style={{ color: feature.color }}>
                   <feature.icon size={20} />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
