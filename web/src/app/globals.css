@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  /* THEME 1: SMU Midnight Gold (Active)
+     Deep navy background with SMU gold accents. */
+  --color-bg-base: #050a14;
+  --color-bg-surface: #0a1120;
+  --color-brand-primary: #EAAA00; /* SMU Gold */
+  --color-brand-secondary: #002D62; /* SMU Navy */
+  --color-brand-accent: #152238;
+
+  /* THEME 2: Obsidian Academic (Draft) 
+  --color-bg-base: #0a0a0a;
+  --color-bg-surface: #141414;
+  --color-brand-primary: #F2A900; 
+  --color-brand-secondary: #0ea5e9;
+  */
+
+  /* THEME 3: Royal Ink (Draft)
+  --color-bg-base: #020617;
+  --color-bg-surface: #0f172a;
+  --color-brand-primary: #eab308;
+  --color-brand-secondary: #3b82f6;
+  */
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-base);
+    color: #e5e5e5;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(234, 170, 0, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(0, 45, 98, 0.1) 0px, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    
+    /* Disable Scrollbar completely but allow scrolling */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  /* Disable Scrollbar for Chrome, Safari, Opera */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg;
+  }
+}
