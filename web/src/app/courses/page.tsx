@@ -138,7 +138,7 @@ function CoursesSearchContent() {
               <div className="mt-12 text-center">
                 <button
                   onClick={() => setPage((p) => p + 1)}
-                  className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white font-medium transition-colors inline-flex items-center gap-2"
+                  className="px-6 py-3 rounded-full bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] font-semibold transition-colors inline-flex items-center gap-2"
                 >
                   Load More
                 </button>

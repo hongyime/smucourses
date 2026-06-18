@@ -74,7 +74,16 @@ def main():
     
     for course in courses:
         course_id = course.get("id")
-        pdf_url = course.get("documents", {}).get("url")
+        pdf_url = None
+        
+        # Extract the first available pdfUrl from any syllabus section
+        for syllabus in course.get("syllabi", []):
+            for section in syllabus.get("sections", []):
+                if section.get("pdfUrl"):
+                    pdf_url = section.get("pdfUrl")
+                    break
+            if pdf_url:
+                break
 
         if not pdf_url:
             continue
