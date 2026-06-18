@@ -134,12 +134,12 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
                       <span className="font-medium text-white block sm:inline">{syllabus.term}</span>
                       <span className="text-neutral-500 text-sm sm:ml-3 block sm:inline">Sections: {syllabus.sections.map((s: any) => s.section).join(', ')}</span>
                     </div>
-                    {course.documents?.url ? (
+                    {course.syllabi?.some((s: any) => s.sections?.some((sec: any) => sec.pdfUrl)) ? (
                       <a 
                         href={`/pdfs/${course.id}.pdf`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-3 sm:mt-0 text-sm bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition-colors inline-flex items-center gap-2"
+                        className="mt-3 sm:mt-0 text-sm bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] px-4 py-2 rounded-lg transition-colors inline-flex items-center gap-2 font-semibold"
                       >
                         <FileText size={16} /> View PDF
                       </a>

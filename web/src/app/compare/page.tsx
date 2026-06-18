@@ -18,23 +18,21 @@ export default function ComparePage() {
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-7xl">
-      <div className="flex flex-col items-center text-center mb-10 gap-2">
-        <Link href="/courses" className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors mb-2">
-          <ArrowLeft size={16} className="mr-2" />
-          Back to Search
-        </Link>
-        <h1 className="text-4xl font-bold flex items-center justify-center gap-3">
-          <Scale className="text-indigo-500" size={36} />
-          Course Comparison
-        </h1>
-        <p className="text-neutral-400 mt-2 text-lg">
-          Compare up to 3 courses side-by-side to make the perfect bidding decision.
-        </p>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
+        <div>
+          <Link href="/courses" className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors mb-4">
+            <ArrowLeft size={16} className="mr-2" />
+            Back to Search
+          </Link>
+          <h1 className="text-4xl font-bold">
+            Course Comparison
+          </h1>
+        </div>
         
         {courses.length > 0 && (
           <button 
             onClick={clearCompare}
-            className="mt-4 px-4 py-2 bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20 rounded-lg flex items-center gap-2 transition-all"
+            className="px-4 py-2 bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20 rounded-lg flex items-center gap-2 transition-all"
           >
             <Trash2 size={18} />
             Clear Comparison
@@ -49,7 +47,7 @@ export default function ComparePage() {
           <p className="text-neutral-400 mb-8 max-w-md mx-auto">
             Go back to the course search and click the scale icon on any course card to add it to your comparison tool.
           </p>
-          <Link href="/courses" className="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors">
+          <Link href="/courses" className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] font-semibold rounded-lg transition-colors">
             Browse Courses
           </Link>
         </div>
