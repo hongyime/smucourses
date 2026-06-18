@@ -47,14 +47,14 @@ export default function CourseCard({ course }: CourseCardProps) {
           </div>
           <div className="flex items-center gap-2">
             <button 
-              onClick={(e) => { e.preventDefault(); toggleCompare(course.id); }}
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleCompare(course.id); }}
               className={`p-1.5 rounded-md transition-colors ${isComparing ? 'bg-indigo-500/30 text-indigo-300' : 'text-neutral-500 hover:text-white hover:bg-white/10'}`}
               title={isComparing ? "Remove from Compare" : "Add to Compare"}
             >
               <Scale size={18} className={isComparing ? "text-indigo-300" : ""} />
             </button>
             <button 
-              onClick={(e) => { e.preventDefault(); toggleBookmark(course.id); }}
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleBookmark(course.id); }}
               className={`p-1.5 rounded-md transition-colors ${bookmarked ? 'bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)]' : 'text-neutral-500 hover:text-white hover:bg-white/10'}`}
               title={bookmarked ? "Remove Bookmark" : "Add Bookmark"}
             >

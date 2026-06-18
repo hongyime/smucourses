@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ChevronLeft, Building2, GraduationCap, FileText, CheckCircle2 } from "lucide-react";
 import rawCourses from "@/data/courses.json";
 import { CourseData } from "@/components/CourseCard";
+import CourseActions from "@/components/CourseActions";
 
 // Help next.js pre-render (SSG) these paths
 export async function generateStaticParams() {
@@ -28,7 +29,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
 
   return (
     <div className="min-h-screen py-12">
-      <div className="container mx-auto px-4 max-w-4xl">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="mb-8">
           <Link href="/courses" className="text-neutral-400 hover:text-white transition-colors flex items-center gap-1 inline-flex">
             <ChevronLeft size={20} /> Back to Search
@@ -50,9 +51,14 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
             )}
           </div>
           
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
-            {course.longName || course.name}
-          </h1>
+          <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+              {course.longName || course.name}
+            </h1>
+            <div className="shrink-0">
+              <CourseActions courseId={course.id} />
+            </div>
+          </div>
 
           <div className="flex flex-wrap gap-4 text-sm text-neutral-400 mb-8 pb-8 border-b border-white/10">
             {course.school?.name && (
