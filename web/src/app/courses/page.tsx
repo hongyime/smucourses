@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Fuse from "fuse.js";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
@@ -38,23 +38,29 @@ const fuse = new Fuse(coursesData, {
 });
 
 function CoursesSearchContent() {
+  const router = useRouter();
   const searchParams = useSearchParams();
-  const initialQuery = searchParams.get("q") || "";
-
+  
   const [filters, setFilters] = useState<FilterState>({
-    query: initialQuery,
-    school: "",
-    level: "",
-    area: "",
-    track: "",
+    query: searchParams.get("q") || "",
+    school: searchParams.get("school") || "",
+    level: searchParams.get("level") || "",
+    area: searchParams.get("area") || "",
+    track: searchParams.get("track") || "",
   });
 
-  // Update query if URL changes and we haven't synced
+  // Update URL when filters change
   useEffect(() => {
-    if (initialQuery && filters.query === "") {
-      setFilters((prev) => ({ ...prev, query: initialQuery }));
-    }
-  }, [initialQuery]);
+    const params = new URLSearchParams();
+    if (filters.query) params.set("q", filters.query);
+    if (filters.school) params.set("school", filters.school);
+    if (filters.level) params.set("level", filters.level);
+    if (filters.area) params.set("area", filters.area);
+    if (filters.track) params.set("track", filters.track);
+    
+    // Use replace to avoid filling up browser history with every keystroke
+    router.replace(`/courses?${params.toString()}`);
+  }, [filters, router]);
 
   const filteredCourses = useMemo(() => {
     let result = coursesData;

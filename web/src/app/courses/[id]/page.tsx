@@ -52,7 +52,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
           </div>
           
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-6">
-            <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+            <h1 className="text-3xl md:text-5xl font-bold text-black dark:text-white leading-tight">
               {course.longName || course.name}
             </h1>
             <div className="shrink-0">
@@ -60,30 +60,30 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 text-sm text-neutral-400 mb-8 pb-8 border-b border-white/10">
+          <div className="flex flex-wrap gap-4 text-sm text-neutral-600 dark:text-neutral-400 mb-8 pb-8 border-b border-black/10 dark:border-white/10">
             {course.school?.name && (
-              <div className="flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-lg border border-white/5">
-                <Building2 size={16} className="text-indigo-400" />
+              <div className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5">
+                <Building2 size={16} className="text-blue-600 dark:text-indigo-400" />
                 <span>{course.school.name}</span>
               </div>
             )}
             {course.level && (
-              <div className="flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-lg border border-white/5">
-                <GraduationCap size={16} className="text-blue-400" />
+              <div className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5">
+                <GraduationCap size={16} className="text-blue-500 dark:text-blue-400" />
                 <span>{course.level}</span>
               </div>
             )}
             {course.gradeMode && (
-              <div className="flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-lg border border-white/5">
-                <CheckCircle2 size={16} className="text-emerald-400" />
+              <div className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5">
+                <CheckCircle2 size={16} className="text-emerald-600 dark:text-emerald-400" />
                 <span>{course.gradeMode}</span>
               </div>
             )}
           </div>
 
           <div className="mb-10">
-            <h2 className="text-xl font-semibold mb-4 text-white">Course Description</h2>
-            <div className="prose prose-invert max-w-none text-neutral-300 leading-relaxed">
+            <h2 className="text-xl font-semibold mb-4 text-black dark:text-white">Course Description</h2>
+            <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-700 dark:text-neutral-300 leading-relaxed">
               {course.description ? (
                 <p>{course.description}</p>
               ) : (
@@ -95,11 +95,11 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             {course.areas && course.areas.length > 0 && (
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-white">Fulfills Areas</h3>
+                <h3 className="text-lg font-semibold mb-3 text-black dark:text-white">Fulfills Areas</h3>
                 <ul className="space-y-2">
                   {course.areas.map((area: string, i: number) => (
-                    <li key={i} className="flex items-start gap-2 text-neutral-300">
-                      <span className="text-indigo-400 mt-1">•</span>
+                    <li key={i} className="flex items-start gap-2 text-neutral-700 dark:text-neutral-300">
+                      <span className="text-blue-600 dark:text-indigo-400 mt-1">•</span>
                       {area}
                     </li>
                   ))}
@@ -109,48 +109,51 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
             
             {course.tracks && course.tracks.length > 0 && (
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-white">Fulfills Tracks</h3>
+                <h3 className="text-lg font-semibold mb-3 text-black dark:text-white">Fulfills Tracks</h3>
                 <ul className="space-y-2">
                   {course.tracks.map((track: string, i: number) => (
-                    <li key={i} className="flex items-start gap-2 text-neutral-300">
-                      <span className="text-emerald-400 mt-1">•</span>
+                    <li key={i} className="flex items-start gap-2 text-neutral-700 dark:text-neutral-300">
+                      <span className="text-emerald-600 dark:text-emerald-400 mt-1">•</span>
                       {track}
                     </li>
                   ))}
                 </ul>
               </div>
             )}
-          </div>
 
-          {course.syllabi && course.syllabi.length > 0 && (
-            <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
-              <h2 className="text-xl font-semibold mb-4 text-white flex items-center gap-2">
-                <FileText size={20} className="text-indigo-400" /> Historical Syllabi
-              </h2>
-              <div className="space-y-3">
-                {course.syllabi.map((syllabus: any, idx: number) => (
-                  <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-black/40 border border-white/5 hover:border-indigo-500/30 transition-colors">
-                    <div>
-                      <span className="font-medium text-white block sm:inline">{syllabus.term}</span>
-                      <span className="text-neutral-500 text-sm sm:ml-3 block sm:inline">Sections: {syllabus.sections.map((s: any) => s.section).join(', ')}</span>
-                    </div>
-                    {course.syllabi?.some((s: any) => s.sections?.some((sec: any) => sec.pdfUrl)) ? (
-                      <a 
-                        href={`/pdfs/${course.id}.pdf`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-3 sm:mt-0 text-sm bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] px-4 py-2 rounded-full transition-colors inline-flex items-center gap-2 font-semibold"
-                      >
-                        <FileText size={16} /> View PDF
-                      </a>
-                    ) : (
-                      <span className="mt-3 sm:mt-0 text-sm text-neutral-500 italic">No PDF Available</span>
-                    )}
-                  </div>
-                ))}
+            {course.syllabi && course.syllabi.length > 0 && (
+              <div className="md:col-span-2 mt-4 pt-8 border-t border-black/10 dark:border-white/10">
+                <h3 className="text-lg font-semibold mb-4 text-black dark:text-white flex items-center gap-2">
+                  Historical Syllabi
+                </h3>
+                <ul className="space-y-4">
+                  {course.syllabi.map((syllabus: any, idx: number) => (
+                    <li key={idx} className="flex items-start gap-2 text-neutral-700 dark:text-neutral-300">
+                      <span className="text-[var(--color-brand-primary)] mt-1">•</span>
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full gap-3">
+                        <div>
+                          <span className="font-medium text-black dark:text-white block sm:inline">{syllabus.term}</span>
+                          <span className="text-neutral-500 text-sm sm:ml-3 block sm:inline">Sections: {syllabus.sections.map((s: any) => s.section).join(', ')}</span>
+                        </div>
+                        {course.syllabi?.some((s: any) => s.sections?.some((sec: any) => sec.pdfUrl)) ? (
+                          <a 
+                            href={`/pdfs/${course.id}.pdf`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="self-start sm:self-auto text-sm bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] px-4 py-2 rounded-full transition-colors inline-flex items-center justify-center gap-2 font-semibold w-auto"
+                          >
+                            <FileText size={16} /> View PDF
+                          </a>
+                        ) : (
+                          <span className="text-sm text-neutral-500 italic">No PDF Available</span>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export default function RootLayout({
   children,
@@ -18,12 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased selection:bg-[var(--color-brand-primary)] selection:text-[#050a14]">
-        <Navbar />
-        <main>
-          {children}
-        </main>
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased selection:bg-[var(--color-brand-primary)] selection:text-white">
+        <ThemeProvider>
+          <Navbar />
+          <main>
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
