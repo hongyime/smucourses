@@ -29,7 +29,7 @@ export default function ComparePage() {
         {courses.length > 0 && (
           <button 
             onClick={clearCompare}
-            className="px-4 py-2 bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20 rounded-lg flex items-center gap-2 transition-all"
+            className="px-4 py-2 bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20 rounded-full flex items-center gap-2 transition-all"
           >
             <Trash2 size={18} />
             Clear Comparison
@@ -44,7 +44,7 @@ export default function ComparePage() {
           <p className="text-neutral-400 mb-8 max-w-md mx-auto">
             Go back to the course search and click the scale icon on any course card to add it to your comparison tool.
           </p>
-          <Link href="/courses" className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] font-semibold rounded-lg transition-colors">
+          <Link href="/courses" className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] font-semibold rounded-full transition-colors">
             Browse Courses
           </Link>
         </div>
