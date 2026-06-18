@@ -27,13 +27,13 @@ export default function RootLayout({
               </span>
             </Link>
             <div className="flex gap-4 md:gap-6 items-center flex-wrap">
-              <Link href="/courses" className="text-sm font-medium text-neutral-300 hover:text-white transition-colors">
+              <Link href="/courses" className="text-sm font-medium text-neutral-300 hover:text-[var(--color-brand-primary)] transition-colors">
                 Browse
               </Link>
               <Link href="/bookmarks" className="text-sm font-medium text-neutral-300 hover:text-[var(--color-brand-primary)] transition-colors">
                 Bookmarks
               </Link>
-              <Link href="/compare" className="text-sm font-medium text-indigo-300 hover:text-indigo-200 transition-colors px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20">
+              <Link href="/compare" className="text-sm font-medium text-neutral-300 hover:text-[var(--color-brand-primary)] transition-colors">
                 Compare
               </Link>
             </div>

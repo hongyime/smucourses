@@ -25,7 +25,7 @@ export default function Home() {
           </h1>
 
           <form onSubmit={handleSearch} className="relative max-w-[600px] mx-auto mb-16">
-            <div className="absolute top-1/2 -translate-y-1/2 left-5 text-neutral-500">
+            <div className="absolute top-1/2 -translate-y-1/2 left-5 text-neutral-500 z-10 pointer-events-none">
               <Search size={20} />
             </div>
             <input 

@@ -48,7 +48,7 @@ export default function SearchFilter({
     <div className="w-full mb-8">
       {/* Search Input */}
       <div className="relative mb-4">
-        <div className="absolute top-1/2 -translate-y-1/2 left-5 text-neutral-500">
+        <div className="absolute top-1/2 -translate-y-1/2 left-5 text-neutral-500 z-10 pointer-events-none">
           <Search size={20} />
         </div>
         <input
