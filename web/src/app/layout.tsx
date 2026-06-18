@@ -33,6 +33,9 @@ export default function RootLayout({
               <Link href="/bookmarks" className="text-sm font-medium text-neutral-300 hover:text-[var(--color-brand-primary)] transition-colors">
                 Bookmarks
               </Link>
+              <Link href="/compare" className="text-sm font-medium text-indigo-300 hover:text-indigo-200 transition-colors px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20">
+                Compare
+              </Link>
             </div>
           </div>
         </nav>
