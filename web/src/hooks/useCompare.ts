@@ -17,9 +17,12 @@ export function useCompare() {
   }, []);
 
   useEffect(() => {
-    loadIds();
+    const timer = setTimeout(() => loadIds(), 0);
     window.addEventListener('compareUpdated', loadIds);
-    return () => window.removeEventListener('compareUpdated', loadIds);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('compareUpdated', loadIds);
+    };
   }, [loadIds]);
 
   const toggleCompare = (courseId: string) => {

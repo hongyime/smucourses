@@ -7,15 +7,18 @@ export function useBookmarks() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem("smucourses_bookmarks");
-      if (stored) {
-        setBookmarks(JSON.parse(stored));
+    const timer = setTimeout(() => {
+      try {
+        const stored = localStorage.getItem("smucourses_bookmarks");
+        if (stored) {
+          setBookmarks(JSON.parse(stored));
+        }
+      } catch (e) {
+        console.error("Failed to load bookmarks", e);
       }
-    } catch (e) {
-      console.error("Failed to load bookmarks", e);
-    }
-    setIsLoaded(true);
+      setIsLoaded(true);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const toggleBookmark = (courseId: string) => {

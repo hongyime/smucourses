@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { BookOpen, GraduationCap, Building2, ChevronRight, Bookmark, Scale } from "lucide-react";
+import { GraduationCap, Building2, ChevronRight, Bookmark, Scale } from "lucide-react";
 import { useBookmarks } from "@/hooks/useBookmarks";
 import { useCompare } from "@/hooks/useCompare";
 
