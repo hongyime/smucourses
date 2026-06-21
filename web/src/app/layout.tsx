@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-display" });
 
 export const metadata: Metadata = {
   title: "SMU Courses | Enhanced Course Catalog",
@@ -19,9 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="antialiased selection:bg-[var(--color-brand-primary)] selection:text-white">
-        <ThemeProvider>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${outfit.variable} dark`}>
+      <body className="antialiased selection:bg-[var(--color-brand-primary)] selection:text-white font-sans bg-[#0a0a0a] text-[#f8fafc]">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} forcedTheme="dark">
           <Navbar />
           <main>
             {children}

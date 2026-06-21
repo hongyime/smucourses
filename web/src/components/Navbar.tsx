@@ -3,12 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
-import { Sun, Moon, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const { theme, setTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -18,12 +17,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 py-4 border-b border-black/10 dark:border-white/10 bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-xl">
+    <nav className="sticky top-0 z-50 py-4 border-b border-white/5 bg-[#0a0a0a]/70 backdrop-blur-xl">
       <div className="container mx-auto px-4 max-w-7xl flex flex-wrap justify-between items-center gap-y-4">
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icon.svg" alt="SMU Courses Logo" className="w-8 h-8 dark:invert-0 invert" />
-          <span className="font-display font-bold text-xl tracking-tight text-black dark:text-white">
+          <img src="/icon.svg" alt="SMU Courses Logo" className="w-8 h-8" />
+          <span className="font-display font-bold text-xl tracking-tight text-white">
             smu<span className="text-neutral-500 font-normal">courses</span>
           </span>
         </Link>
@@ -35,32 +34,19 @@ export default function Navbar() {
               key={link.name}
               href={link.href} 
               className={`text-sm font-medium transition-colors hover:text-[var(--color-brand-primary)] ${
-                pathname.startsWith(link.href) ? "text-[var(--color-brand-primary)]" : "text-neutral-600 dark:text-neutral-300"
+                pathname.startsWith(link.href) ? "text-[var(--color-brand-primary)]" : "text-neutral-400"
               }`}
             >
               {link.name}
             </Link>
           ))}
-          
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
-          >
-            {theme === "dark" ? <Sun size={18} className="text-yellow-400" /> : <Moon size={18} className="text-slate-700" />}
-          </button>
         </div>
 
         {/* Mobile Nav Toggle */}
         <div className="flex md:hidden items-center gap-4">
           <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
-          >
-            {theme === "dark" ? <Sun size={18} className="text-yellow-400" /> : <Moon size={18} className="text-slate-700" />}
-          </button>
-          <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-black dark:text-white"
+            className="p-2 text-white"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -69,20 +55,24 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a] px-4 py-4 space-y-4 shadow-lg absolute w-full left-0 animate-fade-in">
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl px-4 py-4 space-y-4 shadow-2xl absolute w-full left-0"
+        >
           {navLinks.map((link) => (
             <Link 
               key={link.name}
               href={link.href} 
               onClick={() => setMobileMenuOpen(false)}
               className={`block text-lg font-medium transition-colors hover:text-[var(--color-brand-primary)] ${
-                pathname.startsWith(link.href) ? "text-[var(--color-brand-primary)]" : "text-neutral-600 dark:text-neutral-300"
+                pathname.startsWith(link.href) ? "text-[var(--color-brand-primary)]" : "text-neutral-300"
               }`}
             >
               {link.name}
             </Link>
           ))}
-        </div>
+        </motion.div>
       )}
     </nav>
   );

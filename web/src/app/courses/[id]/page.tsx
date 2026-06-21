@@ -121,11 +121,12 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
               </div>
             )}
 
-            {course.syllabi && course.syllabi.length > 0 && (
-              <div className="md:col-span-2 mt-4 pt-8 border-t border-black/10 dark:border-white/10">
-                <h3 className="text-lg font-semibold mb-4 text-black dark:text-white flex items-center gap-2">
-                  Historical Syllabi
-                </h3>
+            <div className="md:col-span-2 mt-4 pt-8 border-t border-black/10 dark:border-white/10">
+              <h3 className="text-lg font-semibold mb-4 text-black dark:text-white flex items-center gap-2">
+                Historical Syllabi
+              </h3>
+              
+              {course.syllabi && course.syllabi.length > 0 ? (
                 <ul className="space-y-4">
                   {course.syllabi.map((syllabus: { term: string; sections: any[] }, idx: number) => {
                     const pdfUrl = syllabus.sections?.find((sec: { pdfUrl?: string }) => sec.pdfUrl)?.pdfUrl;
@@ -155,8 +156,15 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
                     );
                   })}
                 </ul>
-              </div>
-            )}
+              ) : (
+                <div className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg p-6 text-center">
+                  <FileText className="mx-auto h-8 w-8 text-neutral-400 mb-2 opacity-50" />
+                  <p className="text-neutral-600 dark:text-neutral-400">
+                    No historical syllabi available for this course yet.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
