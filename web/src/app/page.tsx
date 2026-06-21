@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Search, BookOpen, GraduationCap, Clock, Award } from "lucide-react";
-import Link from "next/link";
+
 import { useRouter } from "next/navigation";
 
 export default function Home() {

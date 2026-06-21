@@ -21,6 +21,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 py-4 border-b border-black/10 dark:border-white/10 bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-xl">
       <div className="container mx-auto px-4 max-w-7xl flex flex-wrap justify-between items-center gap-y-4">
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/icon.svg" alt="SMU Courses Logo" className="w-8 h-8 dark:invert-0 invert" />
           <span className="font-display font-bold text-xl tracking-tight text-black dark:text-white">
             smu<span className="text-neutral-500 font-normal">courses</span>

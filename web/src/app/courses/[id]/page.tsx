@@ -127,8 +127,8 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
                   Historical Syllabi
                 </h3>
                 <ul className="space-y-4">
-                  {course.syllabi.map((syllabus: any, idx: number) => {
-                    const pdfUrl = syllabus.sections?.find((sec: any) => sec.pdfUrl)?.pdfUrl;
+                  {course.syllabi.map((syllabus: { term: string; sections: any[] }, idx: number) => {
+                    const pdfUrl = syllabus.sections?.find((sec: { pdfUrl?: string }) => sec.pdfUrl)?.pdfUrl;
                     
                     return (
                       <li key={idx} className="flex items-start gap-2 text-neutral-700 dark:text-neutral-300">
@@ -136,7 +136,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full gap-3">
                           <div>
                             <span className="font-medium text-black dark:text-white block sm:inline">{syllabus.term}</span>
-                            <span className="text-neutral-500 text-sm sm:ml-3 block sm:inline">Sections: {syllabus.sections.map((s: any) => s.section).join(', ')}</span>
+                            <span className="text-neutral-500 text-sm sm:ml-3 block sm:inline">Sections: {syllabus.sections.map((s: { section: string }) => s.section).join(', ')}</span>
                           </div>
                           {pdfUrl ? (
                             <a 

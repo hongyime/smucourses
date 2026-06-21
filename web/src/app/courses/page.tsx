@@ -95,10 +95,10 @@ function CoursesSearchContent() {
   const itemsPerPage = 20;
   const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
   
-  // Reset page when filters change
-  useEffect(() => {
+  const handleFilterChange = (newFilters: FilterState) => {
+    setFilters(newFilters);
     setPage(1);
-  }, [filters]);
+  };
 
   const displayedCourses = filteredCourses.slice(0, page * itemsPerPage);
 
@@ -115,7 +115,7 @@ function CoursesSearchContent() {
 
         <SearchFilter
           filters={filters}
-          onFilterChange={setFilters}
+          onFilterChange={handleFilterChange}
           availableSchools={availableSchools}
           availableLevels={availableLevels}
           availableAreas={availableAreas}

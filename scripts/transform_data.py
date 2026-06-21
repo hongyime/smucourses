@@ -18,7 +18,7 @@ def parse_term(term_code):
 def main():
     repo_root = Path(__file__).parent.parent
     raw_dir = repo_root / "data" / "raw"
-    proc_dir = repo_root / "data" / "processed"
+    proc_dir = repo_root / "web" / "src" / "data"
     proc_dir.mkdir(parents=True, exist_ok=True)
 
     print("Loading raw data...")
@@ -192,6 +192,15 @@ def main():
                 elif rt == "corequisite":
                     co.append({"name": name})
 
+        course_level = custom.get("courseType")
+        if not course_level or course_level == "Unknown":
+            for a in attrs:
+                if a.startswith("Level : "):
+                    course_level = a[8:]
+                    break
+        if not course_level:
+            course_level = "Unknown"
+
         course_obj = {
             "id": latest.get("code"),
             "code": latest.get("code"),
@@ -200,7 +209,7 @@ def main():
             "longName": latest.get("longName"),
             "subjectCode": latest.get("subjectCode"),
             "courseNumber": latest.get("courseNumber"),
-            "level": custom.get("courseType", "Unknown"),
+            "level": course_level,
             "school": school,
             "description": latest.get("description", ""),
             "credits": credits_info,

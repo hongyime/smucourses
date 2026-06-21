@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import { ArrowLeft, Scale, Trash2, CheckCircle2, XCircle, Clock } from "lucide-react";
 import { useCompare } from "@/hooks/useCompare";
@@ -8,12 +8,8 @@ import coursesData from "@/data/courses.json";
 
 export default function ComparePage() {
   const { compareIds, clearCompare, toggleCompare } = useCompare();
-  const [courses, setCourses] = useState<any[]>([]);
-
-  useEffect(() => {
-    // Only filter courses that are in the compareIds list
-    const selected = coursesData.filter(c => compareIds.includes(c.id));
-    setCourses(selected);
+  const courses = useMemo(() => {
+    return coursesData.filter(c => compareIds.includes(c.id));
   }, [compareIds]);
 
   return (
@@ -92,7 +88,7 @@ export default function ComparePage() {
                 <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Prerequisites</h3>
                 {course.requisites?.prerequisites?.length > 0 ? (
                   <ul className="list-disc pl-4 space-y-1">
-                    {course.requisites.prerequisites.map((req: any, i: number) => (
+                    {course.requisites.prerequisites.map((req: { name: string }, i: number) => (
                       <li key={i} className="text-sm text-amber-200/80">{req.name}</li>
                     ))}
                   </ul>
