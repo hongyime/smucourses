@@ -157,7 +157,7 @@ def main():
                     syllabi_map[term].append({
                         "section": doc.get("section", "Unknown"),
                         "docId": doc_id,
-                        "pdfUrl": f"/pdfs/{doc_id}.pdf"
+                        "pdfUrl": f"https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/{doc_id}/pdf"
                     })
                     
         syllabi_list = []
