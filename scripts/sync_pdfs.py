@@ -11,7 +11,7 @@ PDF_MAGIC_BYTES = b"%PDF"                   # Standard PDF header
 
 # Paths
 ROOT_DIR = Path(__file__).resolve().parent.parent
-COURSES_JSON_PATH = ROOT_DIR / "data" / "processed" / "courses.json"
+COURSES_JSON_PATH = ROOT_DIR / "web" / "src" / "data" / "courses.json"
 PDF_DIR = ROOT_DIR / "web" / "public" / "pdfs"
 
 def download_and_validate_pdf(url: str, course_id: str) -> bytes:
