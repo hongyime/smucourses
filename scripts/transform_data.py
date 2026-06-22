@@ -151,10 +151,13 @@ def main():
                     offering_history.add(term)
                     if term not in syllabi_map:
                         syllabi_map[term] = []
+                    
+                    doc_id = doc.get("_id")
+                    
                     syllabi_map[term].append({
                         "section": doc.get("section", "Unknown"),
-                        "docId": doc.get("_id"),
-                        "pdfUrl": f"https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/{doc['_id']}/pdf"
+                        "docId": doc_id,
+                        "pdfUrl": f"/pdfs/{doc_id}.pdf"
                     })
                     
         syllabi_list = []
