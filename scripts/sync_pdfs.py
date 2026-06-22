@@ -11,97 +11,78 @@ PDF_MAGIC_BYTES = b"%PDF"                   # Standard PDF header
 
 # Paths
 ROOT_DIR = Path(__file__).resolve().parent.parent
-COURSES_JSON_PATH = ROOT_DIR / "web" / "src" / "data" / "courses.json"
+DOCUMENTS_JSON_PATH = ROOT_DIR / "data" / "raw" / "documents_raw.json"
 PDF_DIR = ROOT_DIR / "web" / "public" / "pdfs"
 
-def download_and_validate_pdf(url: str, course_id: str) -> bytes:
+def download_and_validate_pdf(url: str, doc_id: str) -> bytes:
     """
     Downloads a PDF securely, validating size and magic bytes.
-    Returns the file bytes if valid, or None if it fails security checks.
     """
     try:
-        # Pre-flight check: Headers
         with requests.get(url, stream=True, timeout=10) as r:
             r.raise_for_status()
             
-            # 1. Content-Length Header check
             content_length = r.headers.get("Content-Length")
             if content_length and int(content_length) > MAX_FILE_SIZE_BYTES:
-                print(f"⚠️ SKIPPED {course_id}: Header claims size > 5MB ({content_length} bytes)")
+                print(f"⚠️ SKIPPED {doc_id}: Size > 5MB ({content_length} bytes)")
                 return None
 
             downloaded_bytes = bytearray()
-            
-            # 2. Streaming check
             for chunk in r.iter_content(chunk_size=8192):
                 if chunk:
                     downloaded_bytes.extend(chunk)
                     if len(downloaded_bytes) > MAX_FILE_SIZE_BYTES:
-                        print(f"⚠️ ABORTED {course_id}: Stream exceeded 5MB limit! Possible zip bomb.")
+                        print(f"⚠️ ABORTED {doc_id}: Stream exceeded 5MB limit!")
                         return None
             
             file_data = bytes(downloaded_bytes)
-
-            # 3. Magic Bytes check
             if not file_data.startswith(PDF_MAGIC_BYTES):
-                print(f"⚠️ REJECTED {course_id}: File does not start with %PDF magic bytes.")
+                print(f"⚠️ REJECTED {doc_id}: File does not start with %PDF")
                 return None
 
             return file_data
 
     except Exception as e:
-        print(f"❌ ERROR downloading {course_id}: {str(e)}")
+        print(f"❌ ERROR downloading {doc_id}: {str(e)}")
         return None
 
 def main():
     print("🚀 Starting Secure PDF Sync Pipeline (Local Storage)")
     
-    if not COURSES_JSON_PATH.exists():
-        print(f"❌ ERROR: Cannot find courses.json at {COURSES_JSON_PATH}")
+    if not DOCUMENTS_JSON_PATH.exists():
+        print(f"❌ ERROR: Cannot find documents_raw.json at {DOCUMENTS_JSON_PATH}")
         return
 
-    # Create the target directory if it doesn't exist
     os.makedirs(PDF_DIR, exist_ok=True)
 
-    with open(COURSES_JSON_PATH, "r", encoding="utf-8") as f:
-        courses = json.load(f)
+    with open(DOCUMENTS_JSON_PATH, "r", encoding="utf-8") as f:
+        documents = json.load(f)
 
     total_bytes_processed = 0
     success_count = 0
     skip_count = 0
 
-    print(f"📦 Found {len(courses)} courses to process.")
+    print(f"📦 Found {len(documents)} document records to process.")
     
-    for course in courses:
-        course_id = course.get("id")
-        pdf_url = None
-        
-        # Extract the first available pdfUrl from any syllabus section
-        for syllabus in course.get("syllabi", []):
-            for section in syllabus.get("sections", []):
-                if section.get("pdfUrl"):
-                    pdf_url = section.get("pdfUrl")
-                    break
-            if pdf_url:
-                break
-
-        if not pdf_url:
+    for doc in documents:
+        doc_id = doc.get("_id")
+        if not doc_id:
             continue
-
-        target_path = PDF_DIR / f"{course_id}.pdf"
+            
+        pdf_url = f"https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/{doc_id}/pdf"
+        target_path = PDF_DIR / f"{doc_id}.pdf"
         
         # Skip if already downloaded
         if target_path.exists():
-            print(f"⏭️ SKIPPED {course_id}: Already exists locally.")
+            print(f"⏭️ SKIPPED {doc_id}: Already exists locally.")
+            skip_count += 1
             continue
 
-        print(f"Processing {course_id}...", end=" ", flush=True)
+        print(f"Processing {doc_id}...", end=" ", flush=True)
 
-        # Download securely
-        pdf_bytes = download_and_validate_pdf(pdf_url, course_id)
+        pdf_bytes = download_and_validate_pdf(pdf_url, doc_id)
         
         if pdf_bytes:
-            # Save to local file
             file_size = len(pdf_bytes)
             total_bytes_processed += file_size
             
@@ -115,7 +96,6 @@ def main():
         else:
             skip_count += 1
 
-        # Rate limit
         time.sleep(DELAY_BETWEEN_REQUESTS)
 
     print("\n🎉 Pipeline Complete!")
