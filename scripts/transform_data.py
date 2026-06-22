@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from datetime import datetime
 
 def parse_term(term_code):
     if not term_code or not isinstance(term_code, str) or len(term_code) != 4:
@@ -235,7 +236,7 @@ def main():
             "syllabi": syllabi_list,
             "offeringHistory": sorted(list(offering_history), reverse=True),
             "versions": versions_list,
-            "lastUpdated": "2026-06-17"
+            "lastUpdated": datetime.now().strftime("%Y-%m-%d")
         }
         final_courses.append(course_obj)
 
@@ -266,7 +267,7 @@ def main():
         "totalCourses": len(final_courses),
         "totalVersions": len(all_courses),
         "totalSyllabi": len(documents),
-        "lastUpdated": "2026-06-17",
+        "lastUpdated": datetime.now().strftime("%Y-%m-%d"),
         "schools": len(schools_list)
     }
 
