@@ -202,8 +202,9 @@ def main():
             elif a.startswith("RQCX - "): rqcx.append(a[7:])
             elif a.startswith("RQPR - "): rqpr.append(a[7:])
 
-        # Documents mapping
-        syllabi_map = {} # termCode -> sections[]
+        # Unified Schedules Mapping
+        course_schedules = schedules_map.get(latest.get("code"), []).copy()
+        
         offering_history = set()
         
         if raw_id and raw_id in docs_by_raw_id:
@@ -211,26 +212,32 @@ def main():
                 term = doc.get("startTerm")
                 if term:
                     offering_history.add(term)
-                    if term not in syllabi_map:
-                        syllabi_map[term] = []
-                    
                     doc_id = doc.get("_id")
+                    section = doc.get("section", "Unknown")
+                    pdf_url = f"https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/{doc_id}/pdf"
                     
-                    syllabi_map[term].append({
-                        "section": doc.get("section", "Unknown"),
-                        "docId": doc_id,
-                        "pdfUrl": f"https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/{doc_id}/pdf"
-                    })
-                    
-        syllabi_list = []
-        for term, sects in syllabi_map.items():
-            syllabi_list.append({
-                "term": parse_term(term),
-                "termCode": term,
-                "sections": sects
-            })
-        # Sort syllabi by term desc
-        syllabi_list.sort(key=lambda x: x["termCode"], reverse=True)
+                    matched = False
+                    for s in course_schedules:
+                        if s.get("termCode") == term and s.get("section") == section:
+                            s["pdfUrl"] = pdf_url
+                            matched = True
+                            break
+                            
+                    if not matched:
+                        course_schedules.append({
+                            "courseCode": latest.get("code"),
+                            "section": section,
+                            "classNbr": "",
+                            "time": "TBA",
+                            "location": "TBA",
+                            "professor": "TBA",
+                            "term": parse_term(term),
+                            "termCode": term,
+                            "pdfUrl": pdf_url
+                        })
+                        
+        # Sort unified schedules by termCode descending, then section
+        course_schedules.sort(key=lambda x: (x.get("termCode", ""), x.get("section", "")), reverse=True)
 
         # Versions info
         versions_list = []
@@ -298,10 +305,9 @@ def main():
             "competencies": custom.get("disciplineSpecificCompetencies", []),
             "graduateOutcomes": custom.get("graduateLearningOutcomes", []),
             "topics": latest.get("topics", []),
-            "syllabi": syllabi_list,
             "offeringHistory": sorted(list(offering_history), reverse=True),
             "versions": versions_list,
-            "schedules": schedules_map.get(latest.get("code"), []),
+            "schedules": course_schedules,
             "lastUpdated": datetime.now().strftime("%Y-%m-%d")
         }
         final_courses.append(course_obj)
