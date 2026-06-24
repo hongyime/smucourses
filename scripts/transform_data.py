@@ -16,6 +16,32 @@ def parse_term(term_code):
     else:
         return f"{year} Term {t}"
 
+def parse_school(school_name):
+    if not school_name:
+        return "Unknown", "Unknown"
+        
+    name = school_name.strip()
+    
+    # Prefix mapping
+    if name.startswith("LKCSB") or name == "Lee Kong Chian School of Business":
+        return "LKCSB", "Lee Kong Chian School of Business"
+    if name.startswith("YPHSL") or name == "Yong Pung How School of Law":
+        return "YPHSL", "Yong Pung How School of Law"
+    if name.startswith("CIS") or name.startswith("College of Integrative Studies"):
+        return "CIS", "College of Integrative Studies"
+    if name.startswith("SCIS") or name.startswith("School of Computing and Information Systems"):
+        return "SCIS", "School of Computing and Information Systems"
+    if name.startswith("SOE") or name.startswith("School of Economics"):
+        return "SOE", "School of Economics"
+    if name.startswith("SOA") or name.startswith("School of Accountancy"):
+        return "SOA", "School of Accountancy"
+    if name.startswith("SOSS") or name.startswith("School of Social Sciences"):
+        return "SOSS", "School of Social Sciences"
+    if name.startswith("CORE") or name == "Core Curriculum":
+        return "CORE", "Core Curriculum"
+        
+    return name, name
+
 def main():
     repo_root = Path(__file__).parent.parent
     raw_dir = repo_root / "data" / "raw"
@@ -29,6 +55,14 @@ def main():
         all_courses = json.load(f)
     with open(raw_dir / "documents_raw.json", "r", encoding="utf-8") as f:
         documents = json.load(f)
+        
+    schedules = []
+    try:
+        with open(raw_dir / "schedules_raw.json", "r", encoding="utf-8") as f:
+            schedules = json.load(f)
+        print(f"Loaded {len(schedules)} class schedules.")
+    except FileNotFoundError:
+        print("No schedules_raw.json found. Skipping schedules mapping.")
 
     print("Building id map and filtering ghosts...")
     id_map = {} # rawCourseId -> {"code": "...", "courseGroupId": "..."}
@@ -58,6 +92,15 @@ def main():
     with open(proc_dir / "id_map.json", "w", encoding="utf-8") as f:
         json.dump(id_map, f, ensure_ascii=False)
 
+    print("Building schedules map...")
+    schedules_map = {}
+    for s in schedules:
+        ccode = s.get("courseCode")
+        if ccode:
+            if ccode not in schedules_map:
+                schedules_map[ccode] = []
+            schedules_map[ccode].append(s)
+
     print("Transforming courses...")
     final_courses = []
     schools_map = {} # id -> name, count, subjectCodes
@@ -86,7 +129,10 @@ def main():
         school = {"id": "Unknown", "name": "Unknown"}
         if latest.get("departments") and len(latest["departments"]) > 0:
             dept = latest["departments"][0]
-            school = {"id": dept.get("id"), "name": dept.get("name")}
+            raw_name = dept.get("name", "Unknown")
+            
+            short_name, full_name = parse_school(raw_name)
+            school = {"id": short_name, "name": short_name} # Using short_name as both ID and Display Name per user request
             
             s_id = school["id"]
             if s_id not in schools_map:
@@ -239,6 +285,7 @@ def main():
             "syllabi": syllabi_list,
             "offeringHistory": sorted(list(offering_history), reverse=True),
             "versions": versions_list,
+            "schedules": schedules_map.get(latest.get("code"), []),
             "lastUpdated": datetime.now().strftime("%Y-%m-%d")
         }
         final_courses.append(course_obj)

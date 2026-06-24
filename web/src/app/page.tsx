@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Search, BookOpen, GraduationCap, Clock, Award } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { motion, Variants } from "framer-motion";
@@ -29,6 +29,39 @@ export default function Home() {
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
   };
 
+  const phrases = [
+    "Discover your perfect courses.",
+    "Master your curriculum.",
+    "Bid with confidence.",
+    "Explore historical syllabi.",
+    "Avoid 100% final exams."
+  ];
+
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+
+  useEffect(() => {
+    const currentPhrase = phrases[phraseIndex];
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting && text === currentPhrase) {
+      timeout = setTimeout(() => setIsDeleting(true), 2500);
+    } else if (isDeleting && text === "") {
+      setIsDeleting(false);
+      setPhraseIndex((prev) => (prev + 1) % phrases.length);
+    } else {
+      const nextText = isDeleting 
+        ? currentPhrase.substring(0, text.length - 1)
+        : currentPhrase.substring(0, text.length + 1);
+        
+      timeout = setTimeout(() => setText(nextText), isDeleting ? 30 : 70);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, phraseIndex]);
+
   return (
     <div className="py-16 overflow-hidden">
       <div className="container mx-auto px-4 text-center max-w-[800px]">
@@ -39,9 +72,10 @@ export default function Home() {
         >
           <motion.h1 
             variants={itemVariants}
-            className="font-display text-5xl md:text-7xl font-bold leading-tight mb-6 bg-gradient-to-r from-[var(--color-brand-primary)] via-amber-400 to-[var(--color-brand-primary)] bg-clip-text text-transparent animate-gradient"
+            className="font-display text-5xl md:text-7xl font-bold leading-tight mb-6 bg-gradient-to-r from-[var(--color-brand-primary)] via-amber-400 to-[var(--color-brand-primary)] bg-clip-text text-transparent animate-gradient min-h-[140px] md:min-h-[100px] flex items-center justify-center"
           >
-            Discover your perfect courses.
+            {text}
+            <span className="animate-pulse ml-1 inline-block w-[3px] h-[50px] md:h-[70px] bg-amber-400 -mb-2"></span>
           </motion.h1>
 
           <motion.form variants={itemVariants} onSubmit={handleSearch} className="relative max-w-[600px] mx-auto mb-20 group">

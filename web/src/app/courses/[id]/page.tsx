@@ -123,35 +123,77 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
 
             <div className="md:col-span-2 mt-4 pt-8 border-t border-black/10 dark:border-white/10">
               <h3 className="text-lg font-semibold mb-4 text-black dark:text-white flex items-center gap-2">
+                Live Class Schedules (Current/Next Term)
+              </h3>
+              
+              {course.schedules && course.schedules.length > 0 ? (
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm text-left text-neutral-700 dark:text-neutral-300">
+                    <thead className="text-xs uppercase bg-black/5 dark:bg-white/5 text-neutral-600 dark:text-neutral-400">
+                      <tr>
+                        <th className="px-4 py-3 rounded-tl-lg">Term</th>
+                        <th className="px-4 py-3">Section</th>
+                        <th className="px-4 py-3">Professor</th>
+                        <th className="px-4 py-3">Timing</th>
+                        <th className="px-4 py-3 rounded-tr-lg">Venue</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {course.schedules.map((schedule: any, idx: number) => (
+                        <tr key={idx} className="border-b border-black/5 dark:border-white/5 last:border-0 hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                          <td className="px-4 py-3 whitespace-nowrap">{schedule.term}</td>
+                          <td className="px-4 py-3 font-medium text-indigo-600 dark:text-indigo-400">{schedule.section}</td>
+                          <td className="px-4 py-3">{schedule.professor || "TBA"}</td>
+                          <td className="px-4 py-3">{schedule.time || "TBA"}</td>
+                          <td className="px-4 py-3">{schedule.location || "TBA"}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <div className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg p-6 text-center mb-8">
+                  <p className="text-neutral-600 dark:text-neutral-400">
+                    No active class schedules found for the current or upcoming term.
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div className="md:col-span-2 mt-4 pt-8 border-t border-black/10 dark:border-white/10">
+              <h3 className="text-lg font-semibold mb-4 text-black dark:text-white flex items-center gap-2">
                 Historical Syllabi
               </h3>
               
               {course.syllabi && course.syllabi.length > 0 ? (
-                <ul className="space-y-4">
+                <ul className="space-y-6">
                   {course.syllabi.map((syllabus: { term: string; sections: any[] }, idx: number) => {
-                    const pdfUrl = syllabus.sections?.find((sec: { pdfUrl?: string }) => sec.pdfUrl)?.pdfUrl;
-                    
                     return (
-                      <li key={idx} className="flex items-start gap-2 text-neutral-700 dark:text-neutral-300">
-                        <span className="text-[var(--color-brand-primary)] mt-1">•</span>
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full gap-3">
-                          <div>
-                            <span className="font-medium text-black dark:text-white block sm:inline">{syllabus.term}</span>
-                            <span className="text-neutral-500 text-sm sm:ml-3 block sm:inline">Sections: {syllabus.sections.map((s: { section: string }) => s.section).join(', ')}</span>
-                          </div>
-                          {pdfUrl ? (
-                            <a 
-                              href={pdfUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="self-start sm:self-auto text-sm bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] px-4 py-2 rounded-full transition-colors inline-flex items-center justify-center gap-2 font-semibold w-auto"
-                            >
-                              <FileText size={16} /> View PDF
-                            </a>
-                          ) : (
-                            <span className="text-sm text-neutral-500 italic">No PDF Available</span>
-                          )}
+                      <li key={idx} className="border border-black/5 dark:border-white/5 rounded-xl bg-black/[0.02] dark:bg-white/[0.02] overflow-hidden">
+                        <div className="bg-black/5 dark:bg-white/5 px-4 py-3 border-b border-black/5 dark:border-white/5 flex items-center gap-2">
+                          <span className="font-semibold text-black dark:text-white">{syllabus.term}</span>
                         </div>
+                        <ul className="divide-y divide-black/5 dark:divide-white/5">
+                          {syllabus.sections.map((sec: any, sIdx: number) => (
+                            <li key={sIdx} className="px-4 py-3 flex items-center justify-between hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition-colors">
+                              <span className="font-medium text-indigo-600 dark:text-indigo-400">Section {sec.section}</span>
+                              {sec.pdfUrl ? (
+                                <a 
+                                  href={sec.pdfUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-sm bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] px-4 py-1.5 rounded-full transition-colors inline-flex items-center gap-2 font-semibold"
+                                >
+                                  <FileText size={14} /> View Syllabus
+                                </a>
+                              ) : (
+                                <span className="text-sm text-neutral-500 italic bg-black/5 dark:bg-white/5 px-3 py-1 rounded-full">
+                                  No Syllabus Available
+                                </span>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
                       </li>
                     );
                   })}
