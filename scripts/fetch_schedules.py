@@ -68,7 +68,7 @@ async def intercept_route(route):
     else:
         await route.continue_()
 
-async def worker(worker_id, queue, browser, term_val, term_name, all_schedules):
+async def worker(worker_id, queue, browser, all_schedules):
     context = await browser.new_context()
     page = await context.new_page()
     await page.route("**/*", intercept_route)
@@ -95,8 +95,6 @@ async def worker(worker_id, queue, browser, term_val, term_name, all_schedules):
             await target_frame.locator("#SIS_CLS_SCHDWRK_ACAD_CAREER").select_option("UGRD")
             await page.wait_for_timeout(1000)
             
-            await target_frame.locator("#SIS_CLS_SCHDWRK_STRM").select_option(term_val)
-            await page.wait_for_timeout(1000)
             initialized = True
             break
         except Exception as e:
@@ -108,15 +106,26 @@ async def worker(worker_id, queue, browser, term_val, term_name, all_schedules):
         await context.close()
         return
 
+    current_term = None
+
     while not queue.empty():
-        subject = await queue.get()
-        logging.info(f"Worker {worker_id} picked up subject: {subject} (Remaining: {queue.qsize()})")
+        item = await queue.get()
+        term_val = item["term_val"]
+        term_name = item["term_name"]
+        subject = item["subject"]
+        
+        logging.info(f"Worker {worker_id} picked up: {term_val} - {subject} (Remaining: {queue.qsize()})")
         
         max_retries = 3
         success = False
         
         for attempt in range(max_retries):
             try:
+                if current_term != term_val:
+                    await target_frame.locator("#SIS_CLS_SCHDWRK_STRM").select_option(term_val)
+                    await page.wait_for_timeout(1000)
+                    current_term = term_val
+                
                 await target_frame.locator("#SIS_CLS_SCHDWRK_SUBJECT").select_option(subject)
                 await page.wait_for_timeout(500)
                 await target_frame.locator("#SIS_CLS_SCHDWRK_SEARCH_BTN").click()
@@ -126,7 +135,6 @@ async def worker(worker_id, queue, browser, term_val, term_name, all_schedules):
                     await target_frame.locator("table.PSLEVEL1GRID").wait_for(timeout=15000)
                 except:
                     # Sometimes there are no classes for a subject, and it pops a dialogue. We auto-accept dialogues.
-                    # Or it just takes too long. We wait 2 seconds just in case it was a dialogue
                     await page.wait_for_timeout(2000)
                     
                 html = await target_frame.content()
@@ -137,7 +145,7 @@ async def worker(worker_id, queue, browser, term_val, term_name, all_schedules):
                     s["termCode"] = term_val
                     all_schedules.append(s)
                     
-                logging.info(f"Worker {worker_id} successfully scraped {subject} -> {len(schedules)} classes.")
+                logging.info(f"Worker {worker_id} scraped {term_val} {subject} -> {len(schedules)} classes.")
                 
                 # Click the "Return to Search" button to reset the view
                 try:
@@ -146,6 +154,7 @@ async def worker(worker_id, queue, browser, term_val, term_name, all_schedules):
                 except:
                     # If button not found, maybe no results were found. Re-initialize just to be safe.
                     await target_frame.locator("#SIS_CLS_SCHDWRK_ACAD_CAREER").select_option("UGRD")
+                    current_term = None # Force term selection next time
                     
                 success = True
                 break
@@ -165,8 +174,7 @@ async def worker(worker_id, queue, browser, term_val, term_name, all_schedules):
                         target_frame = page.main_frame
                     await target_frame.locator("#SIS_CLS_SCHDWRK_ACAD_CAREER").select_option("UGRD")
                     await page.wait_for_timeout(1000)
-                    await target_frame.locator("#SIS_CLS_SCHDWRK_STRM").select_option(term_val)
-                    await page.wait_for_timeout(1000)
+                    current_term = None
                 except Exception as ex:
                     logging.error(f"Worker {worker_id} failed to recover: {ex}")
                     
@@ -184,8 +192,7 @@ async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         
-        # We need a master page just to get the Term and Subject List
-        logging.info("Initializing Master Page to fetch subjects...")
+        logging.info("Initializing Master Page to fetch terms and subjects...")
         context = await browser.new_context()
         page = await context.new_page()
         await page.route("**/*", intercept_route)
@@ -206,41 +213,41 @@ async def main():
         await page.wait_for_timeout(2000)
         
         options = await target_frame.locator("#SIS_CLS_SCHDWRK_STRM option").element_handles()
-        term_val = None
-        term_name = ""
+        terms_to_scrape = []
         for opt in options:
             text = (await opt.inner_text()).strip()
             val = await opt.get_attribute("value")
             if val and "Extension" not in text:
-                term_val = val
-                term_name = text
-                break
+                terms_to_scrape.append({"val": val, "name": text})
                 
-        if not term_val and len(options) > 1:
-            term_val = await options[1].get_attribute("value")
-            term_name = (await options[1].inner_text()).strip()
-            
-        logging.info(f"Selected Term: {term_name} ({term_val})")
-        await target_frame.locator("#SIS_CLS_SCHDWRK_STRM").select_option(term_val)
-        await page.wait_for_timeout(2000)
+        logging.info(f"Found {len(terms_to_scrape)} terms. Queueing subjects...")
         
-        subject_options = await target_frame.locator("#SIS_CLS_SCHDWRK_SUBJECT option").element_handles()
         queue = asyncio.Queue()
         count = 0
-        for opt in subject_options:
-            val = await opt.get_attribute("value")
-            if val and val.strip():
-                queue.put_nowait(val)
-                count += 1
-                
-        logging.info(f"Found {count} subjects to scrape. Closing Master Page...")
+        
+        for term in terms_to_scrape:
+            await target_frame.locator("#SIS_CLS_SCHDWRK_STRM").select_option(term["val"])
+            await page.wait_for_timeout(2000)
+            
+            subject_options = await target_frame.locator("#SIS_CLS_SCHDWRK_SUBJECT option").element_handles()
+            for opt in subject_options:
+                val = await opt.get_attribute("value")
+                if val and val.strip():
+                    queue.put_nowait({
+                        "term_val": term["val"],
+                        "term_name": term["name"],
+                        "subject": val
+                    })
+                    count += 1
+                    
+        logging.info(f"Queued {count} total subjects across {len(terms_to_scrape)} terms. Closing Master Page...")
         await context.close()
         
         # Spin up 5 workers
         num_workers = 5
         workers = []
         for i in range(num_workers):
-            workers.append(asyncio.create_task(worker(i+1, queue, browser, term_val, term_name, all_schedules)))
+            workers.append(asyncio.create_task(worker(i+1, queue, browser, all_schedules)))
             
         await queue.join() # Wait for all subjects to be processed
         
