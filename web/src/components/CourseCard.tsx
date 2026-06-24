@@ -95,42 +95,9 @@ export default function CourseCard({ course }: CourseCardProps) {
           )}
         </div>
 
-        <p className="text-sm text-neutral-400 mb-6 line-clamp-3 leading-relaxed flex-grow">
+        <p className="text-sm text-neutral-400 mb-2 line-clamp-3 leading-relaxed flex-grow">
           {truncatedDesc}
         </p>
-
-        {(course.areas?.length || course.tracks?.length) ? (
-          <div className="mt-auto pt-4 border-t border-white/10 space-y-2">
-            {course.areas && course.areas.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {course.areas.slice(0, 2).map((area, idx) => (
-                  <span key={idx} className="text-[10px] px-2 py-1 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20">
-                    {area}
-                  </span>
-                ))}
-                {course.areas.length > 2 && (
-                  <span className="text-[10px] px-2 py-1 rounded bg-white/5 text-neutral-400">
-                    +{course.areas.length - 2} more
-                  </span>
-                )}
-              </div>
-            )}
-            {course.tracks && course.tracks.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {course.tracks.slice(0, 1).map((track, idx) => (
-                  <span key={idx} className="text-[10px] px-2 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 truncate max-w-[200px]">
-                    {track}
-                  </span>
-                ))}
-                {course.tracks.length > 1 && (
-                  <span className="text-[10px] px-2 py-1 rounded bg-white/5 text-neutral-400">
-                    +{course.tracks.length - 1}
-                  </span>
-                )}
-              </div>
-            )}
-          </div>
-        ) : null}
       </div>
     </motion.div>
   );
