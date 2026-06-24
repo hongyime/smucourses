@@ -123,45 +123,6 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
 
             <div className="md:col-span-2 mt-4 pt-8 border-t border-black/10 dark:border-white/10">
               <h3 className="text-lg font-semibold mb-4 text-black dark:text-white flex items-center gap-2">
-                Live Class Schedules (Current/Next Term)
-              </h3>
-              
-              {course.schedules && course.schedules.length > 0 ? (
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm text-left text-neutral-700 dark:text-neutral-300">
-                    <thead className="text-xs uppercase bg-black/5 dark:bg-white/5 text-neutral-600 dark:text-neutral-400">
-                      <tr>
-                        <th className="px-4 py-3 rounded-tl-lg">Term</th>
-                        <th className="px-4 py-3">Section</th>
-                        <th className="px-4 py-3">Professor</th>
-                        <th className="px-4 py-3">Timing</th>
-                        <th className="px-4 py-3 rounded-tr-lg">Venue</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {course.schedules.map((schedule: any, idx: number) => (
-                        <tr key={idx} className="border-b border-black/5 dark:border-white/5 last:border-0 hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                          <td className="px-4 py-3 whitespace-nowrap">{schedule.term}</td>
-                          <td className="px-4 py-3 font-medium text-indigo-600 dark:text-indigo-400">{schedule.section}</td>
-                          <td className="px-4 py-3">{schedule.professor || "TBA"}</td>
-                          <td className="px-4 py-3">{schedule.time || "TBA"}</td>
-                          <td className="px-4 py-3">{schedule.location || "TBA"}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              ) : (
-                <div className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg p-6 text-center mb-8">
-                  <p className="text-neutral-600 dark:text-neutral-400">
-                    No active class schedules found for the current or upcoming term.
-                  </p>
-                </div>
-              )}
-            </div>
-
-            <div className="md:col-span-2 mt-4 pt-8 border-t border-black/10 dark:border-white/10">
-              <h3 className="text-lg font-semibold mb-4 text-black dark:text-white flex items-center gap-2">
                 Historical Syllabi
               </h3>
               
@@ -203,6 +164,45 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
                   <FileText className="mx-auto h-8 w-8 text-neutral-400 mb-2 opacity-50" />
                   <p className="text-neutral-600 dark:text-neutral-400">
                     No historical syllabi available for this course yet.
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div className="md:col-span-2 mt-4 pt-8 border-t border-black/10 dark:border-white/10">
+              <h3 className="text-lg font-semibold mb-4 text-black dark:text-white flex items-center gap-2">
+                Class Schedules
+              </h3>
+              
+              {course.schedules && course.schedules.length > 0 ? (
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm text-left text-neutral-700 dark:text-neutral-300">
+                    <thead className="text-xs uppercase bg-black/5 dark:bg-white/5 text-neutral-600 dark:text-neutral-400">
+                      <tr>
+                        <th className="px-4 py-3 rounded-tl-lg">Term</th>
+                        <th className="px-4 py-3">Section</th>
+                        <th className="px-4 py-3">Professor</th>
+                        <th className="px-4 py-3">Timing</th>
+                        <th className="px-4 py-3 rounded-tr-lg">Venue</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {course.schedules.map((schedule: any, idx: number) => (
+                        <tr key={idx} className="border-b border-black/5 dark:border-white/5 last:border-0 hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                          <td className="px-4 py-3 whitespace-nowrap">{schedule.term}</td>
+                          <td className="px-4 py-3 font-medium text-indigo-600 dark:text-indigo-400">{schedule.section}</td>
+                          <td className="px-4 py-3">{schedule.professor || "TBA"}</td>
+                          <td className="px-4 py-3">{schedule.time || "TBA"}</td>
+                          <td className="px-4 py-3">{schedule.location || "TBA"}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <div className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg p-6 text-center mb-8">
+                  <p className="text-neutral-600 dark:text-neutral-400">
+                    No active class schedules found for the current or upcoming term.
                   </p>
                 </div>
               )}
