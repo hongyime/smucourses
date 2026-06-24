@@ -5,7 +5,8 @@ from datetime import datetime
 def parse_term(term_code):
     if not term_code or not isinstance(term_code, str) or len(term_code) != 4:
         return "Unknown Term"
-    year = "20" + term_code[:2]
+    year_num = int(term_code[:2])
+    year = f"20{year_num}-{year_num+1}"
     t = term_code[2]
     if t == '1':
         return f"{year} Term 1"
@@ -95,6 +96,21 @@ def main():
     print("Building schedules map...")
     schedules_map = {}
     for s in schedules:
+        if s.get("professor"):
+            s["professor"] = s["professor"].title()
+            
+        if s.get("time"):
+            parts = []
+            for p in s["time"].split():
+                if p.isalpha() and p.isupper():
+                    parts.append(p.title())
+                else:
+                    parts.append(p)
+            s["time"] = " ".join(parts)
+            
+        if s.get("term") and " starting " in s["term"]:
+            s["term"] = s["term"].replace(" starting ", " (") + ")"
+
         ccode = s.get("courseCode")
         if ccode:
             if ccode not in schedules_map:
