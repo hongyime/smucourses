@@ -208,29 +208,51 @@ def main():
         offering_history = set()
         
         if raw_id and raw_id in docs_by_raw_id:
+            # Group documents by term to determine if a term has a single global syllabus or multiple custom ones
+            term_docs = {}
             for doc in docs_by_raw_id[raw_id]:
                 term = doc.get("startTerm")
                 if term:
-                    offering_history.add(term)
+                    if term not in term_docs:
+                        term_docs[term] = []
+                    term_docs[term].append(doc)
+            
+            for term, docs_list in term_docs.items():
+                offering_history.add(term)
+                
+                # If there's exactly 1 document for the whole term, assume it's a global syllabus for all sections
+                is_global_syllabus = len(docs_list) == 1
+                
+                for doc in docs_list:
                     doc_id = doc.get("_id")
                     section = doc.get("section", "Unknown")
                     pdf_url = f"https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/{doc_id}/pdf"
                     
                     matched = False
-                    for s in course_schedules:
-                        if s.get("termCode") == term and s.get("section") == section:
-                            s["pdfUrl"] = pdf_url
-                            matched = True
-                            break
-                            
+                    
+                    if is_global_syllabus:
+                        # Apply to ALL schedule rows in this term
+                        for s in course_schedules:
+                            if s.get("termCode") == term:
+                                s["pdfUrl"] = pdf_url
+                                matched = True
+                    else:
+                        # Strict matching by section
+                        for s in course_schedules:
+                            if s.get("termCode") == term and s.get("section") == section:
+                                s["pdfUrl"] = pdf_url
+                                matched = True
+                                break
+                                
+                    # If Peoplesoft didn't have this class schedule (e.g. it's from 5 years ago), create a synthetic row to hold the PDF
                     if not matched:
                         course_schedules.append({
                             "courseCode": latest.get("code"),
-                            "section": section,
+                            "section": section if not is_global_syllabus else "Any",
                             "classNbr": "",
-                            "time": "TBA",
-                            "location": "TBA",
-                            "professor": "TBA",
+                            "time": "Historical Data Unavailable",
+                            "location": "Historical Data Unavailable",
+                            "professor": "Historical Data Unavailable",
                             "term": parse_term(term),
                             "termCode": term,
                             "pdfUrl": pdf_url
