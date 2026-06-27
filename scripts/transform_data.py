@@ -356,11 +356,56 @@ def main():
             "description": desc
         })
 
+    # Build Professors Dictionary
+    professors_map = {}
+    import re
+    for c in final_courses:
+        for s in c.get("schedules", []):
+            prof = s.get("professor")
+            # Group unknown professors
+            if not prof or prof in ["TBA", "Historical Data Unavailable"]:
+                prof_clean = "Unknown Professor"
+                slug = "unknown-professor"
+            else:
+                prof_clean = prof.strip()
+                slug = re.sub(r'[^a-z0-9]+', '-', prof_clean.lower()).strip('-')
+            
+            if slug not in professors_map:
+                professors_map[slug] = {
+                    "id": slug,
+                    "name": prof_clean,
+                    "history": {}
+                }
+            
+            term = s.get("termCode")
+            term_str = s.get("term")
+            if not term or not term_str:
+                continue
+                
+            if term not in professors_map[slug]["history"]:
+                professors_map[slug]["history"][term] = {
+                    "termName": term_str,
+                    "courses": []
+                }
+            
+            # Add this course to their term history
+            course_summary = {
+                "courseCode": c.get("code"),
+                "courseName": c.get("name"),
+                "section": s.get("section")
+            }
+            
+            if course_summary not in professors_map[slug]["history"][term]["courses"]:
+                professors_map[slug]["history"][term]["courses"].append(course_summary)
+
+    professors_list = sorted(list(professors_map.values()), key=lambda x: x["name"])
+
     # Stats
     stats = {
         "totalCourses": len(final_courses),
         "totalVersions": len(all_courses),
         "totalSyllabi": len(documents),
+        "totalProfessors": len(professors_list),
         "lastUpdated": datetime.now().strftime("%Y-%m-%d"),
         "schools": len(schools_list)
     }
@@ -368,6 +413,8 @@ def main():
     print("Saving processed data...")
     with open(proc_dir / "courses.json", "w", encoding="utf-8") as f:
         json.dump(final_courses, f, ensure_ascii=False)
+    with open(proc_dir / "professors.json", "w", encoding="utf-8") as f:
+        json.dump(professors_list, f, ensure_ascii=False)
     with open(proc_dir / "search_index.json", "w", encoding="utf-8") as f:
         json.dump(search_index, f, ensure_ascii=False)
     with open(proc_dir / "schools.json", "w", encoding="utf-8") as f:

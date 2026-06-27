@@ -258,6 +258,24 @@ async def main():
         await browser.close()
         
     out_path = RAW_DIR / "schedules_raw.json"
+    
+    # Merge with existing schedules to prevent data loss
+    if out_path.exists():
+        try:
+            with open(out_path, "r", encoding="utf-8") as f:
+                existing_schedules = json.load(f)
+            
+            # Deduplicate using termCode, courseCode, and section
+            schedules_dict = {f"{s['termCode']}_{s['courseCode']}_{s['section']}": s for s in existing_schedules}
+            
+            # Update/append newly scraped schedules
+            for s in all_schedules:
+                schedules_dict[f"{s['termCode']}_{s['courseCode']}_{s['section']}"] = s
+                
+            all_schedules = list(schedules_dict.values())
+        except Exception as e:
+            logging.error(f"Error merging schedules: {e}")
+            
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(all_schedules, f, ensure_ascii=False, indent=2)
         

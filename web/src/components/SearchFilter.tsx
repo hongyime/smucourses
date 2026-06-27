@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export interface FilterState {
   query: string;
+  searchType: "courses" | "professors";
   school: string;
   level: string;
   area: string;
@@ -35,6 +36,7 @@ export default function SearchFilter({
   const clearFilters = () => {
     onFilterChange({
       query: "",
+      searchType: filters.searchType, // Preserve the toggle state
       school: "",
       level: "",
       area: "",
@@ -46,6 +48,32 @@ export default function SearchFilter({
 
   return (
     <div className="w-full mb-8">
+      {/* Search Type Toggle */}
+      <div className="flex justify-center mb-6">
+        <div className="bg-black/20 dark:bg-white/5 p-1 rounded-full inline-flex border border-black/10 dark:border-white/10">
+          <button
+            onClick={() => handleChange("searchType", "courses")}
+            className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
+              filters.searchType === "courses"
+                ? "bg-[var(--color-brand-primary)] text-black shadow-lg"
+                : "text-neutral-500 hover:text-neutral-300"
+            }`}
+          >
+            Courses
+          </button>
+          <button
+            onClick={() => handleChange("searchType", "professors")}
+            className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
+              filters.searchType === "professors"
+                ? "bg-[var(--color-brand-primary)] text-black shadow-lg"
+                : "text-neutral-500 hover:text-neutral-300"
+            }`}
+          >
+            Professors
+          </button>
+        </div>
+      </div>
+
       {/* Search Input */}
       <div className="relative mb-4 max-w-[600px] mx-auto">
         <div className="absolute top-1/2 -translate-y-1/2 left-5 text-neutral-500 z-10 pointer-events-none">
@@ -54,7 +82,7 @@ export default function SearchFilter({
         <input
           type="text"
           className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-black dark:text-white rounded-full h-16 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500 backdrop-blur-sm"
-          placeholder="Search by course code, name, or keywords..."
+          placeholder={filters.searchType === "courses" ? "Search by course code, name, or keywords..." : "Search by professor name..."}
           value={filters.query}
           onChange={(e) => handleChange("query", e.target.value)}
         />

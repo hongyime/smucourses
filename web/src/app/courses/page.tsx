@@ -8,8 +8,11 @@ import { ChevronLeft } from "lucide-react";
 import SearchFilter, { FilterState } from "@/components/SearchFilter";
 import CourseCard, { CourseData } from "@/components/CourseCard";
 import rawCourses from "@/data/courses.json";
+import rawProfessors from "@/data/professors.json";
+import ProfessorCard, { ProfessorData } from "@/components/ProfessorCard";
 
 const coursesData = rawCourses as CourseData[];
+const professorsData = rawProfessors as ProfessorData[];
 
 // Pre-compute options to avoid recomputing on every render
 const availableSchools = Array.from(new Set(coursesData.map((c) => c.school?.name).filter(Boolean))).sort();
@@ -24,8 +27,8 @@ coursesData.forEach((c) => {
 const availableAreas = Array.from(allAreas).sort();
 const availableTracks = Array.from(allTracks).sort();
 
-// Create Fuse instance outside component so it's not recreated
-const fuse = new Fuse(coursesData, {
+// Create Fuse instances outside component so they aren't recreated
+const courseFuse = new Fuse(coursesData, {
   keys: [
     { name: "code", weight: 3 },
     { name: "name", weight: 2 },
@@ -33,7 +36,16 @@ const fuse = new Fuse(coursesData, {
     { name: "subjectCode", weight: 1 },
     { name: "description", weight: 0.5 },
   ],
-  threshold: 0.3,
+  threshold: 0.4, // Increased threshold for more fuzzy/forgiving search
+  ignoreLocation: true,
+});
+
+const professorFuse = new Fuse(professorsData, {
+  keys: [
+    { name: "name", weight: 3 },
+    { name: "id", weight: 1 }
+  ],
+  threshold: 0.4,
   ignoreLocation: true,
 });
 
@@ -43,6 +55,7 @@ function CoursesSearchContent() {
   
   const [filters, setFilters] = useState<FilterState>({
     query: searchParams.get("q") || "",
+    searchType: (searchParams.get("type") as "courses" | "professors") || "courses",
     school: searchParams.get("school") || "",
     level: searchParams.get("level") || "",
     area: searchParams.get("area") || "",
@@ -53,6 +66,7 @@ function CoursesSearchContent() {
   useEffect(() => {
     const params = new URLSearchParams();
     if (filters.query) params.set("q", filters.query);
+    if (filters.searchType === "professors") params.set("type", "professors");
     if (filters.school) params.set("school", filters.school);
     if (filters.level) params.set("level", filters.level);
     if (filters.area) params.set("area", filters.area);
@@ -62,23 +76,23 @@ function CoursesSearchContent() {
     router.replace(`/courses?${params.toString()}`);
   }, [filters, router]);
 
+  // Compute filtered courses
   const filteredCourses = useMemo(() => {
+    if (filters.searchType !== "courses") return [];
+    
     let result = coursesData;
 
-    // Search
     if (filters.query.trim()) {
       const queryLower = filters.query.trim().toLowerCase();
-      // Check for exact course code match first
       const exactMatch = coursesData.find(c => c.code.toLowerCase() === queryLower);
       
       if (exactMatch) {
         result = [exactMatch];
       } else {
-        result = fuse.search(filters.query).map((res) => res.item);
+        result = courseFuse.search(filters.query).map((res) => res.item);
       }
     }
 
-    // Filter
     result = result.filter((course) => {
       if (filters.school && course.school?.name !== filters.school) return false;
       if (filters.level && course.level !== filters.level) return false;
@@ -90,17 +104,31 @@ function CoursesSearchContent() {
     return result;
   }, [filters]);
 
-  // Pagination for performance (rendering 5000 cards is bad)
+  // Compute filtered professors
+  const filteredProfessors = useMemo(() => {
+    if (filters.searchType !== "professors") return [];
+    
+    let result = professorsData;
+
+    if (filters.query.trim()) {
+      result = professorFuse.search(filters.query).map((res) => res.item);
+    }
+
+    return result;
+  }, [filters]);
+
   const [page, setPage] = useState(1);
   const itemsPerPage = 20;
-  const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
+  
+  const currentResults = filters.searchType === "courses" ? filteredCourses : filteredProfessors;
+  const totalPages = Math.ceil(currentResults.length / itemsPerPage);
   
   const handleFilterChange = (newFilters: FilterState) => {
     setFilters(newFilters);
     setPage(1);
   };
 
-  const displayedCourses = filteredCourses.slice(0, page * itemsPerPage);
+  const displayedResults = currentResults.slice(0, page * itemsPerPage);
 
   return (
     <div className="min-h-screen py-12">
@@ -111,8 +139,6 @@ function CoursesSearchContent() {
           </Link>
         </div>
         
-
-
         <SearchFilter
           filters={filters}
           onFilterChange={handleFilterChange}
@@ -124,16 +150,16 @@ function CoursesSearchContent() {
 
         <div className="mb-6 flex justify-between items-end">
           <h2 className="text-xl font-semibold">
-            {filteredCourses.length} {filteredCourses.length === 1 ? "Result" : "Results"}
+            {currentResults.length} {currentResults.length === 1 ? "Result" : "Results"}
           </h2>
         </div>
 
-        {filteredCourses.length === 0 ? (
+        {currentResults.length === 0 ? (
           <div className="glass-panel p-12 text-center">
-            <p className="text-xl text-neutral-400 mb-2">No courses found matching your criteria.</p>
+            <p className="text-xl text-neutral-400 mb-2">No {filters.searchType} found matching your criteria.</p>
             <button 
-              onClick={() => setFilters({ query: "", school: "", level: "", area: "", track: "" })}
-              className="text-indigo-400 hover:text-indigo-300 font-medium transition-colors"
+              onClick={() => setFilters({ query: "", searchType: filters.searchType, school: "", level: "", area: "", track: "" })}
+              className="text-[var(--color-brand-primary)] hover:opacity-80 font-medium transition-opacity"
             >
               Clear all filters
             </button>
@@ -141,9 +167,14 @@ function CoursesSearchContent() {
         ) : (
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {displayedCourses.map((course) => (
-                <CourseCard key={course.id} course={course} />
-              ))}
+              {filters.searchType === "courses" 
+                ? (displayedResults as CourseData[]).map((course) => (
+                    <CourseCard key={course.id} course={course} />
+                  ))
+                : (displayedResults as ProfessorData[]).map((prof) => (
+                    <ProfessorCard key={prof.id} professor={prof} />
+                  ))
+              }
             </div>
             
             {page < totalPages && (
