@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { FileText, Search, ArrowDownUp } from "lucide-react";
+import Link from "next/link";
 
 export default function CourseSchedules({ schedules }: { schedules: any[] }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -87,7 +88,18 @@ export default function CourseSchedules({ schedules }: { schedules: any[] }) {
                 <tr key={idx} className="border-b border-black/5 dark:border-white/5 last:border-0 hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">
                   <td className="px-4 py-3 whitespace-nowrap font-medium text-black dark:text-white">{schedule.term}</td>
                   <td className="px-4 py-3 font-semibold text-indigo-600 dark:text-indigo-400">{schedule.section}</td>
-                  <td className="px-4 py-3">{schedule.professor}</td>
+                  <td className="px-4 py-3">
+                    {schedule.professor && !["TBA", "Historical Data Unavailable", "Unknown Professor"].includes(schedule.professor.trim()) ? (
+                      <Link 
+                        href={`/professors/${schedule.professor.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
+                        className="text-[var(--color-brand-primary)] hover:underline font-medium"
+                      >
+                        {schedule.professor}
+                      </Link>
+                    ) : (
+                      <span className="text-neutral-500 italic">{schedule.professor || "Unknown"}</span>
+                    )}
+                  </td>
                   <td className="px-4 py-3 text-xs">{schedule.time}</td>
                   <td className="px-4 py-3 text-xs text-neutral-500">{schedule.location}</td>
                   <td className="px-4 py-3 text-right">

@@ -26,7 +26,6 @@ function Run-TransformAndPush {
         Write-Host "Changes detected! Committing to GitHub..."
         git add data/
         git add web/src/data/
-        git add web/public/pdfs/
         git commit -m "chore: automated course data and PDF sync"
         git push origin main
         Write-Host "✅ Successfully pushed to main! Vercel is building the new SSG site." -ForegroundColor Green

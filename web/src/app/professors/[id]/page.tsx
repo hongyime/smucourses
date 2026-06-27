@@ -96,9 +96,9 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
                           <span className="text-sm font-semibold text-[var(--color-brand-primary)] bg-[var(--color-brand-primary)]/10 px-2 py-0.5 rounded">
                             {course.courseCode}
                           </span>
-                          {course.section && (
+                          {course.sections && course.sections.length > 0 && (
                             <span className="text-xs text-neutral-500 font-mono">
-                              Sec: {course.section}
+                              Sec: {course.sections.join(', ')}
                             </span>
                           )}
                         </div>

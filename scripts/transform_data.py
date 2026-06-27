@@ -357,9 +357,15 @@ def main():
         })
 
     # Build Professors Dictionary
+    # Build Professors Dictionary
     professors_map = {}
     import re
     for c in final_courses:
+        course_school = c.get("school", {}).get("name")
+        course_level = c.get("level")
+        course_areas = c.get("areas", [])
+        course_tracks = c.get("tracks", [])
+        
         for s in c.get("schedules", []):
             prof = s.get("professor")
             # Group unknown professors
@@ -374,8 +380,18 @@ def main():
                 professors_map[slug] = {
                     "id": slug,
                     "name": prof_clean,
+                    "schools": set(),
+                    "levels": set(),
+                    "areas": set(),
+                    "tracks": set(),
                     "history": {}
                 }
+                
+            # Aggregate metadata for filters
+            if course_school: professors_map[slug]["schools"].add(course_school)
+            if course_level: professors_map[slug]["levels"].add(course_level)
+            for a in course_areas: professors_map[slug]["areas"].add(a)
+            for t in course_tracks: professors_map[slug]["tracks"].add(t)
             
             term = s.get("termCode")
             term_str = s.get("term")
@@ -385,20 +401,40 @@ def main():
             if term not in professors_map[slug]["history"]:
                 professors_map[slug]["history"][term] = {
                     "termName": term_str,
-                    "courses": []
+                    "courses": {}
                 }
             
-            # Add this course to their term history
-            course_summary = {
-                "courseCode": c.get("code"),
-                "courseName": c.get("name"),
-                "section": s.get("section")
-            }
+            # Add this course to their term history, grouping sections
+            course_code = c.get("code")
+            if course_code not in professors_map[slug]["history"][term]["courses"]:
+                professors_map[slug]["history"][term]["courses"][course_code] = {
+                    "courseCode": course_code,
+                    "courseName": c.get("name"),
+                    "sections": set()
+                }
             
-            if course_summary not in professors_map[slug]["history"][term]["courses"]:
-                professors_map[slug]["history"][term]["courses"].append(course_summary)
+            section = s.get("section")
+            if section:
+                professors_map[slug]["history"][term]["courses"][course_code]["sections"].add(section)
 
-    professors_list = sorted(list(professors_map.values()), key=lambda x: x["name"])
+    # Convert sets to lists and format the courses dict into a list
+    professors_list = []
+    for slug, prof_data in professors_map.items():
+        prof_data["schools"] = sorted(list(prof_data["schools"]))
+        prof_data["levels"] = sorted(list(prof_data["levels"]))
+        prof_data["areas"] = sorted(list(prof_data["areas"]))
+        prof_data["tracks"] = sorted(list(prof_data["tracks"]))
+        
+        for term, term_data in prof_data["history"].items():
+            courses_list = []
+            for course_code, course_info in term_data["courses"].items():
+                course_info["sections"] = sorted(list(course_info["sections"]))
+                courses_list.append(course_info)
+            term_data["courses"] = sorted(courses_list, key=lambda x: x["courseCode"])
+            
+        professors_list.append(prof_data)
+        
+    professors_list = sorted(professors_list, key=lambda x: x["name"])
 
     # Stats
     stats = {
