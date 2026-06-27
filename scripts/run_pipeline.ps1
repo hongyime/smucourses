@@ -4,16 +4,19 @@ Set-Location $RepoPath
 
 Write-Host "🚀 Starting Automated SMU Courses Data Sync"
 
-Write-Host "[1/4] Fetching latest API data..."
+Write-Host "[1/5] Fetching latest API data..."
 python scripts/fetch_courses.py
 
-Write-Host "[2/4] Fetching live class schedules via Playwright..."
+Write-Host "[2/5] Fetching live class schedules via Playwright..."
 python scripts/fetch_schedules.py
 
-Write-Host "[3/4] Transforming raw data into SSG format..."
+Write-Host "[3/5] Transforming raw data into SSG format..."
 python scripts/transform_data.py
 
-Write-Host "[4/4] Syncing latest PDF syllabi..."
+Write-Host "[4/5] Scraping latest Faculty Profile Photos..."
+python scripts/scrape_faculty.py
+
+Write-Host "[5/5] Syncing latest PDF syllabi..."
 python scripts/sync_pdfs.py
 
 Write-Host "Checking for changes..."

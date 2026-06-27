@@ -101,7 +101,29 @@ export default function CourseSchedules({ schedules }: { schedules: any[] }) {
                     )}
                   </td>
                   <td className="px-4 py-3 text-xs">{schedule.time}</td>
-                  <td className="px-4 py-3 text-xs text-neutral-500">{schedule.location}</td>
+                  <td className="px-4 py-3 text-xs">
+                    {(() => {
+                      if (!schedule.location) return <span className="text-neutral-500">-</span>;
+                      const loc = schedule.location.toLowerCase();
+                      const isTba = loc.includes('tba') || loc.includes('exam venue') || loc.includes('historical data');
+                      const isRoom = !isTba && (loc.includes('room') || loc.includes('cr') || loc.includes('sr') || /\d+-\d+/.test(loc));
+                      
+                      if (isRoom) {
+                        const slug = loc.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                        return (
+                          <a 
+                            href={`https://smuseats.hong-yi.me/room/${slug}`} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-[var(--color-brand-primary)] hover:underline flex items-center gap-1 font-medium"
+                          >
+                            {schedule.location}
+                          </a>
+                        );
+                      }
+                      return <span className="text-neutral-500">{schedule.location}</span>;
+                    })()}
+                  </td>
                   <td className="px-4 py-3 text-right">
                     {schedule.pdfUrl ? (
                       <a 
