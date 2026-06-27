@@ -66,7 +66,6 @@ function CoursesSearchContent() {
   useEffect(() => {
     const params = new URLSearchParams();
     if (filters.query) params.set("q", filters.query);
-    if (filters.searchType === "professors") params.set("type", "professors");
     if (filters.school) params.set("school", filters.school);
     if (filters.level) params.set("level", filters.level);
     if (filters.area) params.set("area", filters.area);
