@@ -2,9 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ChevronLeft, BookOpen, Calendar } from 'lucide-react';
+import { ChevronLeft, BookOpen, Calendar, User } from 'lucide-react';
 import { ProfessorData } from '@/components/ProfessorCard';
 import FloatingActions from '@/components/FloatingActions';
+import facultyPhotosData from '@/data/faculty_photos.json';
 
 // Pre-render all professor pages
 export async function generateStaticParams() {
@@ -30,6 +31,10 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
     notFound();
   }
 
+  // Safely get photo
+  const photos = facultyPhotosData as Record<string, string | null>;
+  const photoUrl = photos[professor.id];
+
   // Sort terms from newest to oldest
   const terms = Object.keys(professor.history).sort((a, b) => b.localeCompare(a));
   
@@ -53,10 +58,19 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
           <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-brand-primary)]/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
           
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-6">
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-white relative z-10">
-              {professor.name}
-            </h1>
-            <div className="relative z-10 shrink-0">
+            <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center relative z-10">
+              <div className="shrink-0 overflow-hidden rounded-full w-24 h-24 bg-white/5 border-2 border-white/10 flex items-center justify-center text-[var(--color-brand-primary)] shadow-xl">
+                {photoUrl ? (
+                  <img src={photoUrl} alt={professor.name} className="w-full h-full object-cover" />
+                ) : (
+                  <User size={40} className="opacity-50" />
+                )}
+              </div>
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-white">
+                {professor.name}
+              </h1>
+            </div>
+            <div className="relative z-10 shrink-0 mt-2 sm:mt-0">
               <FloatingActions id={professor.id} namespace="professors" />
             </div>
           </div>

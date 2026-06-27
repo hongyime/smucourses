@@ -8,7 +8,7 @@ function Show-Menu {
     Write-Host "    SMU COURSES - DATA PIPELINE MENU" -ForegroundColor Cyan
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host ""
-    Write-Host "  [1] Sync ALL Data (APIs + PeopleSoft + PDFs)"
+    Write-Host "  [1] Sync ALL Data (APIs + PeopleSoft + Photos + PDFs)"
     Write-Host "  [2] Sync Class Schedules Only (PeopleSoft)"
     Write-Host "  [3] Sync Historical Syllabi Only (Coursedog PDFs)"
     Write-Host "  [4] Transform Data & Build Only (No Scraping)"
@@ -40,11 +40,13 @@ $choice = Read-Host "Select an option (1-5)"
 switch ($choice) {
     "1" {
         Write-Host "`n🚀 Starting Full Data Sync..." -ForegroundColor Cyan
-        Write-Host "`n[1/4] Fetching latest API data..." -ForegroundColor Yellow
+        Write-Host "`n[1/5] Fetching latest API data..." -ForegroundColor Yellow
         python scripts/fetch_courses.py
-        Write-Host "`n[2/4] Fetching live class schedules via Playwright..." -ForegroundColor Yellow
+        Write-Host "`n[2/5] Fetching live class schedules via Playwright..." -ForegroundColor Yellow
         python scripts/fetch_schedules.py
-        Write-Host "`n[3/4] Syncing latest PDF syllabi..." -ForegroundColor Yellow
+        Write-Host "`n[3/5] Scraping latest Faculty Profile Photos..." -ForegroundColor Yellow
+        python scripts/scrape_faculty.py
+        Write-Host "`n[4/5] Syncing latest PDF syllabi..." -ForegroundColor Yellow
         python scripts/sync_pdfs.py
         Run-TransformAndPush
     }

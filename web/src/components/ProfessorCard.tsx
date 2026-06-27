@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { useBookmarks } from "@/hooks/useBookmarks";
 import { useCompare } from "@/hooks/useCompare";
 
+import facultyPhotosData from "@/data/faculty_photos.json";
+
 export interface ProfessorData {
   id: string;
   name: string;
@@ -22,11 +24,15 @@ interface ProfessorCardProps {
 
 export default function ProfessorCard({ professor }: ProfessorCardProps) {
   const router = useRouter();
-  const { isBookmarked, toggleBookmark } = useBookmarks();
-  const { compareIds, toggleCompare } = useCompare();
+  const { isBookmarked, toggleBookmark } = useBookmarks("professors");
+  const { compareIds, toggleCompare } = useCompare("professors");
   
   const bookmarked = isBookmarked(professor.id);
   const isComparing = compareIds.includes(professor.id);
+
+  // Safely get photo
+  const photos = facultyPhotosData as Record<string, string | null>;
+  const photoUrl = photos[professor.id];
 
   // Calculate total courses taught
   let totalCourses = 0;
@@ -51,8 +57,14 @@ export default function ProfessorCard({ professor }: ProfessorCardProps) {
         <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-primary)]/20 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-500"></div>
         
         <div className="flex justify-between items-start mb-4">
-          <div className="p-3 rounded-xl bg-white/5 text-[var(--color-brand-primary)] border border-white/10">
-            <User size={24} />
+          <div className="shrink-0 overflow-hidden rounded-full w-14 h-14 bg-white/5 border border-white/10 flex items-center justify-center text-[var(--color-brand-primary)]">
+            {photoUrl ? (
+              <img src={photoUrl} alt={professor.name} className="w-full h-full object-cover" />
+            ) : (
+              <span className="font-display font-bold text-lg">
+                {professor.name.split(' ').slice(0,2).map(n => n[0]).join('')}
+              </span>
+            )}
           </div>
           <div className="flex items-center gap-2 relative z-10">
             <button 

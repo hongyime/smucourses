@@ -27,8 +27,8 @@ interface CourseCardProps {
 
 export default function CourseCard({ course }: CourseCardProps) {
   const router = useRouter();
-  const { isBookmarked, toggleBookmark } = useBookmarks();
-  const { compareIds, toggleCompare } = useCompare();
+  const { isBookmarked, toggleBookmark } = useBookmarks("courses");
+  const { compareIds, toggleCompare } = useCompare("courses");
   const bookmarked = isBookmarked(course.id);
   const isComparing = compareIds.includes(course.id);
 
