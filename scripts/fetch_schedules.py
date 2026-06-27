@@ -265,12 +265,15 @@ async def main():
             with open(out_path, "r", encoding="utf-8") as f:
                 existing_schedules = json.load(f)
             
-            # Deduplicate using termCode, courseCode, and section
-            schedules_dict = {f"{s['termCode']}_{s['courseCode']}_{s['section']}": s for s in existing_schedules}
+            # Deduplicate using termCode, courseCode, section, and classNbr
+            def make_key(s):
+                return f"{s.get('termCode','')}_{s.get('courseCode','')}_{s.get('section','')}_{s.get('classNbr','')}"
+            
+            schedules_dict = {make_key(s): s for s in existing_schedules}
             
             # Update/append newly scraped schedules
             for s in all_schedules:
-                schedules_dict[f"{s['termCode']}_{s['courseCode']}_{s['section']}"] = s
+                schedules_dict[make_key(s)] = s
                 
             all_schedules = list(schedules_dict.values())
         except Exception as e:

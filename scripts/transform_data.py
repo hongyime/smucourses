@@ -269,6 +269,16 @@ def main():
                             "pdfUrl": pdf_url
                         })
                         
+        # Deduplicate per-course schedules (by termCode + section + classNbr)
+        deduped = []
+        seen_sched = set()
+        for s in course_schedules:
+            skey = (s.get("termCode", ""), s.get("section", ""), s.get("classNbr", ""))
+            if skey not in seen_sched:
+                seen_sched.add(skey)
+                deduped.append(s)
+        course_schedules = deduped
+        
         # Sort unified schedules by termCode descending, then section
         course_schedules.sort(key=lambda x: (x.get("termCode", ""), x.get("section", "")), reverse=True)
 

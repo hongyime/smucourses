@@ -87,7 +87,11 @@ export default function CourseSchedules({ schedules }: { schedules: any[] }) {
               {filteredAndSorted.map((schedule: any, idx: number) => (
                 <tr key={idx} className="border-b border-black/5 dark:border-white/5 last:border-0 hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">
                   <td className="px-4 py-3 whitespace-nowrap font-medium text-black dark:text-white">{schedule.term}</td>
-                  <td className="px-4 py-3 font-semibold text-indigo-600 dark:text-indigo-400">{schedule.section}</td>
+                  <td className="px-4 py-3 font-semibold text-indigo-600 dark:text-indigo-400">
+                    {schedule.section === 'Any' ? (
+                      <span className="text-neutral-500 italic font-normal">All</span>
+                    ) : schedule.section}
+                  </td>
                   <td className="px-4 py-3">
                     {schedule.professor && !["TBA", "Historical Data Unavailable", "Unknown Professor"].includes(schedule.professor.trim()) ? (
                       <Link 
@@ -100,7 +104,11 @@ export default function CourseSchedules({ schedules }: { schedules: any[] }) {
                       <span className="text-neutral-500 italic">{schedule.professor || "Unknown"}</span>
                     )}
                   </td>
-                  <td className="px-4 py-3 text-xs">{schedule.time}</td>
+                  <td className="px-4 py-3 text-xs">
+                    {schedule.time === 'Historical Data Unavailable' ? (
+                      <span className="text-neutral-500 italic">—</span>
+                    ) : schedule.time}
+                  </td>
                   <td className="px-4 py-3 text-xs">
                     {(() => {
                       if (!schedule.location) return <span className="text-neutral-500">-</span>;
