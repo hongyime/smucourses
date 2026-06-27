@@ -1,13 +1,19 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { User, BookOpen, ChevronRight } from "lucide-react";
+import { User, BookOpen, ChevronRight, Bookmark, Scale } from "lucide-react";
 import { motion } from "framer-motion";
+import { useBookmarks } from "@/hooks/useBookmarks";
+import { useCompare } from "@/hooks/useCompare";
 
 export interface ProfessorData {
   id: string;
   name: string;
-  history: Record<string, { termName: string; courses: { courseCode: string; courseName: string; section: string }[] }>;
+  schools?: string[];
+  levels?: string[];
+  areas?: string[];
+  tracks?: string[];
+  history: Record<string, { termName: string; courses: { courseCode: string; courseName: string; sections: string[] }[] }>;
 }
 
 interface ProfessorCardProps {
@@ -16,6 +22,11 @@ interface ProfessorCardProps {
 
 export default function ProfessorCard({ professor }: ProfessorCardProps) {
   const router = useRouter();
+  const { isBookmarked, toggleBookmark } = useBookmarks();
+  const { compareIds, toggleCompare } = useCompare();
+  
+  const bookmarked = isBookmarked(professor.id);
+  const isComparing = compareIds.includes(professor.id);
 
   // Calculate total courses taught
   let totalCourses = 0;
@@ -43,8 +54,24 @@ export default function ProfessorCard({ professor }: ProfessorCardProps) {
           <div className="p-3 rounded-xl bg-white/5 text-[var(--color-brand-primary)] border border-white/10">
             <User size={24} />
           </div>
-          <div className="text-neutral-500 group-hover:text-white transition-colors pointer-events-none">
-            <ChevronRight size={18} />
+          <div className="flex items-center gap-2 relative z-10">
+            <button 
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleCompare(professor.id); }}
+              className={`p-1.5 rounded-full transition-colors ${isComparing ? 'bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)]' : 'text-neutral-500 hover:text-white hover:bg-white/10'}`}
+              title={isComparing ? "Remove from Compare" : "Add to Compare"}
+            >
+              <Scale size={18} />
+            </button>
+            <button 
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleBookmark(professor.id); }}
+              className={`p-1.5 rounded-full transition-colors ${bookmarked ? 'bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)]' : 'text-neutral-500 hover:text-white hover:bg-white/10'}`}
+              title={bookmarked ? "Remove Bookmark" : "Add Bookmark"}
+            >
+              <Bookmark size={18} className={bookmarked ? "fill-[var(--color-brand-primary)]" : ""} />
+            </button>
+            <div className="text-neutral-500 group-hover:text-white transition-colors pointer-events-none">
+              <ChevronRight size={18} />
+            </div>
           </div>
         </div>
 
