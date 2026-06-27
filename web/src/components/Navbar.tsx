@@ -21,7 +21,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Browse", href: "/courses" },
+    { name: "Browse", href: "/browse" },
     { name: "Compare", href: "/compare" },
     { name: "Bookmarks", href: "/bookmarks" },
   ];

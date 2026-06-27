@@ -12,7 +12,7 @@ export default function Home() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      router.push(`/courses?q=${encodeURIComponent(searchQuery)}`);
+      router.push(`/browse?q=${encodeURIComponent(searchQuery)}`);
     }
   };
 
