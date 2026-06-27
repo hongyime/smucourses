@@ -9,7 +9,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-RAW_DIR = ROOT_DIR / "data" / "raw"
+RAW_DIR = ROOT_DIR / "data"
 URL = "https://publiceservices.smu.edu.sg/psc/ps/EMPLOYEE/SA/c/SIS_CR.SIS_CS_SS_CLS_SCHD.GBL"
 
 def parse_html_to_schedules(html):

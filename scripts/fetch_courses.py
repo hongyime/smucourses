@@ -164,7 +164,7 @@ def load_existing(file_path):
 
 def main():
     repo_root = Path(__file__).parent.parent
-    output_dir = repo_root / "data" / "raw"
+    output_dir = repo_root / "data"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # 1. Active Courses
