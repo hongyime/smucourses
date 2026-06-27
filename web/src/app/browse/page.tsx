@@ -104,7 +104,6 @@ function CoursesSearchContent() {
     return result;
   }, [filters]);
 
-  // Compute filtered professors
   const filteredProfessors = useMemo(() => {
     if (filters.searchType !== "professors") return [];
     
@@ -113,6 +112,14 @@ function CoursesSearchContent() {
     if (filters.query.trim()) {
       result = professorFuse.search(filters.query).map((res) => res.item);
     }
+
+    result = result.filter((prof) => {
+      if (filters.school && (!prof.schools || !prof.schools.includes(filters.school))) return false;
+      if (filters.level && (!prof.levels || !prof.levels.includes(filters.level))) return false;
+      if (filters.area && (!prof.areas || !prof.areas.includes(filters.area))) return false;
+      if (filters.track && (!prof.tracks || !prof.tracks.includes(filters.track))) return false;
+      return true;
+    });
 
     return result;
   }, [filters]);
