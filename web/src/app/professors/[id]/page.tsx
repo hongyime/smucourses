@@ -2,10 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ChevronLeft, BookOpen, Calendar, User } from 'lucide-react';
+import { ChevronLeft, BookOpen, Calendar, User, ExternalLink } from 'lucide-react';
 import { ProfessorData } from '@/components/ProfessorCard';
 import FloatingActions from '@/components/FloatingActions';
-import facultyPhotosData from '@/data/faculty_photos.json';
+import facultyPhotosData from '@/data/faculty_extra.json';
 
 // Pre-render all professor pages
 export async function generateStaticParams() {
@@ -31,9 +31,13 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
     notFound();
   }
 
-  // Safely get photo
-  const photos = facultyPhotosData as Record<string, string | null>;
-  const photoUrl = photos[professor.id];
+  // Safely get extra data
+  const extraData = facultyPhotosData as Record<string, { photoUrl?: string | null, title?: string | null, profileUrl?: string | null, researchAreas?: string[] } | null>;
+  const profExtra = extraData[professor.id] || {};
+  const photoUrl = profExtra.photoUrl;
+  const title = profExtra.title;
+  const profileUrl = profExtra.profileUrl;
+  const researchAreas = profExtra.researchAreas || [];
 
   // Sort terms from newest to oldest
   const terms = Object.keys(professor.history).sort((a, b) => b.localeCompare(a));
@@ -58,7 +62,7 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
           <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-brand-primary)]/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
           
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-6">
-            <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center relative z-10">
+            <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center relative z-10 w-full md:w-auto">
               <div className="shrink-0 overflow-hidden rounded-full w-24 h-24 bg-white/5 border-2 border-white/10 flex items-center justify-center text-[var(--color-brand-primary)] shadow-xl">
                 {photoUrl ? (
                   <img src={photoUrl} alt={professor.name} className="w-full h-full object-cover" />
@@ -66,16 +70,28 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
                   <User size={40} className="opacity-50" />
                 )}
               </div>
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-white">
-                {professor.name}
-              </h1>
+              <div className="flex-1">
+                <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-2">
+                  {professor.name}
+                </h1>
+                {title && (
+                  <p className="text-lg text-[var(--color-brand-primary)] font-medium mb-1">
+                    {title}
+                  </p>
+                )}
+                {profileUrl && (
+                  <a href={profileUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-neutral-400 hover:text-white transition-colors flex items-center gap-1">
+                    View SMU Profile <ExternalLink size={14} />
+                  </a>
+                )}
+              </div>
             </div>
-            <div className="relative z-10 shrink-0 mt-2 sm:mt-0">
+            <div className="relative z-10 shrink-0 mt-2 sm:mt-0 self-start">
               <FloatingActions id={professor.id} namespace="professors" />
             </div>
           </div>
           
-          <div className="flex flex-wrap gap-4 text-neutral-300 relative z-10">
+          <div className="flex flex-wrap gap-4 text-neutral-300 relative z-10 mb-6">
             <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
               <BookOpen size={18} className="text-[var(--color-brand-primary)]" />
               <span className="font-medium">{totalCourses} Classes Taught</span>
@@ -85,6 +101,19 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
               <span className="font-medium">{terms.length} Semesters Active</span>
             </div>
           </div>
+
+          {researchAreas.length > 0 && (
+            <div className="relative z-10">
+              <h3 className="text-sm text-neutral-500 font-semibold uppercase tracking-wider mb-3">Research Areas</h3>
+              <div className="flex flex-wrap gap-2">
+                {researchAreas.map((area, idx) => (
+                  <span key={idx} className="text-xs px-3 py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">
+                    {area}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Timeline Section */}
