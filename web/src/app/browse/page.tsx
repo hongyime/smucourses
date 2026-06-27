@@ -73,7 +73,7 @@ function CoursesSearchContent() {
     if (filters.track) params.set("track", filters.track);
     
     // Use replace to avoid filling up browser history with every keystroke
-    router.replace(`/courses?${params.toString()}`);
+    router.replace(`/browse?${params.toString()}`);
   }, [filters, router]);
 
   // Compute filtered courses

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronLeft, BookOpen, Calendar } from 'lucide-react';
 import { ProfessorData } from '@/components/ProfessorCard';
+import FloatingActions from '@/components/FloatingActions';
 
 // Pre-render all professor pages
 export async function generateStaticParams() {
@@ -42,7 +43,7 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="mb-8">
-          <Link href="/courses?type=professors" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
+          <Link href="/browse?type=professors" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
             <ChevronLeft size={20} /> Back to Directory
           </Link>
         </div>
@@ -51,9 +52,14 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
         <div className="glass-panel p-8 md:p-12 mb-10 border-white/10 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-brand-primary)]/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
           
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4 relative z-10">
-            {professor.name}
-          </h1>
+          <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-6">
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-white relative z-10">
+              {professor.name}
+            </h1>
+            <div className="relative z-10 shrink-0">
+              <FloatingActions id={professor.id} namespace="professors" />
+            </div>
+          </div>
           
           <div className="flex flex-wrap gap-4 text-neutral-300 relative z-10">
             <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ChevronLeft, Building2, GraduationCap, FileText, CheckCircle2 } from "lucide-react";
 import rawCourses from "@/data/courses.json";
 import { CourseData } from "@/components/CourseCard";
-import CourseActions from "@/components/CourseActions";
+import FloatingActions from "@/components/FloatingActions";
 import CourseSchedules from "@/components/CourseSchedules";
 
 // Help next.js pre-render (SSG) these paths
@@ -23,7 +23,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
     return (
       <div className="min-h-screen py-20 text-center">
         <h1 className="text-3xl font-bold mb-4">Course Not Found</h1>
-        <Link href="/courses" className="text-indigo-400 hover:underline">Return to Course Catalog</Link>
+        <Link href="/browse" className="text-indigo-400 hover:underline">Return to Course Catalog</Link>
       </div>
     );
   }
@@ -32,7 +32,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="mb-8">
-          <Link href="/courses" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
+          <Link href="/browse" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
             <ChevronLeft size={20} /> Back to Search
           </Link>
         </div>
@@ -57,7 +57,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
               {course.longName || course.name}
             </h1>
             <div className="shrink-0">
-              <CourseActions courseId={course.id} />
+              <FloatingActions id={course.id} namespace="courses" />
             </div>
           </div>
 

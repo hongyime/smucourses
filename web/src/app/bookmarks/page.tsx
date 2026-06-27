@@ -13,18 +13,21 @@ const coursesData = rawCourses as CourseData[];
 const professorsData = rawProfessors as ProfessorData[];
 
 export default function BookmarksPage() {
-  const { bookmarks, isLoaded } = useBookmarks();
+  const { bookmarks: courseBookmarks, isLoaded: coursesLoaded } = useBookmarks("courses");
+  const { bookmarks: profBookmarks, isLoaded: profsLoaded } = useBookmarks("professors");
   const [searchType, setSearchType] = useState<"courses" | "professors">("courses");
 
   const bookmarkedCourses = useMemo(() => {
-    if (!isLoaded) return [];
-    return coursesData.filter((c) => bookmarks.includes(c.id));
-  }, [bookmarks, isLoaded]);
+    if (!coursesLoaded) return [];
+    return coursesData.filter((c) => courseBookmarks.includes(c.id));
+  }, [courseBookmarks, coursesLoaded]);
 
   const bookmarkedProfessors = useMemo(() => {
-    if (!isLoaded) return [];
-    return professorsData.filter((p) => bookmarks.includes(p.id));
-  }, [bookmarks, isLoaded]);
+    if (!profsLoaded) return [];
+    return professorsData.filter((p) => profBookmarks.includes(p.id));
+  }, [profBookmarks, profsLoaded]);
+
+  const isLoaded = coursesLoaded && profsLoaded;
 
   if (!isLoaded) {
     return <div className="min-h-screen py-20 text-center text-neutral-400">Loading your bookmarks...</div>;
@@ -36,7 +39,7 @@ export default function BookmarksPage() {
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="mb-8">
-          <Link href="/courses" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
+          <Link href="/browse" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
             <ChevronLeft size={20} /> Back to Search
           </Link>
         </div>
@@ -77,7 +80,7 @@ export default function BookmarksPage() {
             <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-md mx-auto">
               Go back to the search and click the bookmark icon on any {searchType === "courses" ? "course" : "professor"} card to save it for later.
             </p>
-            <Link href={`/courses?type=${searchType}`} className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] font-semibold rounded-full transition-colors">
+            <Link href={`/browse?type=${searchType}`} className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] font-semibold rounded-full transition-colors">
               Browse {searchType === "courses" ? "Courses" : "Professors"}
             </Link>
           </div>

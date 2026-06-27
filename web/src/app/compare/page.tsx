@@ -11,24 +11,26 @@ import { ProfessorData } from "@/components/ProfessorCard";
 const professorsData = rawProfessors as ProfessorData[];
 
 export default function ComparePage() {
-  const { compareIds, clearCompare, toggleCompare } = useCompare();
+  const { compareIds: courseIds, clearCompare: clearCourses, toggleCompare: toggleCourse } = useCompare("courses");
+  const { compareIds: profIds, clearCompare: clearProfs, toggleCompare: toggleProf } = useCompare("professors");
   const [searchType, setSearchType] = useState<"courses" | "professors">("courses");
 
   const courses = useMemo(() => {
-    return coursesData.filter(c => compareIds.includes(c.id));
-  }, [compareIds]);
+    return coursesData.filter(c => courseIds.includes(c.id));
+  }, [courseIds]);
 
   const professors = useMemo(() => {
-    return professorsData.filter(p => compareIds.includes(p.id));
-  }, [compareIds]);
+    return professorsData.filter(p => profIds.includes(p.id));
+  }, [profIds]);
 
   const currentItems = searchType === "courses" ? courses : professors;
+  const handleClear = searchType === "courses" ? clearCourses : clearProfs;
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-7xl">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
         <div>
-          <Link href="/courses" className="inline-flex items-center text-white hover:text-[var(--color-brand-primary)] transition-colors">
+          <Link href="/browse" className="inline-flex items-center text-white hover:text-[var(--color-brand-primary)] transition-colors">
             <ArrowLeft size={16} className="mr-2" />
             Back to Search
           </Link>
@@ -36,7 +38,7 @@ export default function ComparePage() {
         
         {currentItems.length > 0 && (
           <button 
-            onClick={clearCompare}
+            onClick={handleClear}
             className="px-4 py-2 bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20 rounded-full flex items-center gap-2 transition-all"
           >
             <Trash2 size={18} />
@@ -82,7 +84,7 @@ export default function ComparePage() {
           <p className="text-neutral-400 mb-8 max-w-md mx-auto">
             Go back to the search and click the scale icon on any {searchType === "courses" ? "course" : "professor"} card to add it to your comparison tool.
           </p>
-          <Link href={`/courses?type=${searchType}`} className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] font-semibold rounded-full transition-colors">
+          <Link href={`/browse?type=${searchType}`} className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] font-semibold rounded-full transition-colors">
             Browse {searchType === "courses" ? "Courses" : "Professors"}
           </Link>
         </div>
@@ -91,7 +93,7 @@ export default function ComparePage() {
           {courses.map(course => (
             <div key={course.id} className="glass-panel flex flex-col relative group">
               <button 
-                onClick={() => toggleCompare(course.id)}
+                onClick={() => toggleCourse(course.id)}
                 className="absolute top-4 right-4 p-2 bg-black/40 hover:bg-red-500/20 text-neutral-400 hover:text-red-400 rounded-full transition-colors opacity-100 md:opacity-0 group-hover:opacity-100 z-10"
                 title="Remove from comparison"
               >
@@ -164,7 +166,7 @@ export default function ComparePage() {
             return (
               <div key={prof.id} className="glass-panel flex flex-col relative group">
                 <button 
-                  onClick={() => toggleCompare(prof.id)}
+                  onClick={() => toggleProf(prof.id)}
                   className="absolute top-4 right-4 p-2 bg-black/40 hover:bg-red-500/20 text-neutral-400 hover:text-red-400 rounded-full transition-colors opacity-100 md:opacity-0 group-hover:opacity-100 z-10"
                   title="Remove from comparison"
                 >
@@ -203,9 +205,9 @@ export default function ComparePage() {
                 </div>
 
                 <div className="p-6 bg-white/[0.02] rounded-b-2xl flex-grow">
-                  <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Recent Semesters</h3>
+                  <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">All Semesters</h3>
                   <ul className="space-y-3">
-                    {terms.slice(0, 3).map((termKey) => (
+                    {terms.map((termKey) => (
                       <li key={termKey} className="text-sm">
                         <div className="font-semibold text-white mb-1">{prof.history[termKey].termName}</div>
                         <div className="text-neutral-400 text-xs">
@@ -213,11 +215,6 @@ export default function ComparePage() {
                         </div>
                       </li>
                     ))}
-                    {terms.length > 3 && (
-                      <li className="text-xs text-[var(--color-brand-primary)] pt-2 italic">
-                        +{terms.length - 3} older semesters...
-                      </li>
-                    )}
                   </ul>
                 </div>
               </div>
