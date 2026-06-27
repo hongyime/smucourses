@@ -1,6 +1,6 @@
 # Product Requirements Document: smucourses
 
-**Status:** Draft / Ready for Implementation  
+**Status:** Live / Completed  
 **Author:** Product Manager  
 **Date:** October 2023  
 **Target Launch:** Upcoming SMU Bidding Cycle
@@ -120,9 +120,9 @@ _______________________________________________________
 ---
 
 ## 10. Definition of Done
-1.  [ ] Data pipeline successfully generates `courses.json` with all 2,950+ records.
-2.  [ ] Search and Filter functions return accurate results based on AREA/TRCK.
-3.  [ ] All course detail pages are accessible and show correct weightages.
-4.  [ ] Syllabus PDFs are downloadable/viewable via R2.
-5.  [ ] Site is deployed on Vercel and passes mobile responsiveness tests.
-6.  [ ] Side-by-side comparison modal functions without breaking the layout.
+1.  [x] Data pipeline successfully generates `courses.json` with all 2,950+ records.
+2.  [x] Search and Filter functions return accurate results based on AREA/TRCK.
+3.  [x] All course detail pages are accessible and show correct weightages.
+4.  [x] Syllabus PDFs are downloadable/viewable via R2.
+5.  [x] Site is deployed on Vercel and passes mobile responsiveness tests.
+6.  [x] Side-by-side comparison modal functions without breaking the layout.

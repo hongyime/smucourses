@@ -45,7 +45,7 @@ def parse_school(school_name):
 
 def main():
     repo_root = Path(__file__).parent.parent
-    raw_dir = repo_root / "data" / "raw"
+    raw_dir = repo_root / "data"
     proc_dir = repo_root / "web" / "src" / "data"
     proc_dir.mkdir(parents=True, exist_ok=True)
 
