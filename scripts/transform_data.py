@@ -61,7 +61,18 @@ def main():
     try:
         with open(raw_dir / "schedules_raw.json", "r", encoding="utf-8") as f:
             schedules = json.load(f)
-        print(f"Loaded {len(schedules)} class schedules.")
+            
+        # Deduplicate identical schedule rows
+        unique_schedules = []
+        seen = set()
+        for s in schedules:
+            s_tuple = tuple(sorted((k, str(v)) for k, v in s.items()))
+            if s_tuple not in seen:
+                seen.add(s_tuple)
+                unique_schedules.append(s)
+        schedules = unique_schedules
+        
+        print(f"Loaded {len(schedules)} unique class schedules.")
     except FileNotFoundError:
         print("No schedules_raw.json found. Skipping schedules mapping.")
 

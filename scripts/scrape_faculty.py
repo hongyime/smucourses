@@ -48,18 +48,59 @@ def scrape_prof(prof_id, name):
         title_div = prof_soup.find("div", class_="designation")
         title = title_div.text.strip() if title_div else None
         
-        areas_div = prof_soup.find("div", class_="research-areas-div")
-        research_areas = []
-        if areas_div:
-            for li in areas_div.find_all("li"):
-                if li.contents and isinstance(li.contents[0], str) and li.contents[0].strip():
-                    research_areas.append(li.contents[0].strip())
+        # Helper function for lists
+        def get_list_after_header(soup_obj, header_text):
+            for tag in soup_obj.find_all(['p', 'h3', 'h4', 'h2']):
+                if header_text.lower() in tag.text.lower():
+                    ul = tag.find_next_sibling('ul')
+                    if ul:
+                        return [li.text.strip() for li in ul.find_all('li')]
+            return []
+            
+        research_areas = get_list_after_header(prof_soup, 'research interests')
+        if not research_areas:
+            areas_div = prof_soup.find("div", class_="research-areas-div")
+            if areas_div:
+                research_areas = [li.contents[0].strip() for li in areas_div.find_all("li") if li.contents and isinstance(li.contents[0], str) and li.contents[0].strip()]
+        
+        qualifications = get_list_after_header(prof_soup, 'qualifications')
+        courses_taught = get_list_after_header(prof_soup, 'course(s) taught')
+        
+        # Email
+        import re
+        email_text = prof_soup.get_text()
+        emails = set(re.findall(r'[a-zA-Z0-9_.+-]+@smu\.edu\.sg', email_text))
+        emails.discard('enquiry@smu.edu.sg')
+        email = list(emails)[0].replace("Email", "") if emails else None
+        
+        # Phone
+        phone_tag = prof_soup.find('a', href=lambda href: href and href.startswith('tel:'))
+        phone = phone_tag.text.strip() if phone_tag else None
+        
+        # CV
+        cv_link = prof_soup.find('a', string=lambda t: t and 'Curriculum Vitae' in t)
+        cv_url = cv_link['href'] if cv_link else None
+        
+        # Scholar
+        scholar = prof_soup.find('a', href=lambda href: href and 'scholar.google' in href)
+        scholar_url = scholar['href'] if scholar else None
+        
+        # Scopus
+        scopus = prof_soup.find('a', href=lambda href: href and 'scopus.com' in href)
+        scopus_url = scopus['href'] if scopus else None
                     
         return prof_id, {
             "photoUrl": img_url,
             "title": title,
             "profileUrl": profile_url,
-            "researchAreas": research_areas
+            "researchAreas": research_areas,
+            "qualifications": qualifications,
+            "coursesTaught": courses_taught,
+            "email": email,
+            "phone": phone,
+            "cvUrl": cv_url,
+            "scholarUrl": scholar_url,
+            "scopusUrl": scopus_url
         }
         
     except Exception as e:
