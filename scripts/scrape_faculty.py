@@ -1,6 +1,5 @@
 import json
 import os
-import time
 import requests
 from bs4 import BeautifulSoup
 import urllib.parse
@@ -46,33 +45,47 @@ def scrape_prof(prof_id, name):
                     img_url = src
                 break
                 
-        return prof_id, img_url
+        title_div = prof_soup.find("div", class_="designation")
+        title = title_div.text.strip() if title_div else None
+        
+        areas_div = prof_soup.find("div", class_="research-areas-div")
+        research_areas = []
+        if areas_div:
+            for li in areas_div.find_all("li"):
+                if li.contents and isinstance(li.contents[0], str) and li.contents[0].strip():
+                    research_areas.append(li.contents[0].strip())
+                    
+        return prof_id, {
+            "photoUrl": img_url,
+            "title": title,
+            "profileUrl": profile_url,
+            "researchAreas": research_areas
+        }
         
     except Exception as e:
         return prof_id, None
 
 def main():
     professors_file = os.path.join("web", "src", "data", "professors.json")
-    out_file = os.path.join("web", "src", "data", "faculty_photos.json")
+    out_file = os.path.join("web", "src", "data", "faculty_extra.json")
     
     with open(professors_file, "r") as f:
         professors = json.load(f)
         
-    photos_data = {}
+    extra_data = {}
     if os.path.exists(out_file):
         with open(out_file, "r") as f:
-            photos_data = json.load(f)
+            extra_data = json.load(f)
             
-    # Re-scrape ones that are None
     to_scrape = []
     for prof in professors:
         name = prof.get("name")
         prof_id = prof.get("id")
         if name in ["TBA", "Unknown Professor", "Historical Data Unavailable"] or not name:
-            photos_data[prof_id] = None
+            extra_data[prof_id] = None
             continue
             
-        if prof_id not in photos_data or not photos_data[prof_id]:
+        if prof_id not in extra_data or not extra_data[prof_id]:
             to_scrape.append((prof_id, name))
             
     print(f"Scraping {len(to_scrape)} profiles using 10 threads...")
@@ -83,16 +96,16 @@ def main():
             futures.append(executor.submit(scrape_prof, prof_id, name))
             
         for i, future in enumerate(futures):
-            prof_id, img_url = future.result()
-            photos_data[prof_id] = img_url
-            if img_url:
-                print(f"Found photo for {prof_id}: {img_url}")
-            if i % 10 == 0:
+            prof_id, data = future.result()
+            extra_data[prof_id] = data
+            if data:
+                print(f"Scraped data for {prof_id}")
+            if i > 0 and i % 10 == 0:
                 with open(out_file, "w") as f:
-                    json.dump(photos_data, f, indent=2)
+                    json.dump(extra_data, f, indent=2)
                     
     with open(out_file, "w") as f:
-        json.dump(photos_data, f, indent=2)
+        json.dump(extra_data, f, indent=2)
         
     print(f"Finished scraping!")
 

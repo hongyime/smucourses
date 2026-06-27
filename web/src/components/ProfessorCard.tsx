@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useBookmarks } from "@/hooks/useBookmarks";
 import { useCompare } from "@/hooks/useCompare";
 
-import facultyPhotosData from "@/data/faculty_photos.json";
+import facultyExtraData from "@/data/faculty_extra.json";
 
 export interface ProfessorData {
   id: string;
@@ -31,8 +31,8 @@ export default function ProfessorCard({ professor }: ProfessorCardProps) {
   const isComparing = compareIds.includes(professor.id);
 
   // Safely get photo
-  const photos = facultyPhotosData as Record<string, string | null>;
-  const photoUrl = photos[professor.id];
+  const extraData = facultyExtraData as Record<string, { photoUrl?: string | null, title?: string | null, profileUrl?: string | null } | null>;
+  const photoUrl = extraData[professor.id]?.photoUrl;
 
   // Calculate total courses taught
   let totalCourses = 0;
