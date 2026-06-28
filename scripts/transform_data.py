@@ -154,13 +154,25 @@ def main():
         
         # School info
         school = {"id": "Unknown", "name": "Unknown"}
+        short_name = "Unknown"
         if latest.get("departments") and len(latest["departments"]) > 0:
             dept = latest["departments"][0]
             raw_name = dept.get("name", "Unknown")
-            
             short_name, full_name = parse_school(raw_name)
-            school = {"id": short_name, "name": short_name} # Using short_name as both ID and Display Name per user request
             
+        if short_name == "Unknown" and latest.get("subjectCode"):
+            subj = latest["subjectCode"]
+            if subj in ["PSYC", "SOCG", "PHIL", "POSC", "PLE"]: short_name = "SOSS"
+            elif subj in ["OBHR", "MGMT", "OPIM", "HLCR", "MKTG", "FNCE", "STRA", "COMM"]: short_name = "LKCSB"
+            elif subj in ["STAT", "ECON"]: short_name = "SOE"
+            elif subj in ["IS", "CS", "COR", "DSA", "DSAI"]: short_name = "SCIS"
+            elif subj in ["LAW"]: short_name = "YPHSL"
+            elif subj in ["ACCT"]: short_name = "SOA"
+            elif subj in ["CIS"]: short_name = "CIS"
+            elif subj in ["CORE"]: short_name = "CORE"
+            
+        if short_name != "Unknown":
+            school = {"id": short_name, "name": short_name} # Using short_name as both ID and Display Name per user request
             s_id = school["id"]
             if s_id not in schools_map:
                 schools_map[s_id] = {"id": s_id, "name": school["name"], "courseCount": 0, "subjectCodes": set()}
