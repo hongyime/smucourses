@@ -1,6 +1,13 @@
 import json
+import re
 from pathlib import Path
 from datetime import datetime
+
+def normalize_code(code):
+    """Strip dots, spaces, and other separators from course codes. ACCT.414 -> ACCT414"""
+    if not code:
+        return code
+    return code.replace('.', '').replace(' ', '')
 
 def parse_term(term_code):
     if not term_code or not isinstance(term_code, str) or len(term_code) != 4:
@@ -105,6 +112,9 @@ def main():
         json.dump(id_map, f, ensure_ascii=False)
 
     print("Building schedules map...")
+    # Build term date lookup from PeopleSoft schedules (which have start dates)
+    # e.g. {"2510": "(18-Aug-25)", "2520": "(12-Jan-26)"}
+    term_date_lookup = {}
     schedules_map = {}
     for s in schedules:
         if s.get("professor"):
@@ -122,11 +132,25 @@ def main():
         if s.get("term") and " starting " in s["term"]:
             s["term"] = s["term"].replace(" starting ", " (") + ")"
 
-        ccode = s.get("courseCode")
+        # Extract term date from schedule rows that have it
+        # Key by year+term (e.g. "25_1") so 2510 and 2515 both resolve
+        term_text = s.get("term", "")
+        term_code = s.get("termCode", "")
+        date_match = re.search(r'\(([^)]+)\)', term_text)
+        if date_match and term_code and len(term_code) == 4:
+            lookup_key = f"{term_code[:2]}_{term_code[2]}"
+            if lookup_key not in term_date_lookup:
+                term_date_lookup[lookup_key] = date_match.group(1)
+
+        # Normalize course codes in schedules
+        ccode = normalize_code(s.get("courseCode"))
         if ccode:
+            s["courseCode"] = ccode
             if ccode not in schedules_map:
                 schedules_map[ccode] = []
             schedules_map[ccode].append(s)
+    
+    print(f"  Term date lookup: {term_date_lookup}")
 
     print("Transforming courses...")
     final_courses = []
@@ -225,8 +249,9 @@ def main():
             elif a.startswith("RQCX - "): rqcx.append(a[7:])
             elif a.startswith("RQPR - "): rqpr.append(a[7:])
 
-        # Unified Schedules Mapping
-        course_schedules = schedules_map.get(latest.get("code"), []).copy()
+        # Unified Schedules Mapping - use normalized code for lookup
+        norm_code = normalize_code(latest.get("code"))
+        course_schedules = schedules_map.get(norm_code, []).copy()
         
         offering_history = set()
         
@@ -268,15 +293,21 @@ def main():
                                 break
                                 
                     # If Peoplesoft didn't have this class schedule (e.g. it's from 5 years ago), create a synthetic row to hold the PDF
+                    # Use term_date_lookup to infer the start date if available
                     if not matched:
+                        term_label = parse_term(term)
+                        if term and len(term) == 4:
+                            lookup_key = f"{term[:2]}_{term[2]}"
+                            if lookup_key in term_date_lookup:
+                                term_label = f"{term_label} ({term_date_lookup[lookup_key]})"
                         course_schedules.append({
-                            "courseCode": latest.get("code"),
+                            "courseCode": norm_code,
                             "section": section if not is_global_syllabus else "Any",
                             "classNbr": "",
                             "time": "Historical Data Unavailable",
                             "location": "Historical Data Unavailable",
                             "professor": "Historical Data Unavailable",
-                            "term": parse_term(term),
+                            "term": term_label,
                             "termCode": term,
                             "pdfUrl": pdf_url
                         })
@@ -330,8 +361,8 @@ def main():
             course_level = "Unknown"
 
         course_obj = {
-            "id": latest.get("code"),
-            "code": latest.get("code"),
+            "id": norm_code,
+            "code": norm_code,
             "courseGroupId": cg_id,
             "name": latest.get("name"),
             "longName": latest.get("longName"),
@@ -392,7 +423,6 @@ def main():
     # Build Professors Dictionary
     # Build Professors Dictionary
     professors_map = {}
-    import re
     for c in final_courses:
         course_school = c.get("school", {}).get("name")
         course_level = c.get("level")
@@ -438,7 +468,7 @@ def main():
                 }
             
             # Add this course to their term history, grouping sections
-            course_code = c.get("code")
+            course_code = normalize_code(c.get("code"))
             if course_code not in professors_map[slug]["history"][term]["courses"]:
                 professors_map[slug]["history"][term]["courses"][course_code] = {
                     "courseCode": course_code,
