@@ -283,10 +283,7 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
               </div>
               )}
 
-            </div>
-          </div>
         </div>
-        
       </div>
     </div>
   );
