@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ChevronLeft, BookOpen, Calendar, User, ExternalLink, Mail, Phone, FileText, Globe, Building2 } from 'lucide-react';
+import { ChevronLeft, BookOpen, Calendar, User, ExternalLink, Mail, Phone, FileText, Globe, Building2, GraduationCap } from 'lucide-react';
 import { ProfessorData } from '@/components/ProfessorCard';
 import FloatingActions from '@/components/FloatingActions';
 import facultyPhotosData from '@/data/faculty_extra.json';
@@ -118,14 +118,17 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
               {/* Pills */}
               <div className="flex flex-wrap gap-3 mb-6">
                 {professor.schools?.map((school, idx) => (
-                  <div key={`school-${idx}`} className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded-lg text-sm font-medium">
-                    <Building2 size={16} />
+                  <div key={`school-${idx}`} className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5 text-sm text-neutral-600 dark:text-neutral-400">
+                    <Building2 size={16} className="text-blue-600 dark:text-indigo-400" />
                     <span>{school}</span>
                   </div>
                 ))}
-                <span className="flex items-center px-3 py-1.5 bg-white/5 text-neutral-300 border border-white/10 rounded-lg text-sm font-medium">
-                  Full-time Faculty
-                </span>
+                {professor.levels?.map((level, idx) => (
+                  <div key={`level-${idx}`} className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5 text-sm text-neutral-600 dark:text-neutral-400">
+                    <GraduationCap size={16} className="text-blue-500 dark:text-blue-400" />
+                    <span>{level}</span>
+                  </div>
+                ))}
               </div>
 
               <div className="border-t border-white/10 my-6"></div>
@@ -141,7 +144,7 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
                 {phone && (
                   <div className="flex items-center gap-3 text-sm text-neutral-300">
                     <Phone size={16} className="text-neutral-500 shrink-0" />
-                    <span>{phone}</span>
+                    <a href={`tel:${phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{phone}</a>
                   </div>
                 )}
               </div>
