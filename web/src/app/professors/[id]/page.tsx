@@ -77,11 +77,10 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
   return (
     <div className="min-h-screen py-12 relative overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
-        <div className="mb-8 flex justify-between items-center">
-          <Link href="/browse?type=professors" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
+        <div className="mb-8">
+          <Link href="/browse" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
             <ChevronLeft size={20} /> Back to Directory
           </Link>
-          <FloatingActions id={professor.id} namespace="professors" />
         </div>
         
         <div className="glass-panel p-8 md:p-12 animate-fade-in relative overflow-hidden border-white/10">
@@ -94,18 +93,23 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
             <div className="w-full lg:w-[320px] shrink-0 space-y-6 lg:sticky lg:top-24">
               
               {/* Photo */}
-              <div className="w-full aspect-[4/3] sm:aspect-[3/4] rounded-xl overflow-hidden mb-6 bg-white/5 border border-white/10 flex items-center justify-center shadow-lg">
+              <div className="w-32 h-32 rounded-full overflow-hidden bg-white/5 border-2 border-white/10 flex items-center justify-center shadow-lg mx-auto lg:mx-0">
                 {photoUrl ? (
                   <img src={photoUrl} alt={professor.name} className="w-full h-full object-cover" />
                 ) : (
-                  <User size={80} className="text-white/20" />
+                  <User size={48} className="text-white/20" />
                 )}
               </div>
               
-              {/* Name & Title */}
-              <h1 className="text-3xl md:text-4xl font-display font-bold text-white mb-2 leading-tight">
-                {professor.name}
-              </h1>
+              {/* Name & Actions */}
+              <div className="flex items-start justify-between gap-4">
+                <h1 className="text-3xl md:text-4xl font-display font-bold text-white mb-2 leading-tight">
+                  {professor.name}
+                </h1>
+                <div className="shrink-0 pt-1">
+                  <FloatingActions id={professor.id} namespace="professors" />
+                </div>
+              </div>
               {title && (
                 <div className="mb-6 space-y-1">
                   {title.split(';').map((t, idx) => (
