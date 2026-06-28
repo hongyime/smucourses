@@ -4,6 +4,7 @@ import rawCourses from "@/data/courses.json";
 import { CourseData } from "@/components/CourseCard";
 import FloatingActions from "@/components/FloatingActions";
 import CourseSchedules from "@/components/CourseSchedules";
+import BackButton from "@/components/BackButton";
 
 // Help next.js pre-render (SSG) these paths
 export async function generateStaticParams() {
@@ -32,9 +33,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="mb-8">
-          <Link href="/browse" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
-            <ChevronLeft size={20} /> Back to Search
-          </Link>
+          <BackButton />
         </div>
 
         <div className="glass-panel p-8 md:p-12 animate-fade-in relative overflow-hidden">
@@ -53,7 +52,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
           </div>
           
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-6">
-            <h1 className="text-3xl md:text-5xl font-bold text-black dark:text-white leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold text-black dark:text-white leading-tight">
               {course.longName || course.name}
             </h1>
             <div className="shrink-0">
@@ -83,7 +82,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
           </div>
 
           <div className="mb-10">
-            <h2 className="text-xl font-semibold mb-4 text-black dark:text-white">Course Description</h2>
+            <h2 className="text-xl font-bold mb-4 text-black dark:text-white">Course Description</h2>
             <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-700 dark:text-neutral-300 leading-relaxed">
               {course.description ? (
                 <p>{course.description}</p>
@@ -96,7 +95,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             {course.areas && course.areas.length > 0 && (
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-black dark:text-white">Fulfills Areas</h3>
+                <h3 className="text-lg font-bold mb-3 text-black dark:text-white">Fulfills Areas</h3>
                 <ul className="space-y-2">
                   {course.areas.map((area: string, i: number) => (
                     <li key={i} className="flex items-start gap-2 text-neutral-700 dark:text-neutral-300">
@@ -110,7 +109,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
             
             {course.tracks && course.tracks.length > 0 && (
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-black dark:text-white">Fulfills Tracks</h3>
+                <h3 className="text-lg font-bold mb-3 text-black dark:text-white">Fulfills Tracks</h3>
                 <ul className="space-y-2">
                   {course.tracks.map((track: string, i: number) => (
                     <li key={i} className="flex items-start gap-2 text-neutral-700 dark:text-neutral-300">

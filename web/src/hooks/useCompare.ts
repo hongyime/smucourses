@@ -28,21 +28,26 @@ export function useCompare(namespace: "courses" | "professors" = "courses") {
   }, [loadIds, eventName]);
 
   const toggleCompare = (id: string) => {
-    setCompareIds(prev => {
-      let newIds;
-      if (prev.includes(id)) {
-        newIds = prev.filter(i => i !== id);
-      } else {
-        if (prev.length >= 3) {
-          alert(`You can only compare up to 3 ${namespace} at a time.`);
-          return prev;
-        }
-        newIds = [...prev, id];
+    const saved = localStorage.getItem(storageKey);
+    let current: string[] = [];
+    if (saved) {
+      try { current = JSON.parse(saved); } catch(e){}
+    }
+
+    let newIds;
+    if (current.includes(id)) {
+      newIds = current.filter(i => i !== id);
+    } else {
+      if (current.length >= 3) {
+        alert(`You can only compare up to 3 ${namespace} at a time.`);
+        return;
       }
-      localStorage.setItem(storageKey, JSON.stringify(newIds));
-      window.dispatchEvent(new Event(eventName));
-      return newIds;
-    });
+      newIds = [...current, id];
+    }
+    
+    localStorage.setItem(storageKey, JSON.stringify(newIds));
+    setCompareIds(newIds);
+    window.dispatchEvent(new Event(eventName));
   };
 
   const clearCompare = () => {
