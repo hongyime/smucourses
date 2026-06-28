@@ -8,6 +8,7 @@ export interface FilterState {
   level: string;
   area: string;
   track: string;
+  gradeMode: string;
 }
 
 interface SearchFilterProps {
@@ -17,6 +18,7 @@ interface SearchFilterProps {
   availableLevels: string[];
   availableAreas: string[];
   availableTracks: string[];
+  availableGradeModes: string[];
 }
 
 export default function SearchFilter({
@@ -41,10 +43,11 @@ export default function SearchFilter({
       level: "",
       area: "",
       track: "",
+      gradeMode: "",
     });
   };
 
-  const activeFilterCount = [filters.school, filters.level, filters.area, filters.track].filter(Boolean).length;
+  const activeFilterCount = [filters.school, filters.level, filters.area, filters.track, filters.gradeMode].filter(Boolean).length;
 
   return (
     <div className="w-full mb-8">
@@ -125,7 +128,7 @@ export default function SearchFilter({
             )}
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {/* School */}
             <div>
               <label className="block text-sm text-neutral-400 mb-1.5 ml-1">School</label>
@@ -182,6 +185,21 @@ export default function SearchFilter({
                 <option value="">All Tracks</option>
                 {availableTracks.map((t) => (
                   <option key={t} value={t}>{t}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Grade Mode */}
+            <div>
+              <label className="block text-sm text-neutral-400 mb-1.5 ml-1">Grade Mode</label>
+              <select
+                value={filters.gradeMode}
+                onChange={(e) => handleChange("gradeMode", e.target.value)}
+                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
+              >
+                <option value="">All Grade Modes</option>
+                {availableGradeModes.map((g) => (
+                  <option key={g} value={g}>{g}</option>
                 ))}
               </select>
             </div>
