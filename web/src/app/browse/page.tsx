@@ -26,7 +26,7 @@ coursesData.forEach((c) => {
 });
 const availableAreas = Array.from(allAreas).sort();
 const availableTracks = Array.from(allTracks).sort();
-const availableGradeModes = Array.from(new Set(coursesData.map((c) => c.gradeMode).filter(Boolean))).sort();
+const availableGradeModes = Array.from(new Set(coursesData.map((c) => c.gradeMode).filter((g): g is string => Boolean(g)))).sort();
 
 // Create Fuse instances outside component so they aren't recreated
 const courseFuse = new Fuse(coursesData, {
