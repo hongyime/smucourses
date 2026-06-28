@@ -86,13 +86,10 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
           {/* Background Glow */}
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[var(--color-brand-primary)]/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
 
-          <div className="flex flex-col lg:flex-row gap-12 items-start relative z-10">
-            
-            {/* LEFT SIDEBAR */}
-            <div className="w-full lg:w-[320px] shrink-0 space-y-6 lg:sticky lg:top-24">
-              
+          <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-6 relative z-10">
+            <div className="flex items-center gap-6">
               {/* Photo */}
-              <div className="w-32 h-32 rounded-full overflow-hidden bg-white/5 border-2 border-white/10 flex items-center justify-center shadow-lg mx-auto lg:mx-0">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden bg-white/5 border-2 border-white/10 flex items-center justify-center shadow-lg shrink-0">
                 {photoUrl ? (
                   <img src={photoUrl} alt={professor.name} className="w-full h-full object-cover" />
                 ) : (
@@ -100,40 +97,59 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
                 )}
               </div>
               
-              {/* Name */}
-              <h1 className="text-3xl md:text-4xl font-display font-bold text-white mb-2 leading-tight">
-                {professor.name}
-              </h1>
-              {title && (
-                <div className="mb-6 space-y-1">
-                  {title.split(';').map((t, idx) => (
-                    <p key={idx} className="text-[var(--color-brand-primary)] font-medium">
-                      {t.trim()}
-                    </p>
-                  ))}
-                </div>
-              )}
-
-              {/* Pills */}
-              <div className="flex flex-wrap gap-3 mb-6">
-                {professor.schools?.map((school, idx) => (
-                  <div key={`school-${idx}`} className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5 text-sm text-neutral-600 dark:text-neutral-400">
-                    <Building2 size={16} className="text-blue-600 dark:text-indigo-400" />
-                    <span>{school}</span>
+              <div>
+                {/* Name */}
+                <h1 className="text-3xl md:text-5xl font-display font-bold text-white mb-2 leading-tight">
+                  {professor.name}
+                </h1>
+                
+                {title && (
+                  <div className="space-y-1 mt-2">
+                    {title.split(';').map((t, idx) => (
+                      <p key={idx} className="text-[var(--color-brand-primary)] font-medium text-sm md:text-base">
+                        {t.trim()}
+                      </p>
+                    ))}
                   </div>
-                ))}
-                {professor.levels?.map((level, idx) => (
-                  <div key={`level-${idx}`} className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5 text-sm text-neutral-600 dark:text-neutral-400">
-                    <GraduationCap size={16} className="text-blue-500 dark:text-blue-400" />
-                    <span>{level}</span>
-                  </div>
-                ))}
+                )}
               </div>
+            </div>
 
-              <div className="border-t border-white/10 my-6"></div>
+            <div className="shrink-0 mt-4 md:mt-0">
+              <FloatingActions id={professor.id} namespace="professors" />
+            </div>
+          </div>
 
-              {/* Contact Info */}
-              <div className="space-y-4 mb-6">
+          <div className="flex flex-wrap gap-4 text-sm text-neutral-600 dark:text-neutral-400 mb-8 pb-8 border-b border-black/10 dark:border-white/10 relative z-10">
+            {professor.schools?.map((school, idx) => (
+              <div key={`school-${idx}`} className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5">
+                <Building2 size={16} className="text-blue-600 dark:text-indigo-400" />
+                <span>{school}</span>
+              </div>
+            ))}
+            {professor.levels?.map((level, idx) => (
+              <div key={`level-${idx}`} className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5">
+                <GraduationCap size={16} className="text-blue-500 dark:text-blue-400" />
+                <span>{level}</span>
+              </div>
+            ))}
+            <div className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5">
+              <BookOpen size={16} className="text-[var(--color-brand-primary)]" />
+              <span>{totalCourses} Classes Taught</span>
+            </div>
+            <div className="flex items-center gap-2 bg-black/5 dark:bg-black/20 px-3 py-1.5 rounded-lg border border-black/5 dark:border-white/5">
+              <Calendar size={16} className="text-[var(--color-brand-primary)]" />
+              <span>{terms.length} Semesters Active</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 relative z-10">
+            
+            {/* Contact & Links */}
+            <div className="space-y-6">
+              <h2 className="text-xl font-bold text-white">Contact & Profiles</h2>
+              
+              <div className="space-y-4">
                 {email && (
                   <div className="flex items-center gap-3 text-sm text-neutral-300">
                     <Mail size={16} className="text-neutral-500 shrink-0" />
@@ -148,107 +164,85 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
                 )}
               </div>
 
-              {/* Links */}
               {(cvUrl || profileUrl || scholarUrl || scopusUrl) && (
-                <>
-                  <div className="border-t border-white/10 my-6"></div>
-                  <div className="space-y-3 mb-6">
-                    {cvUrl && (
-                      <a href={cvUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors">
-                        <FileText size={16} className="text-[var(--color-brand-primary)] shrink-0" />
-                        <span className="font-medium">Curriculum Vitae (CV)</span>
-                      </a>
-                    )}
-                    {profileUrl && (
-                      <a href={profileUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors">
-                        <Globe size={16} className="text-[var(--color-brand-primary)] shrink-0" />
-                        <span className="font-medium">SMU Profile Page</span>
-                      </a>
-                    )}
-                    {scholarUrl && (
-                      <a href={scholarUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors">
-                        <BookOpen size={16} className="text-[var(--color-brand-primary)] shrink-0" />
-                        <span className="font-medium">Google Scholar</span>
-                      </a>
-                    )}
-                    {scopusUrl && (
-                      <a href={scopusUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors">
-                        <ExternalLink size={16} className="text-[var(--color-brand-primary)] shrink-0" />
-                        <span className="font-medium">Scopus Profile</span>
-                      </a>
-                    )}
-                  </div>
-                </>
+                <div className="space-y-3">
+                  {cvUrl && (
+                    <a href={cvUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors">
+                      <FileText size={16} className="text-[var(--color-brand-primary)] shrink-0" />
+                      <span className="font-medium">Curriculum Vitae (CV)</span>
+                    </a>
+                  )}
+                  {profileUrl && (
+                    <a href={profileUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors">
+                      <Globe size={16} className="text-[var(--color-brand-primary)] shrink-0" />
+                      <span className="font-medium">SMU Profile Page</span>
+                    </a>
+                  )}
+                  {scholarUrl && (
+                    <a href={scholarUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors">
+                      <BookOpen size={16} className="text-[var(--color-brand-primary)] shrink-0" />
+                      <span className="font-medium">Google Scholar</span>
+                    </a>
+                  )}
+                  {scopusUrl && (
+                    <a href={scopusUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors">
+                      <ExternalLink size={16} className="text-[var(--color-brand-primary)] shrink-0" />
+                      <span className="font-medium">Scopus Profile</span>
+                    </a>
+                  )}
+                </div>
               )}
-
             </div>
 
-            {/* RIGHT CONTENT */}
-            <div className="flex-1 space-y-10 w-full">
-              
-              {/* Stats row + Compare/Save */}
-              <div className="flex flex-wrap items-center gap-4 pb-8 border-b border-white/10">
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10 text-neutral-300">
-                  <BookOpen size={18} className="text-[var(--color-brand-primary)]" />
-                  <span className="font-medium">{totalCourses} Classes Taught</span>
-                </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10 text-neutral-300">
-                  <Calendar size={18} className="text-[var(--color-brand-primary)]" />
-                  <span className="font-medium">{terms.length} Semesters Active</span>
-                </div>
-                <div className="ml-auto shrink-0">
-                  <FloatingActions id={professor.id} namespace="professors" />
-                </div>
+            {/* Qualifications */}
+            {qualifications && qualifications.length > 0 && (
+              <div>
+                <h2 className="text-xl font-bold text-white mb-4">Qualifications</h2>
+                <ul className="list-disc pl-5 space-y-2 text-neutral-300 text-sm">
+                  {qualifications.map((q, idx) => (
+                    <li key={idx}>{q}</li>
+                  ))}
+                </ul>
               </div>
+            )}
 
-              {/* Qualifications & Research Interests grid */}
-              {(qualifications?.length > 0 || cleanResearchAreas?.length > 0) && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {qualifications && qualifications.length > 0 && (
-                    <div>
-                      <h2 className="text-xl font-bold text-white mb-4">Qualifications</h2>
-                      <ul className="list-disc pl-5 space-y-2 text-neutral-300">
-                        {qualifications.map((q, idx) => (
-                          <li key={idx}>{q}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+            {/* Research Interests */}
+            {cleanResearchAreas && cleanResearchAreas.length > 0 && (
+              <div>
+                <h2 className="text-xl font-bold text-white mb-4">Research Interests</h2>
+                <ul className="list-disc pl-5 space-y-2 text-neutral-300 text-sm">
+                  {cleanResearchAreas.map((area, idx) => (
+                    <li key={idx}>{area}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            
+            {/* Courses Taught Overview */}
+            {coursesTaught && coursesTaught.length > 0 && (
+              <div>
+                <h2 className="text-xl font-bold text-white mb-4">Courses Taught</h2>
+                <ul className="list-disc pl-5 space-y-2 text-neutral-300 text-sm">
+                  {coursesTaught.map((course, idx) => (
+                    <li key={idx}>{course}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
 
-                  {cleanResearchAreas && cleanResearchAreas.length > 0 && (
-                    <div>
-                      <h2 className="text-xl font-bold text-white mb-4">Research Interests</h2>
-                      <ul className="list-disc pl-5 space-y-2 text-neutral-300">
-                        {cleanResearchAreas.map((area, idx) => (
-                          <li key={idx}>{area}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              )}
+          <div className="border-t border-white/10 my-10 relative z-10"></div>
 
-              {coursesTaught && coursesTaught.length > 0 && (
-                <div>
-                  <h2 className="text-xl font-bold text-white mb-4">Course(s) Taught In SMU</h2>
-                  <ul className="list-disc pl-5 space-y-2 text-neutral-300">
-                    {coursesTaught.map((course, idx) => (
-                      <li key={idx}>{course}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Historical Timeline */}
-              {terms.length > 0 && (
-                <div>
-                <h2 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
-                  <Calendar className="text-[var(--color-brand-primary)]" />
-                  Teaching History
-                </h2>
-                
-                <div className="relative border-l border-white/10 ml-3 space-y-12 pb-4">
-                  {terms.map((termKey) => {
+          {/* Historical Timeline */}
+          {terms.length > 0 && (
+            <div className="relative z-10">
+              <h2 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
+                <Calendar className="text-[var(--color-brand-primary)]" />
+                Teaching History
+              </h2>
+              
+              <div className="relative border-l border-white/10 ml-3 space-y-12 pb-4">
+                {terms.map((termKey) => {
                     const termData = professor.history[termKey];
                     return (
                       <div key={termKey} className="relative pl-8">
