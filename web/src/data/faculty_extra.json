@@ -9631,5 +9631,1001 @@
     "scopusUrl": "https://www.scopus.com/authid/detail.url?authorId=43462255700"
   },
   "zhou-kankan": null,
-  "zhou-yu-xuan-sophia": null
+  "zhou-yu-xuan-sophia": null,
+  "akshat-kumar": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/akshatkumar/600x400",
+    "title": "Associate Professor of Computer Science",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/akshat-kumar-381",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Decision Making & Optimization",
+      "Machine Learning & Intelligence",
+      "Urban & Sustainability",
+      "Urban Mobility & Smart Environment"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "akshatkumar@smu.edu.sg",
+    "phone": "68087914",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/akshatkumar-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=WHZiLTIAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=59130616400"
+  },
+  "alan-ho": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/alanho/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/alan-ho-1476",
+    "researchAreas": [
+      "School of Computing and Information Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "alanho@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "ang-yi-peng-cecil": null,
+  "antoine-ledent": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/aledent/600x400",
+    "title": "Assistant Professor of Computer Science",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/antoine-ledent-6456",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Data Management & Mining",
+      "Machine Learning & Intelligence"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "aledent@smu.edu.sg",
+    "phone": "68264914",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/aledent-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=xxbYi-MAAAAJ&hl=en&oi=ao",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57219505353"
+  },
+  "arjay-gavankar": null,
+  "arnold-wee": null,
+  "ashish-kumar": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/ashishk/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/ashish-kumar-7996",
+    "researchAreas": [
+      "School of Computing and Information Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "ashishk@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "bowen-white": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/bowenwhite/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/edward-bowen-white-8306",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "bowenwhite@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "cec-instructor-1": null,
+  "cheng-shih-fen": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/sfcheng/600x400",
+    "title": "Associate Professor of Computer Science; Urban Fellow (Urban Systems)",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/cheng-shih-fen-366",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Decision Making & Optimization",
+      "Machine Learning & Intelligence",
+      "Learning & Work",
+      "Analytics & Decision Support",
+      "Urban & Sustainability",
+      "Urban Mobility & Smart Environment",
+      "Urban Logistics & Sustainability"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "sfcheng@smu.edu.sg",
+    "phone": "68280526",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/sfcheng-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=zEHb5vMAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=7404685895"
+  },
+  "cho-young-jun": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/yjcho/600x400",
+    "title": "Associate Professor of Accounting",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/cho-young-jun-841",
+    "researchAreas": [
+      "School of Accountancy",
+      "Corporate Reporting & Disclosure",
+      "Voluntary Disclosures",
+      "Sustainability Reporting and Disclosure",
+      "Corporate Governance, Auditing & Risk Management",
+      "Executive Compensation & Contracting and Corporate Reporting Quality"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "yjcho@smu.edu.sg",
+    "phone": "68085232",
+    "cvUrl": "https://accountancy.smu.edu.sg/sites/accountancy.smu.edu.sg/files/accountancy/faculty/pdf/CHO%20Young%20Jun_CV_Jan_26.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=pwBNBlQAAAAJ",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=56789306900"
+  },
+  "daphne-yiu": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/daphneyiu/600x400",
+    "title": "Lee Kong Chian Professor of Strategy & Entrepreneurship",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/daphne-yiu-7501",
+    "researchAreas": [
+      "Lee Kong Chian School of Business",
+      "Strategy and Entrepreneurship",
+      "Corporate Strategy",
+      "Entrepreneurship",
+      "International Business",
+      "Digital transformation and platform strategies",
+      "Strategic Knowledge and Innovation Management",
+      "Strategic Partnerships",
+      "Corporate Governance and Strategic Leadership",
+      "Organisational Change and Change Management",
+      "Institutions and Institutional Change",
+      "Marketing",
+      "Digital and Social Media Strategy",
+      "Sustainable Business",
+      "Digital Business",
+      "Innovation and Entrepreneurship",
+      "Asian & ASEAN Initiatives"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "daphneyiu@smu.edu.sg",
+    "phone": "68280249",
+    "cvUrl": "https://business.smu.edu.sg/sites/business.smu.edu.sg/files/business/Strategy_Organisation/CV/Daphne%20W%20Yiu%20CV%202025%20SMU.pdf",
+    "scholarUrl": "https://scholar.google.com.hk/citations?user=zZRZ3agAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=16641409000"
+  },
+  "david-chan": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/davidchan/600x400",
+    "title": "Professor of Psychology Director, BSI",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/david-chan-2256",
+    "researchAreas": [
+      "Research methods\u00a0& Data Analysis",
+      "Behavioural Sciences & Public Policy",
+      "Well-Being and Quality of Life",
+      "Personnel Selection",
+      "Adaptation to Changes at Work",
+      "Organisational Health & Workplace Climate",
+      "Computational Social-Behavioural Sciences"
+    ],
+    "qualifications": [
+      "PhD (Psychology), Michigan State University, 1998",
+      "MA (Psychology), Michigan State University, 1996",
+      "BSocSc (First Class Honors, Psychology), National University of Singapore, 1990"
+    ],
+    "coursesTaught": [
+      "Research Methods in the Social Sciences (UG)",
+      "Industrial and Organisational Psychology (UG)",
+      "Psychology of Individual Differences (UG)",
+      "Subjective Well-Being (UG)",
+      "Capstone Seminar (UG)",
+      "Industrial and Organisational Psychology (PG)",
+      "Public Policy and Behaviour (PG)",
+      "Psychology of Well-Being (PG)"
+    ],
+    "email": "davidchan@smu.edu.sg",
+    "phone": "68280300",
+    "cvUrl": "https://socsc.smu.edu.sg/sites/socsc.smu.edu.sg/files/socsc/pdf/cv/davidchan_2024_Dec%2031.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=LQHeHaQAAAAJ",
+    "scopusUrl": "https://www.scopus.com/authid/detail.url?authorId=55752576100"
+  },
+  "debin-gao": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/dbgao/600x400",
+    "title": "Professor of Computer Science Faculty Manager, SMU BSc (IS)-CMU Fast-Track Programme; Supervisor to SCIS UG Instructors Director, Centre on Security, Mobile Applications and Cryptography (SMC)",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/debin-gao-346",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Human-Machine Collaborative Systems",
+      "Embodied & Pervasive Systems",
+      "Information Systems & Technology",
+      "Software Engineering",
+      "Cybersecurity",
+      "Safety, Security & Fairness",
+      "Trustworthiness of Digital Platforms & Devices",
+      "Security & Governance of Software/AI Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "dbgao@smu.edu.sg",
+    "phone": "68280969",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/dbgao-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=ufQVl6UAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=8243924800"
+  },
+  "derrick-kon-sen-choeng": null,
+  "doan-hoang-linh-kaestner": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/linhkastner/600x400",
+    "title": "Assistant Professor of Computer Science",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/kaestner-doan-hoang-linh-8386",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Machine Learning & Intelligence",
+      "Human-Machine Collaborative Systems",
+      "Human-Computer Interaction"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "linhkastner@smu.edu.sg",
+    "phone": "68289557",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-01/linhkastner-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=Esqp2v8AAAAJ&hl=en&oi=ao",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57216688012"
+  },
+  "elizabeth-su": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/elizabethsu/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/elizabeth-su-2566",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "elizabethsu@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "er-jwee-ping": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/jper/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/er-jwee-ping-2656",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "jper@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "eva-katharina-peters": null,
+  "fiona-lee": null,
+  "henry-gao": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/henrygao/600x400",
+    "title": "Professor of Law; Lee Kong Chian Fellow",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/henry-gao-2121",
+    "researchAreas": [
+      "Yong Pung How School of Law",
+      "International Economic Law",
+      "International Trade & Investment Law",
+      "Asian and ASEAN Law",
+      "Corporate and Finance Law",
+      "Chinese Commercial Law",
+      "Technology and Innovation",
+      "AI and Law",
+      "Cybersecurity",
+      "E-commerce Law",
+      "Data Protection & Privacy Law",
+      "Public Interests Law",
+      "Legal Systems",
+      "Legal Education",
+      "Law & Sustainability",
+      "Climate Change and Energy Transition",
+      "Chinese Environmental Law"
+    ],
+    "qualifications": [
+      "J.D., Vanderbilt University",
+      "LL.M., University College London",
+      "LL.B. (summa cum laude), China Youth Politics Institute"
+    ],
+    "coursesTaught": [],
+    "email": "henrygao@smu.edu.sg",
+    "phone": "68280520",
+    "cvUrl": "https://law.smu.edu.sg/sites/law.smu.edu.sg/files/law/pdf/henrygao_7.pdf",
+    "scholarUrl": "https://scholar.google.com.sg/citations?user=5BR6mTIAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.url?authorId=8873017200"
+  },
+  "ho-giao-pik": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/gpho/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/ho-giao-pik-7751",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "gpho@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "ian-phang": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/ianphang/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/ian-phang-6031",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "ianphang@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "james-anthony-allworth": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/jallworth/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/james-anthony-allworth-7741",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "jallworth@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "jenzus-hsu": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/jenzushsu/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/jenzus-hsu-8426",
+    "researchAreas": [
+      "School of Computing and Information Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "jenzushsu@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "jerry-lim": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/jerrylim/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/jerry-lim-yishun-7986",
+    "researchAreas": [
+      "School of Computing and Information Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "jerrylim@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "jiang-lingxiao": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/lxjiang/600x400",
+    "title": "Professor of Computer Science; Director, Centre for Research for Intelligent Software Engineering",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/jiang-lingxiao-896",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Data Management & Mining",
+      "Information Systems & Technology",
+      "Software Engineering",
+      "Cybersecurity",
+      "Learning & Work",
+      "Technology-Enhanced Learning & Pedagogy",
+      "Safety, Security & Fairness",
+      "Trustworthiness of Digital Platforms & Devices",
+      "Security & Governance of Software/AI Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "lxjiang@smu.edu.sg",
+    "phone": "68085113",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/lxjiang-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=0hssXLPZL2YC&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=55473381400"
+  },
+  "johann-annuar": null,
+  "john-antony": null,
+  "jordan-chia": null,
+  "josephine-kang-poh-tin": null,
+  "judy-tan": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/judytan/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/judy-tan-2561",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "judytan@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "kam-tin-seong": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/tskam/600x400",
+    "title": "Associate Professor of Information Systems (Practice)",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/kam-tin-seong-486",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Data Management & Mining",
+      "Machine Learning & Intelligence",
+      "Learning & Work",
+      "Analytics & Decision Support",
+      "Urban & Sustainability",
+      "Urban Mobility & Smart Environment",
+      "Health & Wellbeing",
+      "Social Analytics"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "tskam@smu.edu.sg",
+    "phone": "68280932",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/tskam-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=e8W_sPYAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=50861312000"
+  },
+  "koh-wee-leng": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/weelengkoh/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/koh-wee-leng-6111",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "weelengkoh@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "lanx-goh": null,
+  "lee-yun": null,
+  "li-dan": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/danli/600x400",
+    "title": "Assistant Professor of Accounting",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/li-dan-8126",
+    "researchAreas": [
+      "School of Accountancy",
+      "Corporate Reporting & Disclosure",
+      "Sustainability Reporting and Disclosure",
+      "Accounting Standards",
+      "Financial Intermediation & Information",
+      "Information Asymmetry, Analysts, and Cost of Capital",
+      "Information and Labor Market",
+      "Institutional Investors and Short Sellers"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "danli@smu.edu.sg",
+    "phone": "68280941",
+    "cvUrl": "https://accountancy.smu.edu.sg/sites/accountancy.smu.edu.sg/files/accountancy/faculty/pdf/LI%20Dan_CV_Jan_26.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?hl=en&user=Pz-3yWcAAAAJ",
+    "scopusUrl": null
+  },
+  "li-jiannan": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/jiannanli/600x400",
+    "title": "Assistant Professor of Computer Science",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/li-jiannan-7441",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Human-Machine Collaborative Systems",
+      "Embodied & Pervasive Systems",
+      "Human-Computer Interaction",
+      "Learning & Work",
+      "Future of Work",
+      "Health & Wellbeing",
+      "Ageing & Mental Health"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "jiannanli@smu.edu.sg",
+    "phone": "68264834",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/jiannanli-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?hl=en&user=wyW0rJQAAAAJ",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57202048246"
+  },
+  "liao-lizi": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/lzliao/600x400",
+    "title": "Assistant Professor of Computer Science; Lee Kong Chian Fellow",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/liao-lizi-6261",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Machine Learning & Intelligence",
+      "Human-Machine Collaborative Systems",
+      "Multimedia Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "lzliao@smu.edu.sg",
+    "phone": "68264882",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/lzliao-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=W2b08EUAAAAJ&hl=en&oi=sra",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=56369584100"
+  },
+  "liew-yah-ling": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/joannliew/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/joann-liew-yah-ling-7756",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "joannliew@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "lily-zhang": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/lilyzhang/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/lily-zhang-8431",
+    "researchAreas": [
+      "School of Computing and Information Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "lilyzhang@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "lim-ee-peng": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/eplim/600x400",
+    "title": "Professor of Computer Science; Director, Artificial Intelligence & Data Science Cluster",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/lim-ee-peng-616",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Data Management & Mining",
+      "Learning & Work",
+      "Future of Work",
+      "Health & Wellbeing",
+      "Ageing & Mental Health"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "eplim@smu.edu.sg",
+    "phone": "68280781",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/eplim-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?\nuser=r0wOAikAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=7201710034"
+  },
+  "liu-kooi-lin-evelyn": null,
+  "lkcsb-instructor-1": null,
+  "loo-khee-sheng": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/ksloo/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/loo-khee-sheng-2601",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "ksloo@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "ma-yunshan": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/ysma/600x400",
+    "title": "Assistant Professor of Computer Science",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/ma-yunshan-7956",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Data Management & Mining",
+      "Machine Learning & Intelligence",
+      "Human-Machine Collaborative Systems",
+      "Multimedia Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "ysma@smu.edu.sg",
+    "phone": "68280415",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/ysma-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?hl=en&user=WSDsPtMAAAAJ",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57204979967"
+  },
+  "mai-anh-tien": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/atmai/600x400",
+    "title": "Assistant Professor of Information Systems; Lee Kong Chian Fellow",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/mai-anh-tien-461",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Decision Making & Optimization",
+      "Learning & Work",
+      "Analytics & Decision Support",
+      "Urban & Sustainability",
+      "Urban Mobility & Smart Environment",
+      "Urban Logistics & Sustainability"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "atmai@smu.edu.sg",
+    "phone": "68264806",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/atmai-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=5TgvaiwAAAAJ&hl=en&oi=sra",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=56583797900"
+  },
+  "maruthi-prithivirajan": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/maruthil/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/maruthi-prithivirajan-lokanathan-8436",
+    "researchAreas": [
+      "School of Computing and Information Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "maruthil@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "melvin-sim": null,
+  "michael-schaerer": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/schaerer/600x400",
+    "title": "Professor of Organizational Behaviour & Human Resources; Sustainable Business Research Peak Co-lead",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/michael-schaerer-1331",
+    "researchAreas": [
+      "Lee Kong Chian School of Business",
+      "Organisational Behaviour & Human Resources",
+      "Ethics, Trust, Fairness",
+      "Leadership",
+      "Judgement and Decision-making, Negotiation",
+      "Positive Organisation (Mindfulness, Humility, Proactivity)",
+      "Power and Status",
+      "Well-being and Stress",
+      "Sustainable Business",
+      "Social Inclusion",
+      "School of Social Sciences",
+      "Psychology",
+      "Social & Personality Psychology",
+      "Psychology of Emotions & Wellbeing",
+      "Industrial & Organisational Psychology",
+      "Society, Environment & Sustainability",
+      "Human Development, Well-being & Ageing"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "schaerer@smu.edu.sg",
+    "phone": "68289657",
+    "cvUrl": "https://business.smu.edu.sg/sites/business.smu.edu.sg/files/business/OBHR/SCHAERER_CV_092025_Website.pdf",
+    "scholarUrl": "https://scholar.google.com.sg/citations?hl=en&user=j0gGMgcAAAAJ",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=56310310700"
+  },
+  "michelle-kan": null,
+  "mohamed-irshad-abbas-ali": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/irshad/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/mohamed-irshad-abbas-ali-6096",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "irshad@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "nah-fiona-fui-hoon": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/fionanah/600x400",
+    "title": "Professor of Information Systems; ResWORK Fellow",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/nah-fiona-fui-hoon-7861",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Human-Machine Collaborative Systems",
+      "Human-Computer Interaction",
+      "Information Systems & Technology",
+      "Information Systems Management"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "fionanah@smu.edu.sg",
+    "phone": "68264866",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/fionanah-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?hl=en&user=TuqWAMQAAAAJ",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=8967145400"
+  },
+  "nazish-zafar": null,
+  "ong-shun-shun": null,
+  "patricia-sharma": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/patricias/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/patricia-sharma-7921",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "patricias@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "patrick-thng": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/patrickthng/600x400",
+    "title": "Principal Lecturer of Information Systems; Director, MITB (Financial Technology & Analytics) Programme",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/patrick-thng-441",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Information Systems & Technology",
+      "Information Systems Management",
+      "Learning & Work",
+      "Future of Work",
+      "Analytics & Decision Support",
+      "Next Generation IT Practices",
+      "Health & Wellbeing",
+      "Lifestyle & Wellness"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "patrickthng@smu.edu.sg",
+    "phone": "68085433",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/patrickthng-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?hl=en&user=xBocR8AAAAAJ",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57245720000"
+  },
+  "qiu-yue": null,
+  "rajah-kumar": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/rajahkumar/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/rajah-kumar-2626",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "rajahkumar@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "rajesh-krishna-balan": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/rajesh/600x400",
+    "title": "Professor of Computer Science; Urban Fellow (Urban Systems)",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/rajesh-krishna-balan-591",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Human-Machine Collaborative Systems",
+      "Embodied & Pervasive Systems",
+      "Learning & Work",
+      "Technology-Enhanced Learning & Pedagogy",
+      "Urban & Sustainability",
+      "Homeland Security",
+      "Health & Wellbeing",
+      "Ageing & Mental Health",
+      "Biomedical Informatics",
+      "Lifestyle & Wellness"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "rajesh@smu.edu.sg",
+    "phone": "68280879",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/rajesh-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=U1jLrJcAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=35576393800"
+  },
+  "ramaprasad-ramakrishnan": null,
+  "ruth-chiang": null,
+  "ryan-tan-zixu": null,
+  "shamala-ramakresinin": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/ShamalaR/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/shamala-ramakresinin-7206",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "shamalar@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "soa-instructor-1": null,
+  "soa-instructor-2": null,
+  "song-zhaogang": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/zgsong/600x400",
+    "title": "Professor of Finance, Mapletree Professor in Real Estate",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/song-zhaogang-8421",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "zgsong@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": "https://scholar.google.com/citations?user=a8BAp4AAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=56973030100"
+  },
+  "soss-instructor-2": null,
+  "soss-instructor-4": null,
+  "tan-kar-way": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/kwtan/600x400",
+    "title": "Associate Professor of Information Systems (Practice); Director, MITB (Data Science & Analytics) Programme",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/tan-kar-way-421",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Decision Making & Optimization",
+      "Machine Learning & Intelligence",
+      "Learning & Work",
+      "Technology-Enhanced Learning & Pedagogy",
+      "Analytics & Decision Support",
+      "Health & Wellbeing",
+      "Lifestyle & Wellness"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "kwtan@smu.edu.sg",
+    "phone": "68280706",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/kwtan-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=Ytl-OxEAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=35106116300"
+  },
+  "tan-pang-jin": null,
+  "ted-tschang": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/tedt/600x400",
+    "title": "Associate Professor of Strategic Management; Course Coordinator, Sustainability",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/ted-tschang-1601",
+    "researchAreas": [
+      "Lee Kong Chian School of Business",
+      "Organisational Behaviour & Human Resources",
+      "Organisational Creativity and Innovation",
+      "Strategy and Entrepreneurship",
+      "Digital transformation and platform strategies",
+      "Sustainable and socially responsible strategy",
+      "Strategic Knowledge and Innovation Management",
+      "Institutions and Institutional Change",
+      "Operations Management",
+      "Product, Process and Service Design and Improvement",
+      "Sustainable Business",
+      "Digital Business",
+      "Innovation and Entrepreneurship",
+      "Asian & ASEAN Initiatives"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "tedt@smu.edu.sg",
+    "phone": "68280251",
+    "cvUrl": "https://business.smu.edu.sg/sites/business.smu.edu.sg/files/business/Strategy_Organisation/CV/Tschang_CV_Sept2025.pdf",
+    "scholarUrl": "https://scholar.google.com.sg/citations?user=2w8OchkAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.url?authorId=6602894600"
+  },
+  "theodor-cojoianu": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/tcojoianu/600x400",
+    "title": "Associate Professor of Sustainable Finance Urban Fellow (Urban Growth); Academic Director, Singapore Green Finance Centre",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/theodor-cojoianu-8256",
+    "researchAreas": [
+      "Sustainable finance and investments",
+      "Green Data Science & AI",
+      "Green innovation and Skills"
+    ],
+    "qualifications": [
+      "DPhil, University of Oxford, 2019",
+      "MSc, University of Edinburgh Business School, 2015",
+      "MEng, University of Edinburgh, 2014"
+    ],
+    "coursesTaught": [],
+    "email": "tcojoianu@smu.edu.sg",
+    "phone": "68085456",
+    "cvUrl": "https://cis.smu.edu.sg/sites/cis.smu.edu.sg/files/faculty/cv/Theodor%20Cojoianu%20-%20cv.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=Yynh-cMAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57201117186"
+  },
+  "tong-yi-lin-eileen": null,
+  "victor-goh": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/victorgoh/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/victor-goh-2651",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "victorgoh@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "wendy-tan": null,
+  "wilson-tan": null,
+  "wong-chee-chein": null,
+  "wyland-ho-ky": null,
+  "xie-xiaofei": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/xfxie/600x400",
+    "title": "Assistant Professor of Computer Science",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/xie-xiaofei-6291",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Machine Learning & Intelligence",
+      "Information Systems & Technology",
+      "Software Engineering",
+      "Cybersecurity",
+      "Safety, Security & Fairness",
+      "Security & Governance of Software/AI Systems"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "xfxie@smu.edu.sg",
+    "phone": "68264861",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/xfxie-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=FfcZfJgAAAAJ&hl=en&oi=sra",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=55268560900"
+  },
+  "xina-li": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/xinali/600x400",
+    "title": "Assistant Professor of Strategy & Entrepreneurship",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/xina-li-8131",
+    "researchAreas": [
+      "Lee Kong Chian School of Business",
+      "Strategy and Entrepreneurship",
+      "Digital transformation and platform strategies",
+      "Sustainable and socially responsible strategy",
+      "Corporate Governance and Strategic Leadership",
+      "Sustainable Business",
+      "Corporate Social Responsibility"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "xinali@smu.edu.sg",
+    "phone": "68085332",
+    "cvUrl": "https://business.smu.edu.sg/sites/business.smu.edu.sg/files/business/Strategy_Organisation/CV/CV_XinaLi_20250805.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=UWz0cxEAAAAJ&hl=en&oi=ao",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57225980897"
+  },
+  "zheng-baihua": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/bhzheng/600x400",
+    "title": "Professor of Computer Science; Associate Dean (Postgraduate Research Programmes); Director, Master of Science in Computing",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/zheng-baihua-521",
+    "researchAreas": [
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Data Management & Mining",
+      "Machine Learning & Intelligence",
+      "Learning & Work",
+      "Analytics & Decision Support",
+      "Urban & Sustainability",
+      "Urban Mobility & Smart Environment"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "bhzheng@smu.edu.sg",
+    "phone": "68280915",
+    "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/bhzheng-CV.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=o5k9wxUAAAAJ&hl=en",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=7201781454"
+  }
 }
