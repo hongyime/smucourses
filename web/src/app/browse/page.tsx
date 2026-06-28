@@ -26,6 +26,7 @@ coursesData.forEach((c) => {
 });
 const availableAreas = Array.from(allAreas).sort();
 const availableTracks = Array.from(allTracks).sort();
+const availableGradeModes = Array.from(new Set(coursesData.map((c) => c.gradeMode).filter(Boolean))).sort();
 
 // Create Fuse instances outside component so they aren't recreated
 const courseFuse = new Fuse(coursesData, {
@@ -60,6 +61,7 @@ function CoursesSearchContent() {
     level: searchParams.get("level") || "",
     area: searchParams.get("area") || "",
     track: searchParams.get("track") || "",
+    gradeMode: searchParams.get("gradeMode") || "",
   });
 
   // Update URL when filters change
@@ -70,6 +72,7 @@ function CoursesSearchContent() {
     if (filters.level) params.set("level", filters.level);
     if (filters.area) params.set("area", filters.area);
     if (filters.track) params.set("track", filters.track);
+    if (filters.gradeMode) params.set("gradeMode", filters.gradeMode);
     
     // Use replace to avoid filling up browser history with every keystroke
     router.replace(`/browse?${params.toString()}`);
@@ -97,6 +100,7 @@ function CoursesSearchContent() {
       if (filters.level && course.level !== filters.level) return false;
       if (filters.area && (!course.areas || !course.areas.includes(filters.area))) return false;
       if (filters.track && (!course.tracks || !course.tracks.includes(filters.track))) return false;
+      if (filters.gradeMode && course.gradeMode !== filters.gradeMode) return false;
       return true;
     });
 
@@ -152,6 +156,7 @@ function CoursesSearchContent() {
           availableLevels={availableLevels}
           availableAreas={availableAreas}
           availableTracks={availableTracks}
+          availableGradeModes={availableGradeModes}
         />
 
         <div className="mb-6 flex justify-between items-end">
@@ -164,7 +169,7 @@ function CoursesSearchContent() {
           <div className="glass-panel p-12 text-center">
             <p className="text-xl text-neutral-400 mb-2">No {filters.searchType} found matching your criteria.</p>
             <button 
-              onClick={() => setFilters({ query: "", searchType: filters.searchType, school: "", level: "", area: "", track: "" })}
+              onClick={() => setFilters({ query: "", searchType: filters.searchType, school: "", level: "", area: "", track: "", gradeMode: "" })}
               className="text-[var(--color-brand-primary)] hover:opacity-80 font-medium transition-opacity"
             >
               Clear all filters
