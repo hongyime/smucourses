@@ -104,12 +104,12 @@ export default function CourseSchedules({ schedules }: { schedules: any[] }) {
                       <span className="text-neutral-500 italic">{schedule.professor || "Unknown"}</span>
                     )}
                   </td>
-                  <td className="px-4 py-3 text-xs">
+                  <td className="px-4 py-3">
                     {schedule.time === 'Historical Data Unavailable' ? (
                       <span className="text-neutral-500 italic">—</span>
                     ) : schedule.time}
                   </td>
-                  <td className="px-4 py-3 text-xs">
+                  <td className="px-4 py-3">
                     {(() => {
                       if (!schedule.location) return <span className="text-neutral-500">-</span>;
                       const loc = schedule.location.toLowerCase();

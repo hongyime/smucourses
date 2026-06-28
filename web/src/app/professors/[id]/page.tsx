@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ChevronLeft, BookOpen, Calendar, User, ExternalLink, Mail, Phone, FileText, Globe, Building2, GraduationCap } from 'lucide-react';
 import { ProfessorData } from '@/components/ProfessorCard';
 import FloatingActions from '@/components/FloatingActions';
+import BackButton from '@/components/BackButton';
 import facultyPhotosData from '@/data/faculty_extra.json';
 
 // Pre-render all professor pages
@@ -78,9 +79,7 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
     <div className="min-h-screen py-12 relative overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="mb-8">
-          <Link href="/browse" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
-            <ChevronLeft size={20} /> Back to Directory
-          </Link>
+          <BackButton label="Back to Directory" />
         </div>
         
         <div className="glass-panel p-8 md:p-12 animate-fade-in relative overflow-hidden border-white/10">
@@ -241,10 +240,11 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
               )}
 
               {/* Historical Timeline */}
-              <div>
-
-                <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                  Historical Teaching Schedule
+              {terms.length > 0 && (
+                <div>
+                <h2 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
+                  <Calendar className="text-[var(--color-brand-primary)]" />
+                  Teaching History
                 </h2>
                 
                 <div className="relative border-l border-white/10 ml-3 space-y-12 pb-4">
