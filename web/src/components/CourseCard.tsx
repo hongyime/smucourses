@@ -19,6 +19,7 @@ export interface CourseData {
   description: string;
   areas?: string[];
   tracks?: string[];
+  gradeMode?: string;
 }
 
 interface CourseCardProps {
