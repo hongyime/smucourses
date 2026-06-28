@@ -2,6 +2,16 @@ $ErrorActionPreference = "Stop"
 $RepoPath = Split-Path -Parent $PSScriptRoot
 Set-Location $RepoPath
 
+function Run-Script {
+    param ([string]$Command)
+    Invoke-Expression $Command
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "❌ Error: Command failed with exit code $LASTEXITCODE - $Command" -ForegroundColor Red
+        Write-Host "Aborting sync process to prevent corrupting live data." -ForegroundColor Red
+        exit $LASTEXITCODE
+    }
+}
+
 function Show-Menu {
     Clear-Host
     Write-Host "========================================" -ForegroundColor Cyan
@@ -18,7 +28,7 @@ function Show-Menu {
 
 function Run-TransformAndPush {
     Write-Host "`n[ ] Transforming raw data into SSG format..." -ForegroundColor Yellow
-    python scripts/transform_data.py
+    Run-Script "python scripts/transform_data.py"
     
     Write-Host "`n[ ] Checking for changes..." -ForegroundColor Yellow
     $status = git status --porcelain
@@ -26,6 +36,7 @@ function Run-TransformAndPush {
         Write-Host "Changes detected! Committing to GitHub..."
         git add data/
         git add web/src/data/
+        git add web/public/pdfs/
         git commit -m "chore: automated course data and PDF sync"
         git push origin main
         Write-Host "✅ Successfully pushed to main! Vercel is building the new SSG site." -ForegroundColor Green
@@ -41,25 +52,25 @@ switch ($choice) {
     "1" {
         Write-Host "`n🚀 Starting Full Data Sync..." -ForegroundColor Cyan
         Write-Host "`n[1/5] Fetching latest API data..." -ForegroundColor Yellow
-        python scripts/fetch_courses.py
+        Run-Script "python scripts/fetch_courses.py"
         Write-Host "`n[2/5] Fetching live class schedules via Playwright..." -ForegroundColor Yellow
-        python scripts/fetch_schedules.py
+        Run-Script "python scripts/fetch_schedules.py"
         Write-Host "`n[3/5] Scraping latest Faculty Profile Photos..." -ForegroundColor Yellow
-        python scripts/scrape_faculty.py
+        Run-Script "python scripts/scrape_faculty.py"
         Write-Host "`n[4/5] Syncing latest PDF syllabi..." -ForegroundColor Yellow
-        python scripts/sync_pdfs.py
+        Run-Script "python scripts/sync_pdfs.py"
         Run-TransformAndPush
     }
     "2" {
         Write-Host "`n🚀 Starting Class Schedules Sync..." -ForegroundColor Cyan
         Write-Host "`n[1/1] Fetching live class schedules via Playwright..." -ForegroundColor Yellow
-        python scripts/fetch_schedules.py
+        Run-Script "python scripts/fetch_schedules.py"
         Run-TransformAndPush
     }
     "3" {
         Write-Host "`n🚀 Starting Historical Syllabi Sync..." -ForegroundColor Cyan
         Write-Host "`n[1/1] Syncing latest PDF syllabi..." -ForegroundColor Yellow
-        python scripts/sync_pdfs.py
+        Run-Script "python scripts/sync_pdfs.py"
         Run-TransformAndPush
     }
     "4" {
