@@ -6,6 +6,7 @@ import { ArrowLeft, Scale, Trash2, CheckCircle2, XCircle, User, BookOpen, Calend
 import { useCompare } from "@/hooks/useCompare";
 import coursesData from "@/data/courses.json";
 import rawProfessors from "@/data/professors.json";
+import facultyExtra from "@/data/faculty_extra.json";
 import { ProfessorData } from "@/components/ProfessorCard";
 
 const professorsData = rawProfessors as ProfessorData[];
@@ -163,6 +164,26 @@ export default function ComparePage() {
             let totalCourses = 0;
             terms.forEach(term => totalCourses += prof.history[term].courses.length);
             
+            // Get unique courses taught across all terms
+            const uniqueCourses = new Map<string, string>();
+            terms.forEach(termKey => {
+              prof.history[termKey].courses.forEach(c => {
+                if (!uniqueCourses.has(c.courseCode)) {
+                  uniqueCourses.set(c.courseCode, c.courseName);
+                }
+              });
+            });
+
+            // Get extra data
+            const profExtra = (facultyExtra as Record<string, any>)?.[prof.id] || {};
+            const { photoUrl, title, researchAreas = [] } = profExtra;
+            const knownSchoolsLong = [
+              "School of Computing and Information Systems", "Lee Kong Chian School of Business",
+              "Yong Pung How School of Law", "School of Economics", "School of Accountancy",
+              "School of Social Sciences", "College of Integrative Studies"
+            ];
+            const cleanResearch = researchAreas.filter((a: string) => !knownSchoolsLong.includes(a));
+            
             return (
               <div key={prof.id} className="glass-panel flex flex-col relative group">
                 <button 
@@ -173,43 +194,76 @@ export default function ComparePage() {
                   <XCircle size={20} />
                 </button>
                 
-                <div className="p-8 border-b border-white/10 bg-white/5 rounded-t-2xl text-center">
-                  <div className="p-4 rounded-full bg-white/5 text-[var(--color-brand-primary)] border border-white/10 inline-flex mb-4">
-                    <User size={32} />
+                <div className="p-6 border-b border-white/10 bg-white/5 rounded-t-2xl flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                    {photoUrl ? (
+                      <img src={photoUrl} alt={prof.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <User size={28} className="text-white/20" />
+                    )}
                   </div>
-                  <h2 className="text-2xl font-bold text-white mb-2 leading-tight">{prof.name}</h2>
-                  <Link href={`/professors/${prof.id}`} className="text-xs text-[var(--color-brand-primary)] hover:underline">View Full Profile</Link>
-                </div>
-                
-                <div className="p-6 border-b border-white/5">
-                  <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Teaching Stats</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <div className="text-2xl font-bold text-white mb-1 flex items-center gap-2"><BookOpen size={16} className="text-[var(--color-brand-primary)]"/>{totalCourses}</div>
-                      <div className="text-xs text-neutral-400">Total Courses</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-white mb-1 flex items-center gap-2"><Calendar size={16} className="text-[var(--color-brand-primary)]"/>{terms.length}</div>
-                      <div className="text-xs text-neutral-400">Active Semesters</div>
-                    </div>
+                  <div className="min-w-0">
+                    <h2 className="text-xl font-bold text-white mb-1 leading-tight">{prof.name}</h2>
+                    {title && (
+                      <p className="text-xs text-[var(--color-brand-primary)] line-clamp-2">{title.split(';')[0].trim()}</p>
+                    )}
+                    <Link href={`/professors/${prof.id}`} className="text-xs text-neutral-400 hover:text-white transition-colors mt-1 inline-block">View Full Profile →</Link>
                   </div>
                 </div>
 
                 <div className="p-6 border-b border-white/5">
-                  <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Schools</h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <div className="text-2xl font-bold text-white mb-1 flex items-center gap-2"><BookOpen size={16} className="text-[var(--color-brand-primary)]"/>{totalCourses}</div>
+                      <div className="text-xs text-neutral-400">Total Classes</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-white mb-1 flex items-center gap-2"><Calendar size={16} className="text-[var(--color-brand-primary)]"/>{terms.length}</div>
+                      <div className="text-xs text-neutral-400">Semesters</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
                     {prof.schools?.map((s, i) => (
-                      <span key={`s-${i}`} className="text-xs px-2 py-1 bg-white/5 text-neutral-300 rounded border border-white/10">{s}</span>
-                    )) || <span className="text-sm text-neutral-500 italic">Unknown</span>}
+                      <span key={`s-${i}`} className="text-xs px-2 py-1 bg-indigo-500/10 text-indigo-300 rounded border border-indigo-500/20">{s}</span>
+                    ))}
+                    {prof.levels?.map((l, i) => (
+                      <span key={`l-${i}`} className="text-xs px-2 py-1 bg-blue-500/10 text-blue-300 rounded border border-blue-500/20">{l}</span>
+                    ))}
+                  </div>
+                </div>
+
+                {cleanResearch.length > 0 && (
+                  <div className="p-6 border-b border-white/5">
+                    <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Research Areas</h3>
+                    <div className="flex flex-wrap gap-1.5">
+                      {cleanResearch.slice(0, 5).map((area: string, i: number) => (
+                        <span key={i} className="text-xs px-2 py-1 bg-emerald-500/10 text-emerald-300 rounded border border-emerald-500/20">{area}</span>
+                      ))}
+                      {cleanResearch.length > 5 && (
+                        <span className="text-xs px-2 py-1 bg-white/5 text-neutral-400 rounded border border-white/10">+{cleanResearch.length - 5} more</span>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                <div className="p-6 border-b border-white/5">
+                  <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Courses Taught ({uniqueCourses.size})</h3>
+                  <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
+                    {Array.from(uniqueCourses.entries()).map(([code, name]) => (
+                      <Link key={code} href={`/courses/${code}`} className="block text-sm hover:bg-white/5 rounded px-2 py-1.5 -mx-2 transition-colors">
+                        <span className="text-[var(--color-brand-primary)] font-semibold">{code}</span>
+                        <span className="text-neutral-400 ml-2">{name}</span>
+                      </Link>
+                    ))}
                   </div>
                 </div>
 
                 <div className="p-6 bg-white/[0.02] rounded-b-2xl flex-grow">
-                  <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">All Semesters</h3>
-                  <ul className="space-y-3">
+                  <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Teaching History</h3>
+                  <ul className="space-y-2 max-h-48 overflow-y-auto pr-1">
                     {terms.map((termKey) => (
                       <li key={termKey} className="text-sm">
-                        <div className="font-semibold text-white mb-1">{prof.history[termKey].termName}</div>
+                        <div className="font-semibold text-white mb-0.5">{prof.history[termKey].termName}</div>
                         <div className="text-neutral-400 text-xs">
                           {prof.history[termKey].courses.map(c => c.courseCode).join(', ')}
                         </div>
