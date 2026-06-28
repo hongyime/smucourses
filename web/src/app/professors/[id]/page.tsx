@@ -152,7 +152,7 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
               </div>
 
               {/* Links */}
-              {(cvUrl || profileUrl) && (
+              {(cvUrl || profileUrl || scholarUrl || scopusUrl) && (
                 <>
                   <div className="border-t border-white/10 my-6"></div>
                   <div className="space-y-3 mb-6">
@@ -168,24 +168,20 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
                         <span className="font-medium">SMU Profile Page</span>
                       </a>
                     )}
+                    {scholarUrl && (
+                      <a href={scholarUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors">
+                        <BookOpen size={16} className="text-[var(--color-brand-primary)] shrink-0" />
+                        <span className="font-medium">Google Scholar</span>
+                      </a>
+                    )}
+                    {scopusUrl && (
+                      <a href={scopusUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors">
+                        <ExternalLink size={16} className="text-[var(--color-brand-primary)] shrink-0" />
+                        <span className="font-medium">Scopus Profile</span>
+                      </a>
+                    )}
                   </div>
                 </>
-              )}
-
-              {/* Social Icons */}
-              {(scholarUrl || scopusUrl) && (
-                <div className="flex gap-3 pt-2">
-                  {scholarUrl && (
-                    <a href={scholarUrl} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 hover:text-white transition-colors text-neutral-400" title="Google Scholar">
-                      <BookOpen size={18} />
-                    </a>
-                  )}
-                  {scopusUrl && (
-                    <a href={scopusUrl} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 hover:text-white transition-colors text-neutral-400 font-bold text-xs flex items-center justify-center w-[40px] h-[40px]" title="Scopus">
-                      SC
-                    </a>
-                  )}
-                </div>
               )}
 
             </div>
