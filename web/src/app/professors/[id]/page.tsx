@@ -101,15 +101,10 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
                 )}
               </div>
               
-              {/* Name & Actions */}
-              <div className="flex items-start justify-between gap-4">
-                <h1 className="text-3xl md:text-4xl font-display font-bold text-white mb-2 leading-tight">
-                  {professor.name}
-                </h1>
-                <div className="shrink-0 pt-1">
-                  <FloatingActions id={professor.id} namespace="professors" />
-                </div>
-              </div>
+              {/* Name */}
+              <h1 className="text-3xl md:text-4xl font-display font-bold text-white mb-2 leading-tight">
+                {professor.name}
+              </h1>
               {title && (
                 <div className="mb-6 space-y-1">
                   {title.split(';').map((t, idx) => (
@@ -187,55 +182,63 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
             </div>
 
             {/* RIGHT CONTENT */}
-            <div className="flex-1 space-y-12 w-full">
+            <div className="flex-1 space-y-10 w-full">
               
-              <div className="space-y-12">
-                {qualifications && qualifications.length > 0 && (
-                  <div>
-                    <h2 className="text-xl font-bold text-white mb-4">Qualifications</h2>
-                    <ul className="list-disc pl-5 space-y-2 text-neutral-300">
-                      {qualifications.map((q, idx) => (
-                        <li key={idx}>{q}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {cleanResearchAreas && cleanResearchAreas.length > 0 && (
-                  <div>
-                    <h2 className="text-xl font-bold text-white mb-4">Research Interests</h2>
-                    <ul className="list-disc pl-5 space-y-2 text-neutral-300">
-                      {cleanResearchAreas.map((area, idx) => (
-                        <li key={idx}>{area}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {coursesTaught && coursesTaught.length > 0 && (
-                  <div>
-                    <h2 className="text-xl font-bold text-white mb-4">Course(s) Taught In SMU</h2>
-                    <ul className="list-disc pl-5 space-y-2 text-neutral-300">
-                      {coursesTaught.map((course, idx) => (
-                        <li key={idx}>{course}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+              {/* Stats row + Compare/Save */}
+              <div className="flex flex-wrap items-center gap-4 pb-8 border-b border-white/10">
+                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10 text-neutral-300">
+                  <BookOpen size={18} className="text-[var(--color-brand-primary)]" />
+                  <span className="font-medium">{totalCourses} Classes Taught</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10 text-neutral-300">
+                  <Calendar size={18} className="text-[var(--color-brand-primary)]" />
+                  <span className="font-medium">{terms.length} Semesters Active</span>
+                </div>
+                <div className="ml-auto shrink-0">
+                  <FloatingActions id={professor.id} namespace="professors" />
+                </div>
               </div>
+
+              {/* Qualifications & Research Interests grid */}
+              {(qualifications?.length > 0 || cleanResearchAreas?.length > 0) && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {qualifications && qualifications.length > 0 && (
+                    <div>
+                      <h2 className="text-xl font-bold text-white mb-4">Qualifications</h2>
+                      <ul className="list-disc pl-5 space-y-2 text-neutral-300">
+                        {qualifications.map((q, idx) => (
+                          <li key={idx}>{q}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {cleanResearchAreas && cleanResearchAreas.length > 0 && (
+                    <div>
+                      <h2 className="text-xl font-bold text-white mb-4">Research Interests</h2>
+                      <ul className="list-disc pl-5 space-y-2 text-neutral-300">
+                        {cleanResearchAreas.map((area, idx) => (
+                          <li key={idx}>{area}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {coursesTaught && coursesTaught.length > 0 && (
+                <div>
+                  <h2 className="text-xl font-bold text-white mb-4">Course(s) Taught In SMU</h2>
+                  <ul className="list-disc pl-5 space-y-2 text-neutral-300">
+                    {coursesTaught.map((course, idx) => (
+                      <li key={idx}>{course}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Historical Timeline */}
               <div>
-                <div className="flex flex-wrap gap-4 text-neutral-300 mb-8 pb-8 border-b border-white/10">
-                  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-                    <BookOpen size={18} className="text-[var(--color-brand-primary)]" />
-                    <span className="font-medium">{totalCourses} Classes Taught</span>
-                  </div>
-                  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-                    <Calendar size={18} className="text-[var(--color-brand-primary)]" />
-                    <span className="font-medium">{terms.length} Semesters Active</span>
-                  </div>
-                </div>
 
                 <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
                   Historical Teaching Schedule
