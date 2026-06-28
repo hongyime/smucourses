@@ -28,6 +28,7 @@ export default function SearchFilter({
   availableLevels,
   availableAreas,
   availableTracks,
+  availableGradeModes,
 }: SearchFilterProps) {
   const [showFilters, setShowFilters] = useState(false);
 
