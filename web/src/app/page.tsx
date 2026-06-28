@@ -30,7 +30,7 @@ export default function Home() {
   };
 
   const phrases = [
-    "Discover your perfect courses.",
+    "Discover your courses.",
     "Master your curriculum.",
     "Bid with confidence.",
     "Explore historical syllabi.",
