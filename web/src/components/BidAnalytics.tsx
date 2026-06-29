@@ -91,24 +91,11 @@ export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
         Object.entries(termMap[selectedTerm]).forEach(([section, secArray]) => {
           const dp = secArray.find(d => d.window === selectedWindow);
           if (dp) {
-            let classTime = "Timing unavailable";
-            if (schedules) {
-              const match = schedules.find(s => 
-                s.term === selectedTerm && 
-                s.section === section && 
-                s.professor?.toLowerCase() === instructor.toLowerCase()
-              );
-              if (match && match.time && match.time !== "Historical Data Unavailable") {
-                classTime = match.time;
-              }
-            }
-
             results.push({
               name: `${toTitleCase(instructor)} (${section})`,
               minBid: dp.minBid,
               medBid: dp.medBid,
-              befVac: dp.befVac,
-              classTime
+              befVac: dp.befVac
             });
           }
         });
@@ -123,11 +110,10 @@ export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
     if (active && payload && payload.length) {
       const pointData = payload[0].payload;
       return (
-        <div className="bg-[#171717] border border-white/10 p-3 rounded-lg shadow-xl">
-          <p className="font-semibold text-[#e5e5e5] mb-1">{label}</p>
-          <p className="text-indigo-400 text-xs font-medium mb-3">{pointData.classTime}</p>
+        <div className="bg-[#171717] border border-white/10 p-3 rounded-lg shadow-xl text-sm md:text-base">
+          <p className="font-semibold text-[#e5e5e5] mb-2">{label}</p>
           {payload.map((p: any, idx: number) => (
-            <p key={idx} style={{ color: p.color }} className="text-sm font-medium">
+            <p key={idx} style={{ color: p.color }} className="text-xs md:text-sm font-medium">
               {p.name}: {p.value}
             </p>
           ))}
@@ -163,9 +149,9 @@ export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
         </h3>
       </div>
 
-      <div className="p-6 bg-[#0a0a0a]/80 border border-white/10 rounded-xl backdrop-blur-xl">
-        <div className="flex flex-wrap gap-4 mb-8">
-          <div className="flex flex-col w-full md:w-auto min-w-[200px]">
+      <div className="p-4 md:p-6 bg-[#0a0a0a]/80 border border-white/10 rounded-xl backdrop-blur-xl">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 md:mb-8">
+          <div className="flex flex-col w-full sm:w-auto sm:min-w-[200px]">
             <label className="text-xs text-gray-400 mb-1 ml-1 uppercase tracking-wider">Term</label>
             <select
               value={selectedTerm}
@@ -193,18 +179,18 @@ export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
         </div>
 
         {chartData.length > 0 ? (
-          <div className="h-[450px] w-full">
+          <div className="h-[350px] md:h-[450px] w-full -ml-4 md:ml-0">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={chartData}
-                margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
+                margin={{ top: 20, right: 10, left: 0, bottom: 80 }}
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#ffffff15" vertical={false} />
                 <XAxis 
                   dataKey="name" 
                   stroke="#737373" 
-                  tick={{ fill: '#a3a3a3', fontSize: 12 }} 
-                  tickMargin={10}
+                  tick={{ fill: '#a3a3a3', fontSize: 11 }} 
+                  tickMargin={30}
                   axisLine={{ stroke: '#404040' }}
                   angle={-45}
                   textAnchor="end"
@@ -215,7 +201,7 @@ export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
                   tick={{ fill: '#a3a3a3', fontSize: 12 }} 
                   axisLine={false}
                   tickLine={false}
-                  label={{ value: 'Bid Amount (e$)', angle: -90, position: 'insideLeft', fill: '#737373', fontSize: 12 }}
+                  label={{ value: 'Bid Amount', angle: -90, position: 'insideLeft', fill: '#737373', fontSize: 11, offset: 15 }}
                 />
                 <Tooltip
                   content={<CustomTooltip />}
