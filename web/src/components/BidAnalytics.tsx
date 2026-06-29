@@ -28,6 +28,7 @@ type BidAnalyticsProps = {
       };
     };
   } | null;
+  schedules?: any[];
 };
 
 function toTitleCase(str: string) {
@@ -36,7 +37,7 @@ function toTitleCase(str: string) {
   return str.toLowerCase().replace(/\b\w/g, s => s.toUpperCase());
 }
 
-export default function BidAnalytics({ data }: BidAnalyticsProps) {
+export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
   const [selectedTerm, setSelectedTerm] = useState<string>("");
   const [selectedWindow, setSelectedWindow] = useState<string>("");
 
@@ -89,11 +90,24 @@ export default function BidAnalytics({ data }: BidAnalyticsProps) {
         Object.entries(termMap[selectedTerm]).forEach(([section, secArray]) => {
           const dp = secArray.find(d => d.window === selectedWindow);
           if (dp) {
+            let classTime = "Timing unavailable";
+            if (schedules) {
+              const match = schedules.find(s => 
+                s.term === selectedTerm && 
+                s.section === section && 
+                s.professor?.toLowerCase() === instructor.toLowerCase()
+              );
+              if (match && match.time && match.time !== "Historical Data Unavailable") {
+                classTime = match.time;
+              }
+            }
+
             results.push({
               name: `${toTitleCase(instructor)} (${section})`,
               minBid: dp.minBid,
               medBid: dp.medBid,
-              befVac: dp.befVac
+              befVac: dp.befVac,
+              classTime
             });
           }
         });
@@ -102,7 +116,25 @@ export default function BidAnalytics({ data }: BidAnalyticsProps) {
 
     // Sort by median bid (most expensive to least expensive)
     return results.sort((a, b) => b.medBid - a.medBid);
-  }, [data, selectedTerm, selectedWindow]);
+  }, [data, selectedTerm, selectedWindow, schedules]);
+
+  const CustomTooltip = ({ active, payload, label }: any) => {
+    if (active && payload && payload.length) {
+      const pointData = payload[0].payload;
+      return (
+        <div className="bg-[#171717] border border-white/10 p-3 rounded-lg shadow-xl">
+          <p className="font-semibold text-[#e5e5e5] mb-1">{label}</p>
+          <p className="text-indigo-400 text-xs font-medium mb-3">{pointData.classTime}</p>
+          {payload.map((p: any, idx: number) => (
+            <p key={idx} style={{ color: p.color }} className="text-sm font-medium">
+              {p.name}: {p.value}
+            </p>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
 
   if (!data || terms.length === 0) {
     return null;
@@ -112,7 +144,7 @@ export default function BidAnalytics({ data }: BidAnalyticsProps) {
     <div className="mt-8 pt-8 border-t border-black/10 dark:border-white/10">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <h3 className="text-lg font-semibold text-black dark:text-white flex items-center gap-2">
-          Bid Analytics Showdown
+          Bid Analytics
         </h3>
       </div>
 
@@ -171,18 +203,12 @@ export default function BidAnalytics({ data }: BidAnalyticsProps) {
                   label={{ value: 'Bid Amount (e$)', angle: -90, position: 'insideLeft', fill: '#737373', fontSize: 12 }}
                 />
                 <Tooltip
-                  contentStyle={{ 
-                    backgroundColor: '#171717', 
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    borderRadius: '8px',
-                    color: '#e5e5e5',
-                    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.5)'
-                  }}
-                  itemStyle={{ color: '#e5e5e5' }}
+                  content={<CustomTooltip />}
                   cursor={{ fill: '#ffffff05' }}
                 />
                 <Legend 
-                  wrapperStyle={{ paddingTop: '30px' }}
+                  verticalAlign="top"
+                  wrapperStyle={{ paddingBottom: '20px' }}
                   iconType="circle"
                 />
                 <Bar dataKey="medBid" name="Median Bid" fill="#f59e0b" radius={[4, 4, 0, 0]} maxBarSize={50} />
