@@ -18,7 +18,7 @@ function Show-Menu {
     Write-Host "    SMU COURSES - DATA PIPELINE MENU" -ForegroundColor Cyan
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host ""
-    Write-Host "  [1] Sync ALL Data (APIs + PeopleSoft + Photos + PDFs)"
+    Write-Host "  [1] Sync ALL Data (APIs + PeopleSoft + Photos + PDFs + Bids)"
     Write-Host "  [2] Sync Class Schedules Only (PeopleSoft)"
     Write-Host "  [3] Sync Historical Syllabi Only (Coursedog PDFs)"
     Write-Host "  [4] Sync Bid Analytics Only (SMUMods)"
