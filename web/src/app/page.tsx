@@ -96,7 +96,7 @@ export default function Home() {
 
           <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
             {[
-              { icon: BookOpen, title: "4,700+ Syllabi", desc: "Access historical section-level PDFs", color: "#0ea5e9" },
+              { icon: BookOpen, title: "Syllabi", desc: "Access historical section-level PDFs", color: "#0ea5e9" },
               { icon: GraduationCap, title: "Requirements", desc: "Filter by AREA and TRCK easily", color: "#4f46e5" },
               { icon: Award, title: "Weightages", desc: "Know exactly what you're bidding for", color: "#f59e0b" },
               { icon: Clock, title: "Historical Data", desc: "See when courses are usually offered", color: "#10b981" }
