@@ -81,18 +81,16 @@ export default function CourseCard({ course }: CourseCardProps) {
           {course.longName || course.name}
         </h2>
 
-        <div className="flex flex-wrap gap-3 text-xs text-neutral-400 mb-4">
+        <div className="flex flex-wrap gap-1.5 mb-4 mt-auto">
           {course.school?.name && (
-            <div className="flex items-center gap-1.5">
-              <Building2 size={14} className="text-neutral-500" />
-              <span>{course.school.name}</span>
-            </div>
+            <span className="text-xs px-2 py-1 bg-indigo-500/10 text-indigo-300 rounded border border-indigo-500/20">
+              {course.school.name}
+            </span>
           )}
           {course.level && (
-            <div className="flex items-center gap-1.5">
-              <GraduationCap size={14} className="text-neutral-500" />
-              <span>{course.level}</span>
-            </div>
+            <span className="text-xs px-2 py-1 bg-blue-500/10 text-blue-300 rounded border border-blue-500/20">
+              {course.level}
+            </span>
           )}
         </div>
 
