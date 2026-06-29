@@ -27,7 +27,7 @@ export default function FloatingActions({ id, namespace = "courses" }: FloatingA
         }`}
       >
         <Scale size={18} className={isComparing ? "text-indigo-300" : ""} />
-        {isComparing ? "Remove Compare" : "Compare"}
+        {isComparing ? "Remove" : "Compare"}
       </button>
       
       <button 
