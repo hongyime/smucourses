@@ -249,7 +249,7 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
                         {/* Timeline Dot */}
                         <div className="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full bg-[var(--color-brand-primary)] shadow-[0_0_10px_var(--color-brand-primary)]"></div>
                         
-                        <h3 className="text-xl font-bold text-white mb-4 inline-block px-4 py-1.5 rounded-md bg-white/5 border border-white/10">
+                        <h3 className="text-xl font-bold text-white mb-4">
                           {termData.termName}
                         </h3>
                         
@@ -260,12 +260,12 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
                               href={`/courses/${course.courseCode}`}
                               className="bg-white/5 p-5 rounded-xl hover:bg-white/10 transition-colors group flex flex-col h-full border border-white/5 hover:border-white/10"
                             >
-                              <div className="flex justify-between items-start mb-2">
+                              <div className="flex flex-col items-start gap-1 mb-2">
                                 <span className="text-sm font-semibold text-[var(--color-brand-primary)] bg-[var(--color-brand-primary)]/10 px-2 py-0.5 rounded">
                                   {course.courseCode}
                                 </span>
                                 {course.sections && course.sections.length > 0 && (
-                                  <span className="text-xs text-neutral-500 font-mono">
+                                  <span className="text-xs text-neutral-500 font-mono mt-0.5">
                                     Sec: {course.sections.join(', ')}
                                   </span>
                                 )}
