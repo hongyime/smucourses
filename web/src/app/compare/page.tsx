@@ -116,8 +116,19 @@ export default function ComparePage() {
               
               <div className="p-6 border-b border-white/10 bg-white/5 rounded-t-2xl">
                 <div className="text-indigo-400 font-bold mb-2">{course.code}</div>
-                <h2 className="text-2xl font-bold text-white mb-2 leading-tight">{course.longName || course.name}</h2>
-                <div className="text-sm text-neutral-400">{course.school?.name} • {course.level}</div>
+                <h2 className="text-2xl font-bold text-white mb-3 leading-tight">{course.longName || course.name}</h2>
+                <div className="flex flex-wrap gap-1.5">
+                  {course.school?.name && (
+                    <span className="text-xs px-2 py-1 bg-indigo-500/10 text-indigo-300 rounded border border-indigo-500/20">
+                      {course.school.name}
+                    </span>
+                  )}
+                  {course.level && (
+                    <span className="text-xs px-2 py-1 bg-blue-500/10 text-blue-300 rounded border border-blue-500/20">
+                      {course.level}
+                    </span>
+                  )}
+                </div>
               </div>
               
               <div className="p-6 border-b border-white/5 flex-grow">
