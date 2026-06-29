@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
+import { BarChart2 } from "lucide-react";
 import {
   BarChart,
   Bar,
@@ -137,7 +138,21 @@ export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
   };
 
   if (!data || terms.length === 0) {
-    return null;
+    return (
+      <div className="mt-8 pt-8 border-t border-black/10 dark:border-white/10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <h3 className="text-lg font-semibold text-black dark:text-white flex items-center gap-2">
+            Bid Analytics
+          </h3>
+        </div>
+        <div className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg p-8 text-center">
+          <BarChart2 className="mx-auto h-8 w-8 text-neutral-400 mb-3 opacity-50" />
+          <p className="text-neutral-600 dark:text-neutral-400 font-medium">
+            No historical bidding analytics available for this course yet.
+          </p>
+        </div>
+      </div>
+    );
   }
 
   return (
