@@ -21,8 +21,9 @@ function Show-Menu {
     Write-Host "  [1] Sync ALL Data (APIs + PeopleSoft + Photos + PDFs)"
     Write-Host "  [2] Sync Class Schedules Only (PeopleSoft)"
     Write-Host "  [3] Sync Historical Syllabi Only (Coursedog PDFs)"
-    Write-Host "  [4] Transform Data & Build Only (No Scraping)"
-    Write-Host "  [5] Exit"
+    Write-Host "  [4] Sync Bid Analytics Only (SMUMods)"
+    Write-Host "  [5] Transform Data & Build Only (No Scraping)"
+    Write-Host "  [6] Exit"
     Write-Host ""
 }
 
@@ -46,7 +47,7 @@ function Run-TransformAndPush {
 }
 
 Show-Menu
-$choice = Read-Host "Select an option (1-5)"
+$choice = Read-Host "Select an option (1-6)"
 
 switch ($choice) {
     "1" {
@@ -57,8 +58,11 @@ switch ($choice) {
         Run-Script "python scripts/fetch_schedules.py"
         Write-Host "`n[3/5] Scraping latest Faculty Profile Photos..." -ForegroundColor Yellow
         Run-Script "python scripts/scrape_faculty.py"
-        Write-Host "`n[4/5] Syncing latest PDF syllabi..." -ForegroundColor Yellow
+        Write-Host "`n[4/6] Syncing latest PDF syllabi..." -ForegroundColor Yellow
         Run-Script "python scripts/sync_pdfs.py"
+        Write-Host "`n[5/6] Fetching Bid Analytics data..." -ForegroundColor Yellow
+        Run-Script "python scripts/fetch_bids.py"
+        Copy-Item -Path data/bidding_raw.json -Destination web/src/data/bids.json -Force -ErrorAction SilentlyContinue
         Run-TransformAndPush
     }
     "2" {
@@ -74,10 +78,17 @@ switch ($choice) {
         Run-TransformAndPush
     }
     "4" {
-        Write-Host "`n🚀 Running Data Transformation..." -ForegroundColor Cyan
+        Write-Host "`n🚀 Starting Bid Analytics Sync..." -ForegroundColor Cyan
+        Write-Host "`n[1/1] Fetching Bid Analytics data..." -ForegroundColor Yellow
+        Run-Script "python scripts/fetch_bids.py"
+        Copy-Item -Path data/bidding_raw.json -Destination web/src/data/bids.json -Force -ErrorAction SilentlyContinue
         Run-TransformAndPush
     }
     "5" {
+        Write-Host "`n🚀 Running Data Transformation..." -ForegroundColor Cyan
+        Run-TransformAndPush
+    }
+    "6" {
         Write-Host "Exiting..."
         exit
     }

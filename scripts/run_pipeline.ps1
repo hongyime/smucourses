@@ -26,6 +26,10 @@ Run-Script "python scripts/scrape_faculty.py"
 Write-Host "`n[4/5] Syncing latest PDF syllabi..." -ForegroundColor Yellow
 Run-Script "python scripts/sync_pdfs.py"
 
+Write-Host "`n[4.5/5] Fetching Bid Analytics data..." -ForegroundColor Yellow
+Run-Script "python scripts/fetch_bids.py"
+Copy-Item -Path data/bidding_raw.json -Destination web/src/data/bids.json -Force -ErrorAction SilentlyContinue
+
 Write-Host "`n[5/5] Transforming raw data into SSG format..." -ForegroundColor Yellow
 Run-Script "python scripts/transform_data.py"
 

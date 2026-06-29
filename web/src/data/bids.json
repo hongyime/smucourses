@@ -1,0 +1,14 @@
+{
+  "IS212": {
+    "SUBHAJIT DATTA": {
+      "2021-22 Term 1": {
+        "G3": [
+          {"window":"Round 1 Window 1","befVac":42,"aftVac":21,"minBid":12.5,"medBid":22.88},
+          {"window":"Round 1 Window 2","befVac":22,"aftVac":1,"minBid":17.32,"medBid":24.98},
+          {"window":"Round 1B Window 2","befVac":4,"aftVac":2,"minBid":10.11,"medBid":10.17},
+          {"window":"Round 2 Window 3","befVac":5,"aftVac":3,"minBid":13.57,"medBid":13.57}
+        ]
+      }
+    }
+  }
+}

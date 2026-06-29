@@ -5,7 +5,8 @@ import { CourseData } from "@/components/CourseCard";
 import FloatingActions from "@/components/FloatingActions";
 import CourseSchedules from "@/components/CourseSchedules";
 import BackButton from "@/components/BackButton";
-
+import BidAnalytics from "@/components/BidAnalytics";
+import allBidData from "@/data/bids.json";
 // Help next.js pre-render (SSG) these paths
 export async function generateStaticParams() {
   const courses = rawCourses as CourseData[];
@@ -19,6 +20,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
   const courses = rawCourses as CourseData[];
   // Using loosely typed 'any' because courses.json has more fields than the minimal CourseData interface
   const course: any = courses.find((c) => c.id === id);
+  const courseBidData = course ? (allBidData as any)[course.code] || null : null;
 
   if (!course) {
     return (
@@ -123,6 +125,10 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
 
             <div className="md:col-span-2">
               <CourseSchedules schedules={course.schedules} />
+            </div>
+            
+            <div className="md:col-span-2">
+              <BidAnalytics data={courseBidData} />
             </div>
           </div>
         </div>
