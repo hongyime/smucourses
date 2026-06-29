@@ -12,6 +12,24 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [daysAgo, setDaysAgo] = useState<number>(0);
   const [isClient, setIsClient] = useState(false);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== "undefined") {
+        if (window.scrollY > lastScrollY && window.scrollY > 80) {
+          setShow(false);
+          setMobileMenuOpen(false);
+        } else {
+          setShow(true);
+        }
+        setLastScrollY(window.scrollY);
+      }
+    };
+    window.addEventListener("scroll", controlNavbar);
+    return () => window.removeEventListener("scroll", controlNavbar);
+  }, [lastScrollY]);
 
   useEffect(() => {
     setIsClient(true);
@@ -27,7 +45,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full flex flex-col">
+    <header className={`sticky top-0 z-50 w-full flex flex-col transition-transform duration-300 ease-in-out ${show ? 'translate-y-0' : '-translate-y-full'}`}>
       {/* Sync Status Banner */}
       {isClient && (
         <div className="w-full bg-[#111]/90 backdrop-blur-xl border-b border-white/5 py-1.5 px-4 text-center text-xs text-neutral-400">
