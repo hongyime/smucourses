@@ -42,6 +42,12 @@ def download_and_validate_pdf(url: str, doc_id: str) -> bytes:
 
             return file_data
 
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            print(f"⏭️ SKIPPED {doc_id}: 404 Not Found (Syllabus unavailable on Coursedog)")
+        else:
+            print(f"❌ ERROR downloading {doc_id}: HTTP {e.response.status_code}")
+        return None
     except Exception as e:
         print(f"❌ ERROR downloading {doc_id}: {str(e)}")
         return None

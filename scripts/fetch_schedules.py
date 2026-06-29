@@ -127,8 +127,15 @@ async def worker(worker_id, queue, browser, all_schedules):
                     current_term = term_val
                 
                 await target_frame.locator("#SIS_CLS_SCHDWRK_SUBJECT").select_option(subject)
-                await page.wait_for_timeout(500)
-                await target_frame.locator("#SIS_CLS_SCHDWRK_SEARCH_BTN").click()
+                await page.wait_for_timeout(1500) # Give more time for the AJAX postback
+                
+                # Check if there's a processing overlay and wait for it to be hidden
+                try:
+                    await target_frame.locator("#WAIT_win0").wait_for(state="hidden", timeout=3000)
+                except:
+                    pass
+
+                await target_frame.locator("#SIS_CLS_SCHDWRK_SEARCH_BTN").click(timeout=10000, force=True)
                 
                 # Smart wait: Wait for the result table or a specific error popup
                 try:
