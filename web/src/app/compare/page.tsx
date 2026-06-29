@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft, Scale, Trash2, CheckCircle2, XCircle, User, BookOpen, Calendar } from "lucide-react";
 import { useCompare } from "@/hooks/useCompare";
@@ -23,6 +23,19 @@ export default function ComparePage() {
   const professors = useMemo(() => {
     return professorsData.filter(p => profIds.includes(p.id));
   }, [profIds]);
+
+  // Automatically clean up stale/invalid IDs from localStorage
+  // This fixes the bug where users are prevented from adding courses if their storage has old invalid dummy data
+  useEffect(() => {
+    if (courses.length !== courseIds.length && courseIds.length > 0) {
+      localStorage.setItem("smu_compare", JSON.stringify(courses.map(c => c.id)));
+      window.dispatchEvent(new Event("compareUpdated"));
+    }
+    if (professors.length !== profIds.length && profIds.length > 0) {
+      localStorage.setItem("smu_compare_professors", JSON.stringify(professors.map(p => p.id)));
+      window.dispatchEvent(new Event("compareProfessorsUpdated"));
+    }
+  }, [courses, courseIds, professors, profIds]);
 
   const currentItems = searchType === "courses" ? courses : professors;
   const handleClear = searchType === "courses" ? clearCourses : clearProfs;
@@ -232,23 +245,11 @@ export default function ComparePage() {
                   </div>
                 </div>
 
-                {cleanResearch.length > 0 && (
-                  <div className="p-6 border-b border-white/5">
-                    <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Research Areas</h3>
-                    <div className="flex flex-wrap gap-1.5">
-                      {cleanResearch.slice(0, 5).map((area: string, i: number) => (
-                        <span key={i} className="text-xs px-2 py-1 bg-emerald-500/10 text-emerald-300 rounded border border-emerald-500/20">{area}</span>
-                      ))}
-                      {cleanResearch.length > 5 && (
-                        <span className="text-xs px-2 py-1 bg-white/5 text-neutral-400 rounded border border-white/10">+{cleanResearch.length - 5} more</span>
-                      )}
-                    </div>
-                  </div>
-                )}
+
 
                 <div className="p-6 border-b border-white/5">
                   <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Courses Taught ({uniqueCourses.size})</h3>
-                  <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
+                  <div className="space-y-2">
                     {Array.from(uniqueCourses.entries()).map(([code, name]) => (
                       <Link key={code} href={`/courses/${code}`} className="block text-sm hover:bg-white/5 rounded px-2 py-1.5 -mx-2 transition-colors">
                         <span className="text-[var(--color-brand-primary)] font-semibold">{code}</span>
@@ -260,7 +261,7 @@ export default function ComparePage() {
 
                 <div className="p-6 bg-white/[0.02] rounded-b-2xl flex-grow">
                   <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Teaching History</h3>
-                  <ul className="space-y-2 max-h-48 overflow-y-auto pr-1">
+                  <ul className="space-y-2">
                     {terms.map((termKey) => (
                       <li key={termKey} className="text-sm">
                         <div className="font-semibold text-white mb-0.5">{prof.history[termKey].termName}</div>
