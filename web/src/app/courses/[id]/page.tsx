@@ -128,7 +128,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
             </div>
             
             <div className="md:col-span-2">
-              <BidAnalytics data={courseBidData} />
+              <BidAnalytics data={courseBidData} schedules={course.schedules} />
             </div>
           </div>
         </div>
