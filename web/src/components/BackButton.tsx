@@ -18,7 +18,7 @@ export default function BackButton({ fallback = "/browse", label = "Back to Sear
   return (
     <button 
       onClick={handleBack}
-      className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex"
+      className="text-neutral-900 dark:text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex font-medium"
     >
       <ChevronLeft size={20} /> {label}
     </button>

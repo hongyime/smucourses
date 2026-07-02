@@ -22,11 +22,11 @@ export default function FloatingActions({ id, namespace = "courses" }: FloatingA
         onClick={() => toggleCompare(id)}
         className={`flex items-center gap-2 px-4 py-2 rounded-full transition-colors border font-medium ${
           isComparing 
-            ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30 hover:bg-indigo-500/30' 
-            : 'bg-white/5 text-neutral-300 border-white/10 hover:bg-white/10 hover:text-white'
+            ? 'bg-indigo-500/10 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 border-indigo-500/30 hover:bg-indigo-500/20 dark:hover:bg-indigo-500/30' 
+            : 'bg-black/5 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 hover:text-neutral-900 dark:hover:text-white'
         }`}
       >
-        <Scale size={18} className={isComparing ? "text-indigo-300" : ""} />
+        <Scale size={18} className={isComparing ? "text-indigo-600 dark:text-indigo-300" : ""} />
         {isComparing ? "Remove" : "Compare"}
       </button>
       
@@ -34,11 +34,11 @@ export default function FloatingActions({ id, namespace = "courses" }: FloatingA
         onClick={() => toggleBookmark(id)}
         className={`flex items-center gap-2 px-4 py-2 rounded-full transition-colors border font-medium ${
           bookmarked 
-            ? 'bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)] border-[var(--color-brand-primary)]/30 hover:bg-[var(--color-brand-primary)]/30' 
-            : 'bg-white/5 text-neutral-300 border-white/10 hover:bg-white/10 hover:text-white'
+            ? 'bg-[var(--color-brand-primary)]/10 dark:bg-[var(--color-brand-primary)]/20 text-[#996e00] dark:text-[var(--color-brand-primary)] border-[var(--color-brand-primary)]/30 hover:bg-[var(--color-brand-primary)]/20 dark:hover:bg-[var(--color-brand-primary)]/30' 
+            : 'bg-black/5 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 hover:text-neutral-900 dark:hover:text-white'
         }`}
       >
-        <Bookmark size={18} className={bookmarked ? "fill-[var(--color-brand-primary)] text-[var(--color-brand-primary)]" : ""} />
+        <Bookmark size={18} className={bookmarked ? "fill-[var(--color-brand-primary)] text-[#996e00] dark:text-[var(--color-brand-primary)]" : ""} />
         {bookmarked ? "Saved" : "Save"}
       </button>
     </div>
