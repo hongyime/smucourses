@@ -84,7 +84,7 @@ export default function Home() {
             </div>
             <input 
               type="text" 
-              className="w-full bg-white/5 border border-white/10 text-white rounded-full h-16 pl-16 pr-36 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500 backdrop-blur-md shadow-2xl"
+              className="w-full bg-white/80 dark:bg-white/5 border border-black/10 dark:border-white/10 text-neutral-900 dark:text-white rounded-full h-16 pl-16 pr-36 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500 backdrop-blur-md shadow-2xl"
               placeholder="Search by code or area (e.g., ACCT101)" 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -101,12 +101,12 @@ export default function Home() {
               { icon: Award, title: "Weightages", desc: "Know exactly what you're bidding for", color: "#f59e0b" },
               { icon: Clock, title: "Historical Data", desc: "See when courses are usually offered", color: "#10b981" }
             ].map((feature, i) => (
-              <motion.div key={i} variants={itemVariants} className="glass-panel p-6 hover:border-white/20 transition-colors">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mb-4 border border-white/5 shadow-inner" style={{ color: feature.color }}>
+              <motion.div key={i} variants={itemVariants} className="glass-panel p-6 hover:border-black/20 dark:hover:border-white/20 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-black/5 dark:bg-white/5 flex items-center justify-center mb-4 border border-black/5 dark:border-white/5 shadow-inner" style={{ color: feature.color }}>
                   <feature.icon size={20} />
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-white">{feature.title}</h3>
-                <p className="text-sm text-neutral-400">{feature.desc}</p>
+                <h3 className="text-lg font-semibold mb-2 text-neutral-900 dark:text-white">{feature.title}</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">{feature.desc}</p>
               </motion.div>
             ))}
           </motion.div>
