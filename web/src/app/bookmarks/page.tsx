@@ -39,24 +39,24 @@ export default function BookmarksPage() {
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="mb-8">
-          <Link href="/browse" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex">
+          <Link href="/browse" className="text-neutral-900 dark:text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 inline-flex font-medium">
             <ChevronLeft size={20} /> Back to Search
           </Link>
         </div>
 
         <div className="flex flex-col items-center mb-8">
-          <h1 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+          <h1 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3 font-display">
             <Bookmark className="text-[var(--color-brand-primary)]" />
             Your Bookmarks
           </h1>
           
-          <div className="bg-black/20 dark:bg-white/5 p-1 rounded-full inline-flex border border-black/10 dark:border-white/10">
+          <div className="bg-black/5 dark:bg-white/5 p-1 rounded-full inline-flex border border-black/10 dark:border-white/10">
             <button
               onClick={() => setSearchType("courses")}
               className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
                 searchType === "courses"
                   ? "bg-[var(--color-brand-primary)] text-black shadow-lg"
-                  : "text-neutral-500 hover:text-neutral-300"
+                  : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"
               }`}
             >
               Courses ({bookmarkedCourses.length})
@@ -66,7 +66,7 @@ export default function BookmarksPage() {
               className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
                 searchType === "professors"
                   ? "bg-[var(--color-brand-primary)] text-black shadow-lg"
-                  : "text-neutral-500 hover:text-neutral-300"
+                  : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"
               }`}
             >
               Professors ({bookmarkedProfessors.length})
@@ -75,7 +75,7 @@ export default function BookmarksPage() {
         </div>
 
         {currentItems.length === 0 ? (
-          <div className="glass-panel p-16 text-center border-dashed border-2 border-black/10 dark:border-white/10 rounded-2xl mt-8">
+          <div className="glass-panel p-16 text-center border-dashed border-2 border-black/10 dark:border-white/10 rounded-2xl mt-8 bg-white/80 dark:bg-white/5">
             <h2 className="text-2xl font-bold text-black dark:text-white mb-3">No {searchType} bookmarked</h2>
             <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-md mx-auto">
               Go back to the search and click the bookmark icon on any {searchType === "courses" ? "course" : "professor"} card to save it for later.

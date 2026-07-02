@@ -44,7 +44,7 @@ export default function ComparePage() {
     <div className="container mx-auto px-4 py-12 max-w-7xl">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
         <div>
-          <Link href="/browse" className="inline-flex items-center text-white hover:text-[var(--color-brand-primary)] transition-colors">
+          <Link href="/browse" className="inline-flex items-center text-neutral-900 dark:text-white hover:text-[var(--color-brand-primary)] transition-colors font-medium">
             <ArrowLeft size={16} className="mr-2" />
             Back to Search
           </Link>
@@ -53,7 +53,7 @@ export default function ComparePage() {
         {currentItems.length > 0 && (
           <button 
             onClick={handleClear}
-            className="px-4 py-2 bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20 rounded-full flex items-center gap-2 transition-all"
+            className="px-4 py-2 bg-red-500/10 text-red-600 dark:text-red-400 hover:bg-red-500/20 border border-red-500/20 rounded-full flex items-center gap-2 transition-all font-medium"
           >
             <Trash2 size={18} />
             Clear Comparison
@@ -62,18 +62,18 @@ export default function ComparePage() {
       </div>
 
       <div className="flex flex-col items-center mb-10">
-        <h1 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+        <h1 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3 font-display">
           <Scale className="text-[var(--color-brand-primary)]" />
           Compare {searchType === "courses" ? "Courses" : "Professors"}
         </h1>
         
-        <div className="bg-black/20 dark:bg-white/5 p-1 rounded-full inline-flex border border-black/10 dark:border-white/10">
+        <div className="bg-black/5 dark:bg-white/5 p-1 rounded-full inline-flex border border-black/10 dark:border-white/10">
           <button
             onClick={() => setSearchType("courses")}
             className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
               searchType === "courses"
                 ? "bg-[var(--color-brand-primary)] text-black shadow-lg"
-                : "text-neutral-500 hover:text-neutral-300"
+                : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"
             }`}
           >
             Courses ({courses.length})
@@ -83,7 +83,7 @@ export default function ComparePage() {
             className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
               searchType === "professors"
                 ? "bg-[var(--color-brand-primary)] text-black shadow-lg"
-                : "text-neutral-500 hover:text-neutral-300"
+                : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"
             }`}
           >
             Professors ({professors.length})
@@ -92,10 +92,10 @@ export default function ComparePage() {
       </div>
 
       {currentItems.length === 0 ? (
-        <div className="glass-panel p-16 text-center border-dashed border-2 border-white/10 rounded-2xl">
-          <Scale size={64} className="mx-auto text-neutral-600 mb-6" />
-          <h2 className="text-2xl font-bold text-white mb-3">No {searchType} selected</h2>
-          <p className="text-neutral-400 mb-8 max-w-md mx-auto">
+        <div className="glass-panel p-16 text-center border-dashed border-2 border-black/10 dark:border-white/10 rounded-2xl bg-white/80 dark:bg-white/5">
+          <Scale size={64} className="mx-auto text-neutral-400 dark:text-neutral-600 mb-6" />
+          <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3">No {searchType} selected</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-md mx-auto">
             Go back to the search and click the scale icon on any {searchType === "courses" ? "course" : "professor"} card to add it to your comparison tool.
           </p>
           <Link href={`/browse?type=${searchType}`} className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-brand-primary)] hover:bg-[#c28e00] text-[#050a14] font-semibold rounded-full transition-colors">
@@ -105,60 +105,60 @@ export default function ComparePage() {
       ) : searchType === "courses" ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-8">
           {courses.map(course => (
-            <div key={course.id} className="glass-panel flex flex-col relative group">
+            <div key={course.id} className="glass-panel flex flex-col relative group bg-white/80 dark:bg-white/5 border border-black/10 dark:border-white/10">
               <button 
                 onClick={() => toggleCourse(course.id)}
-                className="absolute top-4 right-4 p-2 bg-black/40 hover:bg-red-500/20 text-neutral-400 hover:text-red-400 rounded-full transition-colors opacity-100 md:opacity-0 group-hover:opacity-100 z-10"
+                className="absolute top-4 right-4 p-2 bg-black/10 dark:bg-black/40 hover:bg-red-500/20 text-neutral-500 dark:text-neutral-400 hover:text-red-500 dark:hover:text-red-400 rounded-full transition-colors opacity-100 md:opacity-0 group-hover:opacity-100 z-10"
                 title="Remove from comparison"
               >
                 <XCircle size={20} />
               </button>
               
-              <div className="p-6 border-b border-white/10 bg-white/5 rounded-t-2xl">
-                <div className="text-indigo-400 font-bold mb-2">{course.code}</div>
-                <h2 className="text-2xl font-bold text-white mb-3 leading-tight">{course.longName || course.name}</h2>
+              <div className="p-6 border-b border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 rounded-t-2xl">
+                <div className="text-indigo-600 dark:text-indigo-400 font-bold mb-2">{course.code}</div>
+                <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3 leading-tight">{course.longName || course.name}</h2>
                 <div className="flex flex-wrap gap-1.5">
                   {course.school?.name && (
-                    <span className="text-xs px-2 py-1 bg-indigo-500/10 text-indigo-300 rounded border border-indigo-500/20">
+                    <span className="text-xs px-2 py-1 bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 rounded border border-indigo-500/20">
                       {course.school.name}
                     </span>
                   )}
                   {course.level && (
-                    <span className="text-xs px-2 py-1 bg-blue-500/10 text-blue-300 rounded border border-blue-500/20">
+                    <span className="text-xs px-2 py-1 bg-blue-500/10 text-blue-700 dark:text-blue-300 rounded border border-blue-500/20">
                       {course.level}
                     </span>
                   )}
                 </div>
               </div>
               
-              <div className="p-6 border-b border-white/5 flex-grow">
+              <div className="p-6 border-b border-black/5 dark:border-white/5 flex-grow">
                 <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Description</h3>
-                <p className="text-sm text-neutral-300 leading-relaxed line-clamp-6 hover:line-clamp-none transition-all">{course.description || "N/A"}</p>
+                <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed line-clamp-6 hover:line-clamp-none transition-all">{course.description || "N/A"}</p>
               </div>
 
-              <div className="p-6 border-b border-white/5">
+              <div className="p-6 border-b border-black/5 dark:border-white/5">
                 <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Credits & Component</h3>
-                <div className="text-lg font-medium text-white">{course.credits?.units || 1} Units</div>
-                <div className="text-sm text-neutral-400 mt-1">{course.component?.type || "Seminar"}</div>
+                <div className="text-lg font-medium text-neutral-900 dark:text-white">{course.credits?.units || 1} Units</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">{course.component?.type || "Seminar"}</div>
               </div>
 
-              <div className="p-6 border-b border-white/5 bg-white/[0.02]">
+              <div className="p-6 border-b border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02]">
                 <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Final Exam</h3>
                 <div className="flex items-center gap-2 text-lg font-medium">
                   {course.component?.hasFinalExam ? (
-                    <><CheckCircle2 className="text-red-400" /> <span className="text-red-100">Yes</span></>
+                    <><CheckCircle2 className="text-red-500 dark:text-red-400" /> <span className="text-red-700 dark:text-red-100">Yes</span></>
                   ) : (
-                    <><XCircle className="text-emerald-400" /> <span className="text-emerald-100">No</span></>
+                    <><XCircle className="text-emerald-500 dark:text-emerald-400" /> <span className="text-emerald-700 dark:text-emerald-100">No</span></>
                   )}
                 </div>
               </div>
 
-              <div className="p-6 border-b border-white/5">
+              <div className="p-6 border-b border-black/5 dark:border-white/5">
                 <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Prerequisites</h3>
                 {course.requisites?.prerequisites?.length > 0 ? (
                   <ul className="list-disc pl-4 space-y-1">
                     {course.requisites.prerequisites.map((req: { name: string }, i: number) => (
-                      <li key={i} className="text-sm text-amber-200/80">{req.name}</li>
+                      <li key={i} className="text-sm text-amber-800 dark:text-amber-200/80">{req.name}</li>
                     ))}
                   </ul>
                 ) : (
@@ -166,14 +166,14 @@ export default function ComparePage() {
                 )}
               </div>
 
-              <div className="p-6 bg-white/[0.02] rounded-b-2xl">
+              <div className="p-6 bg-black/[0.02] dark:bg-white/[0.02] rounded-b-2xl">
                 <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Areas / Tracks</h3>
                 <div className="flex flex-wrap gap-2">
                   {course.areas?.map((a: string, i: number) => (
-                    <span key={`a-${i}`} className="text-xs px-2 py-1 bg-blue-500/10 text-blue-300 rounded border border-blue-500/20">{a}</span>
+                    <span key={`a-${i}`} className="text-xs px-2 py-1 bg-blue-500/10 text-blue-700 dark:text-blue-300 rounded border border-blue-500/20">{a}</span>
                   ))}
                   {course.tracks?.map((t: string, i: number) => (
-                    <span key={`t-${i}`} className="text-xs px-2 py-1 bg-emerald-500/10 text-emerald-300 rounded border border-emerald-500/20">{t}</span>
+                    <span key={`t-${i}`} className="text-xs px-2 py-1 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 rounded border border-emerald-500/20">{t}</span>
                   ))}
                   {(!course.areas?.length && !course.tracks?.length) && <span className="text-sm text-neutral-500 italic">None</span>}
                 </div>
@@ -209,74 +209,74 @@ export default function ComparePage() {
             const cleanResearch = researchAreas.filter((a: string) => !knownSchoolsLong.includes(a));
             
             return (
-              <div key={prof.id} className="glass-panel flex flex-col relative group">
+              <div key={prof.id} className="glass-panel flex flex-col relative group bg-white/80 dark:bg-white/5 border border-black/10 dark:border-white/10">
                 <button 
                   onClick={() => toggleProf(prof.id)}
-                  className="absolute top-4 right-4 p-2 bg-black/40 hover:bg-red-500/20 text-neutral-400 hover:text-red-400 rounded-full transition-colors opacity-100 md:opacity-0 group-hover:opacity-100 z-10"
+                  className="absolute top-4 right-4 p-2 bg-black/10 dark:bg-black/40 hover:bg-red-500/20 text-neutral-500 dark:text-neutral-400 hover:text-red-500 dark:hover:text-red-400 rounded-full transition-colors opacity-100 md:opacity-0 group-hover:opacity-100 z-10"
                   title="Remove from comparison"
                 >
                   <XCircle size={20} />
                 </button>
                 
-                <div className="p-6 border-b border-white/10 bg-white/5 rounded-t-2xl flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                <div className="p-6 border-b border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 rounded-t-2xl flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center shrink-0">
                     {photoUrl ? (
                       <img src={photoUrl} alt={prof.name} className="w-full h-full object-cover" />
                     ) : (
-                      <User size={28} className="text-white/20" />
+                      <User size={28} className="text-black/20 dark:text-white/20" />
                     )}
                   </div>
                   <div className="min-w-0">
-                    <h2 className="text-xl font-bold text-white mb-1 leading-tight">{prof.name}</h2>
+                    <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-1 leading-tight">{prof.name}</h2>
                     {title && (
-                      <p className="text-xs text-[var(--color-brand-primary)] line-clamp-2">{title.split(';')[0].trim()}</p>
+                      <p className="text-xs text-[var(--color-brand-primary)] line-clamp-2 font-medium">{title.split(';')[0].trim()}</p>
                     )}
-                    <Link href={`/professors/${prof.id}`} className="text-xs text-neutral-400 hover:text-white transition-colors mt-1 inline-block">View Full Profile →</Link>
+                    <Link href={`/professors/${prof.id}`} className="text-xs text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors mt-1 inline-block font-medium">View Full Profile →</Link>
                   </div>
                 </div>
 
-                <div className="p-6 border-b border-white/5">
+                <div className="p-6 border-b border-black/5 dark:border-white/5">
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                      <div className="text-2xl font-bold text-white mb-1 flex items-center gap-2"><BookOpen size={16} className="text-[var(--color-brand-primary)]"/>{totalCourses}</div>
-                      <div className="text-xs text-neutral-400">Total Classes</div>
+                      <div className="text-2xl font-bold text-neutral-900 dark:text-white mb-1 flex items-center gap-2"><BookOpen size={16} className="text-[var(--color-brand-primary)]"/>{totalCourses}</div>
+                      <div className="text-xs text-neutral-600 dark:text-neutral-400">Total Classes</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-white mb-1 flex items-center gap-2"><Calendar size={16} className="text-[var(--color-brand-primary)]"/>{terms.length}</div>
-                      <div className="text-xs text-neutral-400">Semesters</div>
+                      <div className="text-2xl font-bold text-neutral-900 dark:text-white mb-1 flex items-center gap-2"><Calendar size={16} className="text-[var(--color-brand-primary)]"/>{terms.length}</div>
+                      <div className="text-xs text-neutral-600 dark:text-neutral-400">Semesters</div>
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {prof.schools?.map((s, i) => (
-                      <span key={`s-${i}`} className="text-xs px-2 py-1 bg-indigo-500/10 text-indigo-300 rounded border border-indigo-500/20">{s}</span>
+                      <span key={`s-${i}`} className="text-xs px-2 py-1 bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 rounded border border-indigo-500/20">{s}</span>
                     ))}
                     {prof.levels?.map((l, i) => (
-                      <span key={`l-${i}`} className="text-xs px-2 py-1 bg-blue-500/10 text-blue-300 rounded border border-blue-500/20">{l}</span>
+                      <span key={`l-${i}`} className="text-xs px-2 py-1 bg-blue-500/10 text-blue-700 dark:text-blue-300 rounded border border-blue-500/20">{l}</span>
                     ))}
                   </div>
                 </div>
 
 
 
-                <div className="p-6 border-b border-white/5">
+                <div className="p-6 border-b border-black/5 dark:border-white/5">
                   <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Courses Taught ({uniqueCourses.size})</h3>
                   <div className="space-y-2">
                     {Array.from(uniqueCourses.entries()).map(([code, name]) => (
-                      <Link key={code} href={`/courses/${code}`} className="block text-sm hover:bg-white/5 rounded px-2 py-1.5 -mx-2 transition-colors">
+                      <Link key={code} href={`/courses/${code}`} className="block text-sm hover:bg-black/5 dark:hover:bg-white/5 rounded px-2 py-1.5 -mx-2 transition-colors">
                         <span className="text-[var(--color-brand-primary)] font-semibold">{code}</span>
-                        <span className="text-neutral-400 ml-2">{name}</span>
+                        <span className="text-neutral-600 dark:text-neutral-400 ml-2">{name}</span>
                       </Link>
                     ))}
                   </div>
                 </div>
 
-                <div className="p-6 bg-white/[0.02] rounded-b-2xl flex-grow">
+                <div className="p-6 bg-black/[0.02] dark:bg-white/[0.02] rounded-b-2xl flex-grow">
                   <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Teaching History</h3>
                   <ul className="space-y-2">
                     {terms.map((termKey) => (
                       <li key={termKey} className="text-sm">
-                        <div className="font-semibold text-white mb-0.5">{prof.history[termKey].termName}</div>
-                        <div className="text-neutral-400 text-xs">
+                        <div className="font-semibold text-neutral-900 dark:text-white mb-0.5">{prof.history[termKey].termName}</div>
+                        <div className="text-neutral-600 dark:text-neutral-400 text-xs">
                           {prof.history[termKey].courses.map(c => c.courseCode).join(', ')}
                         </div>
                       </li>

@@ -144,7 +144,7 @@ function CoursesSearchContent() {
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="mb-8 flex items-center">
-          <Link href="/" className="text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1">
+          <Link href="/" className="text-neutral-900 dark:text-white hover:text-[var(--color-brand-primary)] transition-colors flex items-center gap-1 font-medium">
             <ChevronLeft size={20} /> Back to Home
           </Link>
         </div>
@@ -160,14 +160,14 @@ function CoursesSearchContent() {
         />
 
         <div className="mb-6 flex justify-between items-end">
-          <h2 className="text-xl font-semibold">
+          <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
             {currentResults.length} {currentResults.length === 1 ? "Result" : "Results"}
           </h2>
         </div>
 
         {currentResults.length === 0 ? (
-          <div className="glass-panel p-12 text-center">
-            <p className="text-xl text-neutral-400 mb-2">No {filters.searchType} found matching your criteria.</p>
+          <div className="glass-panel p-12 text-center bg-white/80 dark:bg-white/5 border-black/10 dark:border-white/10">
+            <p className="text-xl text-neutral-600 dark:text-neutral-400 mb-2">No {filters.searchType} found matching your criteria.</p>
             <button 
               onClick={() => setFilters({ query: "", searchType: filters.searchType, school: "", level: "", area: "", track: "", gradeMode: "" })}
               className="text-[var(--color-brand-primary)] hover:opacity-80 font-medium transition-opacity"
