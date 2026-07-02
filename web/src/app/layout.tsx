@@ -22,9 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${outfit.variable} dark`}>
-      <body className="antialiased selection:bg-[var(--color-brand-primary)] selection:text-white font-sans bg-[#0a0a0a] text-[#f8fafc]">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} forcedTheme="dark">
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${outfit.variable}`}>
+      <body className="antialiased selection:bg-[var(--color-brand-primary)] selection:text-white font-sans bg-[var(--color-bg-base)] text-[var(--color-text-main)] transition-colors duration-300">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           <Navbar />
           <main>
             {children}

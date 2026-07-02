@@ -43,11 +43,11 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
           <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
           
           <div className="flex items-center gap-3 mb-4">
-            <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 font-semibold rounded border border-indigo-500/30">
+            <span className="px-3 py-1 bg-indigo-500/10 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 font-semibold rounded border border-indigo-500/30">
               {course.code}
             </span>
             {course.credits?.units && (
-              <span className="px-3 py-1 bg-white/5 text-neutral-300 font-medium rounded border border-white/10">
+              <span className="px-3 py-1 bg-black/5 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 font-medium rounded border border-black/10 dark:border-white/10">
                 {course.credits.units} CU
               </span>
             )}

@@ -49,7 +49,7 @@ export default function CourseCard({ course }: CourseCardProps) {
       whileTap={{ scale: 0.98 }}
       layout
     >
-      <div className="glass-panel p-6 h-full transition-colors duration-300 hover:border-[var(--color-brand-primary)]/40 hover:bg-white/10 relative overflow-hidden flex flex-col border-white/5 bg-white/5">
+      <div className="glass-panel p-6 h-full transition-colors duration-300 hover:border-[var(--color-brand-primary)]/40 hover:bg-black/5 dark:hover:bg-white/10 relative overflow-hidden flex flex-col border-black/5 dark:border-white/5 bg-white/70 dark:bg-white/5">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-primary)]/20 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-500"></div>
         
         <div className="flex justify-between items-start mb-3">
@@ -59,42 +59,42 @@ export default function CourseCard({ course }: CourseCardProps) {
           <div className="flex items-center gap-2 relative z-10">
             <button 
               onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleCompare(course.id); }}
-              className={`p-1.5 rounded-full transition-colors ${isComparing ? 'bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)]' : 'text-neutral-500 hover:text-white hover:bg-white/10'}`}
+              className={`p-1.5 rounded-full transition-colors ${isComparing ? 'bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)]' : 'text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10'}`}
               title={isComparing ? "Remove from Compare" : "Add to Compare"}
             >
               <Scale size={18} />
             </button>
             <button 
               onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleBookmark(course.id); }}
-              className={`p-1.5 rounded-full transition-colors ${bookmarked ? 'bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)]' : 'text-neutral-500 hover:text-white hover:bg-white/10'}`}
+              className={`p-1.5 rounded-full transition-colors ${bookmarked ? 'bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)]' : 'text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10'}`}
               title={bookmarked ? "Remove Bookmark" : "Add Bookmark"}
             >
               <Bookmark size={18} className={bookmarked ? "fill-[var(--color-brand-primary)]" : ""} />
             </button>
-            <div className="text-neutral-500 group-hover:text-white transition-colors pointer-events-none">
+            <div className="text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors pointer-events-none">
               <ChevronRight size={18} />
             </div>
           </div>
         </div>
 
-        <h2 className="text-xl font-bold mb-2 text-white group-hover:text-[var(--color-brand-primary)] transition-colors line-clamp-2 leading-snug font-display">
+        <h2 className="text-xl font-bold mb-2 text-neutral-900 dark:text-white group-hover:text-[var(--color-brand-primary)] transition-colors line-clamp-2 leading-snug font-display">
           {course.longName || course.name}
         </h2>
 
         <div className="flex flex-wrap gap-1.5 mb-4 mt-auto">
           {course.school?.name && (
-            <span className="text-xs px-2 py-1 bg-indigo-500/10 text-indigo-300 rounded border border-indigo-500/20">
+            <span className="text-xs px-2 py-1 bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 rounded border border-indigo-500/20">
               {course.school.name}
             </span>
           )}
           {course.level && (
-            <span className="text-xs px-2 py-1 bg-blue-500/10 text-blue-300 rounded border border-blue-500/20">
+            <span className="text-xs px-2 py-1 bg-blue-500/10 text-blue-700 dark:text-blue-300 rounded border border-blue-500/20">
               {course.level}
             </span>
           )}
         </div>
 
-        <p className="text-sm text-neutral-400 mb-2 line-clamp-3 leading-relaxed flex-grow">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-2 line-clamp-3 leading-relaxed flex-grow">
           {truncatedDesc}
         </p>
       </div>

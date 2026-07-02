@@ -54,13 +54,13 @@ export default function SearchFilter({
     <div className="w-full mb-8">
       {/* Search Type Toggle */}
       <div className="flex justify-center mb-6">
-        <div className="bg-black/20 dark:bg-white/5 p-1 rounded-full inline-flex border border-black/10 dark:border-white/10">
+        <div className="bg-black/5 dark:bg-white/5 p-1 rounded-full inline-flex border border-black/10 dark:border-white/10">
           <button
             onClick={() => handleChange("searchType", "courses")}
             className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
               filters.searchType === "courses"
                 ? "bg-[var(--color-brand-primary)] text-black shadow-lg"
-                : "text-neutral-500 hover:text-neutral-300"
+                : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"
             }`}
           >
             Courses
@@ -70,7 +70,7 @@ export default function SearchFilter({
             className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
               filters.searchType === "professors"
                 ? "bg-[var(--color-brand-primary)] text-black shadow-lg"
-                : "text-neutral-500 hover:text-neutral-300"
+                : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"
             }`}
           >
             Professors
@@ -85,7 +85,7 @@ export default function SearchFilter({
         </div>
         <input
           type="text"
-          className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-black dark:text-white rounded-full h-16 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500 backdrop-blur-sm"
+          className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-neutral-900 dark:text-white rounded-full h-16 pl-14 pr-32 text-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/50 transition-all placeholder:text-neutral-500 backdrop-blur-sm shadow-md dark:shadow-none"
           placeholder={filters.searchType === "courses" ? "Search by course code, name, or keywords..." : "Search by professor name..."}
           value={filters.query}
           onChange={(e) => handleChange("query", e.target.value)}
@@ -94,7 +94,7 @@ export default function SearchFilter({
           {filters.query && (
             <button
               onClick={() => handleChange("query", "")}
-              className="p-2 text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+              className="p-2 text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
               title="Clear search"
             >
               <X size={18} />
@@ -105,7 +105,7 @@ export default function SearchFilter({
             className={`flex items-center gap-2 px-4 h-full rounded-full transition-colors font-medium border border-black/5 dark:border-white/5 ${
               showFilters || activeFilterCount > 0
                 ? "bg-[var(--color-brand-primary)]/20 text-[var(--color-brand-primary)] border-[var(--color-brand-primary)]/30"
-                : "bg-black/5 dark:bg-white/5 text-neutral-600 dark:text-neutral-300 hover:bg-black/10 dark:hover:bg-white/10"
+                : "bg-black/5 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 hover:bg-black/10 dark:hover:bg-white/10"
             }`}
           >
             <SlidersHorizontal size={18} />
@@ -116,13 +116,13 @@ export default function SearchFilter({
 
       {/* Advanced Filters Panel */}
       {showFilters && (
-        <div className="glass-panel p-6 animate-fade-in">
+        <div className="glass-panel p-6 animate-fade-in bg-white/80 dark:bg-white/5 border-black/10 dark:border-white/10">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold">Refine Search</h3>
+            <h3 className="text-lg font-semibold text-neutral-900 dark:text-white">Refine Search</h3>
             {activeFilterCount > 0 && (
               <button
                 onClick={clearFilters}
-                className="text-sm text-neutral-400 hover:text-white transition-colors flex items-center gap-1"
+                className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors flex items-center gap-1"
               >
                 <X size={14} /> Clear all
               </button>
@@ -132,11 +132,11 @@ export default function SearchFilter({
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {/* School */}
             <div>
-              <label className="block text-sm text-neutral-400 mb-1.5 ml-1">School</label>
+              <label className="block text-sm text-neutral-600 dark:text-neutral-400 mb-1.5 ml-1">School</label>
               <select
                 value={filters.school}
                 onChange={(e) => handleChange("school", e.target.value)}
-                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full bg-white dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-xl px-4 py-2.5 text-neutral-900 dark:text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
               >
                 <option value="">All Schools</option>
                 {availableSchools.map((s) => (
@@ -147,11 +147,11 @@ export default function SearchFilter({
 
             {/* Level */}
             <div>
-              <label className="block text-sm text-neutral-400 mb-1.5 ml-1">Level</label>
+              <label className="block text-sm text-neutral-600 dark:text-neutral-400 mb-1.5 ml-1">Level</label>
               <select
                 value={filters.level}
                 onChange={(e) => handleChange("level", e.target.value)}
-                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full bg-white dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-xl px-4 py-2.5 text-neutral-900 dark:text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
               >
                 <option value="">All Levels</option>
                 {availableLevels.map((l) => (
@@ -162,11 +162,11 @@ export default function SearchFilter({
 
             {/* Area */}
             <div>
-              <label className="block text-sm text-neutral-400 mb-1.5 ml-1">Area</label>
+              <label className="block text-sm text-neutral-600 dark:text-neutral-400 mb-1.5 ml-1">Area</label>
               <select
                 value={filters.area}
                 onChange={(e) => handleChange("area", e.target.value)}
-                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full bg-white dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-xl px-4 py-2.5 text-neutral-900 dark:text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
               >
                 <option value="">All Areas</option>
                 {availableAreas.map((a) => (
@@ -177,11 +177,11 @@ export default function SearchFilter({
 
             {/* Track */}
             <div>
-              <label className="block text-sm text-neutral-400 mb-1.5 ml-1">Track</label>
+              <label className="block text-sm text-neutral-600 dark:text-neutral-400 mb-1.5 ml-1">Track</label>
               <select
                 value={filters.track}
                 onChange={(e) => handleChange("track", e.target.value)}
-                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full bg-white dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-xl px-4 py-2.5 text-neutral-900 dark:text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
               >
                 <option value="">All Tracks</option>
                 {availableTracks.map((t) => (
@@ -192,11 +192,11 @@ export default function SearchFilter({
 
             {/* Grade Mode */}
             <div>
-              <label className="block text-sm text-neutral-400 mb-1.5 ml-1">Grade Mode</label>
+              <label className="block text-sm text-neutral-600 dark:text-neutral-400 mb-1.5 ml-1">Grade Mode</label>
               <select
                 value={filters.gradeMode}
                 onChange={(e) => handleChange("gradeMode", e.target.value)}
-                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full bg-white dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-xl px-4 py-2.5 text-neutral-900 dark:text-white appearance-none focus:outline-none focus:ring-1 focus:ring-indigo-500"
               >
                 <option value="">All Grade Modes</option>
                 {availableGradeModes.map((g) => (
