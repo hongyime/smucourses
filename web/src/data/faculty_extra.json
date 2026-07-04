@@ -376,7 +376,25 @@
     "scholarUrl": null,
     "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=55855518100"
   },
-  "andrew-roberts": null,
+  "andrew-roberts": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/aroberts/600x400",
+    "title": "Professor of Law",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/andrew-roberts-8631",
+    "researchAreas": [
+      "Yong Pung How School of Law"
+    ],
+    "qualifications": [
+      "Ph.D., University of Amsterdam",
+      "M.Phil., University of Cambridge",
+      "LL.B. (Hons) in Law with American Law, University of Nottingham"
+    ],
+    "coursesTaught": [],
+    "email": "aroberts@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": "https://law.smu.edu.sg/sites/law.smu.edu.sg/files/law/pdf/aroberts_1.pdf",
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
   "ang-ann-liang": null,
   "ang-kian-wee": {
     "photoUrl": "https://staffphoto.smu.edu.sg/s/kianweeang/600x400",
@@ -3564,7 +3582,29 @@
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=qnsKNEkAAAAJ",
     "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=58902675200"
   },
-  "jin-miao": null,
+  "jin-miao": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/jinmiao/600x400",
+    "title": "Assistant Professor of Marketing",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/jin-miao-8576",
+    "researchAreas": [
+      "Lee Kong Chian School of Business",
+      "Marketing",
+      "Service Excellence",
+      "New Product Development",
+      "Communication Management",
+      "Business Education",
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Machine Learning & Intelligence"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "jinmiao@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": "https://business.smu.edu.sg/sites/business.smu.edu.sg/files/business/Marketing/2026CV/CV_Jin_Miao_July2026.pdf",
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
   "jocelyn-teo": null,
   "jochen-reb": {
     "photoUrl": "https://staffphoto.smu.edu.sg/s/jreb/600x400",
@@ -6925,7 +6965,35 @@
     "scholarUrl": "https://scholar.google.com/citations?user=r_BBRGMAAAAJ&hl=en&oi=ao",
     "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=59155527300"
   },
-  "sakshi-babar": null,
+  "sakshi-babar": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/sakshib/600x400",
+    "title": "Assistant Professor of Marketing",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/sakshi-sanjay-babar-8581",
+    "researchAreas": [
+      "School of Accountancy",
+      "Corporate Reporting & Disclosure",
+      "Sustainability Reporting and Disclosure",
+      "Lee Kong Chian School of Business",
+      "Marketing",
+      "Marketing Strategy",
+      "Brand Strategy",
+      "New Product Development",
+      "Financial Impact and Marketing",
+      "Sustainable Business",
+      "School of Computing and Information Systems",
+      "Artificial Intelligence and Data Science",
+      "Machine Learning & Intelligence",
+      "Safety, Security & Fairness",
+      "Misinformation & Disinformation"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "sakshib@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": "https://business.smu.edu.sg/sites/business.smu.edu.sg/files/business/Marketing/2026CV/CV_Sakshi_Babar_July2026.pdf",
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
   "sam-phoen": {
     "photoUrl": "https://staffphoto.smu.edu.sg/s/samphoen/600x400",
     "title": "",
@@ -10392,7 +10460,28 @@
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=xBocR8AAAAAJ",
     "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57245720000"
   },
-  "qiu-yue": null,
+  "qiu-yue": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/yueqiu/600x400",
+    "title": "Senior Lecturer of Economics",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/qiu-yue-8606",
+    "researchAreas": [
+      "Econometrics and Data Science",
+      "Financial Econometrics",
+      "Data Science and Analytics"
+    ],
+    "qualifications": [
+      "Ph.D. in Economics, Queen's University, 2017",
+      "M.A. in Economics, Queen's University, 2008",
+      "B.A. Applied Economics, Massey University, 2006",
+      "Bachelor of Business Studies in Economics, Massey University, 2005"
+    ],
+    "coursesTaught": [],
+    "email": "yueqiu@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": "https://economics.smu.edu.sg/sites/economics.smu.edu.sg/files/economics/Faculty/CV/2026/CV_YUEQIU-bio.pdf",
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
   "rajah-kumar": {
     "photoUrl": "https://staffphoto.smu.edu.sg/s/rajahkumar/600x400",
     "title": "",
@@ -10627,5 +10716,154 @@
     "cvUrl": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/bhzheng-CV.pdf",
     "scholarUrl": "https://scholar.google.com/citations?user=o5k9wxUAAAAJ&hl=en",
     "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=7201781454"
+  },
+  "bhavani-shanker-uppari": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/bhavaniu/600x400",
+    "title": "Assistant Professor of Operations Management",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/bhavani-shanker-uppari-1296",
+    "researchAreas": [
+      "Business Models at the Bottom of the Pyramid",
+      "Behavioral Decision Making"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "bhavaniu@smu.edu.sg",
+    "phone": "68085247",
+    "cvUrl": "https://business.smu.edu.sg/sites/business.smu.edu.sg/files/business/OperationsManagement/Uppari_CV_30Nov2025.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=nd66KbYAAAAJ&hl=en&oi=ao",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57209855487"
+  },
+  "gao-yini": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/yngao/600x400",
+    "title": "Associate Professor of Operations Management",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/gao-yini-2111",
+    "researchAreas": [
+      "Lee Kong Chian School of Business",
+      "Organisational Behaviour & Human Resources",
+      "Well-being and Stress",
+      "Quantitative Finance",
+      "Computational Methods and Simulations",
+      "Operations Management",
+      "Supply Chain Strategy and Risk Management",
+      "Healthcare Analytics and Operations (including Medical AI, Population Health, and Public Policy)",
+      "AI in Operations",
+      "E-Commerce and Marketplace Analytics",
+      "Business Analytics",
+      "Operations Strategy",
+      "Operations Planning, Scheduling and Control",
+      "Inventory, Logistics and Transportation Management",
+      "Marketing",
+      "Retail Operations and Strategy",
+      "Consumer Behaviour",
+      "Consumer Judgment and Decision-making",
+      "Communication Management",
+      "Crisis Communication & Management",
+      "Health Communication",
+      "Sustainable Business",
+      "Digital Business",
+      "Asian & ASEAN Initiatives",
+      "Social Inclusion"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "yngao@smu.edu.sg",
+    "phone": "68289658",
+    "cvUrl": "https://business.smu.edu.sg/sites/business.smu.edu.sg/files/business/OperationsManagement/CV_Sarah_Yini_Gao.pdf",
+    "scholarUrl": "https://scholar.google.com.sg/citations?hl=en&user=6MBl6Q4AAAAJ",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57190122334"
+  },
+  "martin-jes-iversen": null,
+  "meichun-lin": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/meichunlin/600x400",
+    "title": "Assistant Professor of Operations Management",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/meichun-lin-7446",
+    "researchAreas": [
+      "Lee Kong Chian School of Business",
+      "Operations Management",
+      "Sustainable Operations and Investments (including Energy, Natural Resources, and Transportation)",
+      "AI in Operations",
+      "E-Commerce and Marketplace Analytics",
+      "Business Analytics",
+      "Operations Planning, Scheduling and Control",
+      "Inventory, Logistics and Transportation Management",
+      "Sustainable Business",
+      "Digital Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "meichunlin@smu.edu.sg",
+    "phone": "68264983",
+    "cvUrl": "https://business.smu.edu.sg/sites/business.smu.edu.sg/files/business/OperationsManagement/CV_Meichun_Aug2025.pdf",
+    "scholarUrl": "https://scholar.google.com/citations?user=O6Az5HQAAAAJ",
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57224859552"
+  },
+  "omer-saritac": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/omersaritac/600x400",
+    "title": "Assistant Professor of Operations Management",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/omer-saritac-7926",
+    "researchAreas": [
+      "Lee Kong Chian School of Business",
+      "Operations Management",
+      "Healthcare Analytics and Operations (including Medical AI, Population Health, and Public Policy)",
+      "AI in Operations",
+      "E-Commerce and Marketplace Analytics",
+      "Business Analytics",
+      "Operations Planning, Scheduling and Control",
+      "Inventory, Logistics and Transportation Management",
+      "Digital Business",
+      "Innovation and Entrepreneurship"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "omersaritac@smu.edu.sg",
+    "phone": "68264935",
+    "cvUrl": "http://www.omersaritac.com/",
+    "scholarUrl": null,
+    "scopusUrl": "https://www.scopus.com/authid/detail.uri?authorId=57193609185"
+  },
+  "steffi-yuree-tedjo": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/steffitedjo/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/steffi-yuree-tedjo-8296",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "steffitedjo@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "vinakota-srikant": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/srikantv/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/vinakota-srikant-8451",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "srikantv@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
+  },
+  "yong-hsin-ning": {
+    "photoUrl": "https://staffphoto.smu.edu.sg/s/hnyong/600x400",
+    "title": "",
+    "profileUrl": "https://faculty.smu.edu.sg/profile/yong-hsin-ning-6211",
+    "researchAreas": [
+      "Lee Kong Chian School of Business"
+    ],
+    "qualifications": [],
+    "coursesTaught": [],
+    "email": "hnyong@smu.edu.sg",
+    "phone": "+65 6828 0100",
+    "cvUrl": null,
+    "scholarUrl": null,
+    "scopusUrl": null
   }
 }
