@@ -41,7 +41,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # PR runs only need base..head diff, so a depth of 2 is enough.
           # Push runs still need full history to scan the whole default branch.
