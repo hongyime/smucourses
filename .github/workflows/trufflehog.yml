@@ -48,7 +48,7 @@ jobs:
           fetch-depth: ${{ github.event_name == 'pull_request' && 2 || 0 }}
 
       - name: TruffleHog OSS
-        uses: trufflesecurity/trufflehog@v3.95.2
+        uses: trufflesecurity/trufflehog@v3.96.0
         with:
           path: ./
           # Explicit base/head keeps PR runs limited to changed commits.
