@@ -60,3 +60,7 @@ The `sync_pdfs.py` script has strict security constraints to protect your Cloudf
 - **5 MB Individual Cap**: Any file attempting to download more than 5MB is immediately severed to prevent "zip bombs."
 - **Magic Byte Validation**: Verifies the `%PDF` header natively to prevent malicious executables from being stored in your bucket.
 - **Rate Limiting**: Includes a 0.5s delay to prevent DOSing the source servers.
+
+## License
+
+Apache-2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
