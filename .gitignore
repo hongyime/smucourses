@@ -15,9 +15,25 @@ env/
 .DS_Store
 Thumbs.db
 
+templates/
+.env.*
+node_modules/
+.venv/
+dist/
+build/
+.next/
+coverage/
+.pytest_cache/
+
 # AI / editor dot directories (managed via sourcerepo)
 .*
 !.github/
+!.agents/
+.agents/*
+!.agents/STATE.md
+!.agents/JOURNAL.md
+!.agents/handoffs/
+!.agents/handoffs/**
 !.gitignore
 !.gitattributes
 !.gitmodules
@@ -43,12 +59,4 @@ Thumbs.db
 skills/
 skills-lock.json
 docs/
-templates/
-.env.*
-node_modules/
-.venv/
-dist/
-build/
-.next/
-coverage/
-.pytest_cache/
+# End AI / editor dot directories (managed via sourcerepo)
