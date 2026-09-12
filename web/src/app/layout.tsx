@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 import Navbar from "@/components/Navbar";
+import SavedSelectionsNotice from "@/components/SavedSelectionsNotice";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export default function RootLayout({
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className="antialiased selection:bg-[var(--color-brand-primary)] selection:text-white font-sans bg-[var(--color-bg-base)] text-[var(--color-text-main)] transition-colors duration-300">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           <Navbar />
+          <SavedSelectionsNotice />
           <main>
             {children}
           </main>

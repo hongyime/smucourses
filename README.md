@@ -64,3 +64,13 @@ The `sync_pdfs.py` script has strict security constraints to protect your Cloudf
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+
+## Maintenance verification — 2026-09-12
+
+- [x] Reproduce malformed/blocked browser storage and automatic removal of unavailable comparison IDs using synthetic browser profiles.
+- [x] Preserve saved selections, report read/write failures, support backup download and explicit removal of unavailable IDs.
+- [x] Point the PR build check at `web`, run the saved-selection tests and build with Node 24 and the committed lockfile.
+- [x] Pass 15 local saved-selection tests, targeted lint, TypeScript, all 3,689 static pages and 13 browser scenarios.
+- [ ] Complete hosted checks, verify the exact production release and update the portfolio report.
+
+Run `npm test` and `npm run build` from `web`. The lint command now invokes ESLint directly because Next.js 16 removed `next lint`. Existing lint findings remain a separate cleanup; the build workflow does not claim to run lint. No catalog, schedule, bid, professor or syllabus records were changed. Saved selections remain local browser data; a Supabase migration is still separate work.
