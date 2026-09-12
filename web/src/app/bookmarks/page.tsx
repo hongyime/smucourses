@@ -8,13 +8,14 @@ import ProfessorCard, { ProfessorData } from "@/components/ProfessorCard";
 import rawCourses from "@/data/courses.json";
 import rawProfessors from "@/data/professors.json";
 import { useBookmarks } from "@/hooks/useBookmarks";
+import UnavailableSelections from "@/components/UnavailableSelections";
 
 const coursesData = rawCourses as CourseData[];
 const professorsData = rawProfessors as ProfessorData[];
 
 export default function BookmarksPage() {
-  const { bookmarks: courseBookmarks, isLoaded: coursesLoaded } = useBookmarks("courses");
-  const { bookmarks: profBookmarks, isLoaded: profsLoaded } = useBookmarks("professors");
+  const { bookmarks: courseBookmarks, toggleBookmark: toggleCourse, isLoaded: coursesLoaded } = useBookmarks("courses");
+  const { bookmarks: profBookmarks, toggleBookmark: toggleProf, isLoaded: profsLoaded } = useBookmarks("professors");
   const [searchType, setSearchType] = useState<"courses" | "professors">("courses");
 
   const bookmarkedCourses = useMemo(() => {
@@ -34,6 +35,9 @@ export default function BookmarksPage() {
   }
 
   const currentItems = searchType === "courses" ? bookmarkedCourses : bookmarkedProfessors;
+
+  const unavailableIds = (searchType === "courses" ? courseBookmarks : profBookmarks).filter(id => !currentItems.some(item => item.id === id));
+  const handleRemove = searchType === "courses" ? toggleCourse : toggleProf;
 
   return (
     <div className="min-h-screen py-12">
@@ -73,6 +77,8 @@ export default function BookmarksPage() {
             </button>
           </div>
         </div>
+
+        <UnavailableSelections ids={unavailableIds} onRemove={handleRemove} />
 
         {currentItems.length === 0 ? (
           <div className="glass-panel p-16 text-center border-dashed border-2 border-black/10 dark:border-white/10 rounded-2xl mt-8 bg-white/80 dark:bg-white/5">

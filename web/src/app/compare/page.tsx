@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import { ArrowLeft, Scale, Trash2, CheckCircle2, XCircle, User, BookOpen, Calendar } from "lucide-react";
 import { useCompare } from "@/hooks/useCompare";
+import UnavailableSelections from "@/components/UnavailableSelections";
 import coursesData from "@/data/courses.json";
 import rawProfessors from "@/data/professors.json";
 import facultyExtra from "@/data/faculty_extra.json";
@@ -24,20 +25,9 @@ export default function ComparePage() {
     return professorsData.filter(p => profIds.includes(p.id));
   }, [profIds]);
 
-  // Automatically clean up stale/invalid IDs from localStorage
-  // This fixes the bug where users are prevented from adding courses if their storage has old invalid dummy data
-  useEffect(() => {
-    if (courses.length !== courseIds.length && courseIds.length > 0) {
-      localStorage.setItem("smu_compare", JSON.stringify(courses.map(c => c.id)));
-      window.dispatchEvent(new Event("compareUpdated"));
-    }
-    if (professors.length !== profIds.length && profIds.length > 0) {
-      localStorage.setItem("smu_compare_professors", JSON.stringify(professors.map(p => p.id)));
-      window.dispatchEvent(new Event("compareProfessorsUpdated"));
-    }
-  }, [courses, courseIds, professors, profIds]);
-
   const currentItems = searchType === "courses" ? courses : professors;
+  const unavailableIds = (searchType === "courses" ? courseIds : profIds).filter(id => !currentItems.some(item => item.id === id));
+  const handleRemove = searchType === "courses" ? toggleCourse : toggleProf;
   const handleClear = searchType === "courses" ? clearCourses : clearProfs;
 
   return (
@@ -90,6 +80,8 @@ export default function ComparePage() {
           </button>
         </div>
       </div>
+
+      <UnavailableSelections ids={unavailableIds} onRemove={handleRemove} />
 
       {currentItems.length === 0 ? (
         <div className="glass-panel p-16 text-center border-dashed border-2 border-black/10 dark:border-white/10 rounded-2xl bg-white/80 dark:bg-white/5">
