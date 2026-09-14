@@ -29,7 +29,6 @@ coverage/
 
 
 
-
 # AI / editor dot directories (managed via sourcerepo)
 .*
 !.github/

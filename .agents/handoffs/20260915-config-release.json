@@ -1,0 +1,7 @@
+{
+  "repository": "hongyime/smucourses",
+  "pr": 26,
+  "branch": "chore/config-sync-34864413485-1",
+  "change": "2026-09-15: PR #26 limits the LFS guard checkout to the current commit and fails on Git scan errors. The guard still rejects current LFS pointers and honors the existing opt-out. Repository ignore rules, the Next.js static export from web, application code and all retained catalog/schedule/bid/professor/syllabus data are unchanged. Required Build and Vercel checks gate release; no collection or PDF-sync job is run for validation.",
+  "stage": "Local app and policy validation next, then exact-head hosted checks and production verification."
+}
