@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v7
 
     - name: Cache downloaded PDFs
-      uses: actions/cache@v4
+      uses: actions/cache@6849a6489418beead18ada9579a901b373b897f # v4.2.3
       with:
         path: web/public/pdfs
         key: smucourses-pdfs-${{ hashFiles('data/documents_raw.json') }}
@@ -49,3 +49,4 @@ jobs:
         git add data/ 2>/dev/null || true
         git commit -m "Auto-sync course data and schedules" || exit 0
         git push
+
