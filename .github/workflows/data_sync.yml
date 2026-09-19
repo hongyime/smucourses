@@ -15,6 +15,14 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v7
 
+    - name: Cache downloaded PDFs
+      uses: actions/cache@v4
+      with:
+        path: web/public/pdfs
+        key: smucourses-pdfs-${{ hashFiles('data/documents_raw.json') }}
+        restore-keys: |
+          smucourses-pdfs-
+
     - name: Set up Python
       uses: actions/setup-python@v7
       with:
