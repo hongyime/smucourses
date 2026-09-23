@@ -1,0 +1,3 @@
+# Agent Journal
+
+- 2026-09-16 baseline review: first entry. Repo synced to origin/main 2d382f5. Working tree clean. `web/` npm audit returned 0 vulnerabilities. Only open PRs are Dependabot workflow-only bumps #16 (labeler 6→7) and #15 (setup-python 6→7). No open issues. Prior batch briefing referenced `campus-auth-release.json` as belonging to this repo — that file is actually for `sgCampusCore2026`; smucourses is a flat-file SSG with no auth. Handoff `20260915-config-release.json` under `.agents/handoffs/` remains the last relevant release note (PR #26 LFS guard hardening). No code, config, or docs changed this session beyond creating this JOURNAL.md and STATE.md.
