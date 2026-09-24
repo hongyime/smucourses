@@ -1,0 +1,14 @@
+.agents/
+.github/
+.deepsource.toml
+.sourcery.yml
+.gitattributes
+tests/
+AGENTS.md
+CLAUDE.md
+CONTRIBUTING.md
+SECURITY.md
+NOTICE
+LICENSE
+README.md
+last_sync.txt
