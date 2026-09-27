@@ -33,3 +33,7 @@ this session.
 Next: after hold lifts, verify the next Vercel deploy for main HEAD 2d382f5;
 merge Dependabot workflow PRs after their hosted checks pass; no application
 code work required.
+
+## Reviewed workspace maintenance - 2026-09-27
+
+Publish the reviewed portability and privacy maintenance from the current default branch, preserving concurrent upstream work and original workspace changes. Validation is limited to the documented offline fixtures and hosted checks; no live data job or deployment command was executed locally.
