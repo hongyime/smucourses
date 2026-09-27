@@ -17,6 +17,23 @@ This project uses a **Flat-File Architecture** for maximum performance and zero 
 
 ## 🚀 Quick Start (Web App)
 
+The web app's npm commands work in Windows and Linux. Linux equivalents for the
+Windows maintenance launchers are also provided:
+
+| Task | Windows | Linux |
+|---|---|---|
+| Type check only | `pwsh -File scripts/pre-push-check.ps1` | `sh scripts/pre-push-check.sh` |
+| Interactive data menu | `scripts/sync_data.bat` | `sh scripts/sync_data.sh` |
+| Full data pipeline | `pwsh -File scripts/run_pipeline.ps1` | `sh scripts/run_pipeline.sh` |
+
+The menu and pipeline shell wrappers require PowerShell 7 (`pwsh`), Python in an
+activated virtual environment, and the same configured services as Windows.
+They call the existing shared PowerShell implementation. **Those data commands
+contact providers, write data, and can commit/push changes as part of the existing
+pipeline; they are not ordinary development-start commands.** Windows Task
+Scheduler registration remains a Windows integration; Linux scheduling is an
+operator choice. No schedule or pipeline is installed by these launchers.
+
 1. **Install dependencies**
    ```bash
    cd web
