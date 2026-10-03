@@ -1,3 +1,7 @@
+## Portability maintenance - 2026-09-27
+
+- Added Linux wrappers for shared PowerShell data commands and a native TypeScript check command; documented PowerShell 7 and optional Windows scheduling. Stub dispatch contracts passed; no provider, pipeline, commit or push operation ran.
+
 # Agent State
 
 2026-09-16 baseline review — first STATE.md for this repo (handoffs/ was the
