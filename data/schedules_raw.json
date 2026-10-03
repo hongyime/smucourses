@@ -34245,7 +34245,7 @@
     "classNbr": "2444",
     "time": "THU 12:00PM - 3:15PM",
     "location": "YPHSL Seminar Room 3-12",
-    "professor": "SOL INSTRUCTOR 3",
+    "professor": "YVONNE GUO",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
   },
@@ -34255,7 +34255,7 @@
     "classNbr": "2445",
     "time": "FRI 12:00PM - 3:15PM",
     "location": "YPHSL Seminar Room 3-11",
-    "professor": "SOL INSTRUCTOR 3",
+    "professor": "YVONNE GUO",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
   },
@@ -34485,7 +34485,7 @@
     "classNbr": "1508",
     "time": "WED 7:00PM - 10:15PM",
     "location": "YPHSL Seminar Room 2-04",
-    "professor": "SOL INSTRUCTOR 7",
+    "professor": "JAYNE LEE",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
   },
@@ -34495,7 +34495,7 @@
     "classNbr": "1509",
     "time": "WED 7:00PM - 10:15PM",
     "location": "YPHSL Seminar Room 2-04",
-    "professor": "SOL INSTRUCTOR 7",
+    "professor": "JAYNE LEE",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
   },
@@ -34685,7 +34685,7 @@
     "classNbr": "2407",
     "time": "WED 3:30PM - 6:45PM",
     "location": "YPHSL Seminar Room 2-05",
-    "professor": "SOL INSTRUCTOR 5",
+    "professor": "FLORIAN GAMPER",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
   },
@@ -34695,7 +34695,7 @@
     "classNbr": "2408",
     "time": "WED 3:30PM - 6:45PM",
     "location": "YPHSL Seminar Room 2-05",
-    "professor": "SOL INSTRUCTOR 5",
+    "professor": "FLORIAN GAMPER",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
   },
@@ -34705,7 +34705,7 @@
     "classNbr": "2409",
     "time": "THU 3:30PM - 6:45PM",
     "location": "YPHSL Seminar Room 3-01",
-    "professor": "NICHOLAS SENG",
+    "professor": "RAJIV RAI",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
   },
@@ -34715,7 +34715,7 @@
     "classNbr": "2410",
     "time": "THU 3:30PM - 6:45PM",
     "location": "YPHSL Seminar Room 3-01",
-    "professor": "NICHOLAS SENG",
+    "professor": "RAJIV RAI",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
   },
@@ -34763,8 +34763,8 @@
     "courseCode": "LAW416",
     "section": "G1",
     "classNbr": "1464",
-    "time": "FRI 8:15AM - 11:30AM",
-    "location": "YPHSL Seminar Room 2-15",
+    "time": "",
+    "location": "",
     "professor": "CHONG KAI SHENG",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
@@ -34773,8 +34773,8 @@
     "courseCode": "LAW416",
     "section": "G61",
     "classNbr": "1465",
-    "time": "FRI 8:15AM - 11:30AM",
-    "location": "YPHSL Seminar Room 2-15",
+    "time": "",
+    "location": "",
     "professor": "CHONG KAI SHENG",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
@@ -34875,7 +34875,7 @@
     "classNbr": "1598",
     "time": "THU 12:00PM - 3:15PM",
     "location": "YPHSL Seminar Room 2-05",
-    "professor": "WARREN B. CHIK",
+    "professor": "LANX GOH",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
   },
@@ -43834,7 +43834,7 @@
     "section": "G14",
     "classNbr": "1821",
     "time": "TUE 12:00PM - 3:15PM",
-    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "location": "SOE/SCIS2 Seminar Room 3-10",
     "professor": "LEE YEOW LEONG",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
@@ -65745,7 +65745,7 @@
     "classNbr": "1773",
     "time": "MON 3:30PM - 6:45PM",
     "location": "LKCSB Seminar Room 2-4",
-    "professor": "PEI, DONG",
+    "professor": "KENNETH TAI",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
   },
@@ -86016,6 +86016,5366 @@
     "time": "",
     "location": "",
     "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "IS105",
+    "section": "G1",
+    "classNbr": "1830",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOA Seminar Room 1-2",
+    "professor": "FIONA LEE",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS105",
+    "section": "G2",
+    "classNbr": "1545",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "OKKAR KYAW",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G1",
+    "classNbr": "1102",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 3-4",
+    "professor": "ZHENG BAIHUA",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G10",
+    "classNbr": "1241",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "MA YUNSHAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G11",
+    "classNbr": "1242",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "MA YUNSHAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G12",
+    "classNbr": "1243",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "SERENA GOH",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G13",
+    "classNbr": "1260",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "KOH KWAN CHIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G14",
+    "classNbr": "1630",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "KOH KWAN CHIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G15",
+    "classNbr": "1731",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "SERENA GOH",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G2",
+    "classNbr": "1107",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "LIM EE PENG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G3",
+    "classNbr": "1108",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "LIM EE PENG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G4",
+    "classNbr": "1109",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "JENZUS HSU",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G5",
+    "classNbr": "1110",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 3-4",
+    "professor": "ZHENG BAIHUA",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G6",
+    "classNbr": "1111",
+    "time": "THU 7:00PM - 10:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "LOW SIOW MENG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G7",
+    "classNbr": "1112",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room B1-2",
+    "professor": "SWETHA GOTTIPATI",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G8",
+    "classNbr": "1213",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room B1-2",
+    "professor": "SWETHA GOTTIPATI",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "G9",
+    "classNbr": "1227",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 3-10",
+    "professor": "SWETHA GOTTIPATI",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS112",
+    "section": "SG81",
+    "classNbr": "2966",
+    "time": "",
+    "location": "",
+    "professor": "ZHENG BAIHUA",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G1",
+    "classNbr": "1219",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "LAU YI MENG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G10",
+    "classNbr": "1349",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "KOH KWAN CHIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G11",
+    "classNbr": "1729",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "MANOJ THULASIDAS",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G12",
+    "classNbr": "1831",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "MANOJ THULASIDAS",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G13",
+    "classNbr": "1850",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "KOH KWAN CHIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G2",
+    "classNbr": "1220",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "MANOJ THULASIDAS",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G3",
+    "classNbr": "1221",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "LAU YI MENG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G4",
+    "classNbr": "1222",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 3-2",
+    "professor": "SHAR LWIN KHIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G5",
+    "classNbr": "1223",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "SHAR LWIN KHIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G6",
+    "classNbr": "1224",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "LI JIANNAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G7",
+    "classNbr": "1225",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "LI JIANNAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G8",
+    "classNbr": "1244",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "WONG CHEE CHEIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS113",
+    "section": "G9",
+    "classNbr": "1263",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "KOH KWAN CHIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS115",
+    "section": "G1",
+    "classNbr": "2000",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "MAI ANH TIEN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS115",
+    "section": "G2",
+    "classNbr": "2001",
+    "time": "TUE 7:00PM - 10:15PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "MAI ANH TIEN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS115",
+    "section": "G3",
+    "classNbr": "2002",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "MAI ANH TIEN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS115",
+    "section": "G4",
+    "classNbr": "2003",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "MAI ANH TIEN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS115",
+    "section": "G5",
+    "classNbr": "2004",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 5-2",
+    "professor": "MOK, HENG NGEE",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS115",
+    "section": "G6",
+    "classNbr": "2005",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 5-2",
+    "professor": "MOK, HENG NGEE",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS115",
+    "section": "G7",
+    "classNbr": "2006",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "ZHANG ZHIYUAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS115",
+    "section": "SG81",
+    "classNbr": "2896",
+    "time": "",
+    "location": "",
+    "professor": "MOK, HENG NGEE",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G1",
+    "classNbr": "1245",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "JIANG LINGXIAO",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G10",
+    "classNbr": "1646",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "FWA HUA LEONG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G11",
+    "classNbr": "2393",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "FWA HUA LEONG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G2",
+    "classNbr": "1246",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "JIANG LINGXIAO",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G3",
+    "classNbr": "1247",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "JIANG LINGXIAO",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G4",
+    "classNbr": "1248",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "ALAN MEGARGEL",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G5",
+    "classNbr": "1249",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "ALAN MEGARGEL",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G6",
+    "classNbr": "1250",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "SWETHA GOTTIPATI",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G7",
+    "classNbr": "1251",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "SWETHA GOTTIPATI",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G8",
+    "classNbr": "1350",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "XIE XIAOFEI",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "G9",
+    "classNbr": "1540",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "XIE XIAOFEI",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS213",
+    "section": "SG81",
+    "classNbr": "2897",
+    "time": "",
+    "location": "",
+    "professor": "JIANG LINGXIAO",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G1",
+    "classNbr": "1252",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "RAFAEL J. BARROS",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G10",
+    "classNbr": "1631",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "CHENG SHIH-FEN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G11",
+    "classNbr": "2394",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "AARTHI KANNALAGAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G2",
+    "classNbr": "1253",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "RAFAEL J. BARROS",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G3",
+    "classNbr": "1254",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "PAUL ROBERT GRIFFIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G4",
+    "classNbr": "1255",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "PAUL ROBERT GRIFFIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G5",
+    "classNbr": "1256",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "PAUL ROBERT GRIFFIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G6",
+    "classNbr": "1257",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "KIRUTHIKA RAMANATHAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G7",
+    "classNbr": "1351",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "KIRUTHIKA RAMANATHAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G8",
+    "classNbr": "1352",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "KIRUTHIKA RAMANATHAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS214",
+    "section": "G9",
+    "classNbr": "1541",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "CHENG SHIH-FEN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G1",
+    "classNbr": "1689",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "LO SIAW LING",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G10",
+    "classNbr": "1627",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "ARNE JONNI SUPPE",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G11",
+    "classNbr": "1628",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "ARNE JONNI SUPPE",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G2",
+    "classNbr": "1472",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "LO SIAW LING",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G3",
+    "classNbr": "1532",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "LO SIAW LING",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G4",
+    "classNbr": "1533",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room B1-2",
+    "professor": "NAH, FIONA FUI-HOON",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G5",
+    "classNbr": "1534",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "NAH, FIONA FUI-HOON",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G6",
+    "classNbr": "1535",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "NAH, FIONA FUI-HOON",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G7",
+    "classNbr": "1688",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "NAH, FIONA FUI-HOON",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G8",
+    "classNbr": "1536",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "LAU YI MENG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS215",
+    "section": "G9",
+    "classNbr": "1537",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "LAU YI MENG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS217",
+    "section": "G1",
+    "classNbr": "1546",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "TAN KAR WAY",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS217",
+    "section": "G2",
+    "classNbr": "1547",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-8",
+    "professor": "TAN PANG JIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS217",
+    "section": "G3",
+    "classNbr": "1548",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-8",
+    "professor": "SERENA GOH",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS4000",
+    "section": "G1",
+    "classNbr": "2623",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SCIS Computing Lab B1-3",
+    "professor": "RANDALL E. DURAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS404",
+    "section": "G1",
+    "classNbr": "2395",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "BENJAMIN GAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS419",
+    "section": "G1",
+    "classNbr": "1258",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "PATRICK THNG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS424",
+    "section": "G1",
+    "classNbr": "1262",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "WANG ZHAOXIA",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS428",
+    "section": "G1",
+    "classNbr": "1363",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "LIAO LIZI",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS428",
+    "section": "G2",
+    "classNbr": "1641",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SCIS1 Classroom B1-1",
+    "professor": "KAM TIN SEONG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS430",
+    "section": "G1",
+    "classNbr": "2397",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "LAU YI MENG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS442",
+    "section": "G1",
+    "classNbr": "1478",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "ZHANG ZHIYUAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS442",
+    "section": "G3",
+    "classNbr": "2398",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "ZHANG ZHIYUAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS442",
+    "section": "SG81",
+    "classNbr": "2968",
+    "time": "",
+    "location": "",
+    "professor": "ZHANG ZHIYUAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS444",
+    "section": "G1",
+    "classNbr": "1392",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room B1-1",
+    "professor": "ALAN MEGARGEL",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS446",
+    "section": "G1",
+    "classNbr": "1475",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "RAFAEL J. BARROS",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS446",
+    "section": "G2",
+    "classNbr": "1539",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 3-6",
+    "professor": "LEONARD TAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS446",
+    "section": "G3",
+    "classNbr": "1640",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-6",
+    "professor": "ALAN HO",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS447",
+    "section": "G1",
+    "classNbr": "2009",
+    "time": "TUE 7:00PM - 10:15PM",
+    "location": "SMUC Active Learning CR 3-1",
+    "professor": "ASHISH KUMAR",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS450",
+    "section": "G1",
+    "classNbr": "1259",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 3-4",
+    "professor": "SWAPNA GOTTIPATI",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS450",
+    "section": "G2",
+    "classNbr": "1473",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-4",
+    "professor": "SWAPNA GOTTIPATI",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS453",
+    "section": "G1",
+    "classNbr": "1549",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-6",
+    "professor": "RANDALL E. DURAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS453",
+    "section": "G2",
+    "classNbr": "1639",
+    "time": "THU 7:00PM - 10:15PM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "LILY ZHANG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS455",
+    "section": "G1",
+    "classNbr": "1835",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "JERRY LIM",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS458",
+    "section": "G1",
+    "classNbr": "1634",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "SIM CHER BOON",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS459",
+    "section": "G1",
+    "classNbr": "1632",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-3",
+    "professor": "SACHIN GUPTA",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS459",
+    "section": "G2",
+    "classNbr": "2022",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "MARUTHI PRITHIVIRAJAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS460",
+    "section": "G1",
+    "classNbr": "1633",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "WANG ZHAOXIA",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS464",
+    "section": "G1",
+    "classNbr": "1730",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-4",
+    "professor": "LO SIAW LING",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS466",
+    "section": "G1",
+    "classNbr": "1840",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-09",
+    "professor": "LIM HOW KHANG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS467",
+    "section": "G1",
+    "classNbr": "2399",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room B1-1",
+    "professor": "ALAN MEGARGEL",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS469",
+    "section": "G1",
+    "classNbr": "2400",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 5-2",
+    "professor": "WYNTER LAURA",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS469",
+    "section": "G2",
+    "classNbr": "2401",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room B1-1",
+    "professor": "WYNTER LAURA",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS470",
+    "section": "G1",
+    "classNbr": "2935",
+    "time": "",
+    "location": "",
+    "professor": "SUN JUN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS472",
+    "section": "G1",
+    "classNbr": "2936",
+    "time": "",
+    "location": "",
+    "professor": "SUN JUN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS483",
+    "section": "G1",
+    "classNbr": "1480",
+    "time": "",
+    "location": "",
+    "professor": "ANTOINE LEDENT",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS483",
+    "section": "G2",
+    "classNbr": "1481",
+    "time": "",
+    "location": "",
+    "professor": "HOE SIU LOON",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS483",
+    "section": "G3",
+    "classNbr": "1482",
+    "time": "",
+    "location": "",
+    "professor": "WANG ZHAOXIA",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS483",
+    "section": "G4",
+    "classNbr": "1483",
+    "time": "",
+    "location": "",
+    "professor": "WENDY TAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS484",
+    "section": "G1",
+    "classNbr": "1727",
+    "time": "",
+    "location": "",
+    "professor": "WENDY TAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS484",
+    "section": "G2",
+    "classNbr": "1845",
+    "time": "",
+    "location": "",
+    "professor": "PAUL ROBERT GRIFFIN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS484",
+    "section": "G3",
+    "classNbr": "2725",
+    "time": "",
+    "location": "",
+    "professor": "ANG KIAN WEE",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS484",
+    "section": "G4",
+    "classNbr": "2726",
+    "time": "",
+    "location": "",
+    "professor": "KANNAN KARTHIKEYAN",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS485",
+    "section": "G1",
+    "classNbr": "2933",
+    "time": "",
+    "location": "",
+    "professor": "KAM TIN SEONG",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "IS493",
+    "section": "G1",
+    "classNbr": "2934",
+    "time": "",
+    "location": "",
+    "professor": "CHUA HONG NGOH",
+    "term": "2025-26 Term 3B starting 22-Jun-26",
+    "termCode": "2532"
+  },
+  {
+    "courseCode": "COR-IS1704",
+    "section": "G16",
+    "classNbr": "2716",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-6",
+    "professor": "LOW SIOW MENG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "COR-IS1704",
+    "section": "G17",
+    "classNbr": "2717",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-10",
+    "professor": "LEE YEOW LEONG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW301_631",
+    "section": "G62",
+    "classNbr": "2726",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "LIU SHENG, NICHOLAS",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G1",
+    "classNbr": "2792",
+    "time": "",
+    "location": "",
+    "professor": "PEARLIE KOH",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G2",
+    "classNbr": "2793",
+    "time": "",
+    "location": "",
+    "professor": "PEARLIE KOH",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G3",
+    "classNbr": "2794",
+    "time": "",
+    "location": "",
+    "professor": "LOW KEE YANG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G4",
+    "classNbr": "2795",
+    "time": "",
+    "location": "",
+    "professor": "LOW KEE YANG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G5",
+    "classNbr": "2796",
+    "time": "",
+    "location": "",
+    "professor": "YEO TIONG MIN",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G6",
+    "classNbr": "2797",
+    "time": "",
+    "location": "",
+    "professor": "JASON GRANT ALLEN",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G61",
+    "classNbr": "2788",
+    "time": "",
+    "location": "",
+    "professor": "LOW KEE YANG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G62",
+    "classNbr": "2789",
+    "time": "",
+    "location": "",
+    "professor": "LIU HAN-WEI",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G63",
+    "classNbr": "2790",
+    "time": "",
+    "location": "",
+    "professor": "LIU SHENG, NICHOLAS",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G64",
+    "classNbr": "2791",
+    "time": "",
+    "location": "",
+    "professor": "DARIUS CHAN",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G7",
+    "classNbr": "2798",
+    "time": "",
+    "location": "",
+    "professor": "MAARTJE DE VISSER",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G8",
+    "classNbr": "2799",
+    "time": "",
+    "location": "",
+    "professor": "DARIUS CHAN",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "LAW400",
+    "section": "G9",
+    "classNbr": "2800",
+    "time": "",
+    "location": "",
+    "professor": "AARON YOONG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "OBHR388",
+    "section": "G1",
+    "classNbr": "2820",
+    "time": "",
+    "location": "",
+    "professor": "THOMAS MENKHOFF",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "TRAD201",
+    "section": "G1",
+    "classNbr": "1910",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-8",
+    "professor": "ICS INSTRUCTORS",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "TRAD201",
+    "section": "SG81",
+    "classNbr": "2579",
+    "time": "",
+    "location": "",
+    "professor": "ICS INSTRUCTORS",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS102",
+    "section": "G1",
+    "classNbr": "1466",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "ZHANG ZHIYUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS102",
+    "section": "G2",
+    "classNbr": "1530",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "LEE YEOW LEONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS102",
+    "section": "G3",
+    "classNbr": "1648",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "LEE YEOW LEONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS102",
+    "section": "G4",
+    "classNbr": "1694",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room B1-1",
+    "professor": "LEE YEOW LEONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS102",
+    "section": "SG81",
+    "classNbr": "2888",
+    "time": "",
+    "location": "",
+    "professor": "LEE YEOW LEONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS102",
+    "section": "SG82",
+    "classNbr": "2889",
+    "time": "",
+    "location": "",
+    "professor": "ZHANG ZHIYUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS105",
+    "section": "G1",
+    "classNbr": "1467",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "FANG YUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS105",
+    "section": "G2",
+    "classNbr": "1521",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "FANG YUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS105",
+    "section": "G3",
+    "classNbr": "1522",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "FANG YUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS105",
+    "section": "G4",
+    "classNbr": "1647",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "CAO ZHIGUANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS105",
+    "section": "G5",
+    "classNbr": "1801",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "CAO ZHIGUANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS105",
+    "section": "SG81",
+    "classNbr": "2893",
+    "time": "",
+    "location": "",
+    "professor": "CAO ZHIGUANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS106",
+    "section": "G1",
+    "classNbr": "1695",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-3",
+    "professor": "JASON CHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS106",
+    "section": "G2",
+    "classNbr": "1517",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-3",
+    "professor": "JASON CHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS106",
+    "section": "G3",
+    "classNbr": "1649",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-3",
+    "professor": "JASON CHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS106",
+    "section": "G4",
+    "classNbr": "1468",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "TANG, TONY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS106",
+    "section": "SG81",
+    "classNbr": "2890",
+    "time": "",
+    "location": "",
+    "professor": "JASON CHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS202",
+    "section": "G1",
+    "classNbr": "1558",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "PRADEEP REDDY VARAKANTHAM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS202",
+    "section": "G2",
+    "classNbr": "1559",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "PRADEEP REDDY VARAKANTHAM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS202",
+    "section": "G3",
+    "classNbr": "1600",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "WANG XINRUN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS202",
+    "section": "G4",
+    "classNbr": "1802",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-4",
+    "professor": "WANG XINRUN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS202",
+    "section": "SG81",
+    "classNbr": "2891",
+    "time": "",
+    "location": "",
+    "professor": "WANG XINRUN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS203",
+    "section": "G1",
+    "classNbr": "2403",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "CHRISTOPH TREUDE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS203",
+    "section": "G2",
+    "classNbr": "2404",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-3",
+    "professor": "CHRISTOPH TREUDE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS204",
+    "section": "G1",
+    "classNbr": "2405",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SCIS1 Classroom B1-1",
+    "professor": "PIUS LEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS204",
+    "section": "G2",
+    "classNbr": "2406",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "SCIS1 Classroom B1-1",
+    "professor": "PIUS LEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS204",
+    "section": "G3",
+    "classNbr": "2407",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "SWAVEK WLODKOWSKI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS204",
+    "section": "G4",
+    "classNbr": "2408",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "SWAVEK WLODKOWSKI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS206",
+    "section": "G1",
+    "classNbr": "1469",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "JOSEPH SUNG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS206",
+    "section": "G2",
+    "classNbr": "1518",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "WENDY TAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS206",
+    "section": "G3",
+    "classNbr": "1701",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "WENDY TAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS206",
+    "section": "G4",
+    "classNbr": "1957",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "WENDY TAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS301",
+    "section": "G1",
+    "classNbr": "1383",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room B1-1",
+    "professor": "OUH ENG LIEH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS301",
+    "section": "G2",
+    "classNbr": "1732",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room B1-1",
+    "professor": "OUH ENG LIEH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS420",
+    "section": "G1",
+    "classNbr": "1384",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "ZHIZE LI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS420",
+    "section": "G2",
+    "classNbr": "1624",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "ZHIZE LI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS421",
+    "section": "G1",
+    "classNbr": "1706",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "GUANSONG PANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS424",
+    "section": "G1",
+    "classNbr": "1471",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "ZHOU PAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS424",
+    "section": "G2",
+    "classNbr": "1707",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-4",
+    "professor": "ZHOU PAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS427",
+    "section": "G1",
+    "classNbr": "1961",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "SUN JUN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS440",
+    "section": "G2",
+    "classNbr": "1386",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "GUANSONG PANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS440",
+    "section": "G3",
+    "classNbr": "2409",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "XUE, HAIYANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS441",
+    "section": "G1",
+    "classNbr": "1387",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 3-4",
+    "professor": "DING XUHUA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS441",
+    "section": "SG81",
+    "classNbr": "2892",
+    "time": "",
+    "location": "",
+    "professor": "DING XUHUA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS443",
+    "section": "G1",
+    "classNbr": "1962",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "DUAN YUE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS443",
+    "section": "G2",
+    "classNbr": "1963",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "DUAN YUE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS444",
+    "section": "G1",
+    "classNbr": "1806",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "KE PING FAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS445",
+    "section": "G1",
+    "classNbr": "1712",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-6",
+    "professor": "LIM YI HAO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS446",
+    "section": "G1",
+    "classNbr": "2426",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "SIM CHER BOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS461",
+    "section": "G1",
+    "classNbr": "1964",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SCIS1 Classroom B1-1",
+    "professor": "PIUS LEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS462",
+    "section": "G1",
+    "classNbr": "1531",
+    "time": "TUE 7:00PM - 10:15PM",
+    "location": "SCIS1 Classroom B1-1",
+    "professor": "PIUS LEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS463",
+    "section": "G1",
+    "classNbr": "1841",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "HE SHENGFENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS464",
+    "section": "G1",
+    "classNbr": "2008",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "SCIS1 Seminar Room 3-1",
+    "professor": "LIM YI SHENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS465",
+    "section": "G1",
+    "classNbr": "2621",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "LI YUCHEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS465",
+    "section": "G2",
+    "classNbr": "2622",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-3",
+    "professor": "LI YUCHEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS466",
+    "section": "G1",
+    "classNbr": "2590",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SCIS1 Seminar Room 3-2",
+    "professor": "ZHU FEIDA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS470",
+    "section": "G1",
+    "classNbr": "2937",
+    "time": "",
+    "location": "",
+    "professor": "SUN JUN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS472",
+    "section": "G1",
+    "classNbr": "2938",
+    "time": "",
+    "location": "",
+    "professor": "SUN JUN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS480",
+    "section": "G1",
+    "classNbr": "1602",
+    "time": "",
+    "location": "",
+    "professor": "DING XUHUA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS480",
+    "section": "G2",
+    "classNbr": "1726",
+    "time": "",
+    "location": "",
+    "professor": "MUHAMMAD BIN MOHSIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS480",
+    "section": "G3",
+    "classNbr": "2411",
+    "time": "",
+    "location": "",
+    "professor": "VINCENT OH YAN MING",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "CS490",
+    "section": "G1",
+    "classNbr": "1643",
+    "time": "",
+    "location": "",
+    "professor": "CHUA HONG NGOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1001",
+    "section": "G1",
+    "classNbr": "1523",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G1",
+    "classNbr": "1154",
+    "time": "THU 10:00AM - 11:30AM",
+    "location": "SOE/SCIS2 Classroom 2-2",
+    "professor": "JUSTYN OLBY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G10",
+    "classNbr": "1161",
+    "time": "FRI 10:00AM - 11:30AM",
+    "location": "LKCSB Classroom 3-5",
+    "professor": "NOR ASHIKIN BINTE KADER SAHEER",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G11",
+    "classNbr": "1162",
+    "time": "FRI 12:00PM - 1:30PM",
+    "location": "LKCSB Classroom 3-5",
+    "professor": "NOR ASHIKIN BINTE KADER SAHEER",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G12",
+    "classNbr": "1163",
+    "time": "WED 8:15AM - 9:45AM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "VINEETHA NAIR",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G13",
+    "classNbr": "1164",
+    "time": "WED 10:00AM - 11:30AM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "VINEETHA NAIR",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G14",
+    "classNbr": "1165",
+    "time": "WED 1:45PM - 3:15PM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "VINEETHA NAIR",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G15",
+    "classNbr": "1166",
+    "time": "THU 1:45PM - 3:15PM",
+    "location": "LKCSB Classroom 3-5",
+    "professor": "WINNY WILSON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G16",
+    "classNbr": "1167",
+    "time": "THU 3:30PM - 5:00PM",
+    "location": "LKCSB Classroom 3-5",
+    "professor": "WINNY WILSON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G17",
+    "classNbr": "1197",
+    "time": "FRI 1:45PM - 3:15PM",
+    "location": "SOE/SCIS2 Classroom 4-3",
+    "professor": "JANNY FRITZEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G18",
+    "classNbr": "1229",
+    "time": "WED 1:45PM - 3:15PM",
+    "location": "SOE/SCIS2 Classroom 3-3",
+    "professor": "ALTHEA TOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G19",
+    "classNbr": "1238",
+    "time": "WED 3:30PM - 5:00PM",
+    "location": "SOE/SCIS2 Classroom 3-3",
+    "professor": "ALTHEA TOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G2",
+    "classNbr": "1153",
+    "time": "THU 12:00PM - 1:30PM",
+    "location": "SOE/SCIS2 Classroom 2-2",
+    "professor": "CHONG YIN TENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G20",
+    "classNbr": "1203",
+    "time": "THU 10:00AM - 11:30AM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "DARYL TAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G21",
+    "classNbr": "1214",
+    "time": "THU 12:00PM - 1:30PM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "DARYL TAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G22",
+    "classNbr": "1215",
+    "time": "FRI 1:45PM - 3:15PM",
+    "location": "SOE/SCIS2 Classroom 2-2",
+    "professor": "DARYL TAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G23",
+    "classNbr": "1355",
+    "time": "THU 10:00AM - 11:30AM",
+    "location": "SOE/SCIS2 Classroom 3-3",
+    "professor": "LIU KOOI LIN, EVELYN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G24",
+    "classNbr": "1227",
+    "time": "FRI 10:00AM - 11:30AM",
+    "location": "SOE/SCIS2 Classroom 3-3",
+    "professor": "LOW BEE HONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G25",
+    "classNbr": "1228",
+    "time": "FRI 12:00PM - 1:30PM",
+    "location": "SOE/SCIS2 Classroom 3-3",
+    "professor": "LOW BEE HONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G26",
+    "classNbr": "1201",
+    "time": "WED 3:30PM - 5:00PM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "NICOLA HELEN GREEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G27",
+    "classNbr": "1202",
+    "time": "WED 5:15PM - 6:45PM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "NICOLA HELEN GREEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G28",
+    "classNbr": "1239",
+    "time": "FRI 12:00PM - 1:30PM",
+    "location": "SOSS/CIS Classroom 3-4",
+    "professor": "PHOEBE SEOW SU KIAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G29",
+    "classNbr": "1249",
+    "time": "FRI 1:45PM - 3:15PM",
+    "location": "SOSS/CIS Classroom 3-4",
+    "professor": "PHOEBE SEOW SU KIAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G3",
+    "classNbr": "1156",
+    "time": "FRI 10:00AM - 11:30AM",
+    "location": "SOSS/CIS Classroom 3-4",
+    "professor": "TAN CHIA MIEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G30",
+    "classNbr": "1256",
+    "time": "WED 8:15AM - 9:45AM",
+    "location": "SOE/SCIS2 Classroom 2-2",
+    "professor": "LIM SEE CHEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G31",
+    "classNbr": "1259",
+    "time": "WED 10:00AM - 11:30AM",
+    "location": "SOE/SCIS2 Classroom 2-2",
+    "professor": "LIM SEE CHEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G32",
+    "classNbr": "1328",
+    "time": "THU 3:30PM - 5:00PM",
+    "location": "SOE/SCIS2 Classroom 2-2",
+    "professor": "LOKE MICHELLE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G33",
+    "classNbr": "1337",
+    "time": "THU 5:15PM - 6:45PM",
+    "location": "SOE/SCIS2 Classroom 2-2",
+    "professor": "LOKE MICHELLE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G34",
+    "classNbr": "2416",
+    "time": "WED 8:15AM - 9:45AM",
+    "location": "SOE/SCIS2 Classroom 3-3",
+    "professor": "MARK NICHOLAS PAPAYOANOU",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G35",
+    "classNbr": "1422",
+    "time": "WED 12:00PM - 1:30PM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "MARK NICHOLAS PAPAYOANOU",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G36",
+    "classNbr": "2718",
+    "time": "THU 3:30PM - 5:00PM",
+    "location": "SOE/SCIS2 Seminar Room 3-10",
+    "professor": "LEE SIEW YAN AGNES",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G37",
+    "classNbr": "2719",
+    "time": "THU 12:00PM - 1:30PM",
+    "location": "SOA Seminar Room 1-3",
+    "professor": "LIU KOOI LIN, EVELYN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G38",
+    "classNbr": "2727",
+    "time": "THU 12:00PM - 1:30PM",
+    "location": "SOE/SCIS2 Seminar Room 3-10",
+    "professor": "LOKE MICHELLE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G4",
+    "classNbr": "1158",
+    "time": "THU 12:00PM - 1:30PM",
+    "location": "SOE/SCIS2 Classroom 3-3",
+    "professor": "TIMOTHY CHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G45",
+    "classNbr": "1152",
+    "time": "THU 1:45PM - 3:15PM",
+    "location": "SOE/SCIS2 Classroom 2-2",
+    "professor": "CHONG YIN TENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G46",
+    "classNbr": "1155",
+    "time": "FRI 8:15AM - 9:45AM",
+    "location": "SOSS/CIS Classroom 3-4",
+    "professor": "TAN CHIA MIEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G47",
+    "classNbr": "1157",
+    "time": "THU 3:30PM - 5:00PM",
+    "location": "SOE/SCIS2 Classroom 3-3",
+    "professor": "TIMOTHY CHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G5",
+    "classNbr": "2417",
+    "time": "THU 8:15AM - 9:45AM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "PAMELA PEH MEI LIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G6",
+    "classNbr": "2418",
+    "time": "THU 5:15PM - 6:45PM",
+    "location": "SOE/SCIS2 Classroom 3-3",
+    "professor": "LEE SIEW YAN AGNES",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G7",
+    "classNbr": "1226",
+    "time": "FRI 12:00PM - 1:30PM",
+    "location": "SOE/SCIS2 Classroom 4-3",
+    "professor": "JANNY FRITZEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G8",
+    "classNbr": "1159",
+    "time": "THU 1:45PM - 3:15PM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "JULYN KANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1100",
+    "section": "G9",
+    "classNbr": "1160",
+    "time": "THU 3:30PM - 5:00PM",
+    "location": "SOE/SCIS2 Classroom 2-1",
+    "professor": "JULYN KANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1201",
+    "section": "G1",
+    "classNbr": "1641",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-8",
+    "professor": "ZHAO YIBAO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1201",
+    "section": "G2",
+    "classNbr": "1642",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "LKCSB Seminar Room 3-8",
+    "professor": "ZHAO YIBAO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1201",
+    "section": "G3",
+    "classNbr": "1643",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-8",
+    "professor": "ZHAO YIBAO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1201",
+    "section": "G4",
+    "classNbr": "1644",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "LKCSB Seminar Room 3-8",
+    "professor": "ZHAO YIBAO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1201",
+    "section": "G5",
+    "classNbr": "2106",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-8",
+    "professor": "ZHAO YIBAO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1201",
+    "section": "SG81",
+    "classNbr": "2560",
+    "time": "",
+    "location": "",
+    "professor": "ZHAO YIBAO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1301",
+    "section": "G1",
+    "classNbr": "1618",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "LKCSB Classroom 3-4",
+    "professor": "TAN RANI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1301",
+    "section": "G10",
+    "classNbr": "2192",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "LKCSB Classroom 3-3",
+    "professor": "LOW CHIN HENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1301",
+    "section": "G2",
+    "classNbr": "1619",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "LKCSB Classroom 3-4",
+    "professor": "TAN RANI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1301",
+    "section": "G3",
+    "classNbr": "1620",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "LKCSB Classroom 3-3",
+    "professor": "TAN RANI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1301",
+    "section": "G5",
+    "classNbr": "1622",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "LKCSB Seminar Room 3-1",
+    "professor": "KEVIN CHEONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1301",
+    "section": "G6",
+    "classNbr": "1623",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "LKCSB Seminar Room 2-7",
+    "professor": "ONG GEOK CHWEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1301",
+    "section": "G7",
+    "classNbr": "1624",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "LKCSB Classroom 3-3",
+    "professor": "LOW CHIN HENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1301",
+    "section": "G8",
+    "classNbr": "1625",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "LKCSB Classroom 3-3",
+    "professor": "LOW CHIN HENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1301",
+    "section": "G9",
+    "classNbr": "1626",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "LKCSB Classroom 3-3",
+    "professor": "LOW CHIN HENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1305",
+    "section": "G1",
+    "classNbr": "1432",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "JASON CHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1305",
+    "section": "G2",
+    "classNbr": "1433",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-2",
+    "professor": "JASON CHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1305",
+    "section": "G3",
+    "classNbr": "1434",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "ALDY GUNAWAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1305",
+    "section": "G4",
+    "classNbr": "1435",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "ALDY GUNAWAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1305",
+    "section": "G5",
+    "classNbr": "1436",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "WANG HAI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1305",
+    "section": "G6",
+    "classNbr": "2374",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SCIS1 Seminar Room 2-4",
+    "professor": "WANG HAI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1305",
+    "section": "G7",
+    "classNbr": "2375",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SCIS1 Seminar Room 2-1",
+    "professor": "WANG HAI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1306",
+    "section": "G1",
+    "classNbr": "1277",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOA Seminar Room 3-3",
+    "professor": "WANG JIWEI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1306",
+    "section": "G2",
+    "classNbr": "1338",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "SOA Seminar Room 2-1",
+    "professor": "WANG JIWEI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1306",
+    "section": "G3",
+    "classNbr": "2393",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOA Seminar Room 3-3",
+    "professor": "WANG JIWEI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1307",
+    "section": "G1",
+    "classNbr": "1651",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOA Seminar Room 3-3",
+    "professor": "KEVIN LEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1314",
+    "section": "G1",
+    "classNbr": "1798",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOA Seminar Room 2-5",
+    "professor": "HOLLY YANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G1",
+    "classNbr": "1324",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 1-3",
+    "professor": "TAN SOR HOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G10",
+    "classNbr": "1799",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 2-1",
+    "professor": "JEREMIAS KOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G11",
+    "classNbr": "1800",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "SHALOM CHALSON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G12",
+    "classNbr": "1972",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 3-09",
+    "professor": "SHALOM CHALSON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G13",
+    "classNbr": "2373",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Classroom 1-2",
+    "professor": "SHALOM CHALSON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G2",
+    "classNbr": "1325",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room B1-1",
+    "professor": "SOVAN PATRA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G3",
+    "classNbr": "1746",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room B1-1",
+    "professor": "SOVAN PATRA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G4",
+    "classNbr": "1747",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 2-1",
+    "professor": "RAND HIRMIZ",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G5",
+    "classNbr": "1748",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 2-1",
+    "professor": "RAND HIRMIZ",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G6",
+    "classNbr": "1652",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 1-3",
+    "professor": "JARED POON JUN KEAT",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G7",
+    "classNbr": "1444",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Classroom 1-2",
+    "professor": "NG SAI YING",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G8",
+    "classNbr": "1521",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Classroom 1-2",
+    "professor": "NG SAI YING",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1701",
+    "section": "G9",
+    "classNbr": "1564",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 2-1",
+    "professor": "JEREMIAS KOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1703",
+    "section": "G1",
+    "classNbr": "1291",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-3",
+    "professor": "WHITNEY, ZHANG WEI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1703",
+    "section": "G2",
+    "classNbr": "1292",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-3",
+    "professor": "WHITNEY, ZHANG WEI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1703",
+    "section": "G3",
+    "classNbr": "1293",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-6",
+    "professor": "WHITNEY, ZHANG WEI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1703",
+    "section": "G4",
+    "classNbr": "1294",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-4",
+    "professor": "WHITNEY, ZHANG WEI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1703",
+    "section": "G5",
+    "classNbr": "1295",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOA Seminar Room 3-5",
+    "professor": "VENKAT",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1703",
+    "section": "G6",
+    "classNbr": "1296",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOA Seminar Room 3-5",
+    "professor": "VENKAT",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR1703",
+    "section": "G7",
+    "classNbr": "1297",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "LKCSB Seminar Room 3-7",
+    "professor": "DON CHEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2001",
+    "section": "G1",
+    "classNbr": "1589",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G1",
+    "classNbr": "1394",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "HO KONG WENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G10",
+    "classNbr": "1403",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "KOSMAS MARINAKIS",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G11",
+    "classNbr": "1404",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "KOSMAS MARINAKIS",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G12",
+    "classNbr": "1405",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOA Seminar Room 3-4",
+    "professor": "KOSMAS MARINAKIS",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G13",
+    "classNbr": "1406",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOA Seminar Room 3-4",
+    "professor": "KOSMAS MARINAKIS",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G14",
+    "classNbr": "1407",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "ARPITA KHANNA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G15",
+    "classNbr": "1408",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "ARPITA KHANNA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G16",
+    "classNbr": "1409",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "ARPITA KHANNA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G17",
+    "classNbr": "1410",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "ARPITA KHANNA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G18",
+    "classNbr": "1411",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "TAN SWEE LIANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G19",
+    "classNbr": "1412",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "TAN SWEE LIANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G2",
+    "classNbr": "1395",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "HO KONG WENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G20",
+    "classNbr": "1413",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "TAN SWEE LIANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G21",
+    "classNbr": "1414",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "BIAN XIAOCHEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G22",
+    "classNbr": "1415",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "LKCSB Classroom 3-2",
+    "professor": "TAN LING HUI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G23",
+    "classNbr": "1438",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "WONG FOT CHYI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G24",
+    "classNbr": "2687",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-6",
+    "professor": "WONG FOT CHYI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G25",
+    "classNbr": "2699",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-6",
+    "professor": "WONG FOT CHYI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G3",
+    "classNbr": "1396",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "ALPARSLAN TUNCAY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G4",
+    "classNbr": "1397",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "ALPARSLAN TUNCAY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G5",
+    "classNbr": "1398",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 5-2",
+    "professor": "ALPARSLAN TUNCAY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G56",
+    "classNbr": "1785",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOA Seminar Room 3-5",
+    "professor": "NONA PEPITO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G57",
+    "classNbr": "1786",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOA Seminar Room 3-5",
+    "professor": "NONA PEPITO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G6",
+    "classNbr": "1399",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 5-2",
+    "professor": "ALPARSLAN TUNCAY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G7",
+    "classNbr": "1400",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "ERIC FESSELMEYER",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G8",
+    "classNbr": "1401",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "ERIC FESSELMEYER",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "G9",
+    "classNbr": "1402",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "ERIC FESSELMEYER",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "SG81",
+    "classNbr": "2533",
+    "time": "",
+    "location": "",
+    "professor": "BIAN XIAOCHEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "SG82",
+    "classNbr": "2534",
+    "time": "",
+    "location": "",
+    "professor": "ERIC FESSELMEYER",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "SG83",
+    "classNbr": "2535",
+    "time": "",
+    "location": "",
+    "professor": "HO KONG WENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "SG84",
+    "classNbr": "2536",
+    "time": "",
+    "location": "",
+    "professor": "KOSMAS MARINAKIS",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2100",
+    "section": "SG85",
+    "classNbr": "2537",
+    "time": "",
+    "location": "",
+    "professor": "TAN SWEE LIANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2201",
+    "section": "G1",
+    "classNbr": "1289",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "LKCSB Seminar Room 3-6",
+    "professor": "NEO KOK BENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2201",
+    "section": "G2",
+    "classNbr": "1290",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "LKCSB Seminar Room 3-6",
+    "professor": "NEO KOK BENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2201",
+    "section": "G3",
+    "classNbr": "1363",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-1",
+    "professor": "SHIRISH RANGNEKAR",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2201",
+    "section": "G4",
+    "classNbr": "1364",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-1",
+    "professor": "SHIRISH RANGNEKAR",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2201",
+    "section": "G5",
+    "classNbr": "1365",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-4",
+    "professor": "SHIRISH RANGNEKAR",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2212",
+    "section": "G1",
+    "classNbr": "1953",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room B1-1",
+    "professor": "HAESOO PARK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2212",
+    "section": "G2",
+    "classNbr": "1954",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room B1-1",
+    "professor": "HAESOO PARK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2212",
+    "section": "G3",
+    "classNbr": "1955",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 2-15",
+    "professor": "HAESOO PARK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2221",
+    "section": "G1",
+    "classNbr": "1612",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 2-2",
+    "professor": "ANDREW KOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2221",
+    "section": "G2",
+    "classNbr": "1613",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 2-2",
+    "professor": "ANDREW KOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2221",
+    "section": "G3",
+    "classNbr": "1614",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 2-1",
+    "professor": "ANDREW KOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2221",
+    "section": "G4",
+    "classNbr": "2304",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 2-2",
+    "professor": "ANDREW KOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2222",
+    "section": "G1",
+    "classNbr": "1610",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 2-2",
+    "professor": "JONATHAN DAVID CHASE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2222",
+    "section": "G2",
+    "classNbr": "1611",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 2-1",
+    "professor": "JONATHAN DAVID CHASE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2222",
+    "section": "G3",
+    "classNbr": "1692",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 2-2",
+    "professor": "JONATHAN DAVID CHASE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2229",
+    "section": "G1",
+    "classNbr": "2306",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "NONA PEPITO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2229",
+    "section": "G2",
+    "classNbr": "2307",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "NONA PEPITO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2249",
+    "section": "G1",
+    "classNbr": "2308",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "EMILY SOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2261",
+    "section": "G1",
+    "classNbr": "2379",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 1-1",
+    "professor": "IJLAL NAQVI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2406",
+    "section": "G1",
+    "classNbr": "1790",
+    "time": "WED 7:00PM - 8:30PM",
+    "location": "SOSS/CIS Classroom 1-2",
+    "professor": "FRANCOIS BRETAULT",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2407",
+    "section": "G1",
+    "classNbr": "1540",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-09",
+    "professor": "FRANCESCA BENVENUTI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2407",
+    "section": "G2",
+    "classNbr": "1539",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 2-04",
+    "professor": "FRANCESCA BENVENUTI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2408",
+    "section": "G1",
+    "classNbr": "1791",
+    "time": "WED 3:30PM - 5:00PM",
+    "location": "SOSS/CIS Seminar Room 1-1",
+    "professor": "MARIJO ROMERO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2408",
+    "section": "G2",
+    "classNbr": "1845",
+    "time": "WED 5:15PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 1-1",
+    "professor": "MARIJO ROMERO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2411",
+    "section": "G1",
+    "classNbr": "1693",
+    "time": "THU 10:00AM - 11:30AM",
+    "location": "YPHSL Seminar Room 2-11",
+    "professor": "AKIKO ITO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2626",
+    "section": "G1",
+    "classNbr": "1615",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 2-2",
+    "professor": "EMILY SOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2626",
+    "section": "G2",
+    "classNbr": "1690",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 2-2",
+    "professor": "EMILY SOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2626",
+    "section": "G3",
+    "classNbr": "1691",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "EMILY SOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2646",
+    "section": "G1",
+    "classNbr": "2309",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "YPHSL Classroom 1-02",
+    "professor": "JACK GREATREX",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2647",
+    "section": "G1",
+    "classNbr": "2310",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "SOVAN PATRA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR2647",
+    "section": "G2",
+    "classNbr": "2420",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "SOVAN PATRA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G1",
+    "classNbr": "1546",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "JUSTIN K TSE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G10",
+    "classNbr": "1709",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room B1-1",
+    "professor": "WEN-QING NGOEI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G11",
+    "classNbr": "1956",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room B1-1",
+    "professor": "AIDAN WONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G12",
+    "classNbr": "1710",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room B1-1",
+    "professor": "AIDAN WONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G13",
+    "classNbr": "1711",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "AIDAN WONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G14",
+    "classNbr": "1717",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "SOVAN PATRA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G15",
+    "classNbr": "1718",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 2-2",
+    "professor": "SOVAN PATRA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G16",
+    "classNbr": "1719",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 2-04",
+    "professor": "LIM LEON GIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G17",
+    "classNbr": "1720",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "LIM LEON GIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G18",
+    "classNbr": "1721",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-09",
+    "professor": "LIM LEON GIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G19",
+    "classNbr": "1722",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "PATRICK OLSEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G2",
+    "classNbr": "1694",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "JUSTIN K TSE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G20",
+    "classNbr": "1729",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "PATRICK OLSEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G21",
+    "classNbr": "1730",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "PATRICK OLSEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G22",
+    "classNbr": "1736",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Classroom 1-2",
+    "professor": "JACK GREATREX",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G23",
+    "classNbr": "2021",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-12",
+    "professor": "YONG ZHANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G24",
+    "classNbr": "2022",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 2-15",
+    "professor": "AL LIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G25",
+    "classNbr": "2655",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "JOSHUA LUCZAK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G26",
+    "classNbr": "2720",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOA Seminar Room 1-3",
+    "professor": "NEAL JHA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G27",
+    "classNbr": "2732",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "SOA Seminar Room 1-3",
+    "professor": "SOVAN PATRA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G28",
+    "classNbr": "2733",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOA Seminar Room 1-3",
+    "professor": "ZHANG QIYANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G3",
+    "classNbr": "1695",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "JUSTIN K TSE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G4",
+    "classNbr": "1708",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Classroom 3-2",
+    "professor": "TERRY VAN GEVELT",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G5",
+    "classNbr": "1957",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "JOSHUA LUCZAK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G55",
+    "classNbr": "1966",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "SOSS/CIS Seminar Room 3-3",
+    "professor": "YEO WEE LOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G56",
+    "classNbr": "1967",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-12",
+    "professor": "DARLENE MACHELL ESPENA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G57",
+    "classNbr": "1968",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-12",
+    "professor": "DARLENE MACHELL ESPENA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G6",
+    "classNbr": "1958",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "JOSHUA LUCZAK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G7",
+    "classNbr": "1959",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "JOSHUA LUCZAK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G8",
+    "classNbr": "2154",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "JOSHUA LUCZAK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3001",
+    "section": "G9",
+    "classNbr": "1960",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room B1-1",
+    "professor": "WEN-QING NGOEI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G1",
+    "classNbr": "1609",
+    "time": "THU 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "DANIEL SEAH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G10",
+    "classNbr": "1911",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 2-01",
+    "professor": "HENG WANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G11",
+    "classNbr": "1588",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 2-01",
+    "professor": "SU JIN CHANDRAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G12",
+    "classNbr": "1605",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "NOEMI CHAW",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G13",
+    "classNbr": "1606",
+    "time": "TUE 7:00PM - 10:15PM",
+    "location": "YPHSL Classroom 1-02",
+    "professor": "CHAN JUNHAO JUSTIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G14",
+    "classNbr": "1607",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-02",
+    "professor": "SAMUEL NG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G2",
+    "classNbr": "1057",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-02",
+    "professor": "DANIEL SEAH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G3",
+    "classNbr": "1274",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "DIRK HARTUNG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G4",
+    "classNbr": "1608",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 2-01",
+    "professor": "DIRK HARTUNG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G5",
+    "classNbr": "1058",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "JASON GRANT ALLEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G6",
+    "classNbr": "1059",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 3-02",
+    "professor": "JASON GRANT ALLEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G7",
+    "classNbr": "1445",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "HENG WANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G8",
+    "classNbr": "1446",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "HENG WANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3301",
+    "section": "G9",
+    "classNbr": "1784",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 2-01",
+    "professor": "HENG WANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3302",
+    "section": "G1",
+    "classNbr": "1305",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOA Seminar Room 2-5",
+    "professor": "CLARENCE GOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3302",
+    "section": "G2",
+    "classNbr": "1306",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOA Seminar Room 2-5",
+    "professor": "CLARENCE GOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3302",
+    "section": "G3",
+    "classNbr": "1317",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOA Seminar Room 2-5",
+    "professor": "CLARENCE GOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3302",
+    "section": "G4",
+    "classNbr": "1518",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOA Seminar Room 2-5",
+    "professor": "CLARENCE GOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3302",
+    "section": "SG81",
+    "classNbr": "2683",
+    "time": "",
+    "location": "",
+    "professor": "CHARMAYNE HIGHFIELD",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "G1",
+    "classNbr": "1309",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-5",
+    "professor": "PAUL LIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "G2",
+    "classNbr": "1310",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "LKCSB Seminar Room 3-1",
+    "professor": "PAUL LIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "G3",
+    "classNbr": "1311",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-1",
+    "professor": "PAUL LIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "G4",
+    "classNbr": "1312",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Classroom 1-2",
+    "professor": "RONALD TAY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "G5",
+    "classNbr": "1313",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 2-4",
+    "professor": "SANDEEP SHARMA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "G6",
+    "classNbr": "1314",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-9",
+    "professor": "NEAL JHA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "G7",
+    "classNbr": "1335",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "LKCSB Seminar Room 3-9",
+    "professor": "NEAL JHA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "G8",
+    "classNbr": "1336",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "LKCSB Seminar Room 3-9",
+    "professor": "NEAL JHA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "G9",
+    "classNbr": "1367",
+    "time": "TUE 7:00PM - 10:15PM",
+    "location": "SOA Seminar Room 1-3",
+    "professor": "NEAL JHA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "SG81",
+    "classNbr": "2561",
+    "time": "",
+    "location": "",
+    "professor": "RONALD TAY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3304",
+    "section": "SG82",
+    "classNbr": "2562",
+    "time": "",
+    "location": "",
+    "professor": "PAUL LIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR3305",
+    "section": "G1",
+    "classNbr": "2419",
+    "time": "THU 10:00AM - 11:30AM",
+    "location": "YPHSL Seminar Room 3-02",
+    "professor": "BRANDON YIP",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR-KREA2402",
+    "section": "G1",
+    "classNbr": "1541",
+    "time": "FRI 12:00PM - 1:30PM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "SEO JI YUN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR-KREA2402",
+    "section": "G2",
+    "classNbr": "1538",
+    "time": "FRI 1:45PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 3-1",
+    "professor": "SEO JI YUN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR-SOCG2251",
+    "section": "G1",
+    "classNbr": "2388",
+    "time": "FRI 10:00AM - 11:30AM",
+    "location": "SOSS/CIS Classroom 3-2",
+    "professor": "Q FORREST ZHANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR-SOCG2607",
+    "section": "G1",
+    "classNbr": "2462",
+    "time": "FRI 8:15AM - 9:45AM",
+    "location": "SOSS/CIS Seminar Room 1-3",
+    "professor": "IJLAL NAQVI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR-SOCG2608",
+    "section": "G1",
+    "classNbr": "1945",
+    "time": "FRI 1:45PM - 3:15PM",
+    "location": "SOA Seminar Room 1-2",
+    "professor": "Q FORREST ZHANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR-SOCG2609",
+    "section": "G1",
+    "classNbr": "1946",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 1-3",
+    "professor": "ALWYN LIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR-SOCG2637",
+    "section": "G1",
+    "classNbr": "1943",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 1-3",
+    "professor": "ALWYN LIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON104",
+    "section": "G1",
+    "classNbr": "1066",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "TAKASHI KUNIMOTO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON104",
+    "section": "G2",
+    "classNbr": "1067",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-8",
+    "professor": "MASSIMILIANO LANDI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON104",
+    "section": "G3",
+    "classNbr": "1068",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "VU HOANG PHUONG QUE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON104",
+    "section": "SG81",
+    "classNbr": "2543",
+    "time": "",
+    "location": "",
+    "professor": "TAKASHI KUNIMOTO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON104",
+    "section": "SG91",
+    "classNbr": "2663",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON104",
+    "section": "SG92",
+    "classNbr": "2664",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON104",
+    "section": "SG93",
+    "classNbr": "2665",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON107",
+    "section": "G1",
+    "classNbr": "1069",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "DOU LIYU",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON107",
+    "section": "G2",
+    "classNbr": "1070",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "CAO WENJIA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON107",
+    "section": "G3",
+    "classNbr": "1077",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "CAO WENJIA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON111",
+    "section": "G1",
+    "classNbr": "1468",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-8",
+    "professor": "MASSIMILIANO LANDI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON111",
+    "section": "G2",
+    "classNbr": "1470",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "HU ZIHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON111",
+    "section": "G3",
+    "classNbr": "1469",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-1",
+    "professor": "HU ZIHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON111",
+    "section": "G4",
+    "classNbr": "1640",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "HU ZIHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON112",
+    "section": "G1",
+    "classNbr": "1471",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "HUYNH BAO TAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON112",
+    "section": "G2",
+    "classNbr": "1472",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room B1-2",
+    "professor": "YOSHIKI ANDO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON112",
+    "section": "G3",
+    "classNbr": "1473",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "YOSHIKI ANDO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON112",
+    "section": "SG91",
+    "classNbr": "2672",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON113",
+    "section": "G1",
+    "classNbr": "2020",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 3-2",
+    "professor": "LAM SAN LING",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON113",
+    "section": "G2",
+    "classNbr": "2402",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "LAM SAN LING",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON118",
+    "section": "G1",
+    "classNbr": "1063",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room B1-2",
+    "professor": "MADHAV SHRIHARI ANEY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON118",
+    "section": "G2",
+    "classNbr": "1064",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room B1-2",
+    "professor": "MADHAV SHRIHARI ANEY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON118",
+    "section": "G3",
+    "classNbr": "1065",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room B1-2",
+    "professor": "MADHAV SHRIHARI ANEY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON118",
+    "section": "G4",
+    "classNbr": "2015",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room B1-2",
+    "professor": "MADHAV SHRIHARI ANEY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON145",
+    "section": "G1",
+    "classNbr": "1787",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-4",
+    "professor": "SEAN LAM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON145",
+    "section": "SG81",
+    "classNbr": "2544",
+    "time": "",
+    "location": "",
+    "professor": "SEAN LAM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON155",
+    "section": "G1",
+    "classNbr": "1423",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "CHAN KAY MIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON203",
+    "section": "G1",
+    "classNbr": "1061",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "MEI YUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON203",
+    "section": "G2",
+    "classNbr": "1062",
+    "time": "THU 7:00PM - 10:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "MEI YUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON203",
+    "section": "G3",
+    "classNbr": "1253",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "MEI YUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON203",
+    "section": "SG91",
+    "classNbr": "2666",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON206",
+    "section": "G1",
+    "classNbr": "1060",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "PAULO DANIEL SALLES RAMOS",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON207",
+    "section": "G1",
+    "classNbr": "1278",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "ANTHONY S. TAY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON208",
+    "section": "SG91",
+    "classNbr": "2667",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON210",
+    "section": "G1",
+    "classNbr": "1698",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "HOON HIAN TECK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON211",
+    "section": "G1",
+    "classNbr": "1788",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-2",
+    "professor": "CHRISTINE HO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON211",
+    "section": "G2",
+    "classNbr": "1969",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-2",
+    "professor": "CHRISTINE HO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON215",
+    "section": "G1",
+    "classNbr": "1970",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "KIM SEONGHOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON216",
+    "section": "G1",
+    "classNbr": "1269",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-2",
+    "professor": "JESLYN TAN SIOK HONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON217",
+    "section": "G1",
+    "classNbr": "2435",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "HO KONG WENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON219",
+    "section": "SG91",
+    "classNbr": "2668",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON220",
+    "section": "SG91",
+    "classNbr": "2669",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON235",
+    "section": "G1",
+    "classNbr": "2434",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "HOON HIAN TECK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON235",
+    "section": "SG81",
+    "classNbr": "2545",
+    "time": "",
+    "location": "",
+    "professor": "HOON HIAN TECK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON241",
+    "section": "G1",
+    "classNbr": "1393",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "XUE JINGYI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON242",
+    "section": "G1",
+    "classNbr": "2436",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-2",
+    "professor": "HUANG FALI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON242",
+    "section": "G2",
+    "classNbr": "2437",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "HUANG FALI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON243",
+    "section": "G1",
+    "classNbr": "2438",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-9",
+    "professor": "CHRISTINE HO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON244",
+    "section": "SG91",
+    "classNbr": "2670",
+    "time": "",
+    "location": "",
+    "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON245",
+    "section": "G1",
+    "classNbr": "2439",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-2",
+    "professor": "DENIS LEUNG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON248",
+    "section": "G1",
+    "classNbr": "1789",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "VU HOANG PHUONG QUE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON251",
+    "section": "G1",
+    "classNbr": "1474",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "GEA M. LEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON251",
+    "section": "G2",
+    "classNbr": "1475",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-10",
+    "professor": "GEA M. LEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON251",
+    "section": "G3",
+    "classNbr": "1476",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "GEA M. LEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON251",
+    "section": "SG81",
+    "classNbr": "2546",
+    "time": "",
+    "location": "",
+    "professor": "GEA M. LEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON252",
+    "section": "G1",
+    "classNbr": "1549",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room B1-2",
+    "professor": "HUYNH BAO TAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON252",
+    "section": "G2",
+    "classNbr": "1550",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-5",
+    "professor": "MOK WENG SAM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON252",
+    "section": "G3",
+    "classNbr": "1551",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 2-4",
+    "professor": "MOK WENG SAM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON252",
+    "section": "SG81",
+    "classNbr": "2547",
+    "time": "",
+    "location": "",
+    "professor": "MOK WENG SAM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON301",
+    "section": "G1",
+    "classNbr": "1288",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-8",
+    "professor": "MASSIMILIANO LANDI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON350",
+    "section": "G1",
+    "classNbr": "1794",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 3-2",
+    "professor": "MA LIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON401",
+    "section": "G1",
+    "classNbr": "2942",
+    "time": "",
+    "location": "",
+    "professor": "HUYNH BAO TAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON490",
+    "section": "G1",
+    "classNbr": "2688",
+    "time": "",
+    "location": "",
+    "professor": "ALJOSCHA JANSSEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON490",
+    "section": "G10",
+    "classNbr": "2697",
+    "time": "",
+    "location": "",
+    "professor": "YEO SU LIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON490",
+    "section": "G11",
+    "classNbr": "2698",
+    "time": "",
+    "location": "",
+    "professor": "ZHANG XUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON490",
+    "section": "G3",
+    "classNbr": "2690",
+    "time": "",
+    "location": "",
+    "professor": "DENIS LEUNG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON490",
+    "section": "G4",
+    "classNbr": "2691",
+    "time": "",
+    "location": "",
+    "professor": "KIM SEONGHOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON490",
+    "section": "G5",
+    "classNbr": "2692",
+    "time": "",
+    "location": "",
+    "professor": "LI JING",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON490",
+    "section": "G6",
+    "classNbr": "2693",
+    "time": "",
+    "location": "",
+    "professor": "MOK, HENG NGEE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON490",
+    "section": "G7",
+    "classNbr": "2694",
+    "time": "",
+    "location": "",
+    "professor": "CRAMA PASCALE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON490",
+    "section": "G8",
+    "classNbr": "2695",
+    "time": "",
+    "location": "",
+    "professor": "SHE ZHAOWEI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "ECON490",
+    "section": "G9",
+    "classNbr": "2696",
+    "time": "",
+    "location": "",
+    "professor": "TOMOKI FUJII",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G1",
+    "classNbr": "1047",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-09",
+    "professor": "SAW CHENG LIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G10",
+    "classNbr": "1054",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 2-05",
+    "professor": "CHONG KAI SHENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G11",
+    "classNbr": "1055",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 2-15",
+    "professor": "KOH BOON TIONG DAVID",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G12",
+    "classNbr": "1056",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 2-01",
+    "professor": "PHANG, RACHEL",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G2",
+    "classNbr": "1048",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 2-11",
+    "professor": "KOH BOON TIONG DAVID",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G3",
+    "classNbr": "1049",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-09",
+    "professor": "TERENCE YEO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G4",
+    "classNbr": "1050",
+    "time": "THU 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-02",
+    "professor": "IAN MAH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G5",
+    "classNbr": "1051",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-02",
+    "professor": "ALLEN CHONG WEI XUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G6",
+    "classNbr": "1117",
+    "time": "TUE 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 2-05",
+    "professor": "SOH KIAN PENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G7",
+    "classNbr": "1057",
+    "time": "THU 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 2-01",
+    "professor": "CHAN ZHENG WEN SAMUEL",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G8",
+    "classNbr": "1052",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "GEROME GOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G9",
+    "classNbr": "1053",
+    "time": "TUE 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-11",
+    "professor": "SAMUEL TAY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "SG81",
+    "classNbr": "2921",
+    "time": "",
+    "location": "",
+    "professor": "KOH BOON TIONG DAVID",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "SG82",
+    "classNbr": "2922",
+    "time": "",
+    "location": "",
+    "professor": "SOH KIAN PENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "SG83",
+    "classNbr": "3017",
+    "time": "",
+    "location": "",
+    "professor": "LOUIS LAU",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST201",
+    "section": "G1",
+    "classNbr": "1058",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-02",
+    "professor": "PEARLIE KOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST201",
+    "section": "G2",
+    "classNbr": "1059",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-12",
+    "professor": "SAMUEL NG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST201",
+    "section": "G3",
+    "classNbr": "1070",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-12",
+    "professor": "SAMUEL NG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST223",
+    "section": "G1",
+    "classNbr": "1148",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "PASHA L. HSIEH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST236",
+    "section": "G1",
+    "classNbr": "1555",
+    "time": "THU 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "CHARLES LI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC003",
+    "section": "G1",
+    "classNbr": "1184",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 1-1",
+    "professor": "JOSHI, DEVIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC003",
+    "section": "G2",
+    "classNbr": "1185",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 1-1",
+    "professor": "JOSHI, DEVIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC003",
+    "section": "G3",
+    "classNbr": "1224",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 1-1",
+    "professor": "JOSHI, DEVIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC003",
+    "section": "G4",
+    "classNbr": "2377",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 1-3",
+    "professor": "NATHAN PENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC101",
+    "section": "G1",
+    "classNbr": "1319",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 2-1",
+    "professor": "CHRISTIANNA PARR",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC103",
+    "section": "G1",
+    "classNbr": "1700",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Seminar Room 2-2",
+    "professor": "CALLAHAN, WILLIAM A.",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC208",
+    "section": "G1",
+    "classNbr": "2380",
+    "time": "WED 1:45PM - 3:15PM",
+    "location": "SOA Seminar Room 3-1",
+    "professor": "PATRICK QUINTON-BROWN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC208",
+    "section": "SG81",
+    "classNbr": "2531",
+    "time": "",
+    "location": "",
+    "professor": "PATRICK QUINTON-BROWN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC219",
+    "section": "G1",
+    "classNbr": "1326",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Classroom 3-2",
+    "professor": "ANTONG LIU",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC225",
+    "section": "G1",
+    "classNbr": "2011",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 1-3",
+    "professor": "JEFFREY GROVE",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC309",
+    "section": "G1",
+    "classNbr": "1702",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOA Seminar Room 3-4",
+    "professor": "PATRICK QUINTON-BROWN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC316",
+    "section": "G1",
+    "classNbr": "2382",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 2-2",
+    "professor": "RICKS, JACOB",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC327",
+    "section": "G1",
+    "classNbr": "2008",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "SOSS/CIS Classroom 1-2",
+    "professor": "CALLAHAN, WILLIAM A.",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC328",
+    "section": "G1",
+    "classNbr": "2383",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 2-1",
+    "professor": "JEREMY SIOW",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "POSC401",
+    "section": "G1",
+    "classNbr": "2810",
+    "time": "",
+    "location": "",
+    "professor": "JOSHI, DEVIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "SOCG001",
+    "section": "G1",
+    "classNbr": "1192",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 1-1",
+    "professor": "GEORGE WONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "SOCG001",
+    "section": "G2",
+    "classNbr": "1193",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Seminar Room 1-1",
+    "professor": "GEORGE WONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "SOCG001",
+    "section": "G3",
+    "classNbr": "1246",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-11",
+    "professor": "GEORGE WONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "SOCG203",
+    "section": "G1",
+    "classNbr": "1803",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOSS/CIS Seminar Room 1-3",
+    "professor": "PAULIN TAY STRAUGHAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "SOCG215",
+    "section": "G1",
+    "classNbr": "1948",
+    "time": "WED 3:30PM - 5:00PM",
+    "location": "YPHSL Seminar Room 2-11",
+    "professor": "LIU JIAQI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "SOCG223",
+    "section": "G1",
+    "classNbr": "1949",
+    "time": "WED 10:00AM - 11:30AM",
+    "location": "SOSS/CIS Classroom 3-2",
+    "professor": "JACQUELINE HO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "SOCG401",
+    "section": "G1",
+    "classNbr": "2747",
+    "time": "",
+    "location": "",
+    "professor": "GEORGE WONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "SOCG401",
+    "section": "G2",
+    "classNbr": "2748",
+    "time": "",
+    "location": "",
+    "professor": "IJLAL NAQVI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "SOCG402",
+    "section": "G1",
+    "classNbr": "2085",
+    "time": "",
+    "location": "",
+    "professor": "ANNIKA RIEGER",
     "term": "2026-27 Term 2 starting 11-Jan-27",
     "termCode": "2620"
   }
