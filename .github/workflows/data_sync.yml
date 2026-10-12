@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
 
     steps:
     - name: Checkout repository
@@ -42,10 +43,23 @@ jobs:
         python scripts/sync_pdfs.py
 
     - name: Commit and Push Changes
+      env:
+        GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add web/src/data/courses.json
         git add data/ 2>/dev/null || true
-        git commit -m "Auto-sync course data and schedules" || exit 0
-        git push
+        # If nothing changed, exit cleanly
+        git diff --cached --quiet && echo "No changes to commit." && exit 0
+        git commit -m "Auto-sync course data and schedules"
+        # Push to a dated sync branch and open/update a PR
+        BRANCH="data-sync/$(date +%Y-%m-%d)"
+        git push --force origin HEAD:refs/heads/$BRANCH
+        # Create PR if one doesn't already exist for this branch
+        gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number' | grep -q '[0-9]' \
+          || gh pr create \
+              --base main \
+              --head "$BRANCH" \
+              --title "Auto-sync course data and schedules $(date +%Y-%m-%d)" \
+              --body "Automated daily data sync. Merges when Build and Vercel checks pass."
