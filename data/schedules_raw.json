@@ -65864,7 +65864,7 @@
     "section": "G3",
     "classNbr": "1246",
     "time": "WED 3:30PM - 6:45PM",
-    "location": "SOSS/CIS Seminar Room 1-1",
+    "location": "YPHSL Seminar Room 3-11",
     "professor": "GEORGE WONG",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
@@ -65903,8 +65903,8 @@
     "courseCode": "SOCG402",
     "section": "G1",
     "classNbr": "2085",
-    "time": "WED 8:15AM - 11:30AM",
-    "location": "SOSS/CIS Seminar Room B1-1",
+    "time": "",
+    "location": "",
     "professor": "ANNIKA RIEGER",
     "term": "2026-27 Term 1 starting 17-Aug-26",
     "termCode": "2610"
@@ -86016,6 +86016,596 @@
     "time": "",
     "location": "",
     "professor": "",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "SOCG401",
+    "section": "G1",
+    "classNbr": "2747",
+    "time": "",
+    "location": "",
+    "professor": "GEORGE WONG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "SOCG401",
+    "section": "G2",
+    "classNbr": "2748",
+    "time": "",
+    "location": "",
+    "professor": "IJLAL NAQVI",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "STAT201",
+    "section": "G1",
+    "classNbr": "1954",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "SOE/SCIS2 Seminar Room 3-1",
+    "professor": "WU ZHENGXIAO",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "STAT201",
+    "section": "G2",
+    "classNbr": "2584",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-5",
+    "professor": "JACKIE LI",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "STAT203",
+    "section": "G1",
+    "classNbr": "1666",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOE/SCIS2 Seminar Room 3-3",
+    "professor": "GOH JING RONG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "STAT203",
+    "section": "SG81",
+    "classNbr": "2927",
+    "time": "",
+    "location": "",
+    "professor": "GOH JING RONG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "STAT310",
+    "section": "G1",
+    "classNbr": "1128",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "SOE/SCIS2 Seminar Room 3-5",
+    "professor": "YEO KENG LEONG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "STAT401",
+    "section": "G1",
+    "classNbr": "2846",
+    "time": "",
+    "location": "",
+    "professor": "GOH JING RONG",
+    "term": "2026-27 Term 1 starting 17-Aug-26",
+    "termCode": "2610"
+  },
+  {
+    "courseCode": "TRAD201",
+    "section": "G1",
+    "classNbr": "1910",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-8",
+    "professor": "ICS INSTRUCTORS",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "TRAD201",
+    "section": "SG81",
+    "classNbr": "2579",
+    "time": "",
+    "location": "",
+    "professor": "ICS INSTRUCTORS",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR-INTS2240",
+    "section": "G1",
+    "classNbr": "1790",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-10",
+    "professor": "THEODOR COJOIANU",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "COR-INTS2255",
+    "section": "G1",
+    "classNbr": "1984",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "SOSS/CIS Classroom 1-2",
+    "professor": "QIUZHUANG SUN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G1",
+    "classNbr": "1060",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "SAW CHENG LIM",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G10",
+    "classNbr": "1067",
+    "time": "THU 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-11",
+    "professor": "SU JIN CHANDRAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G11",
+    "classNbr": "1068",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-02",
+    "professor": "SOL INSTRUCTOR 5",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G12",
+    "classNbr": "1069",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "KOH BOON TIONG DAVID",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G2",
+    "classNbr": "1061",
+    "time": "WED 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 2-01",
+    "professor": "TERENCE ANG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G3",
+    "classNbr": "1062",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-02",
+    "professor": "SOL INSTRUCTOR 5",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G4",
+    "classNbr": "1063",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-09",
+    "professor": "AARON YOONG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G5",
+    "classNbr": "1064",
+    "time": "TUE 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 2-01",
+    "professor": "LOUIS LAU",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G6",
+    "classNbr": "1128",
+    "time": "TUE 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-02",
+    "professor": "ELGIN TAY",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G7",
+    "classNbr": "1070",
+    "time": "THU 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "ALLEN CHONG WEI XUAN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G8",
+    "classNbr": "1065",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "GEROME GOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST101",
+    "section": "G9",
+    "classNbr": "1066",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "KOH BOON TIONG DAVID",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST201",
+    "section": "G1",
+    "classNbr": "1071",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 2-15",
+    "professor": "PEARLIE KOH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST201",
+    "section": "G2",
+    "classNbr": "1072",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "SAMUEL NG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST201",
+    "section": "G3",
+    "classNbr": "1083",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "SAMUEL NG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST201",
+    "section": "G4",
+    "classNbr": "2320",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "SAMUEL NG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST210",
+    "section": "G1",
+    "classNbr": "2321",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "YPHSL Seminar Room 3-11",
+    "professor": "EDWARD TI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST223",
+    "section": "G1",
+    "classNbr": "1157",
+    "time": "WED 3:30PM - 6:45PM",
+    "location": "YPHSL Seminar Room 3-01",
+    "professor": "PASHA L. HSIEH",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "LGST236",
+    "section": "G1",
+    "classNbr": "1529",
+    "time": "THU 7:00PM - 10:15PM",
+    "location": "YPHSL Seminar Room 3-09",
+    "professor": "CHARLES LI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G1",
+    "classNbr": "1220",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "LKCSB Seminar Room 2-4",
+    "professor": "TAN HWEE HOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G10",
+    "classNbr": "1135",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-1",
+    "professor": "SIM SU-HSIEN, SAMANTHA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G11",
+    "classNbr": "1152",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "LKCSB Seminar Room 3-1",
+    "professor": "SIM SU-HSIEN, SAMANTHA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G12",
+    "classNbr": "1448",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "LKCSB Classroom 3-3",
+    "professor": "LOW CHIN HENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G13",
+    "classNbr": "1478",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "LKCSB Classroom 3-3",
+    "professor": "LOW CHIN HENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G14",
+    "classNbr": "1479",
+    "time": "FRI 8:15AM - 11:30AM",
+    "location": "LKCSB Classroom 3-2",
+    "professor": "LOW CHIN HENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G15",
+    "classNbr": "1674",
+    "time": "FRI 12:00PM - 3:15PM",
+    "location": "LKCSB Classroom 3-2",
+    "professor": "LOW CHIN HENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G16",
+    "classNbr": "1675",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "LKCSB Seminar Room 3-1",
+    "professor": "SIM SU-HSIEN, SAMANTHA",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G17",
+    "classNbr": "2201",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "SOA Seminar Room 1-2",
+    "professor": "LKCSB INSTRUCTOR 12",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G2",
+    "classNbr": "1232",
+    "time": "MON 3:30PM - 6:45PM",
+    "location": "LKCSB Seminar Room 2-4",
+    "professor": "TAN HWEE HOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G3",
+    "classNbr": "1053",
+    "time": "TUE 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-2",
+    "professor": "KENNETH TAI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G4",
+    "classNbr": "1054",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "LKCSB Seminar Room 3-1",
+    "professor": "KENNETH TAI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G5",
+    "classNbr": "1073",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "LKCSB Classroom 3-3",
+    "professor": "MCGUIRE, JACK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G6",
+    "classNbr": "1055",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "LKCSB Classroom 3-3",
+    "professor": "MCGUIRE, JACK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G7",
+    "classNbr": "1176",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 2-8",
+    "professor": "MA KHENG MIN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G8",
+    "classNbr": "1056",
+    "time": "MON 7:00PM - 10:15PM",
+    "location": "LKCSB Seminar Room 2-8",
+    "professor": "KUMAR ABHISHEK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR101",
+    "section": "G9",
+    "classNbr": "1057",
+    "time": "TUE 7:00PM - 10:15PM",
+    "location": "LKCSB Seminar Room 3-9",
+    "professor": "KUMAR ABHISHEK",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR201",
+    "section": "G1",
+    "classNbr": "1108",
+    "time": "TUE 12:00PM - 3:15PM",
+    "location": "LKCSB Seminar Room 3-3",
+    "professor": "JARED NAI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR203",
+    "section": "G1",
+    "classNbr": "2253",
+    "time": "WED 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 2-8",
+    "professor": "LIEVENS, FILIP",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR212",
+    "section": "G1",
+    "classNbr": "1559",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "LKCSB Seminar Room 3-7",
+    "professor": "TAN HWEE HOON",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR225",
+    "section": "G1",
+    "classNbr": "1820",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "LKCSB Seminar Room 3-2",
+    "professor": "KAN SIEW NING",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "OBHR301",
+    "section": "G1",
+    "classNbr": "1821",
+    "time": "WED 12:00PM - 3:15PM",
+    "location": "LKCSB Seminar Room 3-1",
+    "professor": "KENNETH TAI",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "QF101",
+    "section": "G1",
+    "classNbr": "1234",
+    "time": "THU 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-8",
+    "professor": "ZHAO YIBAO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "QF102",
+    "section": "G1",
+    "classNbr": "1332",
+    "time": "TUE 3:30PM - 6:45PM",
+    "location": "SOA Seminar Room 1-3",
+    "professor": "TEE CHYNG WEN",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "QF205",
+    "section": "G1",
+    "classNbr": "1334",
+    "time": "THU 3:30PM - 6:45PM",
+    "location": "SOA Seminar Room 1-3",
+    "professor": "ZHAO YIBAO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "QF206",
+    "section": "G1",
+    "classNbr": "1560",
+    "time": "MON 12:00PM - 3:15PM",
+    "location": "LKCSB Seminar Room 3-6",
+    "professor": "LIU PENG",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "QF208",
+    "section": "G1",
+    "classNbr": "1934",
+    "time": "MON 8:15AM - 11:30AM",
+    "location": "LKCSB Seminar Room 3-7",
+    "professor": "ZHAO YIBAO",
+    "term": "2026-27 Term 2 starting 11-Jan-27",
+    "termCode": "2620"
+  },
+  {
+    "courseCode": "QF307",
+    "section": "G1",
+    "classNbr": "1333",
+    "time": "THU 12:00PM - 3:15PM",
+    "location": "SOA Seminar Room 3-4",
+    "professor": "TEE CHYNG WEN",
     "term": "2026-27 Term 2 starting 11-Jan-27",
     "termCode": "2620"
   }
