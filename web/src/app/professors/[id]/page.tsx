@@ -1,19 +1,31 @@
-import fs from 'fs';
-import path from 'path';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ChevronLeft, BookOpen, Calendar, User, ExternalLink, Mail, Phone, FileText, Globe, Building2, GraduationCap } from 'lucide-react';
+import { BookOpen, Calendar, User, ExternalLink, Mail, Phone, FileText, Globe, Building2, GraduationCap } from 'lucide-react';
 import { ProfessorData } from '@/components/ProfessorCard';
 import FloatingActions from '@/components/FloatingActions';
 import BackButton from '@/components/BackButton';
 import facultyPhotosData from '@/data/faculty_extra.json';
+import rawProfessors from '@/data/professors.json';
+
+type FacultyExtra = {
+  photoUrl?: string | null;
+  title?: string | null;
+  profileUrl?: string | null;
+  researchAreas?: string[];
+  qualifications?: string[];
+  coursesTaught?: string[];
+  email?: string | null;
+  phone?: string | null;
+  cvUrl?: string | null;
+  scholarUrl?: string | null;
+  scopusUrl?: string | null;
+};
+
+const professors = rawProfessors as ProfessorData[];
+const facultyExtra = facultyPhotosData as Record<string, FacultyExtra | null>;
 
 // Pre-render all professor pages
 export async function generateStaticParams() {
-  const filePath = path.join(process.cwd(), 'src/data/professors.json');
-  const fileContents = fs.readFileSync(filePath, 'utf8');
-  const professors: ProfessorData[] = JSON.parse(fileContents);
-  
   return professors.map((prof) => ({
     id: prof.id,
   }));
@@ -21,11 +33,6 @@ export async function generateStaticParams() {
 
 export default async function ProfessorPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  
-  const filePath = path.join(process.cwd(), 'src/data/professors.json');
-  const fileContents = fs.readFileSync(filePath, 'utf8');
-  const professors: ProfessorData[] = JSON.parse(fileContents);
-  
   const professor = professors.find((p) => p.id === id);
   
   if (!professor) {
@@ -33,21 +40,7 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
   }
 
   // Safely get extra data
-  const extraData = facultyPhotosData as Record<string, { 
-    photoUrl?: string | null, 
-    title?: string | null, 
-    profileUrl?: string | null, 
-    researchAreas?: string[],
-    qualifications?: string[],
-    coursesTaught?: string[],
-    email?: string | null,
-    phone?: string | null,
-    cvUrl?: string | null,
-    scholarUrl?: string | null,
-    scopusUrl?: string | null
-  } | null>;
-  
-  const profExtra = extraData[professor.id] || {};
+  const profExtra: FacultyExtra = facultyExtra[professor.id] ?? {};
   const { 
     photoUrl, title, profileUrl, 
     researchAreas = [], qualifications = [], coursesTaught = [], 
@@ -91,6 +84,7 @@ export default async function ProfessorPage({ params }: { params: Promise<{ id: 
               {/* Photo */}
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden bg-black/5 dark:bg-white/5 border-2 border-black/10 dark:border-white/10 flex items-center justify-center shadow-lg shrink-0">
                 {photoUrl ? (
+                  /* eslint-disable-next-line @next/next/no-img-element -- External faculty URLs cannot use the static image optimizer. */
                   <img src={photoUrl} alt={professor.name} className="w-full h-full object-cover" />
                 ) : (
                   <User size={48} className="text-black/20 dark:text-white/20" />

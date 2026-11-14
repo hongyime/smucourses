@@ -1,25 +1,42 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { GraduationCap, Building2, ChevronRight, Bookmark, Scale } from "lucide-react";
+import { ChevronRight, Bookmark, Scale } from "lucide-react";
 import { useBookmarks } from "@/hooks/useBookmarks";
 import { useCompare } from "@/hooks/useCompare";
 import { motion } from "framer-motion";
+
+export interface CourseSchedule {
+  courseCode?: string;
+  section?: string;
+  classNbr?: string;
+  time?: string;
+  location?: string;
+  professor?: string;
+  term?: string;
+  termCode?: string;
+  pdfUrl?: string;
+}
 
 export interface CourseData {
   id: string;
   code: string;
   name: string;
-  longName: string;
+  longName?: string | null;
+  subjectCode?: string | null;
   level: string;
-  school: {
+  school?: {
     id: string;
     name: string;
   };
-  description: string;
+  description?: string;
   areas?: string[];
   tracks?: string[];
   gradeMode?: string;
+  credits?: { units?: number; contactHours?: number };
+  component?: { type?: string; hasFinalExam?: boolean };
+  requisites?: { prerequisites?: { name: string }[] };
+  schedules?: CourseSchedule[];
 }
 
 interface CourseCardProps {

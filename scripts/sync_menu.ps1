@@ -27,6 +27,23 @@ function Show-Menu {
     Write-Host ""
 }
 
+function Run-PrePushChecks {
+    & "$PSScriptRoot/pre-push-check.ps1"
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
+
+    Push-Location "$RepoPath/web"
+    try {
+        npm test
+        if ($LASTEXITCODE -ne 0) {
+            exit $LASTEXITCODE
+        }
+    } finally {
+        Pop-Location
+    }
+}
+
 function Run-TransformAndPush {
     Write-Host "`n[ ] Transforming raw data into SSG format..." -ForegroundColor Yellow
     Run-Script "python scripts/transform_data.py"
@@ -35,6 +52,7 @@ function Run-TransformAndPush {
     $status = git status --porcelain
     if ($status) {
         Write-Host "Changes detected! Committing to GitHub..."
+        Run-PrePushChecks
         git add data/
         git add web/src/data/
         git add web/public/pdfs/

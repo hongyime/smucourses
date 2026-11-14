@@ -1,9 +1,9 @@
-import json
-import os
 import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+from json_io import load_json, write_json_atomic
 
 def scrape_prof(prof_id, name):
     headers = {
@@ -107,16 +107,15 @@ def scrape_prof(prof_id, name):
         return prof_id, None
 
 def main():
-    professors_file = os.path.join("web", "src", "data", "professors.json")
-    out_file = os.path.join("web", "src", "data", "faculty_extra.json")
+    repo_root = Path(__file__).resolve().parent.parent
+    professors_file = repo_root / "web" / "src" / "data" / "professors.json"
+    out_file = repo_root / "web" / "src" / "data" / "faculty_extra.json"
     
-    with open(professors_file, "r") as f:
-        professors = json.load(f)
+    professors = load_json(professors_file, list)
         
     extra_data = {}
-    if os.path.exists(out_file):
-        with open(out_file, "r") as f:
-            extra_data = json.load(f)
+    if out_file.exists():
+        extra_data = load_json(out_file, dict)
             
     to_scrape = []
     for prof in professors:
@@ -142,11 +141,9 @@ def main():
             if data:
                 print(f"Scraped data for {prof_id}")
             if i > 0 and i % 10 == 0:
-                with open(out_file, "w") as f:
-                    json.dump(extra_data, f, indent=2)
+                write_json_atomic(out_file, extra_data, indent=2)
                     
-    with open(out_file, "w") as f:
-        json.dump(extra_data, f, indent=2)
+    write_json_atomic(out_file, extra_data, indent=2)
         
     print(f"Finished scraping!")
 

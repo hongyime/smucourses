@@ -1,9 +1,9 @@
 import asyncio
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
-import json
 from pathlib import Path
 import logging
+from json_io import load_json, write_json_atomic
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -268,26 +268,21 @@ async def main():
     
     # Merge with existing schedules to prevent data loss
     if out_path.exists():
-        try:
-            with open(out_path, "r", encoding="utf-8") as f:
-                existing_schedules = json.load(f)
+        existing_schedules = load_json(out_path, list)
+
+        # Deduplicate using termCode, courseCode, section, and classNbr
+        def make_key(s):
+            return f"{s.get('termCode','')}_{s.get('courseCode','')}_{s.get('section','')}_{s.get('classNbr','')}"
+
+        schedules_dict = {make_key(s): s for s in existing_schedules}
+
+        # Update/append newly scraped schedules
+        for s in all_schedules:
+            schedules_dict[make_key(s)] = s
+
+        all_schedules = list(schedules_dict.values())
             
-            # Deduplicate using termCode, courseCode, section, and classNbr
-            def make_key(s):
-                return f"{s.get('termCode','')}_{s.get('courseCode','')}_{s.get('section','')}_{s.get('classNbr','')}"
-            
-            schedules_dict = {make_key(s): s for s in existing_schedules}
-            
-            # Update/append newly scraped schedules
-            for s in all_schedules:
-                schedules_dict[make_key(s)] = s
-                
-            all_schedules = list(schedules_dict.values())
-        except Exception as e:
-            logging.error(f"Error merging schedules: {e}")
-            
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(all_schedules, f, ensure_ascii=False, indent=2)
+    write_json_atomic(out_path, all_schedules, ensure_ascii=False, indent=2)
         
     logging.info(f"Pipeline Complete! Saved {len(all_schedules)} class schedules to {out_path}.")
 

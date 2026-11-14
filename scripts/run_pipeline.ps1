@@ -12,6 +12,23 @@ function Run-Script {
     }
 }
 
+function Run-PrePushChecks {
+    & "$PSScriptRoot/pre-push-check.ps1"
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
+
+    Push-Location "$RepoPath/web"
+    try {
+        npm test
+        if ($LASTEXITCODE -ne 0) {
+            exit $LASTEXITCODE
+        }
+    } finally {
+        Pop-Location
+    }
+}
+
 Write-Host "🚀 Starting Automated SMU Courses Data Sync" -ForegroundColor Cyan
 
 Write-Host "`n[1/5] Fetching latest API data..." -ForegroundColor Yellow
@@ -37,6 +54,7 @@ Write-Host "`n[ ] Checking for changes..." -ForegroundColor Yellow
 $status = git status --porcelain
 if ($status) {
     Write-Host "Changes detected! Committing to GitHub..."
+    Run-PrePushChecks
     git add data/
     git add web/src/data/
     git add web/public/pdfs/

@@ -16,14 +16,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v7
 
-    - name: Cache downloaded PDFs
-      uses: actions/cache@v6
-      with:
-        path: web/public/pdfs
-        key: smucourses-pdfs-${{ hashFiles('data/documents_raw.json') }}
-        restore-keys: |
-          smucourses-pdfs-
-
     - name: Set up Python
       uses: actions/setup-python@v7
       with:
@@ -40,7 +32,6 @@ jobs:
         python scripts/fetch_courses.py
         python scripts/fetch_schedules.py
         python scripts/transform_data.py
-        python scripts/sync_pdfs.py
 
     - name: Commit and Push Changes
       env:
@@ -48,7 +39,7 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add web/src/data/courses.json
+        git add web/src/data/*.json
         git add data/ 2>/dev/null || true
         # If nothing changed, exit cleanly
         git diff --cached --quiet && echo "No changes to commit." && exit 0

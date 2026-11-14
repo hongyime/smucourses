@@ -3,6 +3,7 @@ import json
 import time
 import requests
 from pathlib import Path
+from json_io import write_bytes_atomic
 
 # --- CONFIGURATION & FAILSAFES ---
 MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024       # 5 MB anti-zip bomb cap
@@ -13,6 +14,14 @@ PDF_MAGIC_BYTES = b"%PDF"                   # Standard PDF header
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DOCUMENTS_JSON_PATH = ROOT_DIR / "data" / "documents_raw.json"
 PDF_DIR = ROOT_DIR / "web" / "public" / "pdfs"
+
+
+def has_valid_pdf_header(path: Path) -> bool:
+    try:
+        with path.open("rb") as file:
+            return file.read(len(PDF_MAGIC_BYTES)).startswith(PDF_MAGIC_BYTES)
+    except OSError:
+        return False
 
 def download_and_validate_pdf(url: str, doc_id: str) -> bytes:
     """
@@ -78,11 +87,14 @@ def main():
         pdf_url = f"https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/{doc_id}/pdf"
         target_path = PDF_DIR / f"{doc_id}.pdf"
         
-        # Skip if already downloaded
-        if target_path.exists():
+        # Skip only valid cached PDFs so corrupt legacy files are retried.
+        if target_path.exists() and has_valid_pdf_header(target_path):
             print(f"⏭️ SKIPPED {doc_id}: Already exists locally.")
             skip_count += 1
             continue
+
+        if target_path.exists():
+            print(f"↻ Re-downloading {doc_id}: Existing file is invalid.")
 
         print(f"Processing {doc_id}...", end=" ", flush=True)
 
@@ -93,8 +105,7 @@ def main():
             total_bytes_processed += file_size
             
             try:
-                with open(target_path, "wb") as f:
-                    f.write(pdf_bytes)
+                write_bytes_atomic(target_path, pdf_bytes)
                 print(f"✅ Saved ({file_size / 1024:.1f} KB)")
                 success_count += 1
             except Exception as e:

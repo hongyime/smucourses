@@ -5,6 +5,14 @@ import { Search, BookOpen, GraduationCap, Clock, Award } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { motion, Variants } from "framer-motion";
 
+const phrases = [
+  "Discover your courses.",
+  "Master your curriculum.",
+  "Bid with confidence.",
+  "Explore historical syllabi.",
+  "Avoid 100% final exams.",
+];
+
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
@@ -29,14 +37,6 @@ export default function Home() {
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
   };
 
-  const phrases = [
-    "Discover your courses.",
-    "Master your curriculum.",
-    "Bid with confidence.",
-    "Explore historical syllabi.",
-    "Avoid 100% final exams."
-  ];
-
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -49,8 +49,10 @@ export default function Home() {
     if (!isDeleting && text === currentPhrase) {
       timeout = setTimeout(() => setIsDeleting(true), 2500);
     } else if (isDeleting && text === "") {
-      setIsDeleting(false);
-      setPhraseIndex((prev) => (prev + 1) % phrases.length);
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+        setPhraseIndex((previous) => (previous + 1) % phrases.length);
+      }, 0);
     } else {
       const nextText = isDeleting 
         ? currentPhrase.substring(0, text.length - 1)

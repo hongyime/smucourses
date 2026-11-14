@@ -4,14 +4,14 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { ChevronLeft, Bookmark } from "lucide-react";
 import CourseCard, { CourseData } from "@/components/CourseCard";
-import ProfessorCard, { ProfessorData } from "@/components/ProfessorCard";
-import rawCourses from "@/data/courses.json";
-import rawProfessors from "@/data/professors.json";
+import ProfessorCard, { ProfessorSearchData } from "@/components/ProfessorCard";
+import rawCourses from "@/data/search_index.json";
+import rawProfessors from "@/data/professor_search_index.json";
 import { useBookmarks } from "@/hooks/useBookmarks";
 import UnavailableSelections from "@/components/UnavailableSelections";
 
 const coursesData = rawCourses as CourseData[];
-const professorsData = rawProfessors as ProfessorData[];
+const professorsData = rawProfessors as ProfessorSearchData[];
 
 export default function BookmarksPage() {
   const { bookmarks: courseBookmarks, toggleBookmark: toggleCourse, isLoaded: coursesLoaded } = useBookmarks("courses");

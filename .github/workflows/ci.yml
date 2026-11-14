@@ -33,8 +33,13 @@ jobs:
           cache-dependency-path: web/package-lock.json
       - name: Install locked dependencies
         run: npm ci --no-fund --no-audit
+      - name: Test data pipeline
+        working-directory: .
+        run: python3 -m unittest discover -s scripts/tests
       - name: Test saved selections
         run: npm test
+      - name: Lint
+        run: npm run lint
       - name: Build static website and check TypeScript
         run: npm run build
       - name: Validate maintenance opt-in

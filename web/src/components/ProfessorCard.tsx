@@ -1,25 +1,40 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { User, BookOpen, ChevronRight, Bookmark, Scale } from "lucide-react";
+import { BookOpen, ChevronRight, Bookmark, Scale } from "lucide-react";
 import { motion } from "framer-motion";
 import { useBookmarks } from "@/hooks/useBookmarks";
 import { useCompare } from "@/hooks/useCompare";
 
-import facultyExtraData from "@/data/faculty_extra.json";
+export interface ProfessorHistory {
+  [term: string]: {
+    termName: string;
+    courses: { courseCode: string; courseName: string; sections: string[] }[];
+  };
+}
 
-export interface ProfessorData {
+export interface ProfessorCardData {
   id: string;
   name: string;
   schools?: string[];
   levels?: string[];
   areas?: string[];
   tracks?: string[];
-  history: Record<string, { termName: string; courses: { courseCode: string; courseName: string; sections: string[] }[] }>;
+  photoUrl?: string | null;
+  totalClasses?: number;
+  history?: ProfessorHistory;
+}
+
+export interface ProfessorData extends ProfessorCardData {
+  history: ProfessorHistory;
+}
+
+export interface ProfessorSearchData extends ProfessorCardData {
+  totalClasses: number;
 }
 
 interface ProfessorCardProps {
-  professor: ProfessorData;
+  professor: ProfessorCardData;
 }
 
 export default function ProfessorCard({ professor }: ProfessorCardProps) {
@@ -30,16 +45,11 @@ export default function ProfessorCard({ professor }: ProfessorCardProps) {
   const bookmarked = isBookmarked(professor.id);
   const isComparing = compareIds.includes(professor.id);
 
-  // Safely get photo
-  const extraData = facultyExtraData as Record<string, { photoUrl?: string | null, title?: string | null, profileUrl?: string | null } | null>;
-  const photoUrl = extraData[professor.id]?.photoUrl;
-
-  // Calculate total courses taught
-  let totalCourses = 0;
-  const terms = Object.keys(professor.history);
-  terms.forEach(term => {
-    totalCourses += professor.history[term].courses.length;
-  });
+  const photoUrl = professor.photoUrl;
+  const totalClasses = professor.totalClasses ?? Object.values(professor.history ?? {}).reduce(
+    (count, term) => count + term.courses.length,
+    0,
+  );
 
   const handleCardClick = () => {
     router.push(`/professors/${professor.id}`);
@@ -59,6 +69,7 @@ export default function ProfessorCard({ professor }: ProfessorCardProps) {
         <div className="flex justify-between items-start mb-4">
           <div className="shrink-0 overflow-hidden rounded-full w-14 h-14 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center text-[var(--color-brand-primary)]">
             {photoUrl ? (
+              /* eslint-disable-next-line @next/next/no-img-element -- External faculty URLs cannot use the static image optimizer. */
               <img src={photoUrl} alt={professor.name} className="w-full h-full object-cover" />
             ) : (
               <span className="font-display font-bold text-lg">
@@ -94,7 +105,7 @@ export default function ProfessorCard({ professor }: ProfessorCardProps) {
         <div className="flex flex-wrap gap-3 text-sm text-neutral-600 dark:text-neutral-400 mt-auto">
           <div className="flex items-center gap-1.5">
             <BookOpen size={16} className="text-neutral-500" />
-            <span>{totalCourses} {totalCourses === 1 ? 'Class' : 'Classes'} Taught</span>
+            <span>{totalClasses} {totalClasses === 1 ? 'Class' : 'Classes'} Taught</span>
           </div>
         </div>
       </div>

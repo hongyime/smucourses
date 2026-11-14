@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -8,35 +8,33 @@ import { motion } from "framer-motion";
 import stats from "@/data/stats.json";
 import ThemeToggle from "@/components/ThemeToggle";
 
+const subscribeToHydration = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
+const getDataAge = () => Math.floor(
+  Math.abs(Date.now() - new Date(stats.lastUpdated).getTime()) / 86_400_000,
+);
+
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [daysAgo, setDaysAgo] = useState<number>(0);
-  const [isClient, setIsClient] = useState(false);
   const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
+  const hasHydrated = useSyncExternalStore(subscribeToHydration, getClientSnapshot, getServerSnapshot);
+  const daysAgo = useSyncExternalStore(subscribeToHydration, getDataAge, () => 0);
 
   useEffect(() => {
     const controlNavbar = () => {
-      if (typeof window !== "undefined") {
-        if (window.scrollY > lastScrollY && window.scrollY > 80) {
-          setShow(false);
-          setMobileMenuOpen(false);
-        } else {
-          setShow(true);
-        }
-        setLastScrollY(window.scrollY);
+      if (window.scrollY > lastScrollY.current && window.scrollY > 80) {
+        setShow(false);
+        setMobileMenuOpen(false);
+      } else {
+        setShow(true);
       }
+      lastScrollY.current = window.scrollY;
     };
     window.addEventListener("scroll", controlNavbar);
     return () => window.removeEventListener("scroll", controlNavbar);
-  }, [lastScrollY]);
-
-  useEffect(() => {
-    setIsClient(true);
-    const lastUpdatedDate = new Date(stats.lastUpdated);
-    const diffTime = Math.abs(new Date().getTime() - lastUpdatedDate.getTime());
-    setDaysAgo(Math.floor(diffTime / (1000 * 60 * 60 * 24)));
   }, []);
 
   const navLinks = [
@@ -48,7 +46,7 @@ export default function Navbar() {
   return (
     <header className={`sticky top-0 z-50 w-full flex flex-col transition-transform duration-300 ease-in-out ${show ? 'translate-y-0' : '-translate-y-full'}`}>
       {/* Sync Status Banner */}
-      {isClient && (
+      {hasHydrated && (
         <div className="w-full bg-neutral-900/90 dark:bg-[#111]/90 backdrop-blur-xl border-b border-black/5 dark:border-white/5 py-1.5 px-4 text-center text-xs text-neutral-400">
           <span className="font-medium text-neutral-300">Data last synced:</span> {stats.lastUpdated}
           {daysAgo > 10 && (
@@ -62,7 +60,7 @@ export default function Navbar() {
       <nav className="py-4 border-b border-black/5 dark:border-white/5 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-xl transition-colors duration-300">
         <div className="container mx-auto px-4 max-w-7xl flex flex-wrap justify-between items-center gap-y-4">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
+            {/* eslint-disable-next-line @next/next/no-img-element -- The local SVG logo does not need image optimization. */}
             <img src="/icon.svg" alt="SMU Courses Logo" className="w-8 h-8" />
             <span className="font-display font-bold text-xl tracking-tight text-neutral-900 dark:text-white">
               smu<span className="text-neutral-500 font-normal">courses</span>

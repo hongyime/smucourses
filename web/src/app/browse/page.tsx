@@ -7,25 +7,20 @@ import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import SearchFilter, { FilterState } from "@/components/SearchFilter";
 import CourseCard, { CourseData } from "@/components/CourseCard";
-import rawCourses from "@/data/courses.json";
-import rawProfessors from "@/data/professors.json";
-import ProfessorCard, { ProfessorData } from "@/components/ProfessorCard";
+import rawCourses from "@/data/search_index.json";
+import rawProfessors from "@/data/professor_search_index.json";
+import rawSchools from "@/data/schools.json";
+import availableAreas from "@/data/areas.json";
+import availableTracks from "@/data/tracks.json";
+import ProfessorCard, { ProfessorSearchData } from "@/components/ProfessorCard";
 
 const coursesData = rawCourses as CourseData[];
-const professorsData = rawProfessors as ProfessorData[];
+const professorsData = rawProfessors as ProfessorSearchData[];
+const schoolsData = rawSchools as { id: string; name: string }[];
 
 // Pre-compute options to avoid recomputing on every render
-const availableSchools = Array.from(new Set(coursesData.map((c) => c.school?.name).filter(Boolean))).sort();
+const availableSchools = schoolsData.map((school) => school.name).sort();
 const availableLevels = Array.from(new Set(coursesData.map((c) => c.level).filter(Boolean))).sort();
-
-const allAreas = new Set<string>();
-const allTracks = new Set<string>();
-coursesData.forEach((c) => {
-  if (c.areas) c.areas.forEach((a) => allAreas.add(a));
-  if (c.tracks) c.tracks.forEach((t) => allTracks.add(t));
-});
-const availableAreas = Array.from(allAreas).sort();
-const availableTracks = Array.from(allTracks).sort();
 const availableGradeModes = Array.from(new Set(coursesData.map((c) => c.gradeMode).filter((g): g is string => Boolean(g)))).sort();
 
 // Create Fuse instances outside component so they aren't recreated
@@ -50,13 +45,17 @@ const professorFuse = new Fuse(professorsData, {
   ignoreLocation: true,
 });
 
+function searchTypeFromUrl(value: string | null): FilterState["searchType"] {
+  return value === "professors" ? "professors" : "courses";
+}
+
 function CoursesSearchContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   
   const [filters, setFilters] = useState<FilterState>({
     query: searchParams.get("q") || "",
-    searchType: (searchParams.get("type") as "courses" | "professors") || "courses",
+    searchType: searchTypeFromUrl(searchParams.get("type")),
     school: searchParams.get("school") || "",
     level: searchParams.get("level") || "",
     area: searchParams.get("area") || "",
@@ -73,9 +72,10 @@ function CoursesSearchContent() {
     if (filters.area) params.set("area", filters.area);
     if (filters.track) params.set("track", filters.track);
     if (filters.gradeMode) params.set("gradeMode", filters.gradeMode);
+    if (filters.searchType === "professors") params.set("type", "professors");
     
     // Use replace to avoid filling up browser history with every keystroke
-    router.replace(`/browse?${params.toString()}`);
+    router.replace(`/browse${params.size ? `?${params.toString()}` : ""}`);
   }, [filters, router]);
 
   // Compute filtered courses
@@ -182,7 +182,7 @@ function CoursesSearchContent() {
                 ? (displayedResults as CourseData[]).map((course) => (
                     <CourseCard key={course.id} course={course} />
                   ))
-                : (displayedResults as ProfessorData[]).map((prof) => (
+                : (displayedResults as ProfessorSearchData[]).map((prof) => (
                     <ProfessorCard key={prof.id} professor={prof} />
                   ))
               }

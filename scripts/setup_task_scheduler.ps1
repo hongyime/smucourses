@@ -1,7 +1,7 @@
 # Run this script as Administrator to register the scheduled task
 
 $TaskName = "SMUCourses AutoSync"
-$ScriptPath = "X:\01 REPOSITORIES\smucourses\scripts\auto_sync.ps1"
+$ScriptPath = Join-Path $PSScriptRoot "run_pipeline.ps1"
 
 Write-Host "Registering Windows Task Scheduler Job: $TaskName"
 

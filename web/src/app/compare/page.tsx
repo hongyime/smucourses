@@ -5,12 +5,20 @@ import Link from "next/link";
 import { ArrowLeft, Scale, Trash2, CheckCircle2, XCircle, User, BookOpen, Calendar } from "lucide-react";
 import { useCompare } from "@/hooks/useCompare";
 import UnavailableSelections from "@/components/UnavailableSelections";
-import coursesData from "@/data/courses.json";
+import rawCourses from "@/data/search_index.json";
 import rawProfessors from "@/data/professors.json";
 import facultyExtra from "@/data/faculty_extra.json";
+import { CourseData } from "@/components/CourseCard";
 import { ProfessorData } from "@/components/ProfessorCard";
 
+type FacultyCardData = {
+  photoUrl?: string | null;
+  title?: string | null;
+};
+
 const professorsData = rawProfessors as ProfessorData[];
+const coursesData = rawCourses as CourseData[];
+const facultyExtraData = facultyExtra as Record<string, FacultyCardData | null>;
 
 export default function ComparePage() {
   const { compareIds: courseIds, clearCompare: clearCourses, toggleCompare: toggleCourse } = useCompare("courses");
@@ -147,10 +155,10 @@ export default function ComparePage() {
 
               <div className="p-6 border-b border-black/5 dark:border-white/5">
                 <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Prerequisites</h3>
-                {course.requisites?.prerequisites?.length > 0 ? (
+                {course.requisites?.prerequisites?.length ? (
                   <ul className="list-disc pl-4 space-y-1">
-                    {course.requisites.prerequisites.map((req: { name: string }, i: number) => (
-                      <li key={i} className="text-sm text-amber-800 dark:text-amber-200/80">{req.name}</li>
+                    {course.requisites.prerequisites.map((requirement, index) => (
+                      <li key={index} className="text-sm text-amber-800 dark:text-amber-200/80">{requirement.name}</li>
                     ))}
                   </ul>
                 ) : (
@@ -191,14 +199,8 @@ export default function ComparePage() {
             });
 
             // Get extra data
-            const profExtra = (facultyExtra as Record<string, any>)?.[prof.id] || {};
-            const { photoUrl, title, researchAreas = [] } = profExtra;
-            const knownSchoolsLong = [
-              "School of Computing and Information Systems", "Lee Kong Chian School of Business",
-              "Yong Pung How School of Law", "School of Economics", "School of Accountancy",
-              "School of Social Sciences", "College of Integrative Studies"
-            ];
-            const cleanResearch = researchAreas.filter((a: string) => !knownSchoolsLong.includes(a));
+            const profExtra: FacultyCardData = facultyExtraData[prof.id] ?? {};
+            const { photoUrl, title } = profExtra;
             
             return (
               <div key={prof.id} className="glass-panel flex flex-col relative group bg-white/80 dark:bg-white/5 border border-black/10 dark:border-white/10">
@@ -213,6 +215,7 @@ export default function ComparePage() {
                 <div className="p-6 border-b border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 rounded-t-2xl flex items-center gap-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center shrink-0">
                     {photoUrl ? (
+                      /* eslint-disable-next-line @next/next/no-img-element -- External faculty URLs cannot use the static image optimizer. */
                       <img src={photoUrl} alt={prof.name} className="w-full h-full object-cover" />
                     ) : (
                       <User size={28} className="text-black/20 dark:text-white/20" />

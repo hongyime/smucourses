@@ -1,9 +1,8 @@
 import requests
-import json
-import os
 import sys
 from pathlib import Path
 import time
+from json_io import load_json, write_json_atomic
 
 BASE_URL = "https://app.coursedog.com/api/v1"
 INSTITUTION = "smu_peoplesoft"
@@ -155,11 +154,7 @@ def merge_data(existing_list, new_list, id_key="id"):
 
 def load_existing(file_path):
     if file_path.exists():
-        try:
-            with open(file_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"  -> Could not load existing file {file_path.name}: {e}")
+        return load_json(file_path, list)
     return []
 
 def main():
@@ -167,34 +162,33 @@ def main():
     output_dir = repo_root / "data"
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    active_file = output_dir / "courses_raw.json"
+    all_file = output_dir / "courses_all_versions_raw.json"
+    docs_file = output_dir / "documents_raw.json"
+
+    # Validate every existing artifact before replacing any of them.
+    load_existing(active_file)
+    existing_all = load_existing(all_file)
+    existing_docs = load_existing(docs_file)
+
     # 1. Active Courses
     print("Fetching active courses...")
-    active_file = output_dir / "courses_raw.json"
-    existing_active = load_existing(active_file)
     new_active = fetch_courses(ignore_effective_dating=False)
-    merged_active = merge_data(existing_active, new_active, id_key="id")
-    with open(active_file, "w", encoding="utf-8") as f:
-        json.dump(merged_active, f, ensure_ascii=False)
-    print(f"Saved {len(merged_active)} active courses.\n")
+    write_json_atomic(active_file, new_active, ensure_ascii=False)
+    print(f"Saved {len(new_active)} active courses.\n")
 
     # 2. All Historical Courses
     print("Fetching ALL historical course versions...")
-    all_file = output_dir / "courses_all_versions_raw.json"
-    existing_all = load_existing(all_file)
     new_all = fetch_courses(ignore_effective_dating=True)
     merged_all = merge_data(existing_all, new_all, id_key="id")
-    with open(all_file, "w", encoding="utf-8") as f:
-        json.dump(merged_all, f, ensure_ascii=False)
+    write_json_atomic(all_file, merged_all, ensure_ascii=False)
     print(f"Saved {len(merged_all)} historical course versions.\n")
 
     # 3. Documents (PDF Metadata)
     print("Fetching document metadata...")
-    docs_file = output_dir / "documents_raw.json"
-    existing_docs = load_existing(docs_file)
     new_docs = fetch_documents()
     merged_docs = merge_data(existing_docs, new_docs, id_key="_id")
-    with open(docs_file, "w", encoding="utf-8") as f:
-        json.dump(merged_docs, f, ensure_ascii=False)
+    write_json_atomic(docs_file, merged_docs, ensure_ascii=False)
     print(f"Saved {len(merged_docs)} document records.\n")
 
     print("Fetch and Smart Merge complete!")

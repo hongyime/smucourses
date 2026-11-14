@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
 import { BarChart2 } from "lucide-react";
 import {
   BarChart,
@@ -12,8 +12,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import type { TooltipContentProps } from "recharts";
 
-type BidDataPoint = {
+export type BidDataPoint = {
   window: string;
   befVac: number;
   aftVac: number;
@@ -21,115 +22,91 @@ type BidDataPoint = {
   medBid: number;
 };
 
-type BidAnalyticsProps = {
-  data: {
-    [instructor: string]: {
-      [term: string]: {
-        [section: string]: BidDataPoint[];
-      };
-    };
-  } | null;
-  schedules?: any[];
+export type CourseBidData = Record<string, Record<string, Record<string, BidDataPoint[]>>>;
+
+type BidChartPoint = {
+  name: string;
+  minBid: number;
+  medBid: number;
+  befVac: number;
 };
 
-function toTitleCase(str: string) {
-  if (!str) return str;
-  // Handle special cases or just basic title casing
-  return str.toLowerCase().replace(/\b\w/g, s => s.toUpperCase());
+type BidAnalyticsProps = {
+  data: CourseBidData | null;
+};
+
+function toTitleCase(value: string) {
+  return value.toLowerCase().replace(/\b\w/g, (character) => character.toUpperCase());
 }
 
-export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
-  const [selectedTerm, setSelectedTerm] = useState<string>("");
-  const [selectedWindow, setSelectedWindow] = useState<string>("");
+function BidTooltip({ active, payload, label }: TooltipContentProps) {
+  if (!active || !payload.length) return null;
 
-  // Extract all available terms across all instructors
+  return (
+    <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/10 p-3 rounded-lg shadow-xl text-sm md:text-base">
+      <p className="font-semibold text-neutral-900 dark:text-[#e5e5e5] mb-2">{label}</p>
+      {payload.map((entry, index) => (
+        <p key={index} style={{ color: entry.color }} className="text-xs md:text-sm font-medium">
+          {entry.name}: {entry.value}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+export default function BidAnalytics({ data }: BidAnalyticsProps) {
+  const [selectedTerm, setSelectedTerm] = useState("");
+  const [selectedWindow, setSelectedWindow] = useState("");
+
   const terms = useMemo(() => {
     if (!data) return [];
     const termSet = new Set<string>();
-    Object.values(data).forEach(termMap => {
-      Object.keys(termMap).forEach(term => termSet.add(term));
+    Object.values(data).forEach((termMap) => {
+      Object.keys(termMap).forEach((term) => termSet.add(term));
     });
-    // Sort descending to show newest first
     return Array.from(termSet).sort().reverse();
   }, [data]);
 
-  // Set default term
-  useMemo(() => {
-    if (terms.length > 0 && !selectedTerm) {
-      setSelectedTerm(terms[0]);
-    }
-  }, [terms, selectedTerm]);
+  const activeTerm = terms.includes(selectedTerm) ? selectedTerm : (terms[0] ?? "");
 
-  // Extract all windows for the selected term
   const windows = useMemo(() => {
-    if (!data || !selectedTerm) return [];
-    const winSet = new Set<string>();
-    Object.values(data).forEach(termMap => {
-      if (termMap[selectedTerm]) {
-        Object.values(termMap[selectedTerm]).forEach(secArray => {
-          secArray.forEach(dp => winSet.add(dp.window));
-        });
-      }
+    if (!data || !activeTerm) return [];
+    const windowSet = new Set<string>();
+    Object.values(data).forEach((termMap) => {
+      Object.values(termMap[activeTerm] ?? {}).forEach((sectionData) => {
+        sectionData.forEach((point) => windowSet.add(point.window));
+      });
     });
-    return Array.from(winSet).sort();
-  }, [data, selectedTerm]);
+    return Array.from(windowSet).sort();
+  }, [data, activeTerm]);
 
-  // Set default window
-  useMemo(() => {
-    if (windows.length > 0 && (!selectedWindow || !windows.includes(selectedWindow))) {
-      setSelectedWindow(windows[0]);
-    }
-  }, [windows, selectedWindow]);
+  const activeWindow = windows.includes(selectedWindow) ? selectedWindow : (windows[0] ?? "");
 
-  // Build the chart data combining all instructors for the selected term and window
-  const chartData = useMemo(() => {
-    if (!data || !selectedTerm || !selectedWindow) return [];
-    
-    const results: any[] = [];
+  const chartData = useMemo((): BidChartPoint[] => {
+    if (!data || !activeTerm || !activeWindow) return [];
+
+    const results: BidChartPoint[] = [];
     Object.entries(data).forEach(([instructor, termMap]) => {
-      if (termMap[selectedTerm]) {
-        Object.entries(termMap[selectedTerm]).forEach(([section, secArray]) => {
-          const dp = secArray.find(d => d.window === selectedWindow);
-          if (dp) {
-            results.push({
-              name: `${toTitleCase(instructor)} (${section})`,
-              minBid: dp.minBid,
-              medBid: dp.medBid,
-              befVac: dp.befVac
-            });
-          }
-        });
-      }
+      Object.entries(termMap[activeTerm] ?? {}).forEach(([section, sectionData]) => {
+        const point = sectionData.find((dataPoint) => dataPoint.window === activeWindow);
+        if (point) {
+          results.push({
+            name: `${toTitleCase(instructor)} (${section})`,
+            minBid: point.minBid,
+            medBid: point.medBid,
+            befVac: point.befVac,
+          });
+        }
+      });
     });
-
-    // Sort by median bid (most expensive to least expensive)
-    return results.sort((a, b) => b.medBid - a.medBid);
-  }, [data, selectedTerm, selectedWindow, schedules]);
-
-  const CustomTooltip = ({ active, payload, label }: any) => {
-    if (active && payload && payload.length) {
-      const pointData = payload[0].payload;
-      return (
-        <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/10 p-3 rounded-lg shadow-xl text-sm md:text-base">
-          <p className="font-semibold text-neutral-900 dark:text-[#e5e5e5] mb-2">{label}</p>
-          {payload.map((p: any, idx: number) => (
-            <p key={idx} style={{ color: p.color }} className="text-xs md:text-sm font-medium">
-              {p.name}: {p.value}
-            </p>
-          ))}
-        </div>
-      );
-    }
-    return null;
-  };
+    return results.sort((first, second) => second.medBid - first.medBid);
+  }, [data, activeTerm, activeWindow]);
 
   if (!data || terms.length === 0) {
     return (
       <div className="mt-8 pt-8 border-t border-black/10 dark:border-white/10">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-          <h3 className="text-lg font-semibold text-black dark:text-white flex items-center gap-2">
-            Bid Analytics
-          </h3>
+          <h3 className="text-lg font-semibold text-black dark:text-white">Bid Analytics</h3>
         </div>
         <div className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg p-8 text-center">
           <BarChart2 className="mx-auto h-8 w-8 text-neutral-400 mb-3 opacity-50" />
@@ -144,9 +121,7 @@ export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
   return (
     <div className="mt-8 pt-8 border-t border-black/10 dark:border-white/10">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-        <h3 className="text-lg font-semibold text-black dark:text-white flex items-center gap-2">
-          Bid Analytics
-        </h3>
+        <h3 className="text-lg font-semibold text-black dark:text-white">Bid Analytics</h3>
       </div>
 
       <div className="p-4 md:p-6 bg-white/80 dark:bg-[#0a0a0a]/80 border border-black/10 dark:border-white/10 rounded-xl backdrop-blur-xl shadow-md dark:shadow-none">
@@ -154,26 +129,22 @@ export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
           <div className="flex flex-col w-full sm:w-auto sm:min-w-[200px]">
             <label className="text-xs text-neutral-600 dark:text-gray-400 mb-1 ml-1 uppercase tracking-wider">Term</label>
             <select
-              value={selectedTerm}
-              onChange={(e) => setSelectedTerm(e.target.value)}
+              value={activeTerm}
+              onChange={(event) => setSelectedTerm(event.target.value)}
               className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/10 text-neutral-900 dark:text-gray-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none shadow-sm dark:shadow-none"
             >
-              {terms.map((term) => (
-                <option key={term} value={term}>{term}</option>
-              ))}
+              {terms.map((term) => <option key={term} value={term}>{term}</option>)}
             </select>
           </div>
 
           <div className="flex flex-col w-full md:w-auto min-w-[200px]">
             <label className="text-xs text-neutral-600 dark:text-gray-400 mb-1 ml-1 uppercase tracking-wider">Bidding Window</label>
             <select
-              value={selectedWindow}
-              onChange={(e) => setSelectedWindow(e.target.value)}
+              value={activeWindow}
+              onChange={(event) => setSelectedWindow(event.target.value)}
               className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/10 text-neutral-900 dark:text-gray-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none shadow-sm dark:shadow-none"
             >
-              {windows.map((win) => (
-                <option key={win} value={win}>{win}</option>
-              ))}
+              {windows.map((window) => <option key={window} value={window}>{window}</option>)}
             </select>
           </div>
         </div>
@@ -181,37 +152,12 @@ export default function BidAnalytics({ data, schedules }: BidAnalyticsProps) {
         {chartData.length > 0 ? (
           <div className="h-[350px] md:h-[450px] w-full -ml-4 md:ml-0">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                data={chartData}
-                margin={{ top: 20, right: 10, left: 0, bottom: 80 }}
-              >
+              <BarChart data={chartData} margin={{ top: 20, right: 10, left: 0, bottom: 80 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#ffffff15" vertical={false} />
-                <XAxis 
-                  dataKey="name" 
-                  stroke="#737373" 
-                  tick={{ fill: '#a3a3a3', fontSize: 11 }} 
-                  tickMargin={30}
-                  axisLine={{ stroke: '#404040' }}
-                  angle={-45}
-                  textAnchor="end"
-                  interval={0}
-                />
-                <YAxis 
-                  stroke="#737373" 
-                  tick={{ fill: '#a3a3a3', fontSize: 12 }} 
-                  axisLine={false}
-                  tickLine={false}
-                  label={{ value: 'Bid Amount', angle: -90, position: 'insideLeft', fill: '#737373', fontSize: 11, offset: 15 }}
-                />
-                <Tooltip
-                  content={<CustomTooltip />}
-                  cursor={{ fill: '#ffffff05' }}
-                />
-                <Legend 
-                  verticalAlign="top"
-                  wrapperStyle={{ paddingBottom: '20px' }}
-                  iconType="circle"
-                />
+                <XAxis dataKey="name" stroke="#737373" tick={{ fill: "#a3a3a3", fontSize: 11 }} tickMargin={30} axisLine={{ stroke: "#404040" }} angle={-45} textAnchor="end" interval={0} />
+                <YAxis stroke="#737373" tick={{ fill: "#a3a3a3", fontSize: 12 }} axisLine={false} tickLine={false} label={{ value: "Bid Amount", angle: -90, position: "insideLeft", fill: "#737373", fontSize: 11, offset: 15 }} />
+                <Tooltip content={BidTooltip} cursor={{ fill: "#ffffff05" }} />
+                <Legend verticalAlign="top" wrapperStyle={{ paddingBottom: "20px" }} iconType="circle" />
                 <Bar dataKey="medBid" name="Median Bid" fill="#f59e0b" radius={[4, 4, 0, 0]} maxBarSize={50} />
                 <Bar dataKey="minBid" name="Minimum Bid" fill="#10b981" radius={[4, 4, 0, 0]} maxBarSize={50} />
               </BarChart>

@@ -3,8 +3,9 @@
 import { useState, useMemo } from "react";
 import { FileText, Search, ArrowDownUp } from "lucide-react";
 import Link from "next/link";
+import { CourseSchedule } from "@/components/CourseCard";
 
-export default function CourseSchedules({ schedules }: { schedules: any[] }) {
+export default function CourseSchedules({ schedules }: { schedules: CourseSchedule[] }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortField, setSortField] = useState<"termCode" | "professor" | "section">("termCode");
   const [sortDesc, setSortDesc] = useState(true);
@@ -13,7 +14,7 @@ export default function CourseSchedules({ schedules }: { schedules: any[] }) {
     if (!schedules) return [];
     
     // Filter
-    let result = schedules.filter(s => {
+    const result = schedules.filter(s => {
       const term = s.term?.toLowerCase() || "";
       const prof = s.professor?.toLowerCase() || "";
       const loc = s.location?.toLowerCase() || "";
@@ -25,8 +26,8 @@ export default function CourseSchedules({ schedules }: { schedules: any[] }) {
 
     // Sort
     result.sort((a, b) => {
-      let aVal = a[sortField] || "";
-      let bVal = b[sortField] || "";
+      const aVal = a[sortField] || "";
+      const bVal = b[sortField] || "";
       
       if (aVal < bVal) return sortDesc ? 1 : -1;
       if (aVal > bVal) return sortDesc ? -1 : 1;
@@ -84,7 +85,7 @@ export default function CourseSchedules({ schedules }: { schedules: any[] }) {
               </tr>
             </thead>
             <tbody>
-              {filteredAndSorted.map((schedule: any, idx: number) => (
+              {filteredAndSorted.map((schedule, idx) => (
                 <tr key={idx} className="border-b border-black/5 dark:border-white/5 last:border-0 hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">
                   <td className="px-4 py-3 whitespace-nowrap font-medium text-black dark:text-white">{schedule.term}</td>
                   <td className="px-4 py-3 font-semibold text-indigo-600 dark:text-indigo-400">

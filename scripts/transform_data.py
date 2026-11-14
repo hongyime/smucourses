@@ -1,7 +1,7 @@
-import json
 import re
 from pathlib import Path
 from datetime import datetime
+from json_io import load_json, write_json_atomic
 
 def normalize_code(code):
     """Strip dots, spaces, and other separators from course codes. ACCT.414 -> ACCT414"""
@@ -57,18 +57,14 @@ def main():
     proc_dir.mkdir(parents=True, exist_ok=True)
 
     print("Loading raw data...")
-    with open(raw_dir / "courses_raw.json", "r", encoding="utf-8") as f:
-        active_courses = json.load(f)
-    with open(raw_dir / "courses_all_versions_raw.json", "r", encoding="utf-8") as f:
-        all_courses = json.load(f)
-    with open(raw_dir / "documents_raw.json", "r", encoding="utf-8") as f:
-        documents = json.load(f)
+    all_courses = load_json(raw_dir / "courses_all_versions_raw.json", list)
+    documents = load_json(raw_dir / "documents_raw.json", list)
         
     schedules = []
-    try:
-        with open(raw_dir / "schedules_raw.json", "r", encoding="utf-8") as f:
-            schedules = json.load(f)
-            
+    schedules_file = raw_dir / "schedules_raw.json"
+    if schedules_file.exists():
+        schedules = load_json(schedules_file, list)
+
         # Deduplicate identical schedule rows
         unique_schedules = []
         seen = set()
@@ -80,14 +76,13 @@ def main():
         schedules = unique_schedules
         
         print(f"Loaded {len(schedules)} unique class schedules.")
-    except FileNotFoundError:
+    else:
         print("No schedules_raw.json found. Skipping schedules mapping.")
 
-    print("Building id map and filtering ghosts...")
-    id_map = {} # rawCourseId -> {"code": "...", "courseGroupId": "..."}
+    print("Filtering ghosts...")
     valid_groups = {} # courseGroupId -> list of versions
     
-    # Process all courses to build complete valid groups and id_map
+    # Process all courses to build complete valid groups
     for c in all_courses:
         cg_id = c.get("courseGroupId")
         code = c.get("code")
@@ -98,18 +93,9 @@ def main():
         if not code or not name or not eff_start:
             continue
             
-        custom = c.get("customFields", {})
-        raw_id = custom.get("rawCourseId")
-        if raw_id:
-            id_map[raw_id] = {"code": code, "courseGroupId": cg_id}
-            
         if cg_id not in valid_groups:
             valid_groups[cg_id] = []
         valid_groups[cg_id].append(c)
-
-    # Save id map
-    with open(proc_dir / "id_map.json", "w", encoding="utf-8") as f:
-        json.dump(id_map, f, ensure_ascii=False)
 
     print("Building schedules map...")
     # Build term date lookup from PeopleSoft schedules (which have start dates)
@@ -415,8 +401,14 @@ def main():
             "name": c["name"],
             "longName": c["longName"],
             "subjectCode": c["subjectCode"],
-            "school": c["school"]["id"],
+            "school": c["school"],
             "level": c["level"],
+            "areas": c["areas"],
+            "tracks": c["tracks"],
+            "gradeMode": c["gradeMode"],
+            "credits": c["credits"],
+            "component": c["component"],
+            "requisites": c["requisites"],
             "description": desc
         })
 
@@ -499,6 +491,27 @@ def main():
         
     professors_list = sorted(professors_list, key=lambda x: x["name"])
 
+    faculty_extra_file = proc_dir / "faculty_extra.json"
+    faculty_extra = load_json(faculty_extra_file, dict) if faculty_extra_file.exists() else {}
+    professor_search_index = []
+    for professor in professors_list:
+        extra = faculty_extra.get(professor["id"])
+        photo_url = extra.get("photoUrl") if isinstance(extra, dict) else None
+        total_classes = sum(
+            len(term_data["courses"])
+            for term_data in professor["history"].values()
+        )
+        professor_search_index.append({
+            "id": professor["id"],
+            "name": professor["name"],
+            "schools": professor["schools"],
+            "levels": professor["levels"],
+            "areas": professor["areas"],
+            "tracks": professor["tracks"],
+            "totalClasses": total_classes,
+            "photoUrl": photo_url if isinstance(photo_url, str) else None,
+        })
+
     # Stats
     stats = {
         "totalCourses": len(final_courses),
@@ -510,20 +523,14 @@ def main():
     }
 
     print("Saving processed data...")
-    with open(proc_dir / "courses.json", "w", encoding="utf-8") as f:
-        json.dump(final_courses, f, ensure_ascii=False)
-    with open(proc_dir / "professors.json", "w", encoding="utf-8") as f:
-        json.dump(professors_list, f, ensure_ascii=False)
-    with open(proc_dir / "search_index.json", "w", encoding="utf-8") as f:
-        json.dump(search_index, f, ensure_ascii=False)
-    with open(proc_dir / "schools.json", "w", encoding="utf-8") as f:
-        json.dump(schools_list, f, ensure_ascii=False)
-    with open(proc_dir / "areas.json", "w", encoding="utf-8") as f:
-        json.dump(sorted(list(areas_set)), f, ensure_ascii=False)
-    with open(proc_dir / "tracks.json", "w", encoding="utf-8") as f:
-        json.dump(sorted(list(tracks_set)), f, ensure_ascii=False)
-    with open(proc_dir / "stats.json", "w", encoding="utf-8") as f:
-        json.dump(stats, f, ensure_ascii=False)
+    write_json_atomic(proc_dir / "courses.json", final_courses, ensure_ascii=False)
+    write_json_atomic(proc_dir / "professors.json", professors_list, ensure_ascii=False)
+    write_json_atomic(proc_dir / "search_index.json", search_index, ensure_ascii=False)
+    write_json_atomic(proc_dir / "professor_search_index.json", professor_search_index, ensure_ascii=False)
+    write_json_atomic(proc_dir / "schools.json", schools_list, ensure_ascii=False)
+    write_json_atomic(proc_dir / "areas.json", sorted(areas_set), ensure_ascii=False)
+    write_json_atomic(proc_dir / "tracks.json", sorted(tracks_set), ensure_ascii=False)
+    write_json_atomic(proc_dir / "stats.json", stats, ensure_ascii=False)
 
     print("Transform complete.")
     print(f"Total structured courses: {len(final_courses)}")
