@@ -474,6 +474,10 @@ def main() -> int:
     except ArchiveError as error:
         print(f"Archive failed: {error}")
         return 1
+    except subprocess.CalledProcessError as error:
+        detail = error.stderr.strip() or error.stdout.strip() or str(error)
+        print(f"Archive failed: {detail}")
+        return 1
 
 
 if __name__ == "__main__":
