@@ -18,7 +18,7 @@ function Show-Menu {
     Write-Host "    SMU COURSES - DATA PIPELINE MENU" -ForegroundColor Cyan
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host ""
-    Write-Host "  [1] Sync ALL Data (APIs + PeopleSoft + Photos + PDFs + Bids)"
+    Write-Host "  [1] Sync ALL Data (APIs + PeopleSoft + Photos + Bids)"
     Write-Host "  [2] Sync Class Schedules Only (PeopleSoft)"
     Write-Host "  [3] Sync Historical Syllabi Only (Coursedog PDFs)"
     Write-Host "  [4] Sync Bid Analytics Only (SMUMods)"
@@ -55,8 +55,7 @@ function Run-TransformAndPush {
         Run-PrePushChecks
         git add data/
         git add web/src/data/
-        git add web/public/pdfs/
-        git commit -m "chore: automated course data and PDF sync"
+        git commit -m "chore: automated course data sync"
         git push origin main
         Write-Host "✅ Successfully pushed to main! Vercel is building the new SSG site." -ForegroundColor Green
     } else {
@@ -70,15 +69,13 @@ $choice = Read-Host "Select an option (1-6)"
 switch ($choice) {
     "1" {
         Write-Host "`n🚀 Starting Full Data Sync..." -ForegroundColor Cyan
-        Write-Host "`n[1/5] Fetching latest API data..." -ForegroundColor Yellow
+        Write-Host "`n[1/4] Fetching latest API data..." -ForegroundColor Yellow
         Run-Script "python scripts/fetch_courses.py"
-        Write-Host "`n[2/5] Fetching live class schedules via Playwright..." -ForegroundColor Yellow
+        Write-Host "`n[2/4] Fetching live class schedules via Playwright..." -ForegroundColor Yellow
         Run-Script "python scripts/fetch_schedules.py"
-        Write-Host "`n[3/5] Scraping latest Faculty Profile Photos..." -ForegroundColor Yellow
+        Write-Host "`n[3/4] Scraping latest Faculty Profile Photos..." -ForegroundColor Yellow
         Run-Script "python scripts/scrape_faculty.py"
-        Write-Host "`n[4/6] Syncing latest PDF syllabi..." -ForegroundColor Yellow
-        Run-Script "python scripts/sync_pdfs.py"
-        Write-Host "`n[5/6] Fetching Bid Analytics data..." -ForegroundColor Yellow
+        Write-Host "`n[4/4] Fetching Bid Analytics data..." -ForegroundColor Yellow
         Run-Script "python scripts/fetch_bids.py"
         Copy-Item -Path data/bidding_raw.json -Destination web/src/data/bids.json -Force -ErrorAction SilentlyContinue
         Run-TransformAndPush

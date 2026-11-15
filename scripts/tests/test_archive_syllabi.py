@@ -1,3 +1,4 @@
+import json
 import sys
 import tempfile
 import unittest
@@ -138,6 +139,44 @@ class SyllabiArchiveTests(unittest.TestCase):
                 ["syllabi-AY24-25-001.zip", "syllabi-AY24-25-002.zip"],
             )
             self.assertEqual(set(manifest["documents"]), {"first", "second"})
+
+    def test_archive_publishes_a_manifest_after_each_uploaded_part(self):
+        with tempfile.TemporaryDirectory() as directory:
+            documents_path = Path(directory) / "documents.json"
+            documents_path.write_text(
+                json.dumps([document("first", "2410"), document("second", "2510")]),
+                encoding="utf-8",
+            )
+            uploaded = []
+
+            def fake_parts(bucket, documents, manifest, _, output_dir, __):
+                document_id = documents[0]["_id"]
+                asset = f"syllabi-{bucket}-001.zip"
+                path = output_dir / asset
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(b"zip")
+                manifest["parts"][bucket] = [asset]
+                manifest["documents"][document_id] = asset
+                yield archive_syllabi.PartUpdate(bucket, None, asset, path)
+
+            with (
+                patch.object(
+                    archive_syllabi,
+                    "release_details",
+                    return_value={"body": "<!-- syllabi-archive-index:  -->", "assets": []},
+                ),
+                patch.object(archive_syllabi, "iter_archive_parts", side_effect=fake_parts),
+                patch.object(
+                    archive_syllabi,
+                    "upload_release_asset",
+                    side_effect=lambda path: uploaded.append(path.name),
+                ),
+                patch.object(archive_syllabi, "cleanup_unreferenced_assets"),
+                patch.object(archive_syllabi, "gh"),
+            ):
+                archive_syllabi.archive(documents_path)
+
+            self.assertEqual(sum(name.startswith("syllabi-index-") for name in uploaded), 2)
 
 
 if __name__ == "__main__":

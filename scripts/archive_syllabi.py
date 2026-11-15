@@ -377,8 +377,8 @@ def upload_release_asset(path: Path) -> None:
     gh("release", "upload", RELEASE_TAG, str(path))
 
 
-def cleanup_unreferenced_assets(active_index: str, manifest: dict[str, Any]) -> None:
-    active_assets = {active_index}
+def cleanup_unreferenced_assets(active_index: str | None, manifest: dict[str, Any]) -> None:
+    active_assets = {active_index} if active_index else set()
     active_assets.update(
         asset for assets in manifest["parts"].values() for asset in assets
     )
@@ -397,6 +397,25 @@ def cleanup_unreferenced_assets(active_index: str, manifest: dict[str, Any]) -> 
                 print(f"Warning: could not delete unreferenced asset {name}: {error.stderr.strip()}")
 
 
+def publish_manifest(
+    manifest: dict[str, Any], release_body: str, workspace: Path
+) -> tuple[str, str]:
+    validate_manifest(manifest)
+    index_asset = f"syllabi-index-{uuid.uuid4()}.json"
+    index_path = workspace / index_asset
+    write_json_atomic(index_path, manifest, sort_keys=True, separators=(",", ":"))
+    upload_release_asset(index_path)
+
+    updated_body = body_with_index(release_body, index_asset)
+    notes_path = workspace / "release-notes.md"
+    notes_path.write_text(updated_body, encoding="utf-8")
+    gh("release", "edit", RELEASE_TAG, "--notes-file", str(notes_path))
+    cleanup_unreferenced_assets(index_asset, manifest)
+    index_path.unlink(missing_ok=True)
+    print(f"Published {index_asset} with {len(manifest['documents'])} PDFs.")
+    return index_asset, updated_body
+
+
 def archive(documents_path: Path) -> int:
     try:
         documents = json.loads(documents_path.read_text(encoding="utf-8"))
@@ -412,8 +431,9 @@ def archive(documents_path: Path) -> int:
         manifest = load_manifest(
             download_release_asset(current_index, workspace) if current_index else None
         )
-        cleanup_unreferenced_assets(current_index, manifest) if current_index else None
+        cleanup_unreferenced_assets(current_index, manifest)
         details = release_details()
+        release_body = details["body"]
         known_assets = {
             asset["name"]
             for asset in details.get("assets", [])
@@ -440,6 +460,7 @@ def archive(documents_path: Path) -> int:
                     known_assets,
                 ):
                     upload_release_asset(update.path)
+                    _, release_body = publish_manifest(manifest, release_body, workspace)
                     update.path.unlink(missing_ok=True)
                     changed = True
                     print(f"Uploaded {update.new_asset}")
@@ -450,18 +471,6 @@ def archive(documents_path: Path) -> int:
         if not changed:
             print("No valid new syllabus PDFs were available.")
             return 0
-
-        validate_manifest(manifest)
-        index_asset = f"syllabi-index-{uuid.uuid4()}.json"
-        index_path = workspace / index_asset
-        write_json_atomic(index_path, manifest, sort_keys=True, separators=(",", ":"))
-        upload_release_asset(index_path)
-
-        notes_path = workspace / "release-notes.md"
-        notes_path.write_text(body_with_index(details["body"], index_asset), encoding="utf-8")
-        gh("release", "edit", RELEASE_TAG, "--notes-file", str(notes_path))
-        cleanup_unreferenced_assets(index_asset, manifest)
-        print(f"Published {index_asset} with {len(manifest['documents'])} PDFs.")
     return 0
 
 
