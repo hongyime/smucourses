@@ -24,6 +24,8 @@ build/
 .next/
 coverage/
 .pytest_cache/
+*.zip
+/web/public/pdfs/
 
 
 

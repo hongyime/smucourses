@@ -48,12 +48,19 @@ launchers.
 
 ---
 
-## 📦 PDF Syllabus Links and Optional Local Cache
+## 📦 PDF Syllabus Links, Backup Archive, and Optional Local Cache
 
 The generated schedule data links each syllabus directly to its Coursedog PDF URL:
 `https://ccms.coursedog.com/api/v1/sy/smu_peoplesoft/documents/<document-id>/pdf`.
 No PDF cache is part of deployment or CI. `sync_pdfs.py` is an optional local-only
 cache utility; its output remains ignored under `web/public/pdfs/`.
+
+The [syllabi archive release](https://github.com/hongyime/smucourses/releases/tag/syllabi-archive)
+is a backup export rather than a website dependency. It stores validated PDFs in
+academic-year ZIP parts and is incrementally refreshed from `documents_raw.json`.
+To run the initial backfill or retry unavailable PDFs, open **Actions → Archive
+Syllabi → Run workflow** on GitHub. ZIPs and local PDFs remain ignored and are
+never committed to this repository.
 
 ### 1. Install Python Dependencies
 ```bash
