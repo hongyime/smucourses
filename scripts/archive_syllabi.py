@@ -24,7 +24,7 @@ from typing import Any
 from json_io import write_json_atomic
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_DOCUMENTS_PATH = ROOT_DIR / "data" / "documents_raw.json"
-RELEASE_TAG = "syllabi-archive"
+RELEASE_TAG = "syllabi-archive-v2"
 MAX_PART_SIZE_BYTES = int(1.5 * 1024**3)
 ZIP_ENTRY_OVERHEAD_BYTES = 256
 DELAY_BETWEEN_REQUESTS = 0.5

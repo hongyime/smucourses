@@ -55,7 +55,7 @@ The generated schedule data links each syllabus directly to its Coursedog PDF UR
 No PDF cache is part of deployment or CI. `sync_pdfs.py` is an optional local-only
 cache utility; its output remains ignored under `web/public/pdfs/`.
 
-The [syllabi archive release](https://github.com/hongyime/smucourses/releases/tag/syllabi-archive)
+The [syllabi archive release](https://github.com/hongyime/smucourses/releases/tag/syllabi-archive-v2)
 is a backup export rather than a website dependency. It stores validated PDFs in
 academic-year ZIP parts and is incrementally refreshed from `documents_raw.json`.
 To run the initial backfill or retry unavailable PDFs, open **Actions → Archive

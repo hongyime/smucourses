@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: syllabi-archive-${{ github.repository }}
+  group: syllabi-archive-v2-${{ github.repository }}
   cancel-in-progress: false
 
 permissions:
@@ -31,9 +31,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
         run: |
-          if ! gh release view syllabi-archive >/dev/null 2>&1; then
-            gh release create syllabi-archive \
-              --title "Syllabi archive" \
+          if ! gh release view syllabi-archive-v2 >/dev/null 2>&1; then
+            gh release create syllabi-archive-v2 \
+              --title "Syllabi archive v2" \
               --notes "$(printf 'Backup export of Coursedog syllabi.\n\n<!-- syllabi-archive-index:  -->')" \
               --latest=false
           fi
