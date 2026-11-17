@@ -1,0 +1,76 @@
+name: Cleanup old Vercel deployments
+
+# smucourses ships a full static export (~3,000 course pages + 20 MB JSON)
+# in every build, and the daily data-sync bot creates a new Production
+# deployment every day. Rather than let deployments pile up (each carrying
+# that payload) and wait for a weekly org-wide sweep, this runs right after
+# every push to main and deletes every OTHER deployment as soon as the new
+# one for this exact commit goes READY. Keeps Vercel storage bounded to ~1
+# deployment's worth for this project at all times.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: vercel-deploy-cleanup-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for this commit's deployment to go READY, then delete all others
+        shell: pwsh
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
+          PROJECT_ID: smucourses
+          TARGET_SHA: ${{ github.sha }}
+        run: |
+          $headers = @{ Authorization = "Bearer $env:VERCEL_TOKEN" }
+          $maxWaitSeconds = 600
+          $pollInterval = 15
+          $elapsed = 0
+          $newDeployment = $null
+
+          Write-Host "Waiting for a READY deployment matching commit $env:TARGET_SHA ..."
+          while ($elapsed -lt $maxWaitSeconds) {
+            $deps = Invoke-RestMethod "https://api.vercel.com/v6/deployments?teamId=$env:VERCEL_TEAM_ID&projectId=$env:PROJECT_ID&limit=20" -Headers $headers -TimeoutSec 20
+            $candidate = $deps.deployments | Where-Object {
+              $_.meta.githubCommitSha -eq $env:TARGET_SHA -and $_.state -eq "READY"
+            } | Select-Object -First 1
+            if ($candidate) { $newDeployment = $candidate; break }
+
+            $failed = $deps.deployments | Where-Object {
+              $_.meta.githubCommitSha -eq $env:TARGET_SHA -and $_.state -in @("ERROR", "CANCELED")
+            } | Select-Object -First 1
+            if ($failed) {
+              Write-Host "Deployment for this commit ended in state $($failed.state) - skipping cleanup, nothing new to keep."
+              exit 0
+            }
+
+            Start-Sleep -Seconds $pollInterval
+            $elapsed += $pollInterval
+          }
+
+          if (-not $newDeployment) {
+            Write-Host "No READY deployment found for $env:TARGET_SHA within ${maxWaitSeconds}s - leaving existing deployments untouched this run."
+            exit 0
+          }
+
+          Write-Host "New deployment ready: $($newDeployment.uid)"
+          $all = Invoke-RestMethod "https://api.vercel.com/v6/deployments?teamId=$env:VERCEL_TEAM_ID&projectId=$env:PROJECT_ID&limit=100" -Headers $headers -TimeoutSec 20
+          $toDelete = $all.deployments | Where-Object { $_.uid -ne $newDeployment.uid }
+
+          Write-Host "Deleting $($toDelete.Count) older deployment(s), keeping only $($newDeployment.uid)."
+          foreach ($d in $toDelete) {
+            try {
+              Invoke-WebRequest "https://api.vercel.com/v13/deployments/$($d.uid)?teamId=$env:VERCEL_TEAM_ID" -Method DELETE -Headers $headers -TimeoutSec 20 -SkipHttpErrorCheck | Out-Null
+              Write-Host "  deleted $($d.uid) ($($d.state), created $([DateTimeOffset]::FromUnixTimeMilliseconds($d.createdAt).ToString('yyyy-MM-dd')))"
+            } catch {
+              Write-Host "  failed to delete $($d.uid): $($_.Exception.Message)"
+            }
+          }
+          Write-Host "Done."
